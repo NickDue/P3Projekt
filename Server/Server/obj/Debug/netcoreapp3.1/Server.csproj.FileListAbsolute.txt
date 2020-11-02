@@ -1,0 +1,12 @@
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/Server.deps.json
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/Server.runtimeconfig.json
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/Server.runtimeconfig.dev.json
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/Server.dll
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/Server.pdb
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/obj/Debug/netcoreapp3.1/Server.csprojAssemblyReference.cache
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/obj/Debug/netcoreapp3.1/Server.AssemblyInfoInputs.cache
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/obj/Debug/netcoreapp3.1/Server.AssemblyInfo.cs
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/obj/Debug/netcoreapp3.1/Server.csproj.CoreCompileInputs.cache
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/obj/Debug/netcoreapp3.1/Server.dll
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/obj/Debug/netcoreapp3.1/Server.pdb
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/obj/Debug/netcoreapp3.1/Server.genruntimeconfig.cache
