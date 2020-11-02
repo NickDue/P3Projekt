@@ -16,6 +16,11 @@ namespace Client
         {
             InitializeComponent();
         }
+        private void MyhomeForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
 
         private void NavButton1_Click(object sender, EventArgs e)
         {
@@ -25,17 +30,18 @@ namespace Client
         {
 
         }
-
         private void NavButton3_Click(object sender, EventArgs e)
         {
 
         }
+        private void NavButton4_Click(object sender, EventArgs e)
+        {
 
+        }
         private void NavButton5_Click(object sender, EventArgs e)
         {
 
         }
-
         private void NavButton6_Click(object sender, EventArgs e)
         {
 
@@ -49,19 +55,21 @@ namespace Client
 
         }
 
+
+
+
+
         private void MyhomeLabel_Click(object sender, EventArgs e)
         {
 
         }
-
         private void LandingPage_Paint(object sender, PaintEventArgs e)
         {
 
         }
-        private void MyhomeForm_Load(object sender, EventArgs e)
-        {
 
-        }
+
+
         
     }
 }
