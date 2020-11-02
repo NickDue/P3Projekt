@@ -6,8 +6,8 @@ namespace Server
 {
     public class ProductDescription
     {
-        public int ID;
-        public string Name;
+        public int id;
+        public string name;
         public int volume;
         public int weight;
         public int colli;
@@ -15,8 +15,8 @@ namespace Server
 
         public ProductDescription(int productID, string productName, int productVolume, int productWeight, int productColli, string productColor)
         {
-            this.ID = productID;
-            this.Name = productName;
+            this.id = productID;
+            this.name = productName;
             this.volume = productVolume;
             this.weight = productWeight;
             this.colli = productColli;
