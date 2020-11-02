@@ -10,41 +10,66 @@ using System.Windows.Forms;
 
 namespace Client
 {
-    public partial class Form1 : Form
+    public partial class MyhomeForm : Form
     {
-        public Form1()
+        public MyhomeForm()
         {
             InitializeComponent();
         }
+        private void MyhomeForm_Load(object sender, EventArgs e)
+        {
+            searchWindow1.Hide();
+        }
 
-        private void search_Click(object sender, EventArgs e)
+
+        private void NavButton1_Click(object sender, EventArgs e)
+        {
+            searchWindow1.Show();
+        }
+        private void NavButton2_Click(object sender, EventArgs e)
+        {
+            searchWindow1.Hide();
+        }
+        private void NavButton3_Click(object sender, EventArgs e)
+        {
+            searchWindow1.Hide();
+        }
+        private void NavButton4_Click(object sender, EventArgs e)
+        {
+            searchWindow1.Hide();
+        }
+        private void NavButton5_Click(object sender, EventArgs e)
+        {
+            searchWindow1.Hide();
+        }
+        private void NavButton6_Click(object sender, EventArgs e)
+        {
+            searchWindow1.Hide();
+        }
+        private void NavButton7_Click(object sender, EventArgs e)
+        {
+            searchWindow1.Hide();
+        }
+        private void Navigationbar_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+
+
+
+
+        private void MyhomeLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void LandingPage_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
