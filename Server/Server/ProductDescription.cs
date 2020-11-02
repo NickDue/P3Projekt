@@ -4,9 +4,16 @@ using System.Text;
 
 namespace Server
 {
-    public class ProductDescription
+    public interface IProductDescription
     {
-        public int id;
+        int id { get; set; }
+        string name { get; set; }
+        int volume { get; set; }
+        int weight { get; set; }
+        int colli { get; set; }
+        string color { get; set; }
+
+        /*public int id;
         public string name;
         public int volume;
         public int weight;
@@ -21,6 +28,6 @@ namespace Server
             this.weight = productWeight;
             this.colli = productColli;
             this.color = productColor;
-        }
+        }*/
     }
 }
