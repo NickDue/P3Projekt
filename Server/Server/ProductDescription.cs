@@ -6,22 +6,24 @@ namespace Server
 {
     public class ProductDescription
     {
+        // 22222-03-05
+        public string id { get; set; }
+        public string name{ get; set; }
+        public double volume{ get; set; }
+        public double weight{ get; set; }
+        public string colli{ get; set; }
+        public string color{ get; set; }
+        public Category category{ get; set; }
 
-        public int id;
-        public string name;
-        public int volume;
-        public int weight;
-        public int colli;
-        public string color;
-
-        public ProductDescription(int productID, string productName, int productVolume, int productWeight, int productColli, string productColor)
+        public ProductDescription(string productID, string productName, double productVolume, double productWeight, string productColli, string productColor, Category productCategory)
         {
-            this.id = productID;
-            this.name = productName;
-            this.volume = productVolume;
-            this.weight = productWeight;
-            this.colli = productColli;
-            this.color = productColor;
+            id = productID+"-"+productColli;
+            name = productName;
+            volume = productVolume;
+            weight = productWeight;
+            colli = productColli;
+            color = productColor;
+            category = productCategory;
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net;
 using System.Net.Sockets;
@@ -12,7 +13,7 @@ namespace Server
         private const string SERVER_IP = "127.0.0.1";
         static void Main(string[] args)
         {
-            IPAddress localAddress = IPAddress.Parse(SERVER_IP);
+            /*IPAddress localAddress = IPAddress.Parse(SERVER_IP);
             TcpListener listener = new TcpListener(localAddress, PORT_NO);
             Console.WriteLine("Server started listening!");
             listener.Start();
@@ -33,8 +34,18 @@ namespace Server
                 Console.WriteLine("Sending back : " + dataReceived);
                 nwStream.Write(buffer, 0, bytesRead);
                 client.Close();
-            }
-            
+            }*/
+            TestProduct();
+        }
+
+        static void TestProduct()
+        {
+            Product p = new Product(new ProductDescription("22222-01","sofa",2.3D, 2.3D,"03","green",Category.Bed));
+            Console.WriteLine(p.description.id);
+            string idToInt = p.description.id.Split("-")[0];
+            Console.WriteLine(idToInt);
+            Product.allProducts.Add(Int32.Parse(idToInt),p);
+            Console.WriteLine(Product.allProducts[Int32.Parse(idToInt)].description.color);
         }
     }
 }
