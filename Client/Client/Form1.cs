@@ -18,37 +18,37 @@ namespace Client
         }
         private void MyhomeForm_Load(object sender, EventArgs e)
         {
-
+            searchWindow1.Hide();
         }
 
 
         private void NavButton1_Click(object sender, EventArgs e)
         {
-
+            searchWindow1.Show();
         }
         private void NavButton2_Click(object sender, EventArgs e)
         {
-
+            searchWindow1.Hide();
         }
         private void NavButton3_Click(object sender, EventArgs e)
         {
-
+            searchWindow1.Hide();
         }
         private void NavButton4_Click(object sender, EventArgs e)
         {
-
+            searchWindow1.Hide();
         }
         private void NavButton5_Click(object sender, EventArgs e)
         {
-
+            searchWindow1.Hide();
         }
         private void NavButton6_Click(object sender, EventArgs e)
         {
-
+            searchWindow1.Hide();
         }
         private void NavButton7_Click(object sender, EventArgs e)
         {
-
+            searchWindow1.Hide();
         }
         private void Navigationbar_Paint(object sender, PaintEventArgs e)
         {

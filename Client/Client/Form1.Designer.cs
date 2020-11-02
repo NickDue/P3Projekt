@@ -38,6 +38,8 @@
             this.NavButton1 = new System.Windows.Forms.Button();
             this.LandingPage = new System.Windows.Forms.Panel();
             this.MyhomeLabel = new System.Windows.Forms.Label();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.searchWindow1 = new Client.SearchWindow();
             this.Navigationbar.SuspendLayout();
             this.LandingPage.SuspendLayout();
             this.SuspendLayout();
@@ -139,6 +141,7 @@
             // 
             // LandingPage
             // 
+            this.LandingPage.Controls.Add(this.searchWindow1);
             this.LandingPage.Controls.Add(this.MyhomeLabel);
             this.LandingPage.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.LandingPage.Location = new System.Drawing.Point(202, 3);
@@ -157,6 +160,13 @@
             this.MyhomeLabel.TabIndex = 1;
             this.MyhomeLabel.Text = "Welcome to MyHome database";
             this.MyhomeLabel.Click += new System.EventHandler(this.MyhomeLabel_Click);
+            // 
+            // searchWindow1
+            // 
+            this.searchWindow1.Location = new System.Drawing.Point(0, -3);
+            this.searchWindow1.Name = "searchWindow1";
+            this.searchWindow1.Size = new System.Drawing.Size(982, 758);
+            this.searchWindow1.TabIndex = 2;
             // 
             // MyhomeForm
             // 
@@ -188,6 +198,8 @@
         private System.Windows.Forms.Button NavButton7;
         private System.Windows.Forms.Panel LandingPage;
         private System.Windows.Forms.Label MyhomeLabel;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private SearchWindow searchWindow1;
     }
 }
 
