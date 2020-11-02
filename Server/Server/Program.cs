@@ -18,16 +18,22 @@ namespace Server
             listener.Start();
 
 
-            TcpClient client = listener.AcceptTcpClient();
+            while (true)
+            {
+                TcpClient client = listener.AcceptTcpClient();
 
-            NetworkStream nwStream = client.GetStream();
-            byte[] buffer = new byte[client.ReceiveBufferSize];
+                NetworkStream nwStream = client.GetStream();
+                byte[] buffer = new byte[client.ReceiveBufferSize];
 
-            int bytesRead = nwStream.Read(buffer, 0, client.ReceiveBufferSize);
+                int bytesRead = nwStream.Read(buffer, 0, client.ReceiveBufferSize);
 
-            string dataReceived = Encoding.ASCII.GetString(buffer, 0, bytesRead);
-            Console.WriteLine("Received: " + dataReceived);
+                string dataReceived = Encoding.ASCII.GetString(buffer, 0, bytesRead);
+                Console.WriteLine("Received: " + dataReceived);
             
+                Console.WriteLine("Sending back : " + dataReceived);
+                nwStream.Write(buffer, 0, bytesRead);
+                client.Close();
+            }
             
         }
     }
