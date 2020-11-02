@@ -8,26 +8,24 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\meerq\\.nuget\\packages\\": {}
+    "/Users/nicholasjorgensen/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\meerq\\OneDrive\\Skrivebord\\P3Projekt\\Server\\Server\\Server.csproj",
+      "projectUniqueName": "/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/Server.csproj",
       "projectName": "Server",
-      "projectPath": "C:\\Users\\meerq\\OneDrive\\Skrivebord\\P3Projekt\\Server\\Server\\Server.csproj",
-      "packagesPath": "C:\\Users\\meerq\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\meerq\\OneDrive\\Skrivebord\\P3Projekt\\Server\\Server\\obj\\",
+      "projectPath": "/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/Server.csproj",
+      "packagesPath": "/Users/nicholasjorgensen/.nuget/packages/",
+      "outputPath": "/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\meerq\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/nicholasjorgensen/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -58,7 +56,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.401/RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "34mhPJtGGsAQGlhA8ZU0tnXVa1l3dlrlkfLn2q9smctwRWeIUwVC8F4nA2P8+Awvo5H73Br4VmQnoO7F2feFBg==",
+  "dgSpecHash": "m8X8uOCjJ8lQLC3xI8HniV50dcjpU5W+brNS5z9n7DOF0XO6BHgTg14uDsNzxf7wq2GVHLSB0yVsFD7CBDEuXQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\meerq\\OneDrive\\Skrivebord\\P3Projekt\\Server\\Server\\Server.csproj",
+  "projectFilePath": "/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/Server.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
