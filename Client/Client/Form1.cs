@@ -17,22 +17,26 @@ namespace Client
             InitializeComponent();
         }
 
-        private void search_Click(object sender, EventArgs e)
+        private void NavButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void NavButton2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void NavButton3_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void NavButton5_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void NavButton6_Click(object sender, EventArgs e)
         {
 
         }
@@ -42,7 +46,17 @@ namespace Client
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void MyhomeLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Navigationbar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void LandingPage_Paint(object sender, PaintEventArgs e)
         {
 
         }
