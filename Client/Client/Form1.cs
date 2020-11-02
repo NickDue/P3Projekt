@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Client
 {
-    public partial class Form1 : Form
+    public partial class MyhomeForm : Form
     {
-        public Form1()
+        public MyhomeForm()
         {
             InitializeComponent();
         }
@@ -40,8 +40,11 @@ namespace Client
         {
 
         }
+        private void NavButton7_Click(object sender, EventArgs e)
+        {
 
-        private void Form1_Load(object sender, EventArgs e)
+        }
+        private void Navigationbar_Paint(object sender, PaintEventArgs e)
         {
 
         }
@@ -51,14 +54,14 @@ namespace Client
 
         }
 
-        private void Navigationbar_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void LandingPage_Paint(object sender, PaintEventArgs e)
         {
 
         }
+        private void MyhomeForm_Load(object sender, EventArgs e)
+        {
+
+        }
+        
     }
 }

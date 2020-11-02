@@ -1,6 +1,6 @@
 ﻿namespace Client
 {
-    partial class Form1
+    partial class MyhomeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -69,6 +69,7 @@
             this.NavButton7.TabIndex = 7;
             this.NavButton7.Text = "Log out";
             this.NavButton7.UseVisualStyleBackColor = true;
+            this.NavButton7.Click += new System.EventHandler(this.NavButton7_Click);
             // 
             // NavButton6
             // 
@@ -156,7 +157,7 @@
             this.LandingPage.TabIndex = 2;
             this.LandingPage.Paint += new System.Windows.Forms.PaintEventHandler(this.LandingPage_Paint);
             // 
-            // Form1
+            // MyhomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -164,9 +165,9 @@
             this.ClientSize = new System.Drawing.Size(1184, 761);
             this.Controls.Add(this.LandingPage);
             this.Controls.Add(this.Navigationbar);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Name = "MyhomeForm";
+            this.Text = "Myhome Database";
+            this.Load += new System.EventHandler(this.MyhomeForm_Load);
             this.Navigationbar.ResumeLayout(false);
             this.LandingPage.ResumeLayout(false);
             this.LandingPage.PerformLayout();
