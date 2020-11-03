@@ -36,9 +36,12 @@ namespace Server
                 nwStream.Write(buffer, 0, bytesRead);
                 client.Close();
             }*/
-            //LoadDatabaseFiles.Load();
+            LoadDatabaseFiles.Load();
             //Console.WriteLine(Product.allProducts["22222-02"].description.color);
-            TestEmployee();
+            foreach (Employee suckmyballs in Employee.employeeList)
+            {
+                Console.WriteLine(suckmyballs.employeeID + ", " + suckmyballs.password + ", " + suckmyballs.employeeName + ", " + suckmyballs.role);
+            }
         }
 
         static void TestProduct()
