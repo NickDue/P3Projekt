@@ -5,7 +5,7 @@ namespace Server
 {
     public class Product
     {
-        public static Dictionary<int, Product> allProducts = new Dictionary<int, Product>();
+        public static Dictionary<String, Product> allProducts = new Dictionary<String, Product>();
 
         public ProductDescription description { get; }
         public int amount { get; set; }
@@ -14,6 +14,11 @@ namespace Server
         {
             description = d;
             amount = 0;
+        }
+        public Product(ProductDescription d, int savedAmount)
+        {
+            description = d;
+            amount = savedAmount;
         }
 
         public void EditAttribute(string[] newValues)

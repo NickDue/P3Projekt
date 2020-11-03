@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using Server.LocalStorage;
 
 namespace Server
 {
@@ -35,17 +36,18 @@ namespace Server
                 nwStream.Write(buffer, 0, bytesRead);
                 client.Close();
             }*/
-            TestProduct();
+            LoadDatabaseFiles.load();
+            Console.WriteLine(Product.allProducts["22222-02"].description.color);
         }
 
         static void TestProduct()
         {
-            Product p = new Product(new ProductDescription("22222-01","sofa",2.3D, 2.3D,"03","green",Category.Bed));
+            Product p = new Product(new ProductDescription("22222-01 ","sofa",2.3D, 2.3D,"03","green",Category.Bed));
             Console.WriteLine(p.description.id);
             string idToInt = p.description.id.Split("-")[0];
             Console.WriteLine(idToInt);
-            Product.allProducts.Add(Int32.Parse(idToInt),p);
-            Console.WriteLine(Product.allProducts[Int32.Parse(idToInt)].description.color);
+            Product.allProducts.Add(idToInt,p);
+            Console.WriteLine(Product.allProducts[idToInt].description.color);
         }
     }
 }
