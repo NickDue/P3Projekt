@@ -7,7 +7,8 @@ namespace Server.LocalStorage
         public static void Load()
         {
             // todo: enter the functions
-            LoadProducts();
+            //LoadProducts();
+            LoadEmployees();
         }
 
         private static void LoadProducts()
@@ -33,9 +34,9 @@ namespace Server.LocalStorage
             for (int i = 0; i < splitted.Length - 1; i++)
             {
                 string[] employeeSplitted = splitted[i].Split("?");
-                Console.WriteLine(employeeSplitted[0]);
+                //Console.WriteLine(employeeSplitted[0]);
                 Employee em = new Employee(Int32.Parse(employeeSplitted[0]), employeeSplitted[1], employeeSplitted[2], (Employee.Role)Enum.Parse(typeof(Employee.Role),employeeSplitted[3]));
-
+                Employee.employeeList.Add(em);
             }
         }
     }
