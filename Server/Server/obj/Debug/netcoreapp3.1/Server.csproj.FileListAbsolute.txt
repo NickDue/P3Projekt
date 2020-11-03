@@ -10,3 +10,16 @@
 /Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/obj/Debug/netcoreapp3.1/Server.dll
 /Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/obj/Debug/netcoreapp3.1/Server.pdb
 /Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/obj/Debug/netcoreapp3.1/Server.genruntimeconfig.cache
+C:\AAU\P3\.Program\P3 project\P3Projekt\Server\Server\bin\Debug\netcoreapp3.1\Server.exe
+C:\AAU\P3\.Program\P3 project\P3Projekt\Server\Server\bin\Debug\netcoreapp3.1\Server.deps.json
+C:\AAU\P3\.Program\P3 project\P3Projekt\Server\Server\bin\Debug\netcoreapp3.1\Server.runtimeconfig.json
+C:\AAU\P3\.Program\P3 project\P3Projekt\Server\Server\bin\Debug\netcoreapp3.1\Server.runtimeconfig.dev.json
+C:\AAU\P3\.Program\P3 project\P3Projekt\Server\Server\bin\Debug\netcoreapp3.1\Server.dll
+C:\AAU\P3\.Program\P3 project\P3Projekt\Server\Server\bin\Debug\netcoreapp3.1\Server.pdb
+C:\AAU\P3\.Program\P3 project\P3Projekt\Server\Server\obj\Debug\netcoreapp3.1\Server.csprojAssemblyReference.cache
+C:\AAU\P3\.Program\P3 project\P3Projekt\Server\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfoInputs.cache
+C:\AAU\P3\.Program\P3 project\P3Projekt\Server\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfo.cs
+C:\AAU\P3\.Program\P3 project\P3Projekt\Server\Server\obj\Debug\netcoreapp3.1\Server.csproj.CoreCompileInputs.cache
+C:\AAU\P3\.Program\P3 project\P3Projekt\Server\Server\obj\Debug\netcoreapp3.1\Server.dll
+C:\AAU\P3\.Program\P3 project\P3Projekt\Server\Server\obj\Debug\netcoreapp3.1\Server.pdb
+C:\AAU\P3\.Program\P3 project\P3Projekt\Server\Server\obj\Debug\netcoreapp3.1\Server.genruntimeconfig.cache

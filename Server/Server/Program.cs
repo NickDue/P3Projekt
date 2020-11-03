@@ -36,8 +36,9 @@ namespace Server
                 nwStream.Write(buffer, 0, bytesRead);
                 client.Close();
             }*/
-            LoadDatabaseFiles.load();
-            Console.WriteLine(Product.allProducts["22222-02"].description.color);
+            //LoadDatabaseFiles.Load();
+            //Console.WriteLine(Product.allProducts["22222-02"].description.color);
+            TestEmployee();
         }
 
         static void TestProduct()
@@ -48,6 +49,12 @@ namespace Server
             Console.WriteLine(idToInt);
             Product.allProducts.Add(idToInt,p);
             Console.WriteLine(Product.allProducts[idToInt].description.color);
+        }
+
+        static void TestEmployee()
+        {
+            Employee mister = new Employee(12345, "AssWord", "Mister Boombastic", Employee.Role.OfficeWorker);
+            Console.WriteLine(mister.role);
         }
     }
 }
