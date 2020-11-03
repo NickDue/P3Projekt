@@ -22,27 +22,30 @@ namespace Server.LocalStorage
             }
         }
 
-        public static void ReadData()
+        public static string ReadData(string filename)
         {
             String line;
             try
             {
                 string dekstopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                string filePath = dekstopPath + "/P3Projekt/Server/Server/LocalStorage/Test.txt";
+                string filePath = dekstopPath + "/P3Projekt/Server/Server/LocalStorage/"+filename+".txt";
                 StreamReader sr = new StreamReader(filePath);
+                string returned = "";
                 line = sr.ReadLine();
                 while (line != null)
                 {
-                    Console.WriteLine(line);
+                    returned += line + "\n";
                     line = sr.ReadLine();
                 }
                 sr.Close();
-                Console.ReadLine();
+                return returned;
             }
             catch(Exception e)
             {
                 Console.WriteLine("Exception: " + e.Message);
             }
+
+            return null;
         }
     }
 }
