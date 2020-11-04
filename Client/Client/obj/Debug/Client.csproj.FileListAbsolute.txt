@@ -17,3 +17,14 @@ C:\Users\Kenneth Køpke\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Clien
 C:\Users\Kenneth Køpke\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.pdb
 C:\Users\Kenneth Køpke\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.MyhomeForm.resources
 C:\Users\Kenneth Køpke\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.SearchWindow.resources
+C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\bin\Debug\Client.exe.config
+C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\bin\Debug\Client.exe
+C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\bin\Debug\Client.pdb
+C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.MyhomeForm.resources
+C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.LoginScreen.resources
+C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.SearchWindow.resources
+C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.csproj.GenerateResource.cache
+C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.exe
+C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.pdb

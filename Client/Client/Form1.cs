@@ -18,7 +18,7 @@ namespace Client
         }
         private void MyhomeForm_Load(object sender, EventArgs e)
         {
-            searchWindow1.Hide();
+            //searchWindow1.Hide();
         }
 
 

@@ -40,6 +40,7 @@
             this.MyhomeLabel = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.searchWindow1 = new Client.SearchWindow();
+            this.loginScreen1 = new Client.LoginScreen();
             this.Navigationbar.SuspendLayout();
             this.LandingPage.SuspendLayout();
             this.SuspendLayout();
@@ -47,6 +48,7 @@
             // Navigationbar
             // 
             this.Navigationbar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Navigationbar.Controls.Add(this.loginScreen1);
             this.Navigationbar.Controls.Add(this.NavButton7);
             this.Navigationbar.Controls.Add(this.NavButton6);
             this.Navigationbar.Controls.Add(this.NavButton5);
@@ -168,6 +170,13 @@
             this.searchWindow1.Size = new System.Drawing.Size(982, 758);
             this.searchWindow1.TabIndex = 2;
             // 
+            // loginScreen1
+            // 
+            this.loginScreen1.Location = new System.Drawing.Point(0, 0);
+            this.loginScreen1.Name = "loginScreen1";
+            this.loginScreen1.Size = new System.Drawing.Size(1200, 800);
+            this.loginScreen1.TabIndex = 3;
+            // 
             // MyhomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,6 +209,7 @@
         private System.Windows.Forms.Label MyhomeLabel;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private SearchWindow searchWindow1;
+        private LoginScreen loginScreen1;
     }
 }
 
