@@ -1,19 +1,18 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace Server.LocalStorage
 {
     public class AccessDatabase
     {
-        public static void WriteData()
+        public static void WriteData(string filename)
         {
             try
             {
                 string dekstopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                string filePath = dekstopPath + "/P3Projekt/Server/Server/LocalStorage/Test.txt";
+                string filePath = dekstopPath + "/P3Projekt/Server/Server/LocalStorage/"+filename+".txt";
                 StreamWriter sw = new StreamWriter(filePath);
-                sw.WriteLine("Hello World!!");
-                sw.WriteLine("From the StreamWriter class");
                 sw.Close();
             }
             catch(Exception e)
@@ -21,6 +20,7 @@ namespace Server.LocalStorage
                 Console.WriteLine("Exception: " + e.Message);
             }
         }
+       
 
         public static string ReadData(string filename)
         {

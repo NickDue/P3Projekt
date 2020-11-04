@@ -2,21 +2,21 @@
 {
     public class PicklistLine
     {
-        public int _plProductID;
-        public int _plAmount;
-        public string _plProductName;
-        public int _plVolume;
-        public int _plWeight;
-        public int _plPlacement;
+        public int plProductID;
+        public int plAmount;
+        public string plProductName;
+        public int plVolume;
+        public int plWeight;
+        public int plPlacement;
 
         public PicklistLine(int plProductID, int plAmount, string plProductName, int plVolume, int plWeight, int plPlacement)
         {
-            this._plProductID = plProductID;
-            this._plAmount = plAmount;
-            this._plProductName = plProductName;
-            this._plVolume = plVolume;
-            this._plWeight = plWeight;
-            this._plPlacement = plPlacement;
+            this.plProductID = plProductID;
+            this.plAmount = plAmount;
+            this.plProductName = plProductName;
+            this.plVolume = plVolume;
+            this.plWeight = plWeight;
+            this.plPlacement = plPlacement;
         }
     }
 }
