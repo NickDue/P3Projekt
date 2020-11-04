@@ -4,8 +4,7 @@ namespace Server
 {
     public class Employee
     {
-        public static List<Employee> employeeList = new List<Employee>();
-
+        
         public int employeeID { get; set; }
         public string password { get; set; }
         public string employeeName { get; set; }

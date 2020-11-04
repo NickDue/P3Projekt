@@ -5,11 +5,11 @@
         public int plProductID;
         public int plAmount;
         public string plProductName;
-        public int plVolume;
-        public int plWeight;
-        public int plPlacement;
+        public double plVolume;
+        public double plWeight;
+        public string plPlacement;
 
-        public PicklistLine(int plProductID, int plAmount, string plProductName, int plVolume, int plWeight, int plPlacement)
+        public PicklistLine(int plProductID, int plAmount, string plProductName, double plVolume, double plWeight, string plPlacement)
         {
             this.plProductID = plProductID;
             this.plAmount = plAmount;

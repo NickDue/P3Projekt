@@ -23,7 +23,7 @@ namespace Server.LocalStorage
                     Double.Parse(productSplitted[2]), Double.Parse(productSplitted[3]), productSplitted[4], productSplitted[5], (Category)Enum.Parse(typeof(Category),productSplitted[6])
                     );
                 Product p  = new Product(pd, Int32.Parse(productSplitted[7]));
-                Product.allProducts.Add(productSplitted[0],p );
+                LoadedDatabase.AllProducts.Add(productSplitted[0],p);
             }
         }
 
@@ -36,7 +36,7 @@ namespace Server.LocalStorage
                 string[] employeeSplitted = splitted[i].Split("?");
                 //Console.WriteLine(employeeSplitted[0]);
                 Employee em = new Employee(Int32.Parse(employeeSplitted[0]), employeeSplitted[1], employeeSplitted[2], (Employee.Role)Enum.Parse(typeof(Employee.Role),employeeSplitted[3]));
-                Employee.employeeList.Add(em);
+                LoadedDatabase.Employees.Add(em);
             }
         }
     }
