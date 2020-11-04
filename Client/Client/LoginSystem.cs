@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Client
 {
-    public partial class UserControl1 : UserControl
+    public partial class LoginSystem : UserControl
     {
-        public UserControl1()
+        public LoginSystem()
         {
             InitializeComponent();
         }
