@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net;
 using System.Net.Sockets;
+using System.Runtime.InteropServices;
 using System.Text;
 using Server.LocalStorage;
 
@@ -36,12 +37,13 @@ namespace Server
                 nwStream.Write(buffer, 0, bytesRead);
                 client.Close();
             }*/
-            LoadDatabaseFiles.Load();
+            /*LoadDatabaseFiles.Load();
             //Console.WriteLine(Product.allProducts["22222-02"].description.color);
             foreach (Employee suckmyballs in Employee.employeeList)
             {
                 Console.WriteLine(suckmyballs.employeeID + ", " + suckmyballs.password + ", " + suckmyballs.employeeName + ", " + suckmyballs.role);
-            }
+            }*/
+            TestPicklist();
         }
 
         static void TestProduct()
@@ -58,6 +60,18 @@ namespace Server
         {
             Employee mister = new Employee(12345, "AssWord", "Mister Boombastic", Employee.Role.OfficeWorker);
             Console.WriteLine(mister.role);
+        }
+
+        static void TestPicklist()
+        {
+            PicklistLine pline1 = new PicklistLine(2,3,"sofa",3,2,0);
+            PicklistLine pline2 = new PicklistLine(5,3,"sofa",3,2,0);
+            PicklistLine pline3 = new PicklistLine(6,3,"sofa",3,2,0);
+            Picklist p = new Picklist(3000,"Svendborg", "Online",true,new List<PicklistLine>());
+            p.AddLine(pline1);
+            p.AddLine(pline2);
+            p.AddLine(pline3);
+            p.SavePicklist();
         }
     }
 }
