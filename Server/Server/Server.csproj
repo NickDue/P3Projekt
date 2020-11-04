@@ -6,7 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="LocalStorage\Picklists" />
+    <Folder Include="LocalStorage\Picklists\Finished" />
+    <Folder Include="LocalStorage\Picklists\Ongoing" />
   </ItemGroup>
 
 </Project>

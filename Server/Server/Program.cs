@@ -39,7 +39,7 @@ namespace Server
             }*/
             /*LoadDatabaseFiles.Load();
             //Console.WriteLine(Product.allProducts["22222-02"].description.color);
-            foreach (Employee suckmyballs in Employee.employeeList)
+            foreach (Employee suckmyballs in LoadedDatabase.Employees)
             {
                 Console.WriteLine(suckmyballs.employeeID + ", " + suckmyballs.password + ", " + suckmyballs.employeeName + ", " + suckmyballs.role);
             }*/
@@ -52,8 +52,8 @@ namespace Server
             Console.WriteLine(p.description.id);
             string idToInt = p.description.id.Split("-")[0];
             Console.WriteLine(idToInt);
-            Product.allProducts.Add(idToInt,p);
-            Console.WriteLine(Product.allProducts[idToInt].description.color);
+            LoadedDatabase.AllProducts.Add(idToInt,p);
+            Console.WriteLine(LoadedDatabase.AllProducts[idToInt].description.color);
         }
 
         static void TestEmployee()
@@ -64,14 +64,19 @@ namespace Server
 
         static void TestPicklist()
         {
-            PicklistLine pline1 = new PicklistLine(2,3,"sofa",3,2,0);
-            PicklistLine pline2 = new PicklistLine(5,3,"sofa",3,2,0);
-            PicklistLine pline3 = new PicklistLine(6,3,"sofa",3,2,0);
-            Picklist p = new Picklist(3000,"Svendborg", "Online",true,new List<PicklistLine>());
+            PicklistLine pline1 = new PicklistLine(2,3,"sofa",3,2,"0");
+            PicklistLine pline2 = new PicklistLine(5,3,"sofa",3,2,"0");
+            PicklistLine pline3 = new PicklistLine(6,3,"sofa",3,2,"0");
+            Picklist p = new Picklist(3030,"Svendborg", "Online",true,new List<PicklistLine>());
             p.AddLine(pline1);
             p.AddLine(pline2);
             p.AddLine(pline3);
-            p.SavePicklist();
+            Picklist.CreatePicklist(p);
+            Picklist temp = LoadedDatabase.FindPicklist(p.picklistID);
+            if (temp != null)
+            {
+                temp.FinishPicklist();
+            }
         }
     }
 }

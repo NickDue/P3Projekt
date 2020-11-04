@@ -5,8 +5,6 @@ namespace Server
 {
     public class Product
     {
-        public static Dictionary<String, Product> allProducts = new Dictionary<String, Product>();
-
         public ProductDescription description { get; }
         public int amount { get; set; }
 

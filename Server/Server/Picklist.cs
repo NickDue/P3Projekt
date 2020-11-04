@@ -33,14 +33,14 @@ namespace Server
             try
             {
                 string dekstopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                string filePath = dekstopPath + "/P3Projekt/Server/Server/LocalStorage/Picklists/" + picklistID + ".txt";
+                string filePath = dekstopPath + "/P3Projekt/Server/Server/LocalStorage/Picklists/Ongoing/" + picklistID + ".txt";
                 StreamWriter sw = new StreamWriter(filePath);
                 sw.Write("City: " + picklistCity + "\n");
                 sw.Write("Platform: " + picklistPlatform + "\n");
                 sw.Write("Express?: " + picklistExpress + "\n");
                 foreach (PicklistLine line in pickLines)
                 {
-                    sw.Write(line.plProductID +"#"+line.plAmount+"#"+line.plProductName+"#"+line.plWeight+"#"+line.plPlacement+"\n");
+                    sw.Write(line.plProductID +"#"+line.plAmount+"#"+line.plProductName+"#"+line.plVolume+"#"+line.plWeight+"#"+line.plPlacement+"\n");
                 }
                 sw.Close();
             }
@@ -48,6 +48,22 @@ namespace Server
             {
                 Console.WriteLine("Exception: " + e.Message);
             }
+        }
+
+        public void FinishPicklist()
+        {
+            string dekstopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string sourceFile = dekstopPath + "/P3Projekt/Server/Server/LocalStorage/Picklists/Ongoing/" + picklistID + ".txt";
+            string destFile = dekstopPath + "/P3Projekt/Server/Server/LocalStorage/Picklists/Finished/" + picklistID + ".txt";
+            File.Copy(sourceFile, destFile, true);
+            File.Delete(sourceFile);
+            
+            
+        }
+
+        public static void CreatePicklist(Picklist p)
+        {
+            LoadedDatabase.AllPicklists.Add(p);
         }
     }
 }
