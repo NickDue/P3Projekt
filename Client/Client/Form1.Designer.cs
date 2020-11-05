@@ -40,6 +40,7 @@
             this.MyhomeLabel = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.searchWindow1 = new Client.SearchWindow();
+            this.allProductsPage1 = new Client.AllProductsPage();
             this.Navigationbar.SuspendLayout();
             this.LandingPage.SuspendLayout();
             this.SuspendLayout();
@@ -141,6 +142,7 @@
             // 
             // LandingPage
             // 
+            this.LandingPage.Controls.Add(this.allProductsPage1);
             this.LandingPage.Controls.Add(this.searchWindow1);
             this.LandingPage.Controls.Add(this.MyhomeLabel);
             this.LandingPage.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -167,6 +169,13 @@
             this.searchWindow1.Name = "searchWindow1";
             this.searchWindow1.Size = new System.Drawing.Size(982, 758);
             this.searchWindow1.TabIndex = 2;
+            // 
+            // allProductsPage1
+            // 
+            this.allProductsPage1.Location = new System.Drawing.Point(0, -3);
+            this.allProductsPage1.Name = "allProductsPage1";
+            this.allProductsPage1.Size = new System.Drawing.Size(982, 758);
+            this.allProductsPage1.TabIndex = 3;
             // 
             // MyhomeForm
             // 
@@ -200,6 +209,7 @@
         private System.Windows.Forms.Label MyhomeLabel;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private SearchWindow searchWindow1;
+        private AllProductsPage allProductsPage1;
     }
 }
 
