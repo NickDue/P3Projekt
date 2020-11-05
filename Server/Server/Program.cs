@@ -37,13 +37,10 @@ namespace Server
                 nwStream.Write(buffer, 0, bytesRead);
                 client.Close();
             }*/
-            /*LoadDatabaseFiles.Load();
-            //Console.WriteLine(Product.allProducts["22222-02"].description.color);
-            foreach (Employee suckmyballs in LoadedDatabase.Employees)
-            {
-                Console.WriteLine(suckmyballs.employeeID + ", " + suckmyballs.password + ", " + suckmyballs.employeeName + ", " + suckmyballs.role);
-            }*/
-            TestPicklist();
+            LoadDatabaseFiles.Load();
+            Console.WriteLine(LoadedDatabase.AllProducts["22222-02"].placement.PrintPlacement());
+            
+            //TestPicklist();
         }
 
         static void TestProduct()

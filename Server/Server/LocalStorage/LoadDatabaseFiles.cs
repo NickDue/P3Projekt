@@ -7,8 +7,8 @@ namespace Server.LocalStorage
         public static void Load()
         {
             // todo: enter the functions
-            //LoadProducts();
-            LoadEmployees();
+            LoadProducts();
+            //LoadEmployees();
         }
 
         private static void LoadProducts()
@@ -18,11 +18,11 @@ namespace Server.LocalStorage
             for (int i = 0; i < splitted.Length-1; i++)
             {
                 string[] productSplitted = splitted[i].Split("?");
-                Console.WriteLine(productSplitted[0]);
                 ProductDescription pd = new ProductDescription(productSplitted[0],productSplitted[1],
                     Double.Parse(productSplitted[2]), Double.Parse(productSplitted[3]), productSplitted[4], productSplitted[5], (Category)Enum.Parse(typeof(Category),productSplitted[6])
                     );
-                Product p  = new Product(pd, Int32.Parse(productSplitted[7]));
+                Placement placement = new Placement(productSplitted[8], productSplitted[9], Int32.Parse(productSplitted[10]));
+                Product p  = new Product(pd, Int32.Parse(productSplitted[7]),placement);
                 LoadedDatabase.AllProducts.Add(productSplitted[0],p);
             }
         }
