@@ -33,11 +33,19 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.EditButton = new System.Windows.Forms.Button();
             this.LocationPanel = new System.Windows.Forms.Panel();
+            this.PrimaryLocationLabel = new System.Windows.Forms.Label();
+            this.PrimaryColliLabel = new System.Windows.Forms.Label();
             this.SecondaryLocationPanel = new System.Windows.Forms.Panel();
             this.ScrollBar = new System.Windows.Forms.VScrollBar();
             this.PrimaryLocationBox = new System.Windows.Forms.TextBox();
             this.PrimaryColliBox = new System.Windows.Forms.TextBox();
             this.ProductPanel = new System.Windows.Forms.Panel();
+            this.AmountLabel = new System.Windows.Forms.Label();
+            this.WeightLabel = new System.Windows.Forms.Label();
+            this.ColorLabel = new System.Windows.Forms.Label();
+            this.VolumeLabel = new System.Windows.Forms.Label();
+            this.ProductNameLabel = new System.Windows.Forms.Label();
+            this.ProductNumLabel = new System.Windows.Forms.Label();
             this.amountBox = new System.Windows.Forms.TextBox();
             this.WeightBox = new System.Windows.Forms.TextBox();
             this.ColorBox = new System.Windows.Forms.TextBox();
@@ -55,14 +63,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.SearchButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
-            this.PrimaryColliLabel = new System.Windows.Forms.Label();
-            this.PrimaryLocationLabel = new System.Windows.Forms.Label();
-            this.ProductNumLabel = new System.Windows.Forms.Label();
-            this.ProductNameLabel = new System.Windows.Forms.Label();
-            this.VolumeLabel = new System.Windows.Forms.Label();
-            this.ColorLabel = new System.Windows.Forms.Label();
-            this.WeightLabel = new System.Windows.Forms.Label();
-            this.AmountLabel = new System.Windows.Forms.Label();
             this.LocationPanel.SuspendLayout();
             this.SecondaryLocationPanel.SuspendLayout();
             this.ProductPanel.SuspendLayout();
@@ -77,7 +77,7 @@
             this.TitleLabel.Size = new System.Drawing.Size(339, 48);
             this.TitleLabel.TabIndex = 0;
             this.TitleLabel.Text = "Enter product ID number";
-            this.TitleLabel.Click += new System.EventHandler(this.TitleLabel_Click);
+            
             // 
             // textBox1
             // 
@@ -99,6 +99,7 @@
             // 
             // LocationPanel
             // 
+            this.LocationPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LocationPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.LocationPanel.Controls.Add(this.PrimaryLocationLabel);
             this.LocationPanel.Controls.Add(this.PrimaryColliLabel);
@@ -109,6 +110,26 @@
             this.LocationPanel.Name = "LocationPanel";
             this.LocationPanel.Size = new System.Drawing.Size(491, 547);
             this.LocationPanel.TabIndex = 3;
+            // 
+            // PrimaryLocationLabel
+            // 
+            this.PrimaryLocationLabel.AutoSize = true;
+            this.PrimaryLocationLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.PrimaryLocationLabel.Location = new System.Drawing.Point(256, 71);
+            this.PrimaryLocationLabel.Name = "PrimaryLocationLabel";
+            this.PrimaryLocationLabel.Size = new System.Drawing.Size(51, 26);
+            this.PrimaryLocationLabel.TabIndex = 17;
+            this.PrimaryLocationLabel.Text = "N/A";
+            // 
+            // PrimaryColliLabel
+            // 
+            this.PrimaryColliLabel.AutoSize = true;
+            this.PrimaryColliLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrimaryColliLabel.Location = new System.Drawing.Point(13, 71);
+            this.PrimaryColliLabel.Name = "PrimaryColliLabel";
+            this.PrimaryColliLabel.Size = new System.Drawing.Size(51, 26);
+            this.PrimaryColliLabel.TabIndex = 19;
+            this.PrimaryColliLabel.Text = "N/A";
             // 
             // SecondaryLocationPanel
             // 
@@ -142,6 +163,7 @@
             // 
             // ProductPanel
             // 
+            this.ProductPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ProductPanel.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ProductPanel.Controls.Add(this.AmountLabel);
             this.ProductPanel.Controls.Add(this.WeightLabel);
@@ -165,6 +187,66 @@
             this.ProductPanel.Name = "ProductPanel";
             this.ProductPanel.Size = new System.Drawing.Size(491, 547);
             this.ProductPanel.TabIndex = 4;
+            // 
+            // AmountLabel
+            // 
+            this.AmountLabel.AutoSize = true;
+            this.AmountLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.AmountLabel.Location = new System.Drawing.Point(306, 474);
+            this.AmountLabel.Name = "AmountLabel";
+            this.AmountLabel.Size = new System.Drawing.Size(51, 26);
+            this.AmountLabel.TabIndex = 25;
+            this.AmountLabel.Text = "N/A";
+            // 
+            // WeightLabel
+            // 
+            this.WeightLabel.AutoSize = true;
+            this.WeightLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.WeightLabel.Location = new System.Drawing.Point(306, 380);
+            this.WeightLabel.Name = "WeightLabel";
+            this.WeightLabel.Size = new System.Drawing.Size(51, 26);
+            this.WeightLabel.TabIndex = 24;
+            this.WeightLabel.Text = "N/A";
+            // 
+            // ColorLabel
+            // 
+            this.ColorLabel.AutoSize = true;
+            this.ColorLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.ColorLabel.Location = new System.Drawing.Point(306, 280);
+            this.ColorLabel.Name = "ColorLabel";
+            this.ColorLabel.Size = new System.Drawing.Size(51, 26);
+            this.ColorLabel.TabIndex = 23;
+            this.ColorLabel.Text = "N/A";
+            // 
+            // VolumeLabel
+            // 
+            this.VolumeLabel.AutoSize = true;
+            this.VolumeLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.VolumeLabel.Location = new System.Drawing.Point(306, 182);
+            this.VolumeLabel.Name = "VolumeLabel";
+            this.VolumeLabel.Size = new System.Drawing.Size(51, 26);
+            this.VolumeLabel.TabIndex = 22;
+            this.VolumeLabel.Text = "N/A";
+            // 
+            // ProductNameLabel
+            // 
+            this.ProductNameLabel.AutoSize = true;
+            this.ProductNameLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.ProductNameLabel.Location = new System.Drawing.Point(306, 98);
+            this.ProductNameLabel.Name = "ProductNameLabel";
+            this.ProductNameLabel.Size = new System.Drawing.Size(51, 26);
+            this.ProductNameLabel.TabIndex = 21;
+            this.ProductNameLabel.Text = "N/A";
+            // 
+            // ProductNumLabel
+            // 
+            this.ProductNumLabel.AutoSize = true;
+            this.ProductNumLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.ProductNumLabel.Location = new System.Drawing.Point(306, 25);
+            this.ProductNumLabel.Name = "ProductNumLabel";
+            this.ProductNumLabel.Size = new System.Drawing.Size(51, 26);
+            this.ProductNumLabel.TabIndex = 20;
+            this.ProductNumLabel.Text = "N/A";
             // 
             // amountBox
             // 
@@ -315,86 +397,6 @@
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = false;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
-            // 
-            // PrimaryColliLabel
-            // 
-            this.PrimaryColliLabel.AutoSize = true;
-            this.PrimaryColliLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrimaryColliLabel.Location = new System.Drawing.Point(13, 71);
-            this.PrimaryColliLabel.Name = "PrimaryColliLabel";
-            this.PrimaryColliLabel.Size = new System.Drawing.Size(51, 26);
-            this.PrimaryColliLabel.TabIndex = 19;
-            this.PrimaryColliLabel.Text = "N/A";
-            // 
-            // PrimaryLocationLabel
-            // 
-            this.PrimaryLocationLabel.AutoSize = true;
-            this.PrimaryLocationLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.PrimaryLocationLabel.Location = new System.Drawing.Point(256, 71);
-            this.PrimaryLocationLabel.Name = "PrimaryLocationLabel";
-            this.PrimaryLocationLabel.Size = new System.Drawing.Size(51, 26);
-            this.PrimaryLocationLabel.TabIndex = 17;
-            this.PrimaryLocationLabel.Text = "N/A";
-            // 
-            // ProductNumLabel
-            // 
-            this.ProductNumLabel.AutoSize = true;
-            this.ProductNumLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.ProductNumLabel.Location = new System.Drawing.Point(306, 25);
-            this.ProductNumLabel.Name = "ProductNumLabel";
-            this.ProductNumLabel.Size = new System.Drawing.Size(51, 26);
-            this.ProductNumLabel.TabIndex = 20;
-            this.ProductNumLabel.Text = "N/A";
-            // 
-            // ProductNameLabel
-            // 
-            this.ProductNameLabel.AutoSize = true;
-            this.ProductNameLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.ProductNameLabel.Location = new System.Drawing.Point(306, 98);
-            this.ProductNameLabel.Name = "ProductNameLabel";
-            this.ProductNameLabel.Size = new System.Drawing.Size(51, 26);
-            this.ProductNameLabel.TabIndex = 21;
-            this.ProductNameLabel.Text = "N/A";
-            // 
-            // VolumeLabel
-            // 
-            this.VolumeLabel.AutoSize = true;
-            this.VolumeLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.VolumeLabel.Location = new System.Drawing.Point(306, 182);
-            this.VolumeLabel.Name = "VolumeLabel";
-            this.VolumeLabel.Size = new System.Drawing.Size(51, 26);
-            this.VolumeLabel.TabIndex = 22;
-            this.VolumeLabel.Text = "N/A";
-            // 
-            // ColorLabel
-            // 
-            this.ColorLabel.AutoSize = true;
-            this.ColorLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.ColorLabel.Location = new System.Drawing.Point(306, 280);
-            this.ColorLabel.Name = "ColorLabel";
-            this.ColorLabel.Size = new System.Drawing.Size(51, 26);
-            this.ColorLabel.TabIndex = 23;
-            this.ColorLabel.Text = "N/A";
-            // 
-            // WeightLabel
-            // 
-            this.WeightLabel.AutoSize = true;
-            this.WeightLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.WeightLabel.Location = new System.Drawing.Point(306, 380);
-            this.WeightLabel.Name = "WeightLabel";
-            this.WeightLabel.Size = new System.Drawing.Size(51, 26);
-            this.WeightLabel.TabIndex = 24;
-            this.WeightLabel.Text = "N/A";
-            // 
-            // AmountLabel
-            // 
-            this.AmountLabel.AutoSize = true;
-            this.AmountLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.AmountLabel.Location = new System.Drawing.Point(306, 474);
-            this.AmountLabel.Name = "AmountLabel";
-            this.AmountLabel.Size = new System.Drawing.Size(51, 26);
-            this.AmountLabel.TabIndex = 25;
-            this.AmountLabel.Text = "N/A";
             // 
             // SearchWindow
             // 
