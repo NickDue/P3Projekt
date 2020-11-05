@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.FunctionPanel = new System.Windows.Forms.Panel();
-            this.ProductNumberPanel = new System.Windows.Forms.Panel();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.CityLabel = new System.Windows.Forms.Label();
             this.CityTextbox = new System.Windows.Forms.TextBox();
@@ -40,6 +39,10 @@
             this.ImportButton = new System.Windows.Forms.Button();
             this.GenerateButton = new System.Windows.Forms.Button();
             this.CreatePicklistScrollbar = new System.Windows.Forms.VScrollBar();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.FunctionPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,14 +62,6 @@
             this.FunctionPanel.Name = "FunctionPanel";
             this.FunctionPanel.Size = new System.Drawing.Size(982, 218);
             this.FunctionPanel.TabIndex = 0;
-            // 
-            // ProductNumberPanel
-            // 
-            this.ProductNumberPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ProductNumberPanel.Location = new System.Drawing.Point(0, 218);
-            this.ProductNumberPanel.Name = "ProductNumberPanel";
-            this.ProductNumberPanel.Size = new System.Drawing.Size(170, 540);
-            this.ProductNumberPanel.TabIndex = 1;
             // 
             // TitleLabel
             // 
@@ -152,12 +147,47 @@
             this.CreatePicklistScrollbar.Size = new System.Drawing.Size(17, 540);
             this.CreatePicklistScrollbar.TabIndex = 2;
             // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 218);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 540);
+            this.panel1.TabIndex = 3;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(200, 218);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(448, 540);
+            this.panel2.TabIndex = 4;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(648, 218);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 540);
+            this.panel3.TabIndex = 5;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(848, 218);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(117, 540);
+            this.panel4.TabIndex = 6;
+            // 
             // CreatePicklistWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.CreatePicklistScrollbar);
-            this.Controls.Add(this.ProductNumberPanel);
             this.Controls.Add(this.FunctionPanel);
             this.Name = "CreatePicklistWindow";
             this.Size = new System.Drawing.Size(982, 758);
@@ -180,7 +210,10 @@
         private System.Windows.Forms.TextBox CityTextbox;
         private System.Windows.Forms.Label CityLabel;
         private System.Windows.Forms.Label TitleLabel;
-        private System.Windows.Forms.Panel ProductNumberPanel;
         private System.Windows.Forms.VScrollBar CreatePicklistScrollbar;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
     }
 }
