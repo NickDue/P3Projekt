@@ -47,6 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllProductsPage.cs" />
+    <Compile Include="AllProductsPage.Designer.cs">
+      <DependentUpon>AllProductsPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreatePicklistWindow.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -67,6 +71,9 @@
     <Compile Include="SearchWindow.Designer.cs">
       <DependentUpon>SearchWindow.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AllProductsPage.resx">
+      <DependentUpon>AllProductsPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreatePicklistWindow.resx">
       <DependentUpon>CreatePicklistWindow.cs</DependentUpon>
     </EmbeddedResource>
