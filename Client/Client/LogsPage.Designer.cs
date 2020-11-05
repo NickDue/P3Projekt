@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.LogTitle = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.DataTable = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTable)).BeginInit();
             this.SuspendLayout();
             // 
             // LogTitle
@@ -43,23 +43,27 @@
             this.LogTitle.TabIndex = 0;
             this.LogTitle.Text = "Logs";
             // 
-            // dataGridView1
+            // DataTable
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(369, 187);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 1;
+            this.DataTable.AllowUserToAddRows = false;
+            this.DataTable.AllowUserToDeleteRows = false;
+            this.DataTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataTable.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.DataTable.Location = new System.Drawing.Point(0, 142);
+            this.DataTable.Name = "DataTable";
+            this.DataTable.Size = new System.Drawing.Size(982, 616);
+            this.DataTable.TabIndex = 1;
+            this.DataTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataTable_CellContentClick);
             // 
             // LogsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DataTable);
             this.Controls.Add(this.LogTitle);
             this.Name = "LogsPage";
             this.Size = new System.Drawing.Size(982, 758);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -68,6 +72,6 @@
         #endregion
 
         private System.Windows.Forms.Label LogTitle;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DataTable;
     }
 }

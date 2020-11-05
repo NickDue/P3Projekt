@@ -37,10 +37,11 @@
             this.NavButton2 = new System.Windows.Forms.Button();
             this.NavButton1 = new System.Windows.Forms.Button();
             this.LandingPage = new System.Windows.Forms.Panel();
+            this.allProductsPage1 = new Client.AllProductsPage();
+            this.searchWindow1 = new Client.SearchWindow();
             this.MyhomeLabel = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.searchWindow1 = new Client.SearchWindow();
-            this.allProductsPage1 = new Client.AllProductsPage();
+            this.logsPage1 = new Client.LogsPage();
             this.Navigationbar.SuspendLayout();
             this.LandingPage.SuspendLayout();
             this.SuspendLayout();
@@ -142,6 +143,7 @@
             // 
             // LandingPage
             // 
+            this.LandingPage.Controls.Add(this.logsPage1);
             this.LandingPage.Controls.Add(this.allProductsPage1);
             this.LandingPage.Controls.Add(this.searchWindow1);
             this.LandingPage.Controls.Add(this.MyhomeLabel);
@@ -151,6 +153,20 @@
             this.LandingPage.Size = new System.Drawing.Size(982, 758);
             this.LandingPage.TabIndex = 2;
             this.LandingPage.Paint += new System.Windows.Forms.PaintEventHandler(this.LandingPage_Paint);
+            // 
+            // allProductsPage1
+            // 
+            this.allProductsPage1.Location = new System.Drawing.Point(0, -3);
+            this.allProductsPage1.Name = "allProductsPage1";
+            this.allProductsPage1.Size = new System.Drawing.Size(982, 758);
+            this.allProductsPage1.TabIndex = 3;
+            // 
+            // searchWindow1
+            // 
+            this.searchWindow1.Location = new System.Drawing.Point(0, -3);
+            this.searchWindow1.Name = "searchWindow1";
+            this.searchWindow1.Size = new System.Drawing.Size(982, 758);
+            this.searchWindow1.TabIndex = 2;
             // 
             // MyhomeLabel
             // 
@@ -163,19 +179,13 @@
             this.MyhomeLabel.Text = "Welcome to MyHome database";
             this.MyhomeLabel.Click += new System.EventHandler(this.MyhomeLabel_Click);
             // 
-            // searchWindow1
+            // logsPage1
             // 
-            this.searchWindow1.Location = new System.Drawing.Point(0, -3);
-            this.searchWindow1.Name = "searchWindow1";
-            this.searchWindow1.Size = new System.Drawing.Size(982, 758);
-            this.searchWindow1.TabIndex = 2;
-            // 
-            // allProductsPage1
-            // 
-            this.allProductsPage1.Location = new System.Drawing.Point(0, -3);
-            this.allProductsPage1.Name = "allProductsPage1";
-            this.allProductsPage1.Size = new System.Drawing.Size(982, 758);
-            this.allProductsPage1.TabIndex = 3;
+            this.logsPage1.Location = new System.Drawing.Point(0, -3);
+            this.logsPage1.Name = "logsPage1";
+            this.logsPage1.Size = new System.Drawing.Size(982, 758);
+            this.logsPage1.TabIndex = 4;
+            
             // 
             // MyhomeForm
             // 
@@ -210,6 +220,7 @@
         private System.Windows.Forms.ColorDialog colorDialog1;
         private SearchWindow searchWindow1;
         private AllProductsPage allProductsPage1;
+        private LogsPage logsPage1;
     }
 }
 
