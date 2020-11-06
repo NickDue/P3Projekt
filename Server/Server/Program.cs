@@ -16,8 +16,9 @@ namespace Server
         private const string SERVER_IP = "127.0.0.1";
         static void Main(string[] args)
         {
-            Login sql = new Login();
-            sql.SelectTable();
+            EmployeeHandler handler = new EmployeeHandler();
+            Employee e = handler.GetEmployeeById(10);
+            Console.WriteLine(e.employeeName);
         }
 
         static void TestProduct()
