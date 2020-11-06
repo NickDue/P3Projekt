@@ -19,6 +19,7 @@ namespace Client
         private void MyhomeForm_Load(object sender, EventArgs e)
         {
             searchWindow1.Hide();
+            allProductsPage1.Hide();
         }
         private void HighlightSelectedButton(Button button) 
         {
@@ -48,39 +49,41 @@ namespace Client
 
         private void NavButton1_Click(object sender, EventArgs e)
         {
+            HideNotSelectedPage();
             searchWindow1.Show();
             HighlightSelectedButton(NavButton1);
         }
         private void NavButton2_Click(object sender, EventArgs e)
         {
-            searchWindow1.Hide();
+            HideNotSelectedPage();
             HighlightSelectedButton(NavButton2);
 
         }
         private void NavButton3_Click(object sender, EventArgs e)
         {
-            searchWindow1.Hide();
+            HideNotSelectedPage();
+            allProductsPage1.Show();
             HighlightSelectedButton(NavButton3);
         }
         private void NavButton4_Click(object sender, EventArgs e)
         {
-            searchWindow1.Hide();
+            HideNotSelectedPage();
             HighlightSelectedButton(NavButton4);
         }
         private void NavButton5_Click(object sender, EventArgs e)
         {
-            searchWindow1.Hide();
+            HideNotSelectedPage();
             HighlightSelectedButton(NavButton5);
 
         }
         private void NavButton6_Click(object sender, EventArgs e)
         {
-            searchWindow1.Hide();
+            HideNotSelectedPage();
             HighlightSelectedButton(NavButton6);
         }
         private void NavButton7_Click(object sender, EventArgs e)
         {
-            searchWindow1.Hide();
+            HideNotSelectedPage();
             HighlightSelectedButton(NavButton7);
 
         }
@@ -88,7 +91,12 @@ namespace Client
         {
 
         }
-
+        
+        private void HideNotSelectedPage()
+        {
+            searchWindow1.Hide();
+            allProductsPage1.Hide();
+        }
 
 
 
