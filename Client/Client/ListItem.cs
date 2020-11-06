@@ -21,7 +21,7 @@ namespace Client
         {
 
         }
-
+        // hej
         #region Properties
 
         private string _name;
