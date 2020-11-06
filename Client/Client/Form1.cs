@@ -72,7 +72,6 @@ namespace Client
         private void NavButton5_Click(object sender, EventArgs e)
         {
             HideNotSelectedPage();
-            employeesWindow1.Show();
             HighlightSelectedButton(NavButton5);
 
         }
@@ -98,7 +97,6 @@ namespace Client
             searchWindow1.Hide();
             allProductsPage1.Hide();
             logsPage1.Hide();
-            employeesWindow1.Hide();
         }
 
 
