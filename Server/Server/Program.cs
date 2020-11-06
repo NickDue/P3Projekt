@@ -6,6 +6,7 @@ using System.Net.Sockets;
 using System.Runtime.InteropServices;
 using System.Text;
 using Server.LocalStorage;
+using Server.SQL;
 
 namespace Server
 {
@@ -15,32 +16,8 @@ namespace Server
         private const string SERVER_IP = "127.0.0.1";
         static void Main(string[] args)
         {
-            /*IPAddress localAddress = IPAddress.Parse(SERVER_IP);
-            TcpListener listener = new TcpListener(localAddress, PORT_NO);
-            Console.WriteLine("Server started listening!");
-            listener.Start();
-
-
-            while (true)
-            {
-                TcpClient client = listener.AcceptTcpClient();
-
-                NetworkStream nwStream = client.GetStream();
-                byte[] buffer = new byte[client.ReceiveBufferSize];
-
-                int bytesRead = nwStream.Read(buffer, 0, client.ReceiveBufferSize);
-
-                string dataReceived = Encoding.ASCII.GetString(buffer, 0, bytesRead);
-                Console.WriteLine("Received: " + dataReceived);
-            
-                Console.WriteLine("Sending back : " + dataReceived);
-                nwStream.Write(buffer, 0, bytesRead);
-                client.Close();
-            }*/
-            LoadDatabaseFiles.Load();
-            Console.WriteLine(LoadedDatabase.AllProducts["22222-02"].placement.PrintPlacement());
-            
-            //TestPicklist();
+            Login sql = new Login();
+            sql.SelectTable();
         }
 
         static void TestProduct()
@@ -75,5 +52,6 @@ namespace Server
                 temp.FinishPicklist();
             }
         }
+
     }
 }

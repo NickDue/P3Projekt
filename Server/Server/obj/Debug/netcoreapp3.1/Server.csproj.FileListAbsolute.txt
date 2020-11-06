@@ -10,29 +10,52 @@
 /Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/obj/Debug/netcoreapp3.1/Server.dll
 /Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/obj/Debug/netcoreapp3.1/Server.pdb
 /Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/obj/Debug/netcoreapp3.1/Server.genruntimeconfig.cache
-C:\AAU\P3\.Program\P3 project\P3Projekt\Server\Server\bin\Debug\netcoreapp3.1\Server.exe
-C:\AAU\P3\.Program\P3 project\P3Projekt\Server\Server\bin\Debug\netcoreapp3.1\Server.deps.json
-C:\AAU\P3\.Program\P3 project\P3Projekt\Server\Server\bin\Debug\netcoreapp3.1\Server.runtimeconfig.json
-C:\AAU\P3\.Program\P3 project\P3Projekt\Server\Server\bin\Debug\netcoreapp3.1\Server.runtimeconfig.dev.json
-C:\AAU\P3\.Program\P3 project\P3Projekt\Server\Server\bin\Debug\netcoreapp3.1\Server.dll
-C:\AAU\P3\.Program\P3 project\P3Projekt\Server\Server\bin\Debug\netcoreapp3.1\Server.pdb
-C:\AAU\P3\.Program\P3 project\P3Projekt\Server\Server\obj\Debug\netcoreapp3.1\Server.csprojAssemblyReference.cache
-C:\AAU\P3\.Program\P3 project\P3Projekt\Server\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfoInputs.cache
-C:\AAU\P3\.Program\P3 project\P3Projekt\Server\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfo.cs
-C:\AAU\P3\.Program\P3 project\P3Projekt\Server\Server\obj\Debug\netcoreapp3.1\Server.csproj.CoreCompileInputs.cache
-C:\AAU\P3\.Program\P3 project\P3Projekt\Server\Server\obj\Debug\netcoreapp3.1\Server.dll
-C:\AAU\P3\.Program\P3 project\P3Projekt\Server\Server\obj\Debug\netcoreapp3.1\Server.pdb
-C:\AAU\P3\.Program\P3 project\P3Projekt\Server\Server\obj\Debug\netcoreapp3.1\Server.genruntimeconfig.cache
-C:\Users\jonas\OneDrive\Skrivebord\P3Projekt\Server\Server\bin\Debug\netcoreapp3.1\Server.exe
-C:\Users\jonas\OneDrive\Skrivebord\P3Projekt\Server\Server\bin\Debug\netcoreapp3.1\Server.deps.json
-C:\Users\jonas\OneDrive\Skrivebord\P3Projekt\Server\Server\bin\Debug\netcoreapp3.1\Server.runtimeconfig.json
-C:\Users\jonas\OneDrive\Skrivebord\P3Projekt\Server\Server\bin\Debug\netcoreapp3.1\Server.runtimeconfig.dev.json
-C:\Users\jonas\OneDrive\Skrivebord\P3Projekt\Server\Server\bin\Debug\netcoreapp3.1\Server.dll
-C:\Users\jonas\OneDrive\Skrivebord\P3Projekt\Server\Server\bin\Debug\netcoreapp3.1\Server.pdb
-C:\Users\jonas\OneDrive\Skrivebord\P3Projekt\Server\Server\obj\Debug\netcoreapp3.1\Server.csprojAssemblyReference.cache
-C:\Users\jonas\OneDrive\Skrivebord\P3Projekt\Server\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfoInputs.cache
-C:\Users\jonas\OneDrive\Skrivebord\P3Projekt\Server\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfo.cs
-C:\Users\jonas\OneDrive\Skrivebord\P3Projekt\Server\Server\obj\Debug\netcoreapp3.1\Server.csproj.CoreCompileInputs.cache
-C:\Users\jonas\OneDrive\Skrivebord\P3Projekt\Server\Server\obj\Debug\netcoreapp3.1\Server.dll
-C:\Users\jonas\OneDrive\Skrivebord\P3Projekt\Server\Server\obj\Debug\netcoreapp3.1\Server.pdb
-C:\Users\jonas\OneDrive\Skrivebord\P3Projekt\Server\Server\obj\Debug\netcoreapp3.1\Server.genruntimeconfig.cache
+C:/AAU/P3/.Program/P3 project/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/Server.exe
+C:/AAU/P3/.Program/P3 project/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/Server.deps.json
+C:/AAU/P3/.Program/P3 project/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/Server.runtimeconfig.json
+C:/AAU/P3/.Program/P3 project/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/Server.runtimeconfig.dev.json
+C:/AAU/P3/.Program/P3 project/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/Server.dll
+C:/AAU/P3/.Program/P3 project/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/Server.pdb
+C:/AAU/P3/.Program/P3 project/P3Projekt/Server/Server/obj/Debug/netcoreapp3.1/Server.csprojAssemblyReference.cache
+C:/AAU/P3/.Program/P3 project/P3Projekt/Server/Server/obj/Debug/netcoreapp3.1/Server.AssemblyInfoInputs.cache
+C:/AAU/P3/.Program/P3 project/P3Projekt/Server/Server/obj/Debug/netcoreapp3.1/Server.AssemblyInfo.cs
+C:/AAU/P3/.Program/P3 project/P3Projekt/Server/Server/obj/Debug/netcoreapp3.1/Server.csproj.CoreCompileInputs.cache
+C:/AAU/P3/.Program/P3 project/P3Projekt/Server/Server/obj/Debug/netcoreapp3.1/Server.dll
+C:/AAU/P3/.Program/P3 project/P3Projekt/Server/Server/obj/Debug/netcoreapp3.1/Server.pdb
+C:/AAU/P3/.Program/P3 project/P3Projekt/Server/Server/obj/Debug/netcoreapp3.1/Server.genruntimeconfig.cache
+C:/Users/jonas/OneDrive/Skrivebord/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/Server.exe
+C:/Users/jonas/OneDrive/Skrivebord/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/Server.deps.json
+C:/Users/jonas/OneDrive/Skrivebord/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/Server.runtimeconfig.json
+C:/Users/jonas/OneDrive/Skrivebord/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/Server.runtimeconfig.dev.json
+C:/Users/jonas/OneDrive/Skrivebord/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/Server.dll
+C:/Users/jonas/OneDrive/Skrivebord/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/Server.pdb
+C:/Users/jonas/OneDrive/Skrivebord/P3Projekt/Server/Server/obj/Debug/netcoreapp3.1/Server.csprojAssemblyReference.cache
+C:/Users/jonas/OneDrive/Skrivebord/P3Projekt/Server/Server/obj/Debug/netcoreapp3.1/Server.AssemblyInfoInputs.cache
+C:/Users/jonas/OneDrive/Skrivebord/P3Projekt/Server/Server/obj/Debug/netcoreapp3.1/Server.AssemblyInfo.cs
+C:/Users/jonas/OneDrive/Skrivebord/P3Projekt/Server/Server/obj/Debug/netcoreapp3.1/Server.csproj.CoreCompileInputs.cache
+C:/Users/jonas/OneDrive/Skrivebord/P3Projekt/Server/Server/obj/Debug/netcoreapp3.1/Server.dll
+C:/Users/jonas/OneDrive/Skrivebord/P3Projekt/Server/Server/obj/Debug/netcoreapp3.1/Server.pdb
+C:/Users/jonas/OneDrive/Skrivebord/P3Projekt/Server/Server/obj/Debug/netcoreapp3.1/Server.genruntimeconfig.cache
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/BouncyCastle.Crypto.dll
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/Google.Protobuf.dll
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/K4os.Compression.LZ4.dll
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/K4os.Compression.LZ4.Streams.dll
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/K4os.Hash.xxHash.dll
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/Microsoft.Win32.SystemEvents.dll
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/MySql.Data.dll
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/Ubiety.Dns.Core.dll
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/Zstandard.Net.dll
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/Renci.SshNet.dll
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/SshNet.Security.Cryptography.dll
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/System.Configuration.ConfigurationManager.dll
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/System.Drawing.Common.dll
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/System.Security.Cryptography.ProtectedData.dll
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/System.Security.Permissions.dll
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/System.Windows.Extensions.dll
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/System.Xml.XPath.XmlDocument.dll
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll
+/Users/nicholasjorgensen/Desktop/P3Projekt/Server/Server/obj/Debug/netcoreapp3.1/Server.csproj.CopyComplete
