@@ -57,23 +57,11 @@
     <Compile Include="CreatePicklistWindow.Designer.cs">
       <DependentUpon>CreatePicklistWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmployeesWindow.cs" />
-    <Compile Include="EmployeesWindow.Designer.cs">
-      <DependentUpon>EmployeesWindow.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ListItem.cs" />
-    <Compile Include="ListItem.Designer.cs">
-      <DependentUpon>ListItem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LoginSystem.cs" />
-    <Compile Include="LoginSystem.Designer.cs">
-      <DependentUpon>LoginSystem.cs</DependentUpon>
     </Compile>
     <Compile Include="LogsPage.cs">
       <SubType>UserControl</SubType>
@@ -95,17 +83,8 @@
     <EmbeddedResource Include="CreatePicklistWindow.resx">
       <DependentUpon>CreatePicklistWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmployeesWindow.resx">
-      <DependentUpon>EmployeesWindow.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ListItem.resx">
-      <DependentUpon>ListItem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginSystem.resx">
-      <DependentUpon>LoginSystem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogsPage.resx">
       <DependentUpon>LogsPage.cs</DependentUpon>
