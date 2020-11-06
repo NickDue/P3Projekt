@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.FunctionPanel = new System.Windows.Forms.Panel();
-            this.EmployeeFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.TitleLabel = new System.Windows.Forms.Label();
-            this.AddButton = new System.Windows.Forms.Button();
             this.RemoveButton = new System.Windows.Forms.Button();
+            this.AddButton = new System.Windows.Forms.Button();
+            this.TitleLabel = new System.Windows.Forms.Label();
+            this.EmployeeFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.FunctionPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,14 +47,23 @@
             this.FunctionPanel.Size = new System.Drawing.Size(982, 151);
             this.FunctionPanel.TabIndex = 0;
             // 
-            // EmployeeFlowPanel
+            // RemoveButton
             // 
-            this.EmployeeFlowPanel.AutoScroll = true;
-            this.EmployeeFlowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EmployeeFlowPanel.Location = new System.Drawing.Point(0, 151);
-            this.EmployeeFlowPanel.Name = "EmployeeFlowPanel";
-            this.EmployeeFlowPanel.Size = new System.Drawing.Size(982, 607);
-            this.EmployeeFlowPanel.TabIndex = 1;
+            this.RemoveButton.Location = new System.Drawing.Point(854, 82);
+            this.RemoveButton.Name = "RemoveButton";
+            this.RemoveButton.Size = new System.Drawing.Size(75, 23);
+            this.RemoveButton.TabIndex = 1;
+            this.RemoveButton.Text = "Remove";
+            this.RemoveButton.UseVisualStyleBackColor = true;
+            // 
+            // AddButton
+            // 
+            this.AddButton.Location = new System.Drawing.Point(713, 82);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(75, 23);
+            this.AddButton.TabIndex = 1;
+            this.AddButton.Text = "Add";
+            this.AddButton.UseVisualStyleBackColor = true;
             // 
             // TitleLabel
             // 
@@ -67,23 +76,15 @@
             this.TitleLabel.TabIndex = 0;
             this.TitleLabel.Text = "Employees";
             // 
-            // AddButton
+            // EmployeeFlowPanel
             // 
-            this.AddButton.Location = new System.Drawing.Point(713, 82);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(75, 23);
-            this.AddButton.TabIndex = 1;
-            this.AddButton.Text = "Add";
-            this.AddButton.UseVisualStyleBackColor = true;
-            // 
-            // RemoveButton
-            // 
-            this.RemoveButton.Location = new System.Drawing.Point(854, 82);
-            this.RemoveButton.Name = "RemoveButton";
-            this.RemoveButton.Size = new System.Drawing.Size(75, 23);
-            this.RemoveButton.TabIndex = 1;
-            this.RemoveButton.Text = "Remove";
-            this.RemoveButton.UseVisualStyleBackColor = true;
+            this.EmployeeFlowPanel.AutoScroll = true;
+            this.EmployeeFlowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EmployeeFlowPanel.Location = new System.Drawing.Point(0, 151);
+            this.EmployeeFlowPanel.Name = "EmployeeFlowPanel";
+            this.EmployeeFlowPanel.Size = new System.Drawing.Size(982, 607);
+            this.EmployeeFlowPanel.TabIndex = 1;
+            this.EmployeeFlowPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.EmployeeFlowPanel_Paint);
             // 
             // EmployeesWindow
             // 
