@@ -54,4 +54,3 @@ C:\Users\Jonas\source\repos\NickDue\P3Projekt\Client\Client\obj\Debug\Client.Emp
 C:\Users\Jonas\source\repos\NickDue\P3Projekt\Client\Client\obj\Debug\Client.ListItem.resources
 C:\Users\Jonas\source\repos\NickDue\P3Projekt\Client\Client\obj\Debug\Client.LogsPage.resources
 C:\Users\Jonas\source\repos\NickDue\P3Projekt\Client\Client\obj\Debug\Client.UserControl1.resources
-C:\Users\Jonas\source\repos\NickDue\P3Projekt\Client\Client\obj\Debug\Client.csprojAssemblyReference.cache

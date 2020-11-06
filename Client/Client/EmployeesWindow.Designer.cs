@@ -79,6 +79,7 @@
             // EmployeeFlowPanel
             // 
             this.EmployeeFlowPanel.AutoScroll = true;
+            this.EmployeeFlowPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.EmployeeFlowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EmployeeFlowPanel.Location = new System.Drawing.Point(0, 151);
             this.EmployeeFlowPanel.Name = "EmployeeFlowPanel";
@@ -94,6 +95,7 @@
             this.Controls.Add(this.FunctionPanel);
             this.Name = "EmployeesWindow";
             this.Size = new System.Drawing.Size(982, 758);
+            this.Load += new System.EventHandler(this.EmloyeeFlowPanel_Load);
             this.FunctionPanel.ResumeLayout(false);
             this.FunctionPanel.PerformLayout();
             this.ResumeLayout(false);
