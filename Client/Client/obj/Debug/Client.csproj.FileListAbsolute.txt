@@ -46,3 +46,8 @@ C:\Users\Kenneth Køpke\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Clien
 C:\Users\Kenneth Køpke\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.AllProductsPage.resources
 C:\Users\Kenneth Køpke\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.CreatePicklistWindow.resources
 C:\Users\Kenneth Køpke\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.LogsPage.resources
+C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.AllProductsPage.resources
+C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.EmployeesWindow.resources
+C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.ListItem.resources
+C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.LoginSystem.resources
+C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.LogsPage.resources
