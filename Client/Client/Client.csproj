@@ -47,7 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AllProductsPage.cs" />
+    <Compile Include="AllProductsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="AllProductsPage.Designer.cs">
       <DependentUpon>AllProductsPage.cs</DependentUpon>
     </Compile>
@@ -57,7 +59,9 @@
     <Compile Include="CreatePicklistWindow.Designer.cs">
       <DependentUpon>CreatePicklistWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmployeesWindow.cs" />
+    <Compile Include="EmployeesWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="EmployeesWindow.Designer.cs">
       <DependentUpon>EmployeesWindow.cs</DependentUpon>
     </Compile>
@@ -67,7 +71,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListItem.cs" />
+    <Compile Include="ListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ListItem.Designer.cs">
       <DependentUpon>ListItem.cs</DependentUpon>
     </Compile>
@@ -117,6 +123,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="SearchWindow.resx">
       <DependentUpon>SearchWindow.cs</DependentUpon>
@@ -136,6 +143,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\912214.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
