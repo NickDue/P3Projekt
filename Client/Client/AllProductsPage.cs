@@ -39,13 +39,6 @@ namespace Client
             dataGridView1.Rows.Add(row.ToArray());
         }
 
-
-
-        private void TablePanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
