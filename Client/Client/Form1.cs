@@ -18,8 +18,7 @@ namespace Client
         }
         private void MyhomeForm_Load(object sender, EventArgs e)
         {
-            searchWindow1.Hide();
-            allProductsPage1.Hide();
+            HideNotSelectedPage();
         }
         private void HighlightSelectedButton(Button button) 
         {
@@ -79,6 +78,7 @@ namespace Client
         private void NavButton6_Click(object sender, EventArgs e)
         {
             HideNotSelectedPage();
+            logsPage1.Show();
             HighlightSelectedButton(NavButton6);
         }
         private void NavButton7_Click(object sender, EventArgs e)
@@ -96,6 +96,7 @@ namespace Client
         {
             searchWindow1.Hide();
             allProductsPage1.Hide();
+            logsPage1.Hide();
         }
 
 
@@ -109,9 +110,5 @@ namespace Client
         {
 
         }
-
-
-
-        
     }
 }
