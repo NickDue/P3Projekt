@@ -35,5 +35,19 @@ namespace Client
         {
             ClearInput();
         }
+
+        static string Product = "";
+
+        private string GenerateProductString()
+        {
+            Product = ProductNumberInput.Text + "#" + ProductNameInput.Text + "#" + VolumeInput.Text + "#" + ColorInput.Text + "#" + WeightInput.Text + "#" + AmountInput.Text;
+
+            return Product;
+        }
+
+        private void SubmitButton_Click(object sender, EventArgs e)
+        {
+            GenerateProductString();
+        }
     }
 }
