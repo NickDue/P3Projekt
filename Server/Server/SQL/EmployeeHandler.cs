@@ -6,9 +6,7 @@ namespace Server.SQL
 {
     public class EmployeeHandler
     {
-        private const string MySQLUsername = "root";
-        private const string MySQLPassword = "";
-        private const string SqlLogin = @"server=localhost;userid="+MySQLUsername+";password="+MySQLPassword+";database=myhome";
+        private const string SqlLogin = @"server=localhost;userid="+SQLCredentials.MySQLUsername+";password="+SQLCredentials.MySQLPassword+";database=myhome";
 
         public Employee GetEmployeeById(int id)
         {
