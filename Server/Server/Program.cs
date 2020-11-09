@@ -18,10 +18,10 @@ namespace Server
         {
             EmployeeHandler handler = new EmployeeHandler();
             //handler.DeleteEmployeeFromDB(22222);
-            //handler.AddUserToDB(15, "helloWorld","Test subject", Employee.Role.FloorWorker);
+            handler.AddUserToDB(51, "helloWorld","Test subject", Employee.Role.FloorWorker);
             //handler.ChangeUserCredentials(15, "Office", "role");
-            Console.WriteLine(handler.AuthenticateUser(1, "dick"));
-            ////Employee e = handler.GetEmployeeById(22222);
+            //Console.WriteLine(handler.AuthenticateUser(1, "dick"));
+            //Employee e = handler.GetEmployeeById(15);
             //Console.WriteLine(e.employeeName);
         }
 

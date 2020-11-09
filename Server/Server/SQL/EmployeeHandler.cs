@@ -23,7 +23,7 @@ namespace Server.SQL
                 {
                     if(employee == null)
                         employee = new Employee(reader.GetInt32(0),reader.GetString(2),reader.GetString(1),reader.GetString(3));
-                    //Console.WriteLine("{0} {1} {2} {3}", reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3));
+                    Console.WriteLine("{0} {1} {2} {3}", reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3));
                 }
 
                 return employee;
@@ -43,11 +43,7 @@ namespace Server.SQL
                 con.Open();
                 string query = "DELETE FROM users where id = " + id;
                 using var cmd = new MySqlCommand(query, con);
-                using MySqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    //nothing here
-                }
+                cmd.ExecuteNonQuery();
                 con.Close();
                 Console.WriteLine("Removed user associated with id: " + id);
             }
@@ -64,6 +60,26 @@ namespace Server.SQL
                      {
                          using var con = new MySqlConnection(SqlLogin);
                          con.Open();
+                         
+                         var query =
+                             "SELECT * FROM users WHERE id = " +id + ";";
+                     
+                         using var command = new MySqlCommand(query, con);
+                         int ids = 0;
+                         using MySqlDataReader reader = command.ExecuteReader();
+                         while (reader.Read())
+                         {
+                             ids = reader.GetInt32(0);
+                         }
+                         reader.Close();
+
+                         if (ids != 0)
+                         {
+                             Console.WriteLine("User already associated with this id.");
+                             con.Close();
+                             return;
+                         }
+
                          var sql =
                              "INSERT INTO users(id, username, password, role, register_date) values (@id, @username, @password, @role, @register_date)";
                      
@@ -89,27 +105,44 @@ namespace Server.SQL
 
         public void ChangeUserCredentials(int id, string newValue, string typeToAlter)
         {
-            using var con = new MySqlConnection(SqlLogin);
-            con.Open();
-            string query = "UPDATE users SET " + typeToAlter + " = '" + newValue + "' WHERE id = " + id + ";";
-            using var cmd = new MySqlCommand(query, con);
-            cmd.ExecuteNonQuery();
-            Console.WriteLine("Changed "+typeToAlter+" of user with id: " + id + ". New password = " +newValue);
+            try
+            {
+                using var con = new MySqlConnection(SqlLogin);
+                con.Open();
+                string query = "UPDATE users SET " + typeToAlter + " = '" + newValue + "' WHERE id = " + id + ";";
+                using var cmd = new MySqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+                Console.WriteLine("Changed "+typeToAlter+" of user with id: " + id + ". New password = " +newValue);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
 
         public bool AuthenticateUser(int id, string pw)
         {
-            using var con = new MySqlConnection(SqlLogin);
-            con.Open();
-            string query = "SELECT * FROM users where password = '" + pw + "';";
-            using var cmd = new MySqlCommand(query, con);
-            using MySqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
+            try
             {
-                if (reader.GetInt32(0) == id && reader.GetString(2).Equals(pw))
-                    return true;
+                using var con = new MySqlConnection(SqlLogin);
+                con.Open();
+                string query = "SELECT * FROM users where password = '" + pw + "';";
+                using var cmd = new MySqlCommand(query, con);
+                using MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    if (reader.GetInt32(0) == id && reader.GetString(2).Equals(pw))
+                        return true;
+                }
+                return false;
             }
-            return false;
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+            
         }
     }
 }
