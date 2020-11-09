@@ -55,6 +55,7 @@ namespace Client
         private void NavButton2_Click(object sender, EventArgs e)
         {
             HideNotSelectedPage();
+            addProductWindow1.Show();
             HighlightSelectedButton(NavButton2);
 
         }
@@ -67,6 +68,7 @@ namespace Client
         private void NavButton4_Click(object sender, EventArgs e)
         {
             HideNotSelectedPage();
+            createPicklistWindow1.Show();
             HighlightSelectedButton(NavButton4);
         }
         private void NavButton5_Click(object sender, EventArgs e)
@@ -99,6 +101,8 @@ namespace Client
             allProductsPage1.Hide();
             logsPage1.Hide();
             employeesWindow1.Hide();
+            addProductWindow1.Hide();
+            createPicklistWindow1.Hide();
         }
 
 

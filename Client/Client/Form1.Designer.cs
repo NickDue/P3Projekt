@@ -39,10 +39,12 @@
             this.LandingPage = new System.Windows.Forms.Panel();
             this.MyhomeLabel = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.addProductWindow1 = new Client.AddProductWindow();
+            this.employeesWindow1 = new Client.EmployeesWindow();
             this.logsPage1 = new Client.LogsPage();
             this.allProductsPage1 = new Client.AllProductsPage();
             this.searchWindow1 = new Client.SearchWindow();
-            this.employeesWindow1 = new Client.EmployeesWindow();
+            this.createPicklistWindow1 = new Client.CreatePicklistWindow();
             this.Navigationbar.SuspendLayout();
             this.LandingPage.SuspendLayout();
             this.SuspendLayout();
@@ -144,6 +146,8 @@
             // 
             // LandingPage
             // 
+            this.LandingPage.Controls.Add(this.createPicklistWindow1);
+            this.LandingPage.Controls.Add(this.addProductWindow1);
             this.LandingPage.Controls.Add(this.employeesWindow1);
             this.LandingPage.Controls.Add(this.logsPage1);
             this.LandingPage.Controls.Add(this.allProductsPage1);
@@ -167,6 +171,20 @@
             this.MyhomeLabel.Text = "Welcome to MyHome database";
             this.MyhomeLabel.Click += new System.EventHandler(this.MyhomeLabel_Click);
             // 
+            // addProductWindow1
+            // 
+            this.addProductWindow1.Location = new System.Drawing.Point(0, -3);
+            this.addProductWindow1.Name = "addProductWindow1";
+            this.addProductWindow1.Size = new System.Drawing.Size(982, 758);
+            this.addProductWindow1.TabIndex = 6;
+            // 
+            // employeesWindow1
+            // 
+            this.employeesWindow1.Location = new System.Drawing.Point(0, -3);
+            this.employeesWindow1.Name = "employeesWindow1";
+            this.employeesWindow1.Size = new System.Drawing.Size(982, 758);
+            this.employeesWindow1.TabIndex = 5;
+            // 
             // logsPage1
             // 
             this.logsPage1.Location = new System.Drawing.Point(0, -3);
@@ -188,12 +206,12 @@
             this.searchWindow1.Size = new System.Drawing.Size(982, 758);
             this.searchWindow1.TabIndex = 2;
             // 
-            // employeesWindow1
+            // createPicklistWindow1
             // 
-            this.employeesWindow1.Location = new System.Drawing.Point(0, -3);
-            this.employeesWindow1.Name = "employeesWindow1";
-            this.employeesWindow1.Size = new System.Drawing.Size(982, 758);
-            this.employeesWindow1.TabIndex = 5;
+            this.createPicklistWindow1.Location = new System.Drawing.Point(0, -3);
+            this.createPicklistWindow1.Name = "createPicklistWindow1";
+            this.createPicklistWindow1.Size = new System.Drawing.Size(982, 758);
+            this.createPicklistWindow1.TabIndex = 7;
             // 
             // MyhomeForm
             // 
@@ -230,6 +248,8 @@
         private AllProductsPage allProductsPage1;
         private LogsPage logsPage1;
         private EmployeesWindow employeesWindow1;
+        private AddProductWindow addProductWindow1;
+        private CreatePicklistWindow createPicklistWindow1;
     }
 }
 

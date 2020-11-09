@@ -20,7 +20,6 @@ C:\Users\Kenneth Køpke\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Clien
 C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\bin\Debug\Client.exe.config
 C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\bin\Debug\Client.exe
 C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\bin\Debug\Client.pdb
-C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.csprojAssemblyReference.cache
 C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.CreatePicklistWindow.resources
 C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.MyhomeForm.resources
 C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.Properties.Resources.resources
