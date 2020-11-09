@@ -17,5 +17,9 @@ namespace Client
             InitializeComponent();
         }
 
+        private void TitlePanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

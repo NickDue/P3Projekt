@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddProductWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddProductWindow.Designer.cs">
+      <DependentUpon>AddProductWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="AllProductsPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -97,6 +103,9 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddProductWindow.resx">
+      <DependentUpon>AddProductWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AllProductsPage.resx">
       <DependentUpon>AllProductsPage.cs</DependentUpon>
     </EmbeddedResource>
