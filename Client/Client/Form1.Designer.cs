@@ -37,14 +37,17 @@
             this.NavButton2 = new System.Windows.Forms.Button();
             this.NavButton1 = new System.Windows.Forms.Button();
             this.LandingPage = new System.Windows.Forms.Panel();
-            this.MyhomeLabel = new System.Windows.Forms.Label();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.TimeLabel = new System.Windows.Forms.Label();
+            this.Timetitle = new System.Windows.Forms.Label();
+            this.logOutPage2 = new Client.LogOutPage();
+            this.createPicklistWindow1 = new Client.CreatePicklistWindow();
             this.addProductWindow1 = new Client.AddProductWindow();
             this.employeesWindow1 = new Client.EmployeesWindow();
             this.logsPage1 = new Client.LogsPage();
             this.allProductsPage1 = new Client.AllProductsPage();
             this.searchWindow1 = new Client.SearchWindow();
-            this.createPicklistWindow1 = new Client.CreatePicklistWindow();
+            this.MyhomeLabel = new System.Windows.Forms.Label();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.Navigationbar.SuspendLayout();
             this.LandingPage.SuspendLayout();
             this.SuspendLayout();
@@ -146,6 +149,9 @@
             // 
             // LandingPage
             // 
+            this.LandingPage.Controls.Add(this.TimeLabel);
+            this.LandingPage.Controls.Add(this.Timetitle);
+            this.LandingPage.Controls.Add(this.logOutPage2);
             this.LandingPage.Controls.Add(this.createPicklistWindow1);
             this.LandingPage.Controls.Add(this.addProductWindow1);
             this.LandingPage.Controls.Add(this.employeesWindow1);
@@ -160,16 +166,39 @@
             this.LandingPage.TabIndex = 2;
             this.LandingPage.Paint += new System.Windows.Forms.PaintEventHandler(this.LandingPage_Paint);
             // 
-            // MyhomeLabel
+            // TimeLabel
             // 
-            this.MyhomeLabel.AutoSize = true;
-            this.MyhomeLabel.Font = new System.Drawing.Font("Myanmar Text", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MyhomeLabel.Location = new System.Drawing.Point(246, 67);
-            this.MyhomeLabel.Name = "MyhomeLabel";
-            this.MyhomeLabel.Size = new System.Drawing.Size(495, 56);
-            this.MyhomeLabel.TabIndex = 1;
-            this.MyhomeLabel.Text = "Welcome to MyHome database";
-            this.MyhomeLabel.Click += new System.EventHandler(this.MyhomeLabel_Click);
+            this.TimeLabel.AutoSize = true;
+            this.TimeLabel.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimeLabel.Location = new System.Drawing.Point(432, 628);
+            this.TimeLabel.Name = "TimeLabel";
+            this.TimeLabel.Size = new System.Drawing.Size(73, 28);
+            this.TimeLabel.TabIndex = 12;
+            this.TimeLabel.Text = "label1";
+            // 
+            // Timetitle
+            // 
+            this.Timetitle.AutoSize = true;
+            this.Timetitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Timetitle.Location = new System.Drawing.Point(321, 631);
+            this.Timetitle.Name = "Timetitle";
+            this.Timetitle.Size = new System.Drawing.Size(65, 25);
+            this.Timetitle.TabIndex = 11;
+            this.Timetitle.Text = "Time:";
+            // 
+            // logOutPage2
+            // 
+            this.logOutPage2.Location = new System.Drawing.Point(0, -3);
+            this.logOutPage2.Name = "logOutPage2";
+            this.logOutPage2.Size = new System.Drawing.Size(982, 758);
+            this.logOutPage2.TabIndex = 10;
+            // 
+            // createPicklistWindow1
+            // 
+            this.createPicklistWindow1.Location = new System.Drawing.Point(0, -3);
+            this.createPicklistWindow1.Name = "createPicklistWindow1";
+            this.createPicklistWindow1.Size = new System.Drawing.Size(982, 758);
+            this.createPicklistWindow1.TabIndex = 7;
             // 
             // addProductWindow1
             // 
@@ -206,12 +235,16 @@
             this.searchWindow1.Size = new System.Drawing.Size(982, 758);
             this.searchWindow1.TabIndex = 2;
             // 
-            // createPicklistWindow1
+            // MyhomeLabel
             // 
-            this.createPicklistWindow1.Location = new System.Drawing.Point(0, -3);
-            this.createPicklistWindow1.Name = "createPicklistWindow1";
-            this.createPicklistWindow1.Size = new System.Drawing.Size(982, 758);
-            this.createPicklistWindow1.TabIndex = 7;
+            this.MyhomeLabel.AutoSize = true;
+            this.MyhomeLabel.Font = new System.Drawing.Font("Myanmar Text", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MyhomeLabel.Location = new System.Drawing.Point(246, 67);
+            this.MyhomeLabel.Name = "MyhomeLabel";
+            this.MyhomeLabel.Size = new System.Drawing.Size(495, 56);
+            this.MyhomeLabel.TabIndex = 1;
+            this.MyhomeLabel.Text = "Welcome to MyHome database";
+            this.MyhomeLabel.Click += new System.EventHandler(this.MyhomeLabel_Click);
             // 
             // MyhomeForm
             // 
@@ -250,6 +283,9 @@
         private EmployeesWindow employeesWindow1;
         private AddProductWindow addProductWindow1;
         private CreatePicklistWindow createPicklistWindow1;
+        private LogOutPage logOutPage2;
+        private System.Windows.Forms.Label TimeLabel;
+        private System.Windows.Forms.Label Timetitle;
     }
 }
 

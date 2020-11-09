@@ -88,6 +88,10 @@ namespace Client
         {
             HideNotSelectedPage();
             HighlightSelectedButton(NavButton7);
+            logOutPage2.Show();
+            Timetitle.Show();
+            TimeLabel.Show();
+            TimeLabel.Text = DateTime.Now.ToLongTimeString();
 
         }
         private void Navigationbar_Paint(object sender, PaintEventArgs e)
@@ -103,6 +107,9 @@ namespace Client
             employeesWindow1.Hide();
             addProductWindow1.Hide();
             createPicklistWindow1.Hide();
+            logOutPage2.Hide();
+            TimeLabel.Hide();
+            Timetitle.Hide();
         }
 
 
