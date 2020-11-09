@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Client
 {
-    public partial class UserControl1 : UserControl
+    public partial class LogOutPage : UserControl
     {
-        public UserControl1()
+        public LogOutPage()
         {
             InitializeComponent();
+        }
+
+        private void LogOutPage_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }

@@ -62,6 +62,7 @@ namespace Client
         {
             SaveButton.Hide();
             HideFunc();
+            
         }
 
         private void EditButton_Click(object sender, EventArgs e)
