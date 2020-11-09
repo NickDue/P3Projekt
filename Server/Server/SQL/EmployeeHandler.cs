@@ -6,7 +6,9 @@ namespace Server.SQL
 {
     public class EmployeeHandler
     {
-        private const string SqlLogin = @"server=localhost;userid=nick;password=Kongen2020.!;database=myhome";
+        private const string MySQLUsername = "root";
+        private const string MySQLPassword = "";
+        private const string SqlLogin = @"server=localhost;userid="+MySQLUsername+";password="+MySQLPassword+";database=myhome";
 
         public Employee GetEmployeeById(int id)
         {
@@ -31,10 +33,8 @@ namespace Server.SQL
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                throw;
+                return null;
             }
-
-            return null;
 
 
         }

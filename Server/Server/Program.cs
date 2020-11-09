@@ -17,7 +17,7 @@ namespace Server
         static void Main(string[] args)
         {
             EmployeeHandler handler = new EmployeeHandler();
-            Employee e = handler.GetEmployeeById(10);
+            Employee e = handler.GetEmployeeById(22222);
             Console.WriteLine(e.employeeName);
         }
 
