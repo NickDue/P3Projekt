@@ -17,8 +17,12 @@ namespace Server
         static void Main(string[] args)
         {
             EmployeeHandler handler = new EmployeeHandler();
-            Employee e = handler.GetEmployeeById(22222);
-            Console.WriteLine(e.employeeName);
+            //handler.DeleteEmployeeFromDB(22222);
+            //handler.AddUserToDB(15, "helloWorld","Test subject", Employee.Role.FloorWorker);
+            //handler.ChangeUserCredentials(15, "Office", "role");
+            Console.WriteLine(handler.AuthenticateUser(1, "dick"));
+            ////Employee e = handler.GetEmployeeById(22222);
+            //Console.WriteLine(e.employeeName);
         }
 
         static void TestProduct()
@@ -33,8 +37,8 @@ namespace Server
 
         static void TestEmployee()
         {
-            Employee mister = new Employee(12345, "AssWord", "Mister Boombastic", Employee.Role.OfficeWorker);
-            Console.WriteLine(mister.role);
+            //Employee mister = new Employee(12345, "AssWord", "Mister Boombastic", Employee.Role.OfficeWorker);
+            //Console.WriteLine(mister.role);
         }
 
         static void TestPicklist()

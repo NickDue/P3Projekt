@@ -22,7 +22,7 @@ namespace Server.SQL
                 while (reader.Read())
                 {
                     if(employee == null)
-                        employee = new Employee(reader.GetInt32(0),reader.GetString(2),reader.GetString(1),(Employee.Role)Enum.Parse(typeof(Employee.Role),reader.GetString(3)));
+                        employee = new Employee(reader.GetInt32(0),reader.GetString(2),reader.GetString(1),reader.GetString(3));
                     //Console.WriteLine("{0} {1} {2} {3}", reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3));
                 }
 
@@ -33,8 +33,83 @@ namespace Server.SQL
                 Console.WriteLine(e);
                 return null;
             }
+        }
 
+        public void DeleteEmployeeFromDB(int id)
+        {
+            try
+            {
+                using var con = new MySqlConnection(SqlLogin);
+                con.Open();
+                string query = "DELETE FROM users where id = " + id;
+                using var cmd = new MySqlCommand(query, con);
+                using MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    //nothing here
+                }
+                con.Close();
+                Console.WriteLine("Removed user associated with id: " + id);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
 
+        public void AddUserToDB(int id, string pw, string name, Employee.Role role)
+                 {
+                     try
+                     {
+                         using var con = new MySqlConnection(SqlLogin);
+                         con.Open();
+                         var sql =
+                             "INSERT INTO users(id, username, password, role, register_date) values (@id, @username, @password, @role, @register_date)";
+                     
+                         using var cmd = new MySqlCommand(sql, con);
+         
+                         cmd.Parameters.AddWithValue("@id", id);
+                         cmd.Parameters.AddWithValue("@username", name);
+                         cmd.Parameters.AddWithValue("@password", pw);
+                         cmd.Parameters.AddWithValue("@role", Enum.GetName(typeof(Employee.Role),role));
+                         cmd.Parameters.AddWithValue("@register_date", DateTime.Now);
+                         cmd.Prepare();
+         
+                         cmd.ExecuteNonQuery();
+         
+                         Console.WriteLine("Added user!");
+                     }
+                     catch (Exception e)
+                     {
+                         Console.WriteLine(e);
+                         throw;
+                     }
+                 }
+
+        public void ChangeUserCredentials(int id, string newValue, string typeToAlter)
+        {
+            using var con = new MySqlConnection(SqlLogin);
+            con.Open();
+            string query = "UPDATE users SET " + typeToAlter + " = '" + newValue + "' WHERE id = " + id + ";";
+            using var cmd = new MySqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+            Console.WriteLine("Changed "+typeToAlter+" of user with id: " + id + ". New password = " +newValue);
+        }
+
+        public bool AuthenticateUser(int id, string pw)
+        {
+            using var con = new MySqlConnection(SqlLogin);
+            con.Open();
+            string query = "SELECT * FROM users where password = '" + pw + "';";
+            using var cmd = new MySqlCommand(query, con);
+            using MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                if (reader.GetInt32(0) == id && reader.GetString(2).Equals(pw))
+                    return true;
+            }
+            return false;
         }
     }
 }
