@@ -28,37 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.TitlePanel = new System.Windows.Forms.Panel();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.ClearButton = new System.Windows.Forms.Button();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.ProductPanel = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.AmountPanel = new System.Windows.Forms.Panel();
             this.AmountInput = new System.Windows.Forms.TextBox();
             this.AmountLabel = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.WeightPanel = new System.Windows.Forms.Panel();
             this.WeightInput = new System.Windows.Forms.TextBox();
             this.WeightLabel = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.ColorPanel = new System.Windows.Forms.Panel();
             this.ColorInput = new System.Windows.Forms.TextBox();
             this.ColorLabel = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.VolumePanel = new System.Windows.Forms.Panel();
             this.VolumeInput = new System.Windows.Forms.TextBox();
             this.VolumeLabel = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.ProductNamePanel = new System.Windows.Forms.Panel();
             this.ProductNameInput = new System.Windows.Forms.TextBox();
             this.ProductNameLabel = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.ProductNumberPanel = new System.Windows.Forms.Panel();
             this.ProductNumberInput = new System.Windows.Forms.TextBox();
             this.ProductNumberLabel = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.TitlePanel.SuspendLayout();
             this.ProductPanel.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.AmountPanel.SuspendLayout();
+            this.WeightPanel.SuspendLayout();
+            this.ColorPanel.SuspendLayout();
+            this.VolumePanel.SuspendLayout();
+            this.ProductNamePanel.SuspendLayout();
+            this.ProductNumberPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // TitlePanel
@@ -106,27 +109,27 @@
             // 
             // ProductPanel
             // 
-            this.ProductPanel.Controls.Add(this.panel6);
-            this.ProductPanel.Controls.Add(this.panel5);
-            this.ProductPanel.Controls.Add(this.panel4);
-            this.ProductPanel.Controls.Add(this.panel3);
-            this.ProductPanel.Controls.Add(this.panel2);
-            this.ProductPanel.Controls.Add(this.panel1);
+            this.ProductPanel.Controls.Add(this.AmountPanel);
+            this.ProductPanel.Controls.Add(this.WeightPanel);
+            this.ProductPanel.Controls.Add(this.ColorPanel);
+            this.ProductPanel.Controls.Add(this.VolumePanel);
+            this.ProductPanel.Controls.Add(this.ProductNamePanel);
+            this.ProductPanel.Controls.Add(this.ProductNumberPanel);
             this.ProductPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProductPanel.Location = new System.Drawing.Point(0, 254);
             this.ProductPanel.Name = "ProductPanel";
             this.ProductPanel.Size = new System.Drawing.Size(982, 504);
             this.ProductPanel.TabIndex = 1;
             // 
-            // panel6
+            // AmountPanel
             // 
-            this.panel6.Controls.Add(this.AmountInput);
-            this.panel6.Controls.Add(this.AmountLabel);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 420);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(982, 84);
-            this.panel6.TabIndex = 5;
+            this.AmountPanel.Controls.Add(this.AmountInput);
+            this.AmountPanel.Controls.Add(this.AmountLabel);
+            this.AmountPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AmountPanel.Location = new System.Drawing.Point(0, 420);
+            this.AmountPanel.Name = "AmountPanel";
+            this.AmountPanel.Size = new System.Drawing.Size(982, 84);
+            this.AmountPanel.TabIndex = 5;
             // 
             // AmountInput
             // 
@@ -148,15 +151,15 @@
             this.AmountLabel.TabIndex = 0;
             this.AmountLabel.Text = "Amount:";
             // 
-            // panel5
+            // WeightPanel
             // 
-            this.panel5.Controls.Add(this.WeightInput);
-            this.panel5.Controls.Add(this.WeightLabel);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 336);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(982, 84);
-            this.panel5.TabIndex = 4;
+            this.WeightPanel.Controls.Add(this.WeightInput);
+            this.WeightPanel.Controls.Add(this.WeightLabel);
+            this.WeightPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.WeightPanel.Location = new System.Drawing.Point(0, 336);
+            this.WeightPanel.Name = "WeightPanel";
+            this.WeightPanel.Size = new System.Drawing.Size(982, 84);
+            this.WeightPanel.TabIndex = 4;
             // 
             // WeightInput
             // 
@@ -178,15 +181,15 @@
             this.WeightLabel.TabIndex = 0;
             this.WeightLabel.Text = "Weight:";
             // 
-            // panel4
+            // ColorPanel
             // 
-            this.panel4.Controls.Add(this.ColorInput);
-            this.panel4.Controls.Add(this.ColorLabel);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 252);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(982, 84);
-            this.panel4.TabIndex = 3;
+            this.ColorPanel.Controls.Add(this.ColorInput);
+            this.ColorPanel.Controls.Add(this.ColorLabel);
+            this.ColorPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ColorPanel.Location = new System.Drawing.Point(0, 252);
+            this.ColorPanel.Name = "ColorPanel";
+            this.ColorPanel.Size = new System.Drawing.Size(982, 84);
+            this.ColorPanel.TabIndex = 3;
             // 
             // ColorInput
             // 
@@ -208,15 +211,15 @@
             this.ColorLabel.TabIndex = 0;
             this.ColorLabel.Text = "Color:";
             // 
-            // panel3
+            // VolumePanel
             // 
-            this.panel3.Controls.Add(this.VolumeInput);
-            this.panel3.Controls.Add(this.VolumeLabel);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 168);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(982, 84);
-            this.panel3.TabIndex = 2;
+            this.VolumePanel.Controls.Add(this.VolumeInput);
+            this.VolumePanel.Controls.Add(this.VolumeLabel);
+            this.VolumePanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.VolumePanel.Location = new System.Drawing.Point(0, 168);
+            this.VolumePanel.Name = "VolumePanel";
+            this.VolumePanel.Size = new System.Drawing.Size(982, 84);
+            this.VolumePanel.TabIndex = 2;
             // 
             // VolumeInput
             // 
@@ -238,15 +241,15 @@
             this.VolumeLabel.TabIndex = 0;
             this.VolumeLabel.Text = "Volume:";
             // 
-            // panel2
+            // ProductNamePanel
             // 
-            this.panel2.Controls.Add(this.ProductNameInput);
-            this.panel2.Controls.Add(this.ProductNameLabel);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 84);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(982, 84);
-            this.panel2.TabIndex = 1;
+            this.ProductNamePanel.Controls.Add(this.ProductNameInput);
+            this.ProductNamePanel.Controls.Add(this.ProductNameLabel);
+            this.ProductNamePanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ProductNamePanel.Location = new System.Drawing.Point(0, 84);
+            this.ProductNamePanel.Name = "ProductNamePanel";
+            this.ProductNamePanel.Size = new System.Drawing.Size(982, 84);
+            this.ProductNamePanel.TabIndex = 1;
             // 
             // ProductNameInput
             // 
@@ -268,15 +271,15 @@
             this.ProductNameLabel.TabIndex = 0;
             this.ProductNameLabel.Text = "Product name:";
             // 
-            // panel1
+            // ProductNumberPanel
             // 
-            this.panel1.Controls.Add(this.ProductNumberInput);
-            this.panel1.Controls.Add(this.ProductNumberLabel);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(982, 84);
-            this.panel1.TabIndex = 0;
+            this.ProductNumberPanel.Controls.Add(this.ProductNumberInput);
+            this.ProductNumberPanel.Controls.Add(this.ProductNumberLabel);
+            this.ProductNumberPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ProductNumberPanel.Location = new System.Drawing.Point(0, 0);
+            this.ProductNumberPanel.Name = "ProductNumberPanel";
+            this.ProductNumberPanel.Size = new System.Drawing.Size(982, 84);
+            this.ProductNumberPanel.TabIndex = 0;
             // 
             // ProductNumberInput
             // 
@@ -298,6 +301,10 @@
             this.ProductNumberLabel.TabIndex = 0;
             this.ProductNumberLabel.Text = "Product number:";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // AddProductWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,18 +316,19 @@
             this.TitlePanel.ResumeLayout(false);
             this.TitlePanel.PerformLayout();
             this.ProductPanel.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.AmountPanel.ResumeLayout(false);
+            this.AmountPanel.PerformLayout();
+            this.WeightPanel.ResumeLayout(false);
+            this.WeightPanel.PerformLayout();
+            this.ColorPanel.ResumeLayout(false);
+            this.ColorPanel.PerformLayout();
+            this.VolumePanel.ResumeLayout(false);
+            this.VolumePanel.PerformLayout();
+            this.ProductNamePanel.ResumeLayout(false);
+            this.ProductNamePanel.PerformLayout();
+            this.ProductNumberPanel.ResumeLayout(false);
+            this.ProductNumberPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -332,23 +340,24 @@
         private System.Windows.Forms.Panel ProductPanel;
         private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.Button ClearButton;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel AmountPanel;
         private System.Windows.Forms.TextBox AmountInput;
         private System.Windows.Forms.Label AmountLabel;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel WeightPanel;
         private System.Windows.Forms.TextBox WeightInput;
         private System.Windows.Forms.Label WeightLabel;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel ColorPanel;
         private System.Windows.Forms.TextBox ColorInput;
         private System.Windows.Forms.Label ColorLabel;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel VolumePanel;
         private System.Windows.Forms.TextBox VolumeInput;
         private System.Windows.Forms.Label VolumeLabel;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel ProductNamePanel;
         private System.Windows.Forms.TextBox ProductNameInput;
         private System.Windows.Forms.Label ProductNameLabel;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel ProductNumberPanel;
         private System.Windows.Forms.TextBox ProductNumberInput;
         private System.Windows.Forms.Label ProductNumberLabel;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
