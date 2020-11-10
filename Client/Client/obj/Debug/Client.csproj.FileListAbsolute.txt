@@ -54,3 +54,4 @@ C:\Users\Jonas\source\repos\NickDue\P3Projekt\Client\Client\obj\Debug\Client.Lis
 C:\Users\Jonas\source\repos\NickDue\P3Projekt\Client\Client\obj\Debug\Client.LogsPage.resources
 C:\Users\Jonas\source\repos\NickDue\P3Projekt\Client\Client\obj\Debug\Client.UserControl1.resources
 C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.AddProductWindow.resources
+C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.csprojAssemblyReference.cache
