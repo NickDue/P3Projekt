@@ -63,6 +63,7 @@
             this.Controls.Add(this.LogTitle);
             this.Name = "LogsPage";
             this.Size = new System.Drawing.Size(982, 758);
+            this.Load += new System.EventHandler(this.LogsPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

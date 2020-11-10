@@ -8,10 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Client
 {
     public partial class SearchWindow : UserControl
     {
+
         public SearchWindow()
         {
             InitializeComponent();
@@ -72,7 +74,7 @@ namespace Client
             ShowFunc();
         }
 
-        private void SaveButton_Click(object sender, EventArgs e)
+        public void SaveButton_Click(object sender, EventArgs e)
         {
             EditButton.Show();
             SaveButton.Hide();
