@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.CompilerServices;
 
 namespace Client
 {
@@ -19,16 +20,19 @@ namespace Client
 
         private void ListItem_Load(object sender, EventArgs e)
         {
-
+            this.Size = new Size(250, 300);
         }
-        // hej
+
+
+
         #region Properties
 
         private string _name;
-        private string _workerID;
+        private int _workerID;
         private string _role;
         private string _lastLog;
         private Image _picture;
+
 
         [Category("Custom Properties")]
         public string EmployeeName
@@ -38,10 +42,10 @@ namespace Client
         }
 
         [Category("Custom Properties")]
-        public string WorkerID
+        public int WorkerID
         {
             get { return _workerID; }
-            set { _workerID = value; WorkerIDInput.Text = value; }
+            set { _workerID = value; WorkerIDInput.Text = value.ToString(); }
         }
 
         [Category("Custom Properties")]
@@ -64,9 +68,6 @@ namespace Client
             get { return _picture; }
             set { _picture = value; pictureBox1.Image = value; }
             }
-
-    }
-
         #endregion
-
+    }
 }

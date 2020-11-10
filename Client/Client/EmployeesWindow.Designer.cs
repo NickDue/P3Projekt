@@ -64,6 +64,7 @@
             this.AddButton.TabIndex = 1;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // TitleLabel
             // 
@@ -79,13 +80,15 @@
             // EmployeeFlowPanel
             // 
             this.EmployeeFlowPanel.AutoScroll = true;
+            this.EmployeeFlowPanel.AutoSize = true;
+            this.EmployeeFlowPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.EmployeeFlowPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.EmployeeFlowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EmployeeFlowPanel.Location = new System.Drawing.Point(0, 151);
             this.EmployeeFlowPanel.Name = "EmployeeFlowPanel";
             this.EmployeeFlowPanel.Size = new System.Drawing.Size(982, 607);
             this.EmployeeFlowPanel.TabIndex = 1;
-            this.EmployeeFlowPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.EmployeeFlowPanel_Paint);
+            this.EmployeeFlowPanel.WrapContents = false;
             // 
             // EmployeesWindow
             // 
@@ -99,6 +102,7 @@
             this.FunctionPanel.ResumeLayout(false);
             this.FunctionPanel.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
