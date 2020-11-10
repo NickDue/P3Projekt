@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Client
@@ -37,8 +31,53 @@ namespace Client
             ClearInput();
         }
 
+        private void SubmitButton_Click(object sender, EventArgs e)
+        {
+            ValidateInput();
+            GenerateProductString();
+        }
+
+        // Validates input in fields and displays error message of those missing
+        private void ValidateInput()
+        {
+            List<TextBox> list = new List<TextBox>();
+            list.Add(ProductNumberInput);
+            list.Add(ProductNameInput);
+            list.Add(VolumeInput);
+            list.Add(ColorInput);
+            list.Add(WeightInput);
+            list.Add(AmountInput);
+
+            string errorPreset = "The following is missing: \n\n";
+            string errorMessage = "";
+
+            foreach (TextBox tb in list)
+            {
+                errorMessage += (CheckTextBox(tb));
+            }
+            
+            if(errorMessage.Length > 0)
+            {
+                MessageBox.Show(errorPreset + errorMessage, "Error");
+            }
+        }
+
+        // Checks if textbox is empty or whitespace
+        private string CheckTextBox(TextBox tb)
+        {
+            if (string.IsNullOrWhiteSpace(tb.Text))
+            {
+                return tb.Name + "\n";
+            }
+            else 
+            {
+                return null;
+            }
+        }
+
         static string Product = "";
 
+        // Assembles a product in one string
         private string GenerateProductString()
         {
             Product = ProductNumberInput.Text + "#" + ProductNameInput.Text + "#" + VolumeInput.Text + "#" + ColorInput.Text + "#" + WeightInput.Text + "#" + AmountInput.Text;
@@ -46,9 +85,5 @@ namespace Client
             return Product;
         }
 
-        private void SubmitButton_Click(object sender, EventArgs e)
-        {
-            GenerateProductString();
-        }
     }
 }
