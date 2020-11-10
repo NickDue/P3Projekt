@@ -83,6 +83,12 @@
     <Compile Include="ListItem.Designer.cs">
       <DependentUpon>ListItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogOutPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LogOutPage.Designer.cs">
+      <DependentUpon>LogOutPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogsPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -96,12 +102,6 @@
     </Compile>
     <Compile Include="SearchWindow.Designer.cs">
       <DependentUpon>SearchWindow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddProductWindow.resx">
       <DependentUpon>AddProductWindow.cs</DependentUpon>
@@ -121,6 +121,9 @@
     <EmbeddedResource Include="ListItem.resx">
       <DependentUpon>ListItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LogOutPage.resx">
+      <DependentUpon>LogOutPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LogsPage.resx">
       <DependentUpon>LogsPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,9 +139,6 @@
     </Compile>
     <EmbeddedResource Include="SearchWindow.resx">
       <DependentUpon>SearchWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

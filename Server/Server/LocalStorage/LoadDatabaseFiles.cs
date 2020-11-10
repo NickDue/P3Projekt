@@ -35,8 +35,8 @@ namespace Server.LocalStorage
             {
                 string[] employeeSplitted = splitted[i].Split("?");
                 //Console.WriteLine(employeeSplitted[0]);
-                Employee em = new Employee(Int32.Parse(employeeSplitted[0]), employeeSplitted[1], employeeSplitted[2], (Employee.Role)Enum.Parse(typeof(Employee.Role),employeeSplitted[3]));
-                LoadedDatabase.Employees.Add(em);
+               // Employee em = new Employee(Int32.Parse(employeeSplitted[0]), employeeSplitted[1], employeeSplitted[2], (Employee.Role)Enum.Parse(typeof(Employee.Role),employeeSplitted[3]));
+               // LoadedDatabase.Employees.Add(em);
             }
         }
     }
