@@ -60,6 +60,10 @@ namespace Client
             {
                 MessageBox.Show(errorPreset + errorMessage, "Error");
             }
+            else
+            {
+                ConfirmChoice();
+            }
         }
 
         // Checks if textbox is empty or whitespace
@@ -83,6 +87,19 @@ namespace Client
             Product = ProductNumberInput.Text + "#" + ProductNameInput.Text + "#" + VolumeInput.Text + "#" + ColorInput.Text + "#" + WeightInput.Text + "#" + AmountInput.Text;
 
             return Product;
+        } 
+
+        private void ConfirmChoice()
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to add this product?", "Confirm", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                //do something
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
         }
 
     }
