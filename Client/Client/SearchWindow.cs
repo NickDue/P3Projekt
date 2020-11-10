@@ -13,10 +13,13 @@ namespace Client
 {
     public partial class SearchWindow : UserControl
     {
+        public static int Act = 0;
+       
 
         public SearchWindow()
         {
             InitializeComponent();
+            
         }
         private void HideFunc()
         {
@@ -72,6 +75,7 @@ namespace Client
             SaveButton.Show();
             EditButton.Hide();
             ShowFunc();
+            
         }
 
         public void SaveButton_Click(object sender, EventArgs e)

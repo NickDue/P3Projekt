@@ -15,14 +15,52 @@ namespace Client
 {
     public partial class LogsPage : UserControl
     {
-        public static string action = "Updated product";
+        public static int act = SearchWindow.Act;
+
+        public static int productNum;
+        public static int employeeNum;
+        public static string actions;
+        public static string oldval;
+        public static string newVal; 
+
+
         public LogsPage()
         {
             InitializeComponent();
-            update();
+            tableHead();
+        }
+        enum Source
+        {
+            UpdateProduct,
+            NewProduct,
+            ChangeEmployeeInfo,
+            AddNewEmployee,
+            DeleteProduct,
+            DeleteEmployee
+        }
+        
+        public void logs()
+        {
+            switch (act)
+            {
+                case (int)Source.UpdateProduct:
+                    employeeNum = 123;
+                    productNum = 12;
+                    actions = "hello world";
+                    oldval = "12";
+                    newVal = "13";
+                    AddNewRow(employeeNum, productNum, actions, oldval, newVal);
+                    break;
+            }
+
         }
 
-        private void update()
+
+
+
+
+
+        private void tableHead()
         {
         
             DataTable.ColumnCount = 5;
@@ -32,10 +70,9 @@ namespace Client
             DataTable.Columns[3].Name = "Old value";
             DataTable.Columns[4].Name = "New value";
 
-            AddNewRow(12223, 12131, action, "123", "144");
-
-
+            logs();
         }
+
         private void AddNewRow(int worker, int product, string action, string oldVal, string newVal)
         {
             ArrayList row = new ArrayList();
