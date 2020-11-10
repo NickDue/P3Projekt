@@ -21,5 +21,34 @@ namespace Client
         {
 
         }
+        private void ClearInput()
+        {
+            ProductNumberInput.Clear();
+            ProductNameInput.Clear();
+            VolumeInput.Clear();
+            ColorInput.Clear();
+            WeightInput.Clear();
+            AmountInput.Clear();
+            // do something
+        }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            ClearInput();
+        }
+
+        static string Product = "";
+
+        private string GenerateProductString()
+        {
+            Product = ProductNumberInput.Text + "#" + ProductNameInput.Text + "#" + VolumeInput.Text + "#" + ColorInput.Text + "#" + WeightInput.Text + "#" + AmountInput.Text;
+
+            return Product;
+        }
+
+        private void SubmitButton_Click(object sender, EventArgs e)
+        {
+            GenerateProductString();
+        }
     }
 }
