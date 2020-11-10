@@ -2,7 +2,7 @@
 {
     public class SQLCredentials
     {
-        public const string MySQLUsername = "root";
-        public const string MySQLPassword = "";
+        public const string MySQLUsername = "nick";
+        public const string MySQLPassword = "Kongen2020.!";
     }
 }

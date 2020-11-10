@@ -40,6 +40,7 @@ C:\Users\Jonas\source\repos\NickDue\P3Projekt\Client\Client\bin\Debug\Client.exe
 C:\Users\Jonas\source\repos\NickDue\P3Projekt\Client\Client\bin\Debug\Client.exe
 C:\Users\Jonas\source\repos\NickDue\P3Projekt\Client\Client\bin\Debug\Client.pdb
 C:\Users\Jonas\source\repos\NickDue\P3Projekt\Client\Client\obj\Debug\Client.AllProductsPage.resources
+C:\Users\Kenneth Køpke\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.csprojAssemblyReference.cache
 C:\Users\Kenneth Køpke\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.AllProductsPage.resources
 C:\Users\Kenneth Køpke\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.CreatePicklistWindow.resources
 C:\Users\Kenneth Køpke\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.LogsPage.resources
@@ -53,8 +54,4 @@ C:\Users\Jonas\source\repos\NickDue\P3Projekt\Client\Client\obj\Debug\Client.Lis
 C:\Users\Jonas\source\repos\NickDue\P3Projekt\Client\Client\obj\Debug\Client.LogsPage.resources
 C:\Users\Jonas\source\repos\NickDue\P3Projekt\Client\Client\obj\Debug\Client.UserControl1.resources
 C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.AddProductWindow.resources
-C:\Users\Kenneth Køpke\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.AddProductWindow.resources
-C:\Users\Kenneth Køpke\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.EmployeesWindow.resources
-C:\Users\Kenneth Køpke\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.ListItem.resources
-C:\Users\Kenneth Køpke\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.LogOutPage.resources
-C:\Users\Kenneth Køpke\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.csprojAssemblyReference.cache
+C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.csprojAssemblyReference.cache
