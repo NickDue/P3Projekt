@@ -20,7 +20,7 @@ namespace Client
 
         private void PopulateEmployeeList()
         {
-
+            //hej
             int amountOfEmloyees = 3;
             ListItem[] ItemList = new ListItem[amountOfEmloyees];
             for (int i = 0; i < ItemList.Length; i++)
