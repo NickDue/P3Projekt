@@ -23,12 +23,12 @@ namespace Client
         }
         private void ClearInput()
         {
-            ProductNumberInput.Text = "";
-            ProductNameInput.Text = "";
-            VolumeInput.Text = "";
-            ColorInput.Text = "";
-            WeightInput.Text = "";
-            AmountInput.Text = "";
+            ProductNumberInput.Clear();
+            ProductNameInput.Clear();
+            VolumeInput.Clear();
+            ColorInput.Clear();
+            WeightInput.Clear();
+            AmountInput.Clear();
         }
 
         private void ClearButton_Click(object sender, EventArgs e)
