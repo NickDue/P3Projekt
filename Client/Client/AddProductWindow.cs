@@ -29,6 +29,7 @@ namespace Client
             ColorInput.Clear();
             WeightInput.Clear();
             AmountInput.Clear();
+            // do something
         }
 
         private void ClearButton_Click(object sender, EventArgs e)
