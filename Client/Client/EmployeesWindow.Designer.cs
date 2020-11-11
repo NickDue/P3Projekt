@@ -88,7 +88,6 @@
             this.EmployeeFlowPanel.Name = "EmployeeFlowPanel";
             this.EmployeeFlowPanel.Size = new System.Drawing.Size(982, 607);
             this.EmployeeFlowPanel.TabIndex = 1;
-            this.EmployeeFlowPanel.WrapContents = false;
             // 
             // EmployeesWindow
             // 

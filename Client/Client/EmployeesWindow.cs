@@ -18,12 +18,16 @@ namespace Client
             InitializeComponent();
         }
 
+        private List<ListItem> ItemList = new List<ListItem>();
+        
+        
+        
+        /*
         private void PopulateEmployeeList()
         {
             //hej
-            int amountOfEmloyees = 3;
-            ListItem[] ItemList = new ListItem[amountOfEmloyees];
-            for (int i = 0; i < ItemList.Length; i++)
+         
+            for (int i = 0; i < ItemList.Count(); i++)
             {
 
                 ItemList[i] = new ListItem();
@@ -46,25 +50,41 @@ namespace Client
                 {
                     EmployeeFlowPanel.Controls.Add(ItemList[i]);
                 }   
+                
             }
         }
+        */
 
         private void EmloyeeFlowPanel_Load(object sender, EventArgs e)
         {
             Size = new Size(982, 758);
             Padding = new Padding(0, 0, 0, 0);
-            PopulateEmployeeList();
-
 
         }
+
+        
 
         private void AddButton_Click(object sender, EventArgs e)
         {
+            EmployeeInputWindow form2 = new EmployeeInputWindow();
+            form2.Show();
+            
 
         }
 
-        private void AddEmployee()
+        private void AddEmployee(string employeeName, int workerID, string role, string lastlog, Image pic)
         {
+
+            ListItem employee = new ListItem
+            {
+                EmployeeName = employeeName,
+                WorkerID = workerID,
+                Role = role,
+                LastLog = lastlog,
+                Picture = pic
+            };
+
+            ItemList.Add(employee);
 
         }
     }

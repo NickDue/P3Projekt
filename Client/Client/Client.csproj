@@ -65,6 +65,12 @@
     <Compile Include="CreatePicklistWindow.Designer.cs">
       <DependentUpon>CreatePicklistWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeInputWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeInputWindow.Designer.cs">
+      <DependentUpon>EmployeeInputWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmployeesWindow.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreatePicklistWindow.resx">
       <DependentUpon>CreatePicklistWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeInputWindow.resx">
+      <DependentUpon>EmployeeInputWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeesWindow.resx">
       <DependentUpon>EmployeesWindow.cs</DependentUpon>
