@@ -39,8 +39,6 @@
             this.LandingPage = new System.Windows.Forms.Panel();
             this.TimeLabel = new System.Windows.Forms.Label();
             this.Timetitle = new System.Windows.Forms.Label();
-            this.MyhomeLabel = new System.Windows.Forms.Label();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.logOutPage2 = new Client.LogOutPage();
             this.createPicklistWindow1 = new Client.CreatePicklistWindow();
             this.addProductWindow1 = new Client.AddProductWindow();
@@ -48,6 +46,8 @@
             this.logsPage1 = new Client.LogsPage();
             this.allProductsPage1 = new Client.AllProductsPage();
             this.searchWindow1 = new Client.SearchWindow();
+            this.MyhomeLabel = new System.Windows.Forms.Label();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.Navigationbar.SuspendLayout();
             this.LandingPage.SuspendLayout();
             this.SuspendLayout();
@@ -186,17 +186,6 @@
             this.Timetitle.TabIndex = 11;
             this.Timetitle.Text = "Time:";
             // 
-            // MyhomeLabel
-            // 
-            this.MyhomeLabel.AutoSize = true;
-            this.MyhomeLabel.Font = new System.Drawing.Font("Myanmar Text", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MyhomeLabel.Location = new System.Drawing.Point(246, 67);
-            this.MyhomeLabel.Name = "MyhomeLabel";
-            this.MyhomeLabel.Size = new System.Drawing.Size(495, 56);
-            this.MyhomeLabel.TabIndex = 1;
-            this.MyhomeLabel.Text = "Welcome to MyHome database";
-            this.MyhomeLabel.Click += new System.EventHandler(this.MyhomeLabel_Click);
-            // 
             // logOutPage2
             // 
             this.logOutPage2.Location = new System.Drawing.Point(0, -3);
@@ -245,6 +234,17 @@
             this.searchWindow1.Name = "searchWindow1";
             this.searchWindow1.Size = new System.Drawing.Size(982, 758);
             this.searchWindow1.TabIndex = 2;
+            // 
+            // MyhomeLabel
+            // 
+            this.MyhomeLabel.AutoSize = true;
+            this.MyhomeLabel.Font = new System.Drawing.Font("Myanmar Text", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MyhomeLabel.Location = new System.Drawing.Point(246, 67);
+            this.MyhomeLabel.Name = "MyhomeLabel";
+            this.MyhomeLabel.Size = new System.Drawing.Size(495, 56);
+            this.MyhomeLabel.TabIndex = 1;
+            this.MyhomeLabel.Text = "Welcome to MyHome database";
+            this.MyhomeLabel.Click += new System.EventHandler(this.MyhomeLabel_Click);
             // 
             // MyhomeForm
             // 
