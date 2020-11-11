@@ -1,6 +1,6 @@
 ﻿namespace Client
 {
-    partial class UserControl1
+    partial class LoginSystem
     {
         /// <summary> 
         /// Required designer variable.
@@ -95,7 +95,7 @@
             this.LoginButton.UseVisualStyleBackColor = true;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
-            // UserControl1
+            // LoginSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -105,7 +105,7 @@
             this.Controls.Add(this.UsernameTextbox);
             this.Controls.Add(this.UsernameLabel);
             this.Controls.Add(this.TitleLabel);
-            this.Name = "UserControl1";
+            this.Name = "LoginSystem";
             this.Size = new System.Drawing.Size(1200, 800);
             this.ResumeLayout(false);
             this.PerformLayout();

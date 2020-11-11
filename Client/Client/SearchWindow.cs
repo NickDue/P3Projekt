@@ -13,14 +13,12 @@ namespace Client
 {
     public partial class SearchWindow : UserControl
     {
-        public static int Act = 0;
-       
-
         public SearchWindow()
         {
             InitializeComponent();
             
         }
+
         private void HideFunc()
         {
             ProductNumBox.Hide();
@@ -32,7 +30,15 @@ namespace Client
             PrimaryLocationBox.Hide();
             PrimaryColliBox.Hide();
         }
-        private void ShowFunc()
+
+        private void FloorShowFunc()
+        {
+            amountBox.Show();
+            PrimaryLocationBox.Show();
+            PrimaryColliBox.Show();
+        }
+
+        private void OfficeShowFunc()
         {
             ProductNumBox.Show();
             ProductNameBox.Show();
@@ -43,6 +49,7 @@ namespace Client
             PrimaryLocationBox.Show();
             PrimaryColliBox.Show();
         }
+
         private void CheckIfEmptyBox()
         {
             if (PrimaryColliBox.Text == "") { PrimaryColliBox.Text = PrimaryColliLabel.Text; }
@@ -74,8 +81,15 @@ namespace Client
         {
             SaveButton.Show();
             EditButton.Hide();
-            ShowFunc();
-            
+
+            if (User.Role.ToUpper() == "FLOOR")
+            {
+                FloorShowFunc();
+            }
+            else
+            {
+                OfficeShowFunc();
+            }    
         }
 
         public void SaveButton_Click(object sender, EventArgs e)
