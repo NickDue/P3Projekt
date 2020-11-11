@@ -47,53 +47,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddProductWindow.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AddProductWindow.Designer.cs">
-      <DependentUpon>AddProductWindow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AllProductsPage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AllProductsPage.Designer.cs">
-      <DependentUpon>AllProductsPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CreatePicklistWindow.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="CreatePicklistWindow.Designer.cs">
-      <DependentUpon>CreatePicklistWindow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EmployeesWindow.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="EmployeesWindow.Designer.cs">
-      <DependentUpon>EmployeesWindow.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListItem.cs">
+    <Compile Include="LoginScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ListItem.Designer.cs">
-      <DependentUpon>ListItem.cs</DependentUpon>
+    <Compile Include="LoginScreen.Designer.cs">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="LogOutPage.cs">
+    <Compile Include="LoginUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="LogOutPage.Designer.cs">
-      <DependentUpon>LogOutPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LogsPage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="LogsPage.Designer.cs">
-      <DependentUpon>LogsPage.cs</DependentUpon>
+    <Compile Include="LoginUI.Designer.cs">
+      <DependentUpon>LoginUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,29 +73,14 @@
     <Compile Include="SearchWindow.Designer.cs">
       <DependentUpon>SearchWindow.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddProductWindow.resx">
-      <DependentUpon>AddProductWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AllProductsPage.resx">
-      <DependentUpon>AllProductsPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CreatePicklistWindow.resx">
-      <DependentUpon>CreatePicklistWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EmployeesWindow.resx">
-      <DependentUpon>EmployeesWindow.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListItem.resx">
-      <DependentUpon>ListItem.cs</DependentUpon>
+    <EmbeddedResource Include="LoginScreen.resx">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LogOutPage.resx">
-      <DependentUpon>LogOutPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LogsPage.resx">
-      <DependentUpon>LogsPage.cs</DependentUpon>
+    <EmbeddedResource Include="LoginUI.resx">
+      <DependentUpon>LoginUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -135,7 +90,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="SearchWindow.resx">
       <DependentUpon>SearchWindow.cs</DependentUpon>
@@ -152,9 +106,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\912214.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
