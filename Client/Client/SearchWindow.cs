@@ -13,7 +13,7 @@ namespace Client
 {
     public partial class SearchWindow : UserControl
     {
-        public static int Act = 0;
+        
        
 
         public SearchWindow()

@@ -15,7 +15,6 @@ namespace Client
 {
     public partial class LogsPage : UserControl
     {
-        public static int act = SearchWindow.Act;
 
         public static int productNum;
         public static int employeeNum;
@@ -29,37 +28,8 @@ namespace Client
             InitializeComponent();
             tableHead();
         }
-        enum Source
-        {
-            UpdateProduct,
-            NewProduct,
-            ChangeEmployeeInfo,
-            AddNewEmployee,
-            DeleteProduct,
-            DeleteEmployee
-        }
-        
-        public void logs()
-        {
-            switch (act)
-            {
-                case (int)Source.UpdateProduct:
-                    employeeNum = 123;
-                    productNum = 12;
-                    actions = "hello world";
-                    oldval = "12";
-                    newVal = "13";
-                    AddNewRow(employeeNum, productNum, actions, oldval, newVal);
-                    break;
-            }
-
-        }
-
-
-
-
-
-
+    
+   
         private void tableHead()
         {
         
@@ -70,7 +40,6 @@ namespace Client
             DataTable.Columns[3].Name = "Old value";
             DataTable.Columns[4].Name = "New value";
 
-            logs();
         }
 
         private void AddNewRow(int worker, int product, string action, string oldVal, string newVal)
