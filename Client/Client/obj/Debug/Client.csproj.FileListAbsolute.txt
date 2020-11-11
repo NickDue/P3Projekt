@@ -28,3 +28,4 @@ C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.cspr
 C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
 C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.exe
 C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.pdb
+C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.LoginUI.resources
