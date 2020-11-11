@@ -4,14 +4,13 @@ namespace Server
 {
     public class Employee
     {
-        public static List<Employee> employeeList = new List<Employee>();
-
+        
         public int employeeID { get; set; }
         public string password { get; set; }
         public string employeeName { get; set; }
-        public Role role { get; set; }
+        public string role { get; set; }
 
-        public Employee(int employeeID, string password, string employeeName, Role role)
+        public Employee(int employeeID, string password, string employeeName, string role)
         {
             this.employeeID = employeeID;
             this.password = password;

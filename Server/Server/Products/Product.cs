@@ -1,24 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace Server
 {
     public class Product
     {
-        public static Dictionary<String, Product> allProducts = new Dictionary<String, Product>();
-
         public ProductDescription description { get; }
         public int amount { get; set; }
+        
+        public Placement placement { get; set; }
 
         public Product(ProductDescription d)
         {
             description = d;
             amount = 0;
+            placement = null;
         }
-        public Product(ProductDescription d, int savedAmount)
+        public Product(ProductDescription d, int savedAmount, Placement savedPlacement)
         {
             description = d;
             amount = savedAmount;
+            placement = savedPlacement;
         }
 
         public void EditAttribute(string[] newValues)
