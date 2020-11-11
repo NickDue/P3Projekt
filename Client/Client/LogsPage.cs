@@ -8,45 +8,88 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
+using System.Security.Cryptography.X509Certificates;
+using System.Runtime.InteropServices;
 
 namespace Client
 {
     public partial class LogsPage : UserControl
     {
+        public static int act = SearchWindow.Act;
+
+        public static int productNum;
+        public static int employeeNum;
+        public static string actions;
+        public static string oldval;
+        public static string newVal; 
+
+
         public LogsPage()
         {
             InitializeComponent();
-            update();
+            tableHead();
         }
-        private void update()
+        enum Source
         {
-            ArrayList row = new ArrayList();
+            UpdateProduct,
+            NewProduct,
+            ChangeEmployeeInfo,
+            AddNewEmployee,
+            DeleteProduct,
+            DeleteEmployee
+        }
+        
+        public void logs()
+        {
+            switch (act)
+            {
+                case (int)Source.UpdateProduct:
+                    employeeNum = 123;
+                    productNum = 12;
+                    actions = "hello world";
+                    oldval = "12";
+                    newVal = "13";
+                    AddNewRow(employeeNum, productNum, actions, oldval, newVal);
+                    break;
+            }
+
+        }
+
+
+
+
+
+
+        private void tableHead()
+        {
+        
             DataTable.ColumnCount = 5;
             DataTable.Columns[0].Name = "Worker ID";
             DataTable.Columns[1].Name = "Product";
             DataTable.Columns[2].Name = "Action";
             DataTable.Columns[3].Name = "Old value";
             DataTable.Columns[4].Name = "New value";
-            for(int i = 1; i<50; i++)
-            { 
-                AddNewRow();
-                
-            }
 
-
+            logs();
         }
-        private void AddNewRow()
+
+        private void AddNewRow(int worker, int product, string action, string oldVal, string newVal)
         {
             ArrayList row = new ArrayList();
-            row.Add("EMPTY");
-            row.Add("EMPTY");
-            row.Add("EMPTY");
-            row.Add("EMPTY");
-            row.Add("EMPTY");
+            row.Add(worker);
+            row.Add(product);
+            row.Add(action);
+            row.Add(oldVal);
+            row.Add(newVal);
             DataTable.Rows.Add(row.ToArray());
         }
 
         private void DataTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void LogsPage_Load(object sender, EventArgs e)
         {
 
         }
