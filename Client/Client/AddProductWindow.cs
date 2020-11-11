@@ -94,8 +94,7 @@ namespace Client
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to add this product?", "Confirm", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                GenerateProductString();
-                MessageBox.Show("Product added succesfully");
+                //do something
             }
             else if (dialogResult == DialogResult.No)
             {
