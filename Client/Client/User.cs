@@ -8,6 +8,6 @@ namespace Client
 {
     class User
     {
-        public static string Role = "";
+        public static string Role = "FLOOR";
     }
 }

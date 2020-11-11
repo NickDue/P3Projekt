@@ -55,3 +55,4 @@ C:\Users\Jonas\source\repos\NickDue\P3Projekt\Client\Client\obj\Debug\Client.Use
 C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.AddProductWindow.resources
 C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.LogOutPage.resources
 C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.csprojAssemblyReference.cache
+C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.LoginSystem.resources

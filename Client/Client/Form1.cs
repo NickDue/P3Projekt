@@ -20,6 +20,16 @@ namespace Client
         private void MyhomeForm_Load(object sender, EventArgs e)
         {
             HideNotSelectedPage();
+
+            if (User.Role.ToUpper() == "FLOOR")
+            {
+                NavButton2.Hide();
+                NavButton3.Hide();
+                NavButton4.Hide();
+                NavButton5.Hide();
+                NavButton6.Hide();
+
+            }
         }
 
         private void HighlightSelectedButton(Button button) 

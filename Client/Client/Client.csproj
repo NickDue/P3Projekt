@@ -83,6 +83,12 @@
     <Compile Include="ListItem.Designer.cs">
       <DependentUpon>ListItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginSystem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginSystem.Designer.cs">
+      <DependentUpon>LoginSystem.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogOutPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -103,6 +109,7 @@
     <Compile Include="SearchWindow.Designer.cs">
       <DependentUpon>SearchWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="User.cs" />
     <EmbeddedResource Include="AddProductWindow.resx">
       <DependentUpon>AddProductWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListItem.resx">
       <DependentUpon>ListItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginSystem.resx">
+      <DependentUpon>LoginSystem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogOutPage.resx">
       <DependentUpon>LogOutPage.cs</DependentUpon>
