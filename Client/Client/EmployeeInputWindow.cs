@@ -19,8 +19,15 @@ namespace Client
 
         private void EmployeeInputWindow_Load(object sender, EventArgs e)
         {
-            this.Size = new Size(500, 600);
+            this.Hide();
             this.BringToFront();
+            this.Size = new Size(500, 600);
+
+        }
+
+        private void Close_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
 
 
