@@ -77,7 +77,6 @@
             this.TitleLabel.Size = new System.Drawing.Size(339, 48);
             this.TitleLabel.TabIndex = 0;
             this.TitleLabel.Text = "Enter product ID number";
-            
             // 
             // textBox1
             // 
@@ -194,9 +193,9 @@
             this.AmountLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold);
             this.AmountLabel.Location = new System.Drawing.Point(306, 474);
             this.AmountLabel.Name = "AmountLabel";
-            this.AmountLabel.Size = new System.Drawing.Size(51, 26);
+            this.AmountLabel.Size = new System.Drawing.Size(36, 26);
             this.AmountLabel.TabIndex = 25;
-            this.AmountLabel.Text = "N/A";
+            this.AmountLabel.Text = "12";
             // 
             // WeightLabel
             // 

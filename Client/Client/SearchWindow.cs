@@ -13,14 +13,12 @@ namespace Client
 {
     public partial class SearchWindow : UserControl
     {
-        public static int Act = 0;
-       
-
         public SearchWindow()
         {
             InitializeComponent();
             
         }
+
         private void HideFunc()
         {
             ProductNumBox.Hide();
@@ -32,7 +30,15 @@ namespace Client
             PrimaryLocationBox.Hide();
             PrimaryColliBox.Hide();
         }
-        private void ShowFunc()
+
+        private void FloorShowFunc()
+        {
+            amountBox.Show();
+            PrimaryLocationBox.Show();
+            PrimaryColliBox.Show();
+        }
+
+        private void OfficeShowFunc()
         {
             ProductNumBox.Show();
             ProductNameBox.Show();
@@ -43,24 +49,75 @@ namespace Client
             PrimaryLocationBox.Show();
             PrimaryColliBox.Show();
         }
+
         private void CheckIfEmptyBox()
         {
-            if (PrimaryColliBox.Text == "") { PrimaryColliBox.Text = PrimaryColliLabel.Text; }
-            PrimaryColliLabel.Text = PrimaryColliBox.Text;
-            if (PrimaryLocationBox.Text == "") { PrimaryLocationBox.Text = PrimaryLocationLabel.Text; }
-            PrimaryLocationLabel.Text = PrimaryLocationBox.Text;
-            if (ProductNumBox.Text == "") { ProductNumBox.Text = ProductNumLabel.Text; }
-            ProductNumLabel.Text = ProductNumBox.Text;
-            if (ProductNameBox.Text == "") { ProductNameBox.Text = ProductNameLabel.Text; }
-            ProductNameLabel.Text = ProductNameBox.Text;
-            if (VolumeBox.Text == "") { VolumeBox.Text = VolumeLabel.Text; }
-            VolumeLabel.Text = VolumeBox.Text;
-            if (ColorBox.Text == "") { ColorBox.Text = ColorLabel.Text; }
-            ColorLabel.Text = ColorBox.Text;
-            if (WeightBox.Text == "") { WeightBox.Text = WeightLabel.Text; }
-            WeightLabel.Text = WeightBox.Text;
-            if (amountBox.Text == "") { amountBox.Text = AmountLabel.Text; }
-            AmountLabel.Text = amountBox.Text;
+            if (PrimaryColliBox.Text == "") 
+            { 
+                PrimaryColliBox.Text = PrimaryColliLabel.Text; 
+            }
+            
+            if (PrimaryLocationBox.Text == "") 
+            { 
+                PrimaryLocationBox.Text = PrimaryLocationLabel.Text; 
+            }
+            
+            if (ProductNumBox.Text == "") 
+            { 
+                ProductNumBox.Text = ProductNumLabel.Text; 
+            }
+            
+            if (ProductNameBox.Text == "") 
+            { 
+                ProductNameBox.Text = ProductNameLabel.Text; 
+            }
+            
+            if (VolumeBox.Text == "") 
+            { 
+                VolumeBox.Text = VolumeLabel.Text; 
+            }
+            
+            if (ColorBox.Text == "") 
+            { 
+                ColorBox.Text = ColorLabel.Text; 
+            }
+            
+            if (WeightBox.Text == "") 
+            { 
+                WeightBox.Text = WeightLabel.Text; 
+            }
+            
+            if (amountBox.Text == "") 
+            { 
+                amountBox.Text = AmountLabel.Text; 
+            }
+            
+            ControlBoxInput();
+
+            amountBox.Text = "";
+            
+        }
+
+        private void ControlBoxInput()
+        {
+            if (int.Parse(amountBox.Text) < int.Parse(AmountLabel.Text))
+            {
+                MessageBox.Show("Input must be higher", "Error");
+                AmountLabel.Text = AmountLabel.Text;
+                
+            }
+
+            else
+            {
+                AmountLabel.Text = amountBox.Text;
+                PrimaryColliLabel.Text = PrimaryColliBox.Text;
+                PrimaryLocationLabel.Text = PrimaryLocationBox.Text;
+                ProductNumLabel.Text = ProductNumBox.Text;
+                ProductNameLabel.Text = ProductNameBox.Text;
+                VolumeLabel.Text = VolumeBox.Text;
+                ColorLabel.Text = ColorBox.Text;
+                WeightLabel.Text = WeightBox.Text;
+            }
         }
 
         private void SearchWindow_Load(object sender, EventArgs e)
@@ -74,8 +131,15 @@ namespace Client
         {
             SaveButton.Show();
             EditButton.Hide();
-            ShowFunc();
-            
+
+            if (User.Role.ToUpper() == "FLOOR")
+            {
+                FloorShowFunc();
+            }
+            else
+            {
+                OfficeShowFunc();
+            }    
         }
 
         public void SaveButton_Click(object sender, EventArgs e)
@@ -84,6 +148,7 @@ namespace Client
             SaveButton.Hide();
             HideFunc();
             CheckIfEmptyBox();
+            
         }
     }
 }
