@@ -34,7 +34,6 @@ namespace Client
         private void SubmitButton_Click(object sender, EventArgs e)
         {
             ValidateInput();
-            GenerateProductString();
         }
 
         // Validates input in fields and displays error message of those missing
@@ -94,7 +93,8 @@ namespace Client
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to add this product?", "Confirm", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                //do something
+                GenerateProductString();
+                MessageBox.Show("Product added succesfully");
             }
             else if (dialogResult == DialogResult.No)
             {
