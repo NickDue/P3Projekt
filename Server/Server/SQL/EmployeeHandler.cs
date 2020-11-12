@@ -22,7 +22,7 @@ namespace Server.SQL
                 while (reader.Read())
                 {
                     if(employee == null)
-                        employee = new Employee(reader.GetInt32(0), reader.GetString(2), reader.GetString(1), reader.GetString(3));
+                        employee = new Employee(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3));
                     Console.WriteLine("{0} {1} {2} {3}", reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3));
                 }
 

@@ -14,9 +14,9 @@ namespace Server
         public double volume{ get; set; }
         public double weight{ get; set; }
         public string color{ get; set; }
-        public Category category{ get; set; }
+        public string category{ get; set; }
 
-        public ProductDescription(string productID, string productColliNumber, string productColliAmount, string productName, double productVolume, double productWeight, string productColor, Category productCategory)
+        public ProductDescription(string productID, string productColliNumber, string productColliAmount, string productName, double productVolume, double productWeight, string productColor, string productCategory)
         {
             id = productID + "-" + productColliNumber + "-" + productColliAmount;
             colliNumber = productColliNumber;
