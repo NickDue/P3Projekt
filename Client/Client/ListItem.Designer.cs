@@ -148,6 +148,7 @@
             this.Name = "ListItem";
             this.Size = new System.Drawing.Size(248, 298);
             this.Load += new System.EventHandler(this.ListItem_Load);
+            this.Click += new System.EventHandler(this.ListItem_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
