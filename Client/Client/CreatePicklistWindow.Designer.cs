@@ -30,14 +30,14 @@
         {
             this.TitleLabel = new System.Windows.Forms.Label();
             this.CityLabel = new System.Windows.Forms.Label();
-            this.CityTextbox = new System.Windows.Forms.TextBox();
             this.PlatformLabel = new System.Windows.Forms.Label();
-            this.PlatformTextbox = new System.Windows.Forms.TextBox();
             this.ExpressLabel = new System.Windows.Forms.Label();
-            this.ExpressTextbox = new System.Windows.Forms.TextBox();
             this.ImportButton = new System.Windows.Forms.Button();
             this.GenerateButton = new System.Windows.Forms.Button();
             this.FunctionPanel = new System.Windows.Forms.Panel();
+            this.ExpressCombobox = new System.Windows.Forms.ComboBox();
+            this.PlatformCombobox = new System.Windows.Forms.ComboBox();
+            this.CityCombobox = new System.Windows.Forms.ComboBox();
             this.AddButton = new System.Windows.Forms.Button();
             this.UserInputPanel = new System.Windows.Forms.Panel();
             this.AmountTextbox = new System.Windows.Forms.TextBox();
@@ -73,28 +73,14 @@
             this.CityLabel.TabIndex = 1;
             this.CityLabel.Text = "City";
             // 
-            // CityTextbox
-            // 
-            this.CityTextbox.Location = new System.Drawing.Point(41, 56);
-            this.CityTextbox.Name = "CityTextbox";
-            this.CityTextbox.Size = new System.Drawing.Size(100, 20);
-            this.CityTextbox.TabIndex = 2;
-            // 
             // PlatformLabel
             // 
             this.PlatformLabel.AutoSize = true;
-            this.PlatformLabel.Location = new System.Drawing.Point(38, 86);
+            this.PlatformLabel.Location = new System.Drawing.Point(38, 91);
             this.PlatformLabel.Name = "PlatformLabel";
             this.PlatformLabel.Size = new System.Drawing.Size(45, 13);
             this.PlatformLabel.TabIndex = 1;
             this.PlatformLabel.Text = "Platform";
-            // 
-            // PlatformTextbox
-            // 
-            this.PlatformTextbox.Location = new System.Drawing.Point(41, 103);
-            this.PlatformTextbox.Name = "PlatformTextbox";
-            this.PlatformTextbox.Size = new System.Drawing.Size(100, 20);
-            this.PlatformTextbox.TabIndex = 2;
             // 
             // ExpressLabel
             // 
@@ -104,13 +90,6 @@
             this.ExpressLabel.Size = new System.Drawing.Size(44, 13);
             this.ExpressLabel.TabIndex = 1;
             this.ExpressLabel.Text = "Express";
-            // 
-            // ExpressTextbox
-            // 
-            this.ExpressTextbox.Location = new System.Drawing.Point(41, 155);
-            this.ExpressTextbox.Name = "ExpressTextbox";
-            this.ExpressTextbox.Size = new System.Drawing.Size(100, 20);
-            this.ExpressTextbox.TabIndex = 2;
             // 
             // ImportButton
             // 
@@ -134,14 +113,14 @@
             // FunctionPanel
             // 
             this.FunctionPanel.Controls.Add(this.OKButton);
+            this.FunctionPanel.Controls.Add(this.ExpressCombobox);
+            this.FunctionPanel.Controls.Add(this.PlatformCombobox);
+            this.FunctionPanel.Controls.Add(this.CityCombobox);
             this.FunctionPanel.Controls.Add(this.AddButton);
             this.FunctionPanel.Controls.Add(this.GenerateButton);
             this.FunctionPanel.Controls.Add(this.ImportButton);
-            this.FunctionPanel.Controls.Add(this.ExpressTextbox);
             this.FunctionPanel.Controls.Add(this.ExpressLabel);
-            this.FunctionPanel.Controls.Add(this.PlatformTextbox);
             this.FunctionPanel.Controls.Add(this.PlatformLabel);
-            this.FunctionPanel.Controls.Add(this.CityTextbox);
             this.FunctionPanel.Controls.Add(this.CityLabel);
             this.FunctionPanel.Controls.Add(this.TitleLabel);
             this.FunctionPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -149,6 +128,30 @@
             this.FunctionPanel.Name = "FunctionPanel";
             this.FunctionPanel.Size = new System.Drawing.Size(982, 218);
             this.FunctionPanel.TabIndex = 0;
+            // 
+            // ExpressCombobox
+            // 
+            this.ExpressCombobox.FormattingEnabled = true;
+            this.ExpressCombobox.Location = new System.Drawing.Point(41, 154);
+            this.ExpressCombobox.Name = "ExpressCombobox";
+            this.ExpressCombobox.Size = new System.Drawing.Size(121, 21);
+            this.ExpressCombobox.TabIndex = 6;
+            // 
+            // PlatformCombobox
+            // 
+            this.PlatformCombobox.FormattingEnabled = true;
+            this.PlatformCombobox.Location = new System.Drawing.Point(41, 107);
+            this.PlatformCombobox.Name = "PlatformCombobox";
+            this.PlatformCombobox.Size = new System.Drawing.Size(121, 21);
+            this.PlatformCombobox.TabIndex = 6;
+            // 
+            // CityCombobox
+            // 
+            this.CityCombobox.FormattingEnabled = true;
+            this.CityCombobox.Location = new System.Drawing.Point(41, 56);
+            this.CityCombobox.Name = "CityCombobox";
+            this.CityCombobox.Size = new System.Drawing.Size(121, 21);
+            this.CityCombobox.TabIndex = 6;
             // 
             // AddButton
             // 
@@ -243,10 +246,10 @@
             // 
             // OKButton
             // 
-            this.OKButton.Location = new System.Drawing.Point(54, 187);
+            this.OKButton.Location = new System.Drawing.Point(64, 187);
             this.OKButton.Name = "OKButton";
             this.OKButton.Size = new System.Drawing.Size(75, 23);
-            this.OKButton.TabIndex = 6;
+            this.OKButton.TabIndex = 7;
             this.OKButton.Text = "OK";
             this.OKButton.UseVisualStyleBackColor = true;
             this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
@@ -273,11 +276,8 @@
 
         private System.Windows.Forms.Label TitleLabel;
         private System.Windows.Forms.Label CityLabel;
-        private System.Windows.Forms.TextBox CityTextbox;
         private System.Windows.Forms.Label PlatformLabel;
-        private System.Windows.Forms.TextBox PlatformTextbox;
         private System.Windows.Forms.Label ExpressLabel;
-        private System.Windows.Forms.TextBox ExpressTextbox;
         private System.Windows.Forms.Button ImportButton;
         private System.Windows.Forms.Button GenerateButton;
         private System.Windows.Forms.Panel FunctionPanel;
@@ -292,6 +292,9 @@
         private System.Windows.Forms.ColumnHeader LocationColumn;
         private System.Windows.Forms.ColumnHeader AmountColumn;
         private System.Windows.Forms.Button AddButton;
+        private System.Windows.Forms.ComboBox ExpressCombobox;
+        private System.Windows.Forms.ComboBox PlatformCombobox;
+        private System.Windows.Forms.ComboBox CityCombobox;
         private System.Windows.Forms.Button OKButton;
     }
 }
