@@ -48,7 +48,6 @@
             this.ProductNameTextbox = new System.Windows.Forms.TextBox();
             this.LocationTextbox = new System.Windows.Forms.TextBox();
             this.AmountTextbox = new System.Windows.Forms.TextBox();
-            this.AddButton = new System.Windows.Forms.Button();
             this.FunctionPanel.SuspendLayout();
             this.UserInputPanel.SuspendLayout();
             this.SuspendLayout();
@@ -132,7 +131,6 @@
             // 
             // FunctionPanel
             // 
-            this.FunctionPanel.Controls.Add(this.AddButton);
             this.FunctionPanel.Controls.Add(this.GenerateButton);
             this.FunctionPanel.Controls.Add(this.ImportButton);
             this.FunctionPanel.Controls.Add(this.ExpressTextbox);
@@ -229,16 +227,6 @@
             this.AmountTextbox.TabIndex = 0;
             this.AmountTextbox.TextChanged += new System.EventHandler(this.AmountTextbox_TextChanged);
             // 
-            // AddButton
-            // 
-            this.AddButton.Location = new System.Drawing.Point(860, 189);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(75, 23);
-            this.AddButton.TabIndex = 5;
-            this.AddButton.Text = "Add";
-            this.AddButton.UseVisualStyleBackColor = true;
-            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
-            // 
             // CreatePicklistWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,6 +267,5 @@
         private System.Windows.Forms.ColumnHeader ProductNameColumn;
         private System.Windows.Forms.ColumnHeader LocationColumn;
         private System.Windows.Forms.ColumnHeader AmountColumn;
-        private System.Windows.Forms.Button AddButton;
     }
 }
