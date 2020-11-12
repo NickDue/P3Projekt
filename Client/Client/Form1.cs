@@ -21,6 +21,7 @@ namespace Client
         {
             HideNotSelectedPage();
 
+            /*
             if (User.Role.ToUpper() == "FLOOR")
             {
                 NavButton2.Hide();
@@ -30,6 +31,8 @@ namespace Client
                 NavButton6.Hide();
 
             }
+            */
+
         }
 
         private void HighlightSelectedButton(Button button) 
