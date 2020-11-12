@@ -27,6 +27,7 @@ namespace Client
 
         private void Close_Click(object sender, EventArgs e)
         {
+            ClearInformation();
             this.Hide();
         }
 
@@ -40,11 +41,62 @@ namespace Client
 
         private void ConfirmButton_Click(object sender, EventArgs e)
         {
-            SetInformation();
-
+            if(IsAllFieldsFilled() == true)
+            {
+                if(CheckPasswordValidity() == true)
+                {
+                    
+                    
+                }
+            }
         }
 
+        private bool IsAllFieldsFilled()
+        {
 
+            string errorPreset = "The following is missing: \n\n";
+            string errorMessage = "";
+
+            errorMessage += CheckTextBox(NameInput);
+            errorMessage += CheckTextBox(EnterPassword);
+            errorMessage += CheckTextBox(ConfirmPassword);
+            errorMessage += CheckRadioButtons(FloorRButton, OfficeRButton);
+            
+
+            if (errorMessage.Length > 0)
+            {
+                MessageBox.Show(errorPreset + errorMessage, "Error");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private string CheckRadioButtons(RadioButton rb1, RadioButton rb2)
+        {
+            if(rb1.Checked == false && rb2.Checked == false)
+            {
+                return "Role";
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        private string CheckTextBox(TextBox tb)
+        {
+            if (string.IsNullOrWhiteSpace(tb.Text))
+            {
+                return tb.Name + "\n";
+            }
+            else
+            {
+                return null;
+            }
+        }
 
         private void SetInformation()
         {
@@ -52,34 +104,27 @@ namespace Client
             {
                 NameInputString = NameInput.Text;
                 PasswordInputString = EnterPassword.Text;
-
-                if (GetRole() == null)
-                {
-                    MessageBox.Show("Please select a role");
-                }
-                else
-                {
-                    RoleInputString = GetRole();
-                }
+                RoleInputString = GetRole();
             }
             else
             {
-                MessageBox.Show("Passwords do not match","");
+                MessageBox.Show("Error", "Passwords do not match");
             }
         }
 
         private bool CheckPasswordValidity()
         {
-            if (EnterPassword.Text.Equals(ConfirmPassword.Text) && string.IsNullOrEmpty(EnterPassword.Text) == false && string.IsNullOrEmpty(ConfirmPassword.Text) == false)
+            if (EnterPassword.Text.Equals(ConfirmPassword.Text) && string.IsNullOrEmpty(EnterPassword.Text) == false)
             {
                 return true;
             }
             else
             {
-                MessageBox.Show("Passwords do not match","Error");
                 return false;
+                MessageBox.Show("Passwords do not match","Error");
             }
         }
+
 
         private string GetRole()
         {
@@ -87,7 +132,7 @@ namespace Client
             {
                 return "FLOOR";
             }
-            else if(OfficeRButton.Checked = true)
+            else if(OfficeRButton.Checked == true)
             {
                 return "OFFICE";
             }
@@ -106,6 +151,9 @@ namespace Client
             FloorRButton.Checked = false;
             OfficeRButton.Checked = false;
         }
+
+
+
 
 
 
