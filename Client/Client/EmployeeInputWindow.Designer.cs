@@ -30,6 +30,8 @@
         {
             this.Header = new System.Windows.Forms.Label();
             this.Content = new System.Windows.Forms.Panel();
+            this.OfficeRButton = new System.Windows.Forms.RadioButton();
+            this.FloorRButton = new System.Windows.Forms.RadioButton();
             this.ConfirmPasswordLabel = new System.Windows.Forms.Label();
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.ConfirmPassword = new System.Windows.Forms.TextBox();
@@ -44,8 +46,6 @@
             this.RoleLabel = new System.Windows.Forms.Label();
             this.NameLabel = new System.Windows.Forms.Label();
             this.Close = new System.Windows.Forms.Button();
-            this.FloorRButton = new System.Windows.Forms.RadioButton();
-            this.OfficeRButton = new System.Windows.Forms.RadioButton();
             this.Content.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             this.SuspendLayout();
@@ -86,6 +86,30 @@
             this.Content.Name = "Content";
             this.Content.Size = new System.Drawing.Size(494, 564);
             this.Content.TabIndex = 1;
+            // 
+            // OfficeRButton
+            // 
+            this.OfficeRButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.OfficeRButton.AutoSize = true;
+            this.OfficeRButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OfficeRButton.Location = new System.Drawing.Point(174, 470);
+            this.OfficeRButton.Name = "OfficeRButton";
+            this.OfficeRButton.Size = new System.Drawing.Size(86, 24);
+            this.OfficeRButton.TabIndex = 15;
+            this.OfficeRButton.Text = "OFFICE";
+            this.OfficeRButton.UseVisualStyleBackColor = true;
+            // 
+            // FloorRButton
+            // 
+            this.FloorRButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.FloorRButton.AutoSize = true;
+            this.FloorRButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FloorRButton.Location = new System.Drawing.Point(72, 470);
+            this.FloorRButton.Name = "FloorRButton";
+            this.FloorRButton.Size = new System.Drawing.Size(82, 24);
+            this.FloorRButton.TabIndex = 14;
+            this.FloorRButton.Text = "FLOOR";
+            this.FloorRButton.UseVisualStyleBackColor = true;
             // 
             // ConfirmPasswordLabel
             // 
@@ -179,7 +203,7 @@
             // 
             this.WorkerID.AutoSize = true;
             this.WorkerID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WorkerID.Location = new System.Drawing.Point(412, 13);
+            this.WorkerID.Location = new System.Drawing.Point(267, 13);
             this.WorkerID.Margin = new System.Windows.Forms.Padding(0);
             this.WorkerID.Name = "WorkerID";
             this.WorkerID.Padding = new System.Windows.Forms.Padding(5);
@@ -201,7 +225,7 @@
             this.WorkerIDLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.WorkerIDLabel.AutoSize = true;
             this.WorkerIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WorkerIDLabel.Location = new System.Drawing.Point(293, 13);
+            this.WorkerIDLabel.Location = new System.Drawing.Point(148, 13);
             this.WorkerIDLabel.Margin = new System.Windows.Forms.Padding(0);
             this.WorkerIDLabel.Name = "WorkerIDLabel";
             this.WorkerIDLabel.Padding = new System.Windows.Forms.Padding(5);
@@ -244,30 +268,6 @@
             this.Close.Text = "X";
             this.Close.UseVisualStyleBackColor = true;
             this.Close.Click += new System.EventHandler(this.Close_Click);
-            // 
-            // FloorRButton
-            // 
-            this.FloorRButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.FloorRButton.AutoSize = true;
-            this.FloorRButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FloorRButton.Location = new System.Drawing.Point(72, 470);
-            this.FloorRButton.Name = "FloorRButton";
-            this.FloorRButton.Size = new System.Drawing.Size(82, 24);
-            this.FloorRButton.TabIndex = 14;
-            this.FloorRButton.Text = "FLOOR";
-            this.FloorRButton.UseVisualStyleBackColor = true;
-            // 
-            // OfficeRButton
-            // 
-            this.OfficeRButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.OfficeRButton.AutoSize = true;
-            this.OfficeRButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OfficeRButton.Location = new System.Drawing.Point(174, 470);
-            this.OfficeRButton.Name = "OfficeRButton";
-            this.OfficeRButton.Size = new System.Drawing.Size(86, 24);
-            this.OfficeRButton.TabIndex = 15;
-            this.OfficeRButton.Text = "OFFICE";
-            this.OfficeRButton.UseVisualStyleBackColor = true;
             // 
             // EmployeeInputWindow
             // 

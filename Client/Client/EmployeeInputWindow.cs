@@ -41,12 +41,21 @@ namespace Client
 
         private void ConfirmButton_Click(object sender, EventArgs e)
         {
-            if(IsAllFieldsFilled() == true)
+            PromptForUserCreation();
+        }
+
+
+        private void PromptForUserCreation()
+        {
+            if (IsAllFieldsFilled())
             {
-                if(CheckPasswordValidity() == true)
+                if (CheckPasswordValidity())
                 {
                     
-                    
+
+
+
+
                 }
             }
         }
@@ -98,19 +107,7 @@ namespace Client
             }
         }
 
-        private void SetInformation()
-        {
-            if (CheckPasswordValidity() == true)
-            {
-                NameInputString = NameInput.Text;
-                PasswordInputString = EnterPassword.Text;
-                RoleInputString = GetRole();
-            }
-            else
-            {
-                MessageBox.Show("Error", "Passwords do not match");
-            }
-        }
+
 
         private bool CheckPasswordValidity()
         {
@@ -120,8 +117,8 @@ namespace Client
             }
             else
             {
+                MessageBox.Show("Passwords do not match", "Error");
                 return false;
-                MessageBox.Show("Passwords do not match","Error");
             }
         }
 
@@ -145,52 +142,12 @@ namespace Client
 
         private void ClearInformation()
         {
-            NameInput.Text = "";
-            EnterPassword.Text = "";
-            ConfirmPassword.Text = "";
+            NameInput.Text = null;
+            EnterPassword.Text = null;
+            ConfirmPassword.Text = null;
             FloorRButton.Checked = false;
             OfficeRButton.Checked = false;
         }
-
-
-
-
-
-
-
-        #region INPUT
-
-
-
-        private string _name;
-        private string _password;
-        private string _role;
-
-
-
-        public string NameInputString
-        {
-            get { return _name; }
-            set { _name = value; }
-        }
-
-
-        public string PasswordInputString
-        {
-            get { return _password; }
-            set { _password = value; }
-        }
-
-
-        public string RoleInputString
-        {
-            get { return _role; }
-            set { _role = value; }
-        }
-
-
-
-        #endregion
 
     }
 }
