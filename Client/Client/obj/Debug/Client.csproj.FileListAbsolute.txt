@@ -58,5 +58,6 @@ C:\Users\Jonas\source\repos\NickDue\P3Projekt\Client\Client\obj\Debug\Client.Add
 C:\Users\Jonas\source\repos\NickDue\P3Projekt\Client\Client\obj\Debug\Client.LogOutPage.resources
 C:\Users\Jonas\source\repos\NickDue\P3Projekt\Client\Client\obj\Debug\Client.EmployeeInputWindow.resources
 C:\Users\Jonas\source\repos\NickDue\P3Projekt\Client\Client\obj\Debug\Client.csprojAssemblyReference.cache
-C:\Users\Jonas\source\repos\NickDue\P3Projekt\Client\Client\obj\Debug\Client.FloorSearchPage.resources
-C:\Users\Jonas\source\repos\NickDue\P3Projekt\Client\Client\obj\Debug\Client.LoginSystem.resources
+C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.EmployeeInputWindow.resources
+C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.FloorSearchPage.resources
+C:\Users\Frederik\Documents\GitHub\P3Projekt\Client\Client\obj\Debug\Client.LoginSystem.resources

@@ -22,7 +22,7 @@ namespace Server.SQL
                 while (reader.Read())
                 {
                     if(employee == null)
-                        employee = new Employee(reader.GetInt32(0),reader.GetString(2),reader.GetString(1),reader.GetString(3));
+                        employee = new Employee(reader.GetInt32(0), reader.GetString(2), reader.GetString(1), reader.GetString(3));
                     Console.WriteLine("{0} {1} {2} {3}", reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3));
                 }
 
@@ -55,53 +55,51 @@ namespace Server.SQL
         }
 
         public void AddUserToDB(int id, string pw, string name, Employee.Role role)
-                 {
-                     try
-                     {
-                         using var con = new MySqlConnection(SqlLogin);
-                         con.Open();
+        {
+            try
+            {
+                 using var con = new MySqlConnection(SqlLogin);
+                 con.Open();
                          
-                         var query =
-                             "SELECT * FROM users WHERE id = " +id + ";";
+                 var query = "SELECT * FROM users WHERE id = " +id + ";";
                      
-                         using var command = new MySqlCommand(query, con);
-                         int ids = 0;
-                         using MySqlDataReader reader = command.ExecuteReader();
-                         while (reader.Read())
-                         {
-                             ids = reader.GetInt32(0);
-                         }
-                         reader.Close();
-
-                         if (ids != 0)
-                         {
-                             Console.WriteLine("User already associated with this id.");
-                             con.Close();
-                             return;
-                         }
-
-                         var sql =
-                             "INSERT INTO users(id, username, password, role, register_date) values (@id, @username, @password, @role, @register_date)";
-                     
-                         using var cmd = new MySqlCommand(sql, con);
-         
-                         cmd.Parameters.AddWithValue("@id", id);
-                         cmd.Parameters.AddWithValue("@username", name);
-                         cmd.Parameters.AddWithValue("@password", pw);
-                         cmd.Parameters.AddWithValue("@role", Enum.GetName(typeof(Employee.Role),role));
-                         cmd.Parameters.AddWithValue("@register_date", DateTime.Now);
-                         cmd.Prepare();
-         
-                         cmd.ExecuteNonQuery();
-         
-                         Console.WriteLine("Added user!");
-                     }
-                     catch (Exception e)
-                     {
-                         Console.WriteLine(e);
-                         throw;
-                     }
+                 using var command = new MySqlCommand(query, con);
+                 int ids = 0;
+                 using MySqlDataReader reader = command.ExecuteReader();
+                 while (reader.Read())
+                 {
+                     ids = reader.GetInt32(0);
                  }
+                 reader.Close();
+
+                 if (ids != 0)
+                 {
+                     Console.WriteLine("User already associated with this id.");
+                     con.Close();
+                     return;
+                 }
+
+                 var sql = "INSERT INTO users(id, username, password, role, register_date) values (@id, @username, @password, @role, @register_date)";
+                     
+                 using var cmd = new MySqlCommand(sql, con);
+         
+                 cmd.Parameters.AddWithValue("@id", id);
+                 cmd.Parameters.AddWithValue("@username", name);
+                 cmd.Parameters.AddWithValue("@password", pw);
+                 cmd.Parameters.AddWithValue("@role", Enum.GetName(typeof(Employee.Role),role));
+                 cmd.Parameters.AddWithValue("@register_date", DateTime.Now);
+                 cmd.Prepare();
+         
+                 cmd.ExecuteNonQuery();
+       
+                 Console.WriteLine("Added user!");
+            }
+            catch (Exception e)
+            {
+                 Console.WriteLine(e);
+                 throw;
+            }
+        }
 
         public void ChangeUserCredentials(int id, string newValue, string typeToAlter)
         {
