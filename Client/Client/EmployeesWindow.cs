@@ -66,9 +66,7 @@ namespace Client
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            EmployeeInputWindow form2 = new EmployeeInputWindow();
-            form2.Show();
-            
+            employeeInputWindow1.Show();
 
         }
 
