@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.TitleLabel = new System.Windows.Forms.Label();
-            this.SearchInputField = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.EditButton = new System.Windows.Forms.Button();
             this.LocationPanel = new System.Windows.Forms.Panel();
             this.PrimaryLocationLabel = new System.Windows.Forms.Label();
@@ -63,12 +63,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.SearchButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
-            this.YESbutton = new System.Windows.Forms.Button();
-            this.NObutton = new System.Windows.Forms.Button();
-            this.LastChanceLabel = new System.Windows.Forms.Label();
-            this.backbutton = new System.Windows.Forms.Button();
-            this.Checkbutton = new System.Windows.Forms.Button();
-            this.CheckLabel = new System.Windows.Forms.Label();
             this.LocationPanel.SuspendLayout();
             this.SecondaryLocationPanel.SuspendLayout();
             this.ProductPanel.SuspendLayout();
@@ -84,12 +78,12 @@
             this.TitleLabel.TabIndex = 0;
             this.TitleLabel.Text = "Enter product ID number";
             // 
-            // SearchInputField
+            // textBox1
             // 
-            this.SearchInputField.Location = new System.Drawing.Point(311, 103);
-            this.SearchInputField.Name = "SearchInputField";
-            this.SearchInputField.Size = new System.Drawing.Size(292, 20);
-            this.SearchInputField.TabIndex = 1;
+            this.textBox1.Location = new System.Drawing.Point(311, 103);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(292, 20);
+            this.textBox1.TabIndex = 1;
             // 
             // EditButton
             // 
@@ -132,9 +126,9 @@
             this.PrimaryColliLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PrimaryColliLabel.Location = new System.Drawing.Point(13, 71);
             this.PrimaryColliLabel.Name = "PrimaryColliLabel";
-            this.PrimaryColliLabel.Size = new System.Drawing.Size(45, 26);
+            this.PrimaryColliLabel.Size = new System.Drawing.Size(51, 26);
             this.PrimaryColliLabel.TabIndex = 19;
-            this.PrimaryColliLabel.Text = "1/3";
+            this.PrimaryColliLabel.Text = "N/A";
             // 
             // SecondaryLocationPanel
             // 
@@ -403,79 +397,10 @@
             this.SaveButton.UseVisualStyleBackColor = false;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
-            // YESbutton
-            // 
-            this.YESbutton.BackColor = System.Drawing.Color.Green;
-            this.YESbutton.Location = new System.Drawing.Point(311, 120);
-            this.YESbutton.Name = "YESbutton";
-            this.YESbutton.Size = new System.Drawing.Size(81, 42);
-            this.YESbutton.TabIndex = 20;
-            this.YESbutton.Text = "YES";
-            this.YESbutton.UseVisualStyleBackColor = false;
-            this.YESbutton.Click += new System.EventHandler(this.YESbutton_Click);
-            // 
-            // NObutton
-            // 
-            this.NObutton.BackColor = System.Drawing.Color.DarkRed;
-            this.NObutton.Location = new System.Drawing.Point(536, 119);
-            this.NObutton.Name = "NObutton";
-            this.NObutton.Size = new System.Drawing.Size(86, 43);
-            this.NObutton.TabIndex = 21;
-            this.NObutton.Text = "NO";
-            this.NObutton.UseVisualStyleBackColor = false;
-            this.NObutton.Click += new System.EventHandler(this.NObutton_Click);
-            // 
-            // LastChanceLabel
-            // 
-            this.LastChanceLabel.AutoSize = true;
-            this.LastChanceLabel.Font = new System.Drawing.Font("Myanmar Text", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastChanceLabel.Location = new System.Drawing.Point(217, 52);
-            this.LastChanceLabel.Name = "LastChanceLabel";
-            this.LastChanceLabel.Size = new System.Drawing.Size(473, 48);
-            this.LastChanceLabel.TabIndex = 22;
-            this.LastChanceLabel.Text = "Are you sure to change the product";
-            // 
-            // backbutton
-            // 
-            this.backbutton.Location = new System.Drawing.Point(875, 3);
-            this.backbutton.Name = "backbutton";
-            this.backbutton.Size = new System.Drawing.Size(75, 23);
-            this.backbutton.TabIndex = 23;
-            this.backbutton.Text = "Back ->";
-            this.backbutton.UseVisualStyleBackColor = true;
-            this.backbutton.Click += new System.EventHandler(this.backbutton_Click);
-            // 
-            // Checkbutton
-            // 
-            this.Checkbutton.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Checkbutton.Location = new System.Drawing.Point(380, 98);
-            this.Checkbutton.Name = "Checkbutton";
-            this.Checkbutton.Size = new System.Drawing.Size(171, 64);
-            this.Checkbutton.TabIndex = 24;
-            this.Checkbutton.Text = "Check";
-            this.Checkbutton.UseVisualStyleBackColor = true;
-            this.Checkbutton.Click += new System.EventHandler(this.Checkbutton_Click);
-            // 
-            // CheckLabel
-            // 
-            this.CheckLabel.AutoSize = true;
-            this.CheckLabel.Font = new System.Drawing.Font("Myanmar Text", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckLabel.Location = new System.Drawing.Point(84, 42);
-            this.CheckLabel.Name = "CheckLabel";
-            this.CheckLabel.Size = new System.Drawing.Size(749, 48);
-            this.CheckLabel.TabIndex = 25;
-            this.CheckLabel.Text = "Use \'Check\' button to see if the right result is putted in... ";
-            // 
             // SearchWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.CheckLabel);
-            this.Controls.Add(this.Checkbutton);
-            this.Controls.Add(this.backbutton);
-            this.Controls.Add(this.LastChanceLabel);
-            this.Controls.Add(this.YESbutton);
-            this.Controls.Add(this.NObutton);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.label2);
@@ -483,7 +408,7 @@
             this.Controls.Add(this.ProductPanel);
             this.Controls.Add(this.LocationPanel);
             this.Controls.Add(this.EditButton);
-            this.Controls.Add(this.SearchInputField);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.TitleLabel);
             this.Name = "SearchWindow";
             this.Size = new System.Drawing.Size(982, 758);
@@ -501,7 +426,7 @@
         #endregion
 
         private System.Windows.Forms.Label TitleLabel;
-        private System.Windows.Forms.TextBox SearchInputField;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button EditButton;
         private System.Windows.Forms.Panel LocationPanel;
         private System.Windows.Forms.Panel ProductPanel;
@@ -534,11 +459,5 @@
         private System.Windows.Forms.Label WeightLabel;
         private System.Windows.Forms.Label ColorLabel;
         private System.Windows.Forms.Label VolumeLabel;
-        private System.Windows.Forms.Button YESbutton;
-        private System.Windows.Forms.Button NObutton;
-        private System.Windows.Forms.Label LastChanceLabel;
-        private System.Windows.Forms.Button backbutton;
-        private System.Windows.Forms.Button Checkbutton;
-        private System.Windows.Forms.Label CheckLabel;
     }
 }
