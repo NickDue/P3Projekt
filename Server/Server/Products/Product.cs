@@ -41,24 +41,27 @@ namespace Server
                     description.id = value;
                     break;
                 case 1:
-                    description.name = value;
+                    description.colliNumber = value;
                     break;
                 case 2:
-                    description.volume = Double.Parse(value);
+                    description.colliAmount = value;
                     break;
                 case 3:
-                    description.weight = Double.Parse(value);
+                    description.name = value;
                     break;
                 case 4:
-                    description.colli = value;
+                    description.volume = Double.Parse(value);
                     break;
                 case 5:
-                    description.color = value;
-                    break;
-                case 6:
-                    // todo
+                    description.weight = Double.Parse(value);
                     break;
                 case 7:
+                    description.color = value;
+                    break;
+                case 8:
+                    // todo Category
+                    break;
+                case 9:
                     amount = Int32.Parse(value);
                     break;
             }
