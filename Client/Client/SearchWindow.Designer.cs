@@ -203,9 +203,9 @@
             this.WeightLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold);
             this.WeightLabel.Location = new System.Drawing.Point(306, 380);
             this.WeightLabel.Name = "WeightLabel";
-            this.WeightLabel.Size = new System.Drawing.Size(51, 26);
+            this.WeightLabel.Size = new System.Drawing.Size(36, 26);
             this.WeightLabel.TabIndex = 24;
-            this.WeightLabel.Text = "N/A";
+            this.WeightLabel.Text = "40";
             // 
             // ColorLabel
             // 
@@ -215,7 +215,7 @@
             this.ColorLabel.Name = "ColorLabel";
             this.ColorLabel.Size = new System.Drawing.Size(51, 26);
             this.ColorLabel.TabIndex = 23;
-            this.ColorLabel.Text = "N/A";
+            this.ColorLabel.Text = "RED";
             // 
             // VolumeLabel
             // 
@@ -223,29 +223,29 @@
             this.VolumeLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold);
             this.VolumeLabel.Location = new System.Drawing.Point(306, 182);
             this.VolumeLabel.Name = "VolumeLabel";
-            this.VolumeLabel.Size = new System.Drawing.Size(51, 26);
+            this.VolumeLabel.Size = new System.Drawing.Size(53, 26);
             this.VolumeLabel.TabIndex = 22;
-            this.VolumeLabel.Text = "N/A";
+            this.VolumeLabel.Text = "0,54";
             // 
             // ProductNameLabel
             // 
             this.ProductNameLabel.AutoSize = true;
             this.ProductNameLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.ProductNameLabel.Location = new System.Drawing.Point(306, 98);
+            this.ProductNameLabel.Location = new System.Drawing.Point(246, 95);
             this.ProductNameLabel.Name = "ProductNameLabel";
-            this.ProductNameLabel.Size = new System.Drawing.Size(51, 26);
+            this.ProductNameLabel.Size = new System.Drawing.Size(165, 26);
             this.ProductNameLabel.TabIndex = 21;
-            this.ProductNameLabel.Text = "N/A";
+            this.ProductNameLabel.Text = "NewYorker Sofa";
             // 
             // ProductNumLabel
             // 
             this.ProductNumLabel.AutoSize = true;
             this.ProductNumLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.ProductNumLabel.Location = new System.Drawing.Point(306, 25);
+            this.ProductNumLabel.Location = new System.Drawing.Point(287, 22);
             this.ProductNumLabel.Name = "ProductNumLabel";
-            this.ProductNumLabel.Size = new System.Drawing.Size(51, 26);
+            this.ProductNumLabel.Size = new System.Drawing.Size(72, 26);
             this.ProductNumLabel.TabIndex = 20;
-            this.ProductNumLabel.Text = "N/A";
+            this.ProductNumLabel.Text = "13311";
             // 
             // amountBox
             // 
