@@ -6,15 +6,15 @@ namespace Server
     {
         
         public int employeeID { get; set; }
-        public string password { get; set; }
         public string employeeName { get; set; }
+        public string password { get; set; }
         public string role { get; set; }
 
-        public Employee(int employeeID, string password, string employeeName, string role)
+        public Employee(int employeeID, string employeeName, string password, string role)
         {
             this.employeeID = employeeID;
-            this.password = password;
             this.employeeName = employeeName;
+            this.password = password;
             this.role = role;
         }
 
