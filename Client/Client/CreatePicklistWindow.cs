@@ -19,7 +19,10 @@ namespace Client
 
         private void CreatePicklistWindow_Load(object sender, EventArgs e)
         {
-            
+            PicklistView.Hide();
+            UserInputPanel.Hide();
+
+            FillComboBox();
         }
 
         private void GenerateButton_Click(object sender, EventArgs e)
@@ -55,20 +58,22 @@ namespace Client
 
         private void OKButton_Click(object sender, EventArgs e)
         {
-            PicklistView.Hide();
-            UserInputPanel.Hide();
-            
-            List<TextBox> storeChoice = new List<TextBox>();
-            storeChoice.Add(CityTextbox);
-            storeChoice.Add(PlatformTextbox);
-            storeChoice.Add(ExpressTextbox);
+            ControlUserInput(); 
+        }
+
+        private void ControlUserInput()
+        {
+            List<ComboBox> list = new List<ComboBox>();
+            list.Add(CityCombobox);
+            list.Add(PlatformCombobox);
+            list.Add(ExpressCombobox);
 
             string errorPreset = "The following is missing: \n\n";
             string errorMessage = "";
 
-            foreach (TextBox tb in storeChoice)
+            foreach (ComboBox cb in list)
             {
-                errorMessage += (CheckTextBox(tb));
+                errorMessage += (CheckComboBox(cb));
             }
 
             if (errorMessage.Length > 0)
@@ -79,24 +84,79 @@ namespace Client
             {
                 PicklistView.Show();
                 UserInputPanel.Show();
-
-                CityTextbox.ReadOnly = true;
-                PlatformTextbox.ReadOnly = true;
-                ExpressTextbox.ReadOnly = true;
             }
-
         }
 
-        private string CheckTextBox(TextBox tb)
+        // Controls user input
+        private string CheckComboBox(ComboBox cb)
         {
-            if (string.IsNullOrWhiteSpace(tb.Text))
+            if (string.IsNullOrWhiteSpace(cb.Text))
             {
-                return tb.Name + "\n";
+                return cb.Name + "\n";
             }
             else
             {
                 return null;
             }
+        }
+
+        // Adds data to the user boxes
+        private void FillComboBox()
+        {
+            foreach (string store in CreateStoreList())
+            {
+                CityCombobox.Items.Add(store);
+            }
+
+            PlatformCombobox.Items.Add("Store order");
+            PlatformCombobox.Items.Add("Online order");
+
+            ExpressCombobox.Items.Add("Yes");
+            ExpressCombobox.Items.Add("No");
+        }
+
+        // Creates and returns a list of stores
+        private List<string> CreateStoreList()
+        {
+            List<string> stores = new List<string>();
+            
+            stores.Add("Bornholm");
+            stores.Add("Broendby");
+            stores.Add("Esbjerg");
+            stores.Add("Fredericia");
+            stores.Add("Frederikshavn"); // Not available currently
+            stores.Add("Gladsaxe");
+            stores.Add("Herning");
+            stores.Add("Hilleroed");
+            stores.Add("Hjoerring");
+            stores.Add("Holbaek");
+            stores.Add("Holstebro");
+            stores.Add("Horsens");
+            stores.Add("Ishoej");
+            stores.Add("Kastrup");
+            stores.Add("Kolding");
+            stores.Add("Koege");
+            stores.Add("Egaa");
+            stores.Add("Grenaa");
+            stores.Add("Nakskov");
+            stores.Add("Nykoebing Falster");
+            stores.Add("Naestved");
+            stores.Add("Odense");
+            stores.Add("Randers");
+            stores.Add("Roskilde");
+            stores.Add("Sdr. Omme");
+            stores.Add("Silkeborg");
+            stores.Add("Slagelse");
+            stores.Add("Svendborg");
+            stores.Add("Soenderborg");
+            stores.Add("Thisted");
+            stores.Add("Vejle");
+            stores.Add("Viborg");
+            stores.Add("Aabenraa");
+            stores.Add("Aalborg");
+            stores.Add("Aarhus");
+
+            return stores;
         }
     }
 }
