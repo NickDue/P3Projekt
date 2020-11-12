@@ -30,20 +30,25 @@ namespace Client
         // Textboxes
         private void ProductNumberTextbox_TextChanged(object sender, EventArgs e)
         {
-            PicklistView.Items.Add(new ListViewItem(new[] {ProductNumberTextbox.Text, ProductNameTextbox.Text, LocationTextbox.Text, AmountTextbox.Text }));
+            //PicklistView.Items.Add(new ListViewItem(new[] {ProductNumberTextbox.Text, ProductNameTextbox.Text, LocationTextbox.Text, AmountTextbox.Text }));
         }
 
         private void ProductNameTextbox_TextChanged(object sender, EventArgs e)
         {
-            PicklistView.Items.Add(new ListViewItem(new[] { ProductNumberTextbox.Text, ProductNameTextbox.Text, LocationTextbox.Text, AmountTextbox.Text }));
+            //PicklistView.Items.Add(new ListViewItem(new[] { ProductNumberTextbox.Text, ProductNameTextbox.Text, LocationTextbox.Text, AmountTextbox.Text }));
         }
 
         private void LocationTextbox_TextChanged(object sender, EventArgs e)
         {
-            PicklistView.Items.Add(new ListViewItem(new[] { ProductNumberTextbox.Text, ProductNameTextbox.Text, LocationTextbox.Text, AmountTextbox.Text }));
+            //PicklistView.Items.Add(new ListViewItem(new[] { ProductNumberTextbox.Text, ProductNameTextbox.Text, LocationTextbox.Text, AmountTextbox.Text }));
         }
 
         private void AmountTextbox_TextChanged(object sender, EventArgs e)
+        {
+            //PicklistView.Items.Add(new ListViewItem(new[] { ProductNumberTextbox.Text, ProductNameTextbox.Text, LocationTextbox.Text, AmountTextbox.Text }));
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
         {
             PicklistView.Items.Add(new ListViewItem(new[] { ProductNumberTextbox.Text, ProductNameTextbox.Text, LocationTextbox.Text, AmountTextbox.Text }));
         }
