@@ -70,9 +70,10 @@ namespace Client
 
         }
 
+        
         private void AddEmployee(string employeeName, int workerID, string role, string lastlog, Image pic)
         {
-
+            
             ListItem employee = new ListItem
             {
                 EmployeeName = employeeName,
@@ -83,7 +84,8 @@ namespace Client
             };
 
             ItemList.Add(employee);
-
+            
         }
+        
     }
 }
