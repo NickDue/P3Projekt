@@ -38,6 +38,7 @@
             this.ImportButton = new System.Windows.Forms.Button();
             this.GenerateButton = new System.Windows.Forms.Button();
             this.FunctionPanel = new System.Windows.Forms.Panel();
+            this.AddButton = new System.Windows.Forms.Button();
             this.UserInputPanel = new System.Windows.Forms.Panel();
             this.AmountTextbox = new System.Windows.Forms.TextBox();
             this.LocationTextbox = new System.Windows.Forms.TextBox();
@@ -48,7 +49,7 @@
             this.ProductNameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.LocationColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.AmountColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.AddButton = new System.Windows.Forms.Button();
+            this.OKButton = new System.Windows.Forms.Button();
             this.FunctionPanel.SuspendLayout();
             this.UserInputPanel.SuspendLayout();
             this.SuspendLayout();
@@ -132,6 +133,7 @@
             // 
             // FunctionPanel
             // 
+            this.FunctionPanel.Controls.Add(this.OKButton);
             this.FunctionPanel.Controls.Add(this.AddButton);
             this.FunctionPanel.Controls.Add(this.GenerateButton);
             this.FunctionPanel.Controls.Add(this.ImportButton);
@@ -147,6 +149,16 @@
             this.FunctionPanel.Name = "FunctionPanel";
             this.FunctionPanel.Size = new System.Drawing.Size(982, 218);
             this.FunctionPanel.TabIndex = 0;
+            // 
+            // AddButton
+            // 
+            this.AddButton.Location = new System.Drawing.Point(873, 187);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(50, 25);
+            this.AddButton.TabIndex = 5;
+            this.AddButton.Text = "Add";
+            this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // UserInputPanel
             // 
@@ -229,15 +241,15 @@
             this.AmountColumn.Text = "Amount";
             this.AmountColumn.Width = 159;
             // 
-            // AddButton
+            // OKButton
             // 
-            this.AddButton.Location = new System.Drawing.Point(873, 187);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(50, 25);
-            this.AddButton.TabIndex = 5;
-            this.AddButton.Text = "Add";
-            this.AddButton.UseVisualStyleBackColor = true;
-            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            this.OKButton.Location = new System.Drawing.Point(54, 187);
+            this.OKButton.Name = "OKButton";
+            this.OKButton.Size = new System.Drawing.Size(75, 23);
+            this.OKButton.TabIndex = 6;
+            this.OKButton.Text = "OK";
+            this.OKButton.UseVisualStyleBackColor = true;
+            this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             // 
             // CreatePicklistWindow
             // 
@@ -280,5 +292,6 @@
         private System.Windows.Forms.ColumnHeader LocationColumn;
         private System.Windows.Forms.ColumnHeader AmountColumn;
         private System.Windows.Forms.Button AddButton;
+        private System.Windows.Forms.Button OKButton;
     }
 }
