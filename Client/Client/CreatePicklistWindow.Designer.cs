@@ -35,6 +35,7 @@
             this.ImportButton = new System.Windows.Forms.Button();
             this.GenerateButton = new System.Windows.Forms.Button();
             this.FunctionPanel = new System.Windows.Forms.Panel();
+            this.OKButton = new System.Windows.Forms.Button();
             this.ExpressCombobox = new System.Windows.Forms.ComboBox();
             this.PlatformCombobox = new System.Windows.Forms.ComboBox();
             this.CityCombobox = new System.Windows.Forms.ComboBox();
@@ -49,9 +50,10 @@
             this.ProductNameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.LocationColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.AmountColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.OKButton = new System.Windows.Forms.Button();
+            this.FileDataGridView = new System.Windows.Forms.DataGridView();
             this.FunctionPanel.SuspendLayout();
             this.UserInputPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FileDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // TitleLabel
@@ -99,6 +101,7 @@
             this.ImportButton.TabIndex = 3;
             this.ImportButton.Text = "IMPORT";
             this.ImportButton.UseVisualStyleBackColor = true;
+            this.ImportButton.Click += new System.EventHandler(this.ImportButton_Click);
             // 
             // GenerateButton
             // 
@@ -128,6 +131,16 @@
             this.FunctionPanel.Name = "FunctionPanel";
             this.FunctionPanel.Size = new System.Drawing.Size(982, 218);
             this.FunctionPanel.TabIndex = 0;
+            // 
+            // OKButton
+            // 
+            this.OKButton.Location = new System.Drawing.Point(64, 187);
+            this.OKButton.Name = "OKButton";
+            this.OKButton.Size = new System.Drawing.Size(75, 23);
+            this.OKButton.TabIndex = 7;
+            this.OKButton.Text = "OK";
+            this.OKButton.UseVisualStyleBackColor = true;
+            this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             // 
             // ExpressCombobox
             // 
@@ -181,7 +194,6 @@
             this.AmountTextbox.Name = "AmountTextbox";
             this.AmountTextbox.Size = new System.Drawing.Size(75, 20);
             this.AmountTextbox.TabIndex = 0;
-            this.AmountTextbox.TextChanged += new System.EventHandler(this.AmountTextbox_TextChanged);
             // 
             // LocationTextbox
             // 
@@ -189,7 +201,6 @@
             this.LocationTextbox.Name = "LocationTextbox";
             this.LocationTextbox.Size = new System.Drawing.Size(213, 20);
             this.LocationTextbox.TabIndex = 0;
-            this.LocationTextbox.TextChanged += new System.EventHandler(this.LocationTextbox_TextChanged);
             // 
             // ProductNameTextbox
             // 
@@ -197,7 +208,6 @@
             this.ProductNameTextbox.Name = "ProductNameTextbox";
             this.ProductNameTextbox.Size = new System.Drawing.Size(465, 20);
             this.ProductNameTextbox.TabIndex = 0;
-            this.ProductNameTextbox.TextChanged += new System.EventHandler(this.ProductNameTextbox_TextChanged);
             // 
             // ProductNumberTextbox
             // 
@@ -205,7 +215,6 @@
             this.ProductNumberTextbox.Name = "ProductNumberTextbox";
             this.ProductNumberTextbox.Size = new System.Drawing.Size(195, 20);
             this.ProductNumberTextbox.TabIndex = 0;
-            this.ProductNumberTextbox.TextChanged += new System.EventHandler(this.ProductNumberTextbox_TextChanged);
             // 
             // PicklistView
             // 
@@ -244,20 +253,20 @@
             this.AmountColumn.Text = "Amount";
             this.AmountColumn.Width = 159;
             // 
-            // OKButton
+            // FileDataGridView
             // 
-            this.OKButton.Location = new System.Drawing.Point(64, 187);
-            this.OKButton.Name = "OKButton";
-            this.OKButton.Size = new System.Drawing.Size(75, 23);
-            this.OKButton.TabIndex = 7;
-            this.OKButton.Text = "OK";
-            this.OKButton.UseVisualStyleBackColor = true;
-            this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
+            this.FileDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.FileDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FileDataGridView.Location = new System.Drawing.Point(0, 255);
+            this.FileDataGridView.Name = "FileDataGridView";
+            this.FileDataGridView.Size = new System.Drawing.Size(982, 503);
+            this.FileDataGridView.TabIndex = 5;
             // 
             // CreatePicklistWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.FileDataGridView);
             this.Controls.Add(this.PicklistView);
             this.Controls.Add(this.UserInputPanel);
             this.Controls.Add(this.FunctionPanel);
@@ -268,6 +277,7 @@
             this.FunctionPanel.PerformLayout();
             this.UserInputPanel.ResumeLayout(false);
             this.UserInputPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FileDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -296,5 +306,6 @@
         private System.Windows.Forms.ComboBox PlatformCombobox;
         private System.Windows.Forms.ComboBox CityCombobox;
         private System.Windows.Forms.Button OKButton;
+        private System.Windows.Forms.DataGridView FileDataGridView;
     }
 }
