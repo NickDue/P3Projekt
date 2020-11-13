@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Data;
+using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Client
 {
@@ -20,6 +22,7 @@ namespace Client
         private void CreatePicklistWindow_Load(object sender, EventArgs e)
         {
             PicklistView.Hide();
+            FileDataGridView.Hide();
             UserInputPanel.Hide();
 
             FillComboBox();
@@ -30,27 +33,6 @@ namespace Client
             // generate picklist to file
         }
 
-        // Textboxes
-        private void ProductNumberTextbox_TextChanged(object sender, EventArgs e)
-        {
-            //PicklistView.Items.Add(new ListViewItem(new[] {ProductNumberTextbox.Text, ProductNameTextbox.Text, LocationTextbox.Text, AmountTextbox.Text }));
-        }
-
-        private void ProductNameTextbox_TextChanged(object sender, EventArgs e)
-        {
-            //PicklistView.Items.Add(new ListViewItem(new[] { ProductNumberTextbox.Text, ProductNameTextbox.Text, LocationTextbox.Text, AmountTextbox.Text }));
-        }
-
-        private void LocationTextbox_TextChanged(object sender, EventArgs e)
-        {
-            //PicklistView.Items.Add(new ListViewItem(new[] { ProductNumberTextbox.Text, ProductNameTextbox.Text, LocationTextbox.Text, AmountTextbox.Text }));
-        }
-
-        private void AmountTextbox_TextChanged(object sender, EventArgs e)
-        {
-            //PicklistView.Items.Add(new ListViewItem(new[] { ProductNumberTextbox.Text, ProductNameTextbox.Text, LocationTextbox.Text, AmountTextbox.Text }));
-        }
-
         private void AddButton_Click(object sender, EventArgs e)
         {
             PicklistView.Items.Add(new ListViewItem(new[] { ProductNumberTextbox.Text, ProductNameTextbox.Text, LocationTextbox.Text, AmountTextbox.Text }));
@@ -58,9 +40,32 @@ namespace Client
 
         private void OKButton_Click(object sender, EventArgs e)
         {
-            ControlUserInput(); 
+            ControlUserInput();
         }
 
+        private void ImportButton_Click(object sender, EventArgs e)
+        {
+            PicklistView.Hide();
+            FileDataGridView.Show();
+            
+            try
+            {
+                using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "CSV|*.csv", ValidateNames = true, Multiselect = false})
+                {
+                    if(ofd.ShowDialog() == DialogResult.OK)
+                    {
+                        FileDataGridView.DataSource = ReadCsv(ofd.FileName);
+                    }
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Controls for missing user input
         private void ControlUserInput()
         {
             List<ComboBox> list = new List<ComboBox>();
@@ -87,7 +92,7 @@ namespace Client
             }
         }
 
-        // Controls user input
+        // Controls combobox for user input
         private string CheckComboBox(ComboBox cb)
         {
             if (string.IsNullOrWhiteSpace(cb.Text))
@@ -119,7 +124,8 @@ namespace Client
         private List<string> CreateStoreList()
         {
             List<string> stores = new List<string>();
-            
+
+            #region City list
             stores.Add("Bornholm");
             stores.Add("Broendby");
             stores.Add("Esbjerg");
@@ -155,8 +161,31 @@ namespace Client
             stores.Add("Aabenraa");
             stores.Add("Aalborg");
             stores.Add("Aarhus");
+            #endregion
 
             return stores;
         }
+
+        // Reads the .csv file
+        public DataTable ReadCsv(string fileName)
+        {
+            DataTable data = new DataTable("Data");
+
+            using (OleDbConnection conn = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=\"" +
+                Path.GetDirectoryName(fileName) + "\";Extended Properties='text;HDR=yes;FMT=Delimited(,)';"))
+            {
+                using(OleDbCommand cmd = new OleDbCommand(string.Format("select *from [{0}]", new FileInfo(fileName).Name), conn))
+                {
+                    conn.Open();
+                    using(OleDbDataAdapter adapter = new OleDbDataAdapter(cmd))
+                    {
+                        adapter.Fill(data);
+                    }
+                }
+            }
+
+            return data;
+        }
+        
     }
 }
