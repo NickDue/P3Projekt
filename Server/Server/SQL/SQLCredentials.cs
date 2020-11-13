@@ -3,6 +3,6 @@
     public class SQLCredentials
     {
         public const string MySQLUsername = "root";
-        public const string MySQLPassword = "Popcorn031096!";
+        public const string MySQLPassword = "password"; //remember to change password
     }
 }
