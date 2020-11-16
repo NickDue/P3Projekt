@@ -134,24 +134,65 @@ namespace Client
                                                                     //This check AND change the value if the value is valid
         private void HandlingBoxInput()
         {
-            // Product number and amount validation
-            if (Int32.TryParse(ProductNumBox.Text, out int _) || Int32.TryParse(amountBox.Text, out int _))
+            // Product number validation
+            try
             {
-                if (ProductNumBox.Text.Length != 5 || int.Parse(amountBox.Text) <= 0)
+                Int32.Parse(ProductNumBox.Text);
+
+                if (ProductNumBox.Text.Length != 5)
                 {
-                    MessageBox.Show("Product number has to be 5 numbers and amount cant be 0, at least 1 or delete the product if there is no more", "error");
-                    ProductNumLabel.Text = ProductNumLabel.Text;
+                    MessageBox.Show("Product number has to be 5 numbers", "error");
+                    
+                }
+                else
+                {
+                    ProductNumLabel.Text = ProductNumBox.Text;
+                }
+            }
+            catch(FormatException)
+            {
+                MessageBox.Show("Product number has to be a number", "error");
+                ProductNumBox.Text = ProductNumLabel.Text;
+            }
+            //amount Validation
+            try
+            {
+                if (Int32.Parse(amountBox.Text) <= 0 || amountBox.Text.Length > 4)
+                {
+                    MessageBox.Show("Amount should be more than 0 and less than 9999", "error");
+                    amountBox.Text = AmountLabel.Text;
                 }
                 else
                 {
                     AmountLabel.Text = amountBox.Text;
-                    ProductNumLabel.Text = ProductNumBox.Text;
                 }
             }
-            else
+            catch (FormatException)
             {
-                MessageBox.Show("NaN", "Error");
-                AmountLabel.Text = AmountLabel.Text;
+                MessageBox.Show("Amount has to be a number", "error");
+                amountBox.Text = AmountLabel.Text;
+            }
+            // Weight and volume validation
+            try
+            {
+                if (double.Parse(WeightBox.Text) < 0.0 || double.Parse(WeightBox.Text) > 500.0 ||
+                    double.Parse(VolumeBox.Text) < 0.0 || double.Parse(VolumeBox.Text) > 5.0)
+                {
+                    MessageBox.Show("Weight and Volume either too high or too low. HENCE, it also could be '.' instead of ','.", "Error");
+                    WeightLabel.Text = WeightLabel.Text;
+                    VolumeLabel.Text = VolumeLabel.Text;
+                }
+                else
+                {
+                    WeightLabel.Text = WeightBox.Text;
+                    VolumeLabel.Text = VolumeBox.Text;
+                }
+            }
+            catch(FormatException)
+            {
+                MessageBox.Show("Weight and Volume has to be number with ONLY 1 decimal", "error");
+                WeightBox.Text = WeightLabel.Text;
+                VolumeBox.Text = VolumeLabel.Text;
             }
 
             // Product name and color validation
@@ -165,30 +206,7 @@ namespace Client
                 ProductNameLabel.Text = ProductNameBox.Text;
                 ColorLabel.Text = ColorBox.Text;
             }
-            // Weight and volume validation
-            if (Double.TryParse(WeightBox.Text, out double _) && double.TryParse(VolumeBox.Text, out double _))
-            {
-                if(double.Parse(WeightBox.Text) < 0.0 || double.Parse(WeightBox.Text) > 500.0 ||
-                   double.Parse(VolumeBox.Text) < 0.0 || double.Parse(VolumeBox.Text) > 5.0)
-                {
-                    MessageBox.Show("To big or To small a number", "Error");
-                    WeightLabel.Text = WeightLabel.Text;
-                    VolumeLabel.Text = VolumeLabel.Text;
-                }
-                else
-                {
-                    WeightLabel.Text = WeightBox.Text;
-                    VolumeBox.Text = VolumeBox.Text;
-                }
-
-            }
-            else
-            {
-                MessageBox.Show("NaN", "Error");
-                WeightLabel.Text = WeightLabel.Text;
-                VolumeLabel.Text = VolumeLabel.Text;
-            }
-
+            
             // Primary colli validation
             string[] colli = { "1/1","1/2", "2/2", "1/3","2/3", "3/3", "1/4", "2/4", "3/4", "4/4",
                                 "1/5", "2/5", "3/5", "4/5", "5/5", "1/6", "2/6", "3/6", "4/6", "5/6",
@@ -227,23 +245,59 @@ namespace Client
         {
             int errors = 0;  // Count errors happen
 
-            // Product number and amount validation
-            if (Int32.TryParse(ProductNumBox.Text, out int _) || Int32.TryParse(amountBox.Text, out int _))
+            // Product number validation
+            try
             {
-                if (ProductNumBox.Text.Length != 5 || int.Parse(amountBox.Text) <= 0 || amountBox.Text.Length > 4)
+                Int32.Parse(ProductNumBox.Text);
+
+                if (ProductNumBox.Text.Length != 5)
                 {
-                    MessageBox.Show("Product number has to be 5 numbers.                                                       " + 
-                    "Amount cant be 0, at least 1 or delete the product if there is no more", "error... Product number or Amount number does not fit");
-                    ProductNumLabel.Text = ProductNumLabel.Text;
+                    MessageBox.Show("Product number has to be 5 numbers", "error");
+                    ProductNumBox.Text = ProductNumLabel.Text;
                     errors++;
                 }
-
+ 
             }
-            else
+            catch (FormatException)
             {
-                MessageBox.Show("NaN", "Error");
-                AmountLabel.Text = AmountLabel.Text;
-                errors++;
+                MessageBox.Show("Product number has to be a number", "error");
+                ProductNumBox.Text = ProductNumLabel.Text;
+            }
+            //amount Validation
+            try
+            {
+                if (Int32.Parse(amountBox.Text) <= 0 || amountBox.Text.Length > 4)
+                {
+                    MessageBox.Show("Amount should be more than 0 and less than 9999", "error");
+                    amountBox.Text = AmountLabel.Text;
+                    errors++;
+                }
+                
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Amount has to be a number", "error");
+                amountBox.Text = AmountLabel.Text;
+            }
+            // Weight and volume validation
+            try
+            {
+                if (double.Parse(WeightBox.Text) < 0.0 || double.Parse(WeightBox.Text) > 500.0 ||
+                    double.Parse(VolumeBox.Text) < 0.0 || double.Parse(VolumeBox.Text) > 5.0)
+                {
+                    MessageBox.Show("Weight and Volume either too high or too low. HENCE, it also could be '.' instead of ','.", "Error");
+                    WeightBox.Text = WeightLabel.Text;
+                    VolumeBox.Text = VolumeLabel.Text;
+                    errors++;
+                }
+                
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Weight and Volume either too high or too low. HENCE, it also could be '.' instead of ','.", "Error");
+                MessageBox.Show("Weight and Volume has to be number with ONLY 1 decimal", "error");
+                WeightBox.Text = WeightLabel.Text;
+                VolumeBox.Text = VolumeLabel.Text;
             }
 
             // Product name and color validation
@@ -251,28 +305,6 @@ namespace Client
             {
                 MessageBox.Show("Name is to long", "Error");
                 ProductNameLabel.Text = ProductNameLabel.Text;
-                errors++;
-            }
-
-            // Weight and volume validation
-            if (Double.TryParse(WeightBox.Text, out double _) && double.TryParse(VolumeBox.Text, out double _))
-            {
-                if (double.Parse(WeightBox.Text) < 0.0 || double.Parse(WeightBox.Text) > 500.0 ||
-                   double.Parse(VolumeBox.Text) < 0.0 || double.Parse(VolumeBox.Text) > 5.0)
-                {
-                    MessageBox.Show("To big or To small a number", "Error");
-                    WeightLabel.Text = WeightLabel.Text;
-                    VolumeLabel.Text = VolumeLabel.Text;
-                    errors++;
-                }
-
-
-            }
-            else
-            {
-                MessageBox.Show("NaN", "Error");
-                WeightLabel.Text = WeightLabel.Text;
-                VolumeLabel.Text = VolumeLabel.Text;
                 errors++;
             }
 
