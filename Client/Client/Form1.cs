@@ -34,25 +34,25 @@ namespace Client
         private void HighlightSelectedButton(Button button) 
         {
             RemoveHighlightButton();
-            button.BackColor = Color.LightGray;
+            button.BackColor = Color.Gray;
             button.ForeColor = Color.Black;
             
         }
         private void RemoveHighlightButton()
         {
-            NavButton1.BackColor = Color.White;
+            NavButton1.BackColor = Color.Silver;
             NavButton1.ForeColor = Color.Black;
-            NavButton2.BackColor = Color.White;
+            NavButton2.BackColor = Color.Silver;
             NavButton2.ForeColor = Color.Black;
-            NavButton3.BackColor = Color.White;
+            NavButton3.BackColor = Color.Silver;
             NavButton3.ForeColor = Color.Black;
-            NavButton4.BackColor = Color.White;
+            NavButton4.BackColor = Color.Silver;
             NavButton4.ForeColor = Color.Black;
-            NavButton5.BackColor = Color.White;
+            NavButton5.BackColor = Color.Silver;
             NavButton5.ForeColor = Color.Black;
-            NavButton6.BackColor = Color.White;
+            NavButton6.BackColor = Color.Silver;
             NavButton6.ForeColor = Color.Black;
-            NavButton7.BackColor = Color.White;
+            NavButton7.BackColor = Color.Silver;
             NavButton7.ForeColor = Color.Black;
         }
 
