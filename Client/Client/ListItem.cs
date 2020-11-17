@@ -16,13 +16,52 @@ namespace Client
         public ListItem()
         {
             InitializeComponent();
+            
         }
+
+        // Event der trigger når man trykker ListItem eller nogen af alle dens underkomponenter
+        public event EventHandler<EventArgs> WasClicked;
+
 
         private void ListItem_Load(object sender, EventArgs e)
         {
-            this.Size = new Size(250, 300);
+            this.Size = new Size(300, 350);
+
+            //Placerer PictureBox i midten af HeaderPanel
+            pictureBox1.Location = new Point((HeaderPanel.Size.Width /2) - (pictureBox1.Size.Width / 2), (HeaderPanel.Size.Height / 2 + (WorkerIDInput.Height / 2)) - (pictureBox1.Size.Height / 2));
+
+            this.MouseClick += Control_MouseClick;
+            RegisterMouseClickForChildren(Controls);
+
         }
 
+
+
+        private void RegisterMouseClickForChildren(ControlCollection controls)
+        {
+            foreach(Control control in controls)
+            {
+                control.MouseClick += Control_MouseClick;
+                if (control.HasChildren)
+                {
+                    RegisterMouseClickForChildren(control.Controls);
+                }
+            }
+        }
+
+
+
+        private void Control_MouseClick(object sender, MouseEventArgs e)
+        {
+            var wasClicked = WasClicked;
+            if (wasClicked != null)
+            {
+                WasClicked(this, EventArgs.Empty);
+            }
+            // Select this UC on click.
+            Selected = true;
+
+        }
 
 
         #region Properties
@@ -45,7 +84,7 @@ namespace Client
         public int WorkerID
         {
             get { return _workerID; }
-            set { _workerID = value; WorkerIDInput.Text = value.ToString(); }
+            set { _workerID = value; WorkerIDInput.Text = "ID#" + value.ToString(); }
         }
 
         [Category("Custom Properties")]
@@ -69,11 +108,15 @@ namespace Client
             set { _picture = value; pictureBox1.Image = value; }
         }
 
+
         #endregion
 
-        private void ListItem_Click(object sender, EventArgs e)
+        private bool _selected;
+        public bool Selected
         {
-
+            get { return _selected; }
+            set { _selected = value; this.BorderStyle = Selected ? BorderStyle.Fixed3D : BorderStyle.FixedSingle; this.BackColor = Selected ? SystemColors.Highlight : SystemColors.ControlLight; }
         }
+
     }
 }
