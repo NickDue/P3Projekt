@@ -68,8 +68,12 @@ namespace Client
             get { return _picture; }
             set { _picture = value; pictureBox1.Image = value; }
         }
-        
+
         #endregion
 
+        private void ListItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

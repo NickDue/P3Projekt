@@ -16,16 +16,18 @@ namespace Server
         private const string SERVER_IP = "127.0.0.1";
         static void Main(string[] args)
         {
-            EmployeeHandler handler = new EmployeeHandler();
+            //EmployeeHandler handler = new EmployeeHandler();
+            ProductHandler pHandler = new ProductHandler();
+            pHandler.GetProductByID("21188", "01", "03");
             //handler.DeleteEmployeeFromDB(22222);
-            handler.AddUserToDB(51, "helloWorld","Test subject", Employee.Role.FloorWorker);
+            //handler.AddUserToDB(51, "helloWorld","Test subject", Employee.Role.FloorWorker);
             //handler.ChangeUserCredentials(15, "Office", "role");
             //Console.WriteLine(handler.AuthenticateUser(1, "dick"));
             //Employee e = handler.GetEmployeeById(15);
             //Console.WriteLine(e.employeeName);
         }
 
-        static void TestProduct()
+        /*static void TestProduct()
         {
             Product p = new Product(new ProductDescription("22222-01 ","sofa",2.3D, 2.3D,"03","green",Category.Bed));
             Console.WriteLine(p.description.id);
@@ -33,7 +35,7 @@ namespace Server
             Console.WriteLine(idToInt);
             LoadedDatabase.AllProducts.Add(idToInt,p);
             Console.WriteLine(LoadedDatabase.AllProducts[idToInt].description.color);
-        }
+        }*/
 
         static void TestEmployee()
         {

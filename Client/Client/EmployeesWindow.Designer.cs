@@ -112,7 +112,7 @@
             this.Controls.Add(this.FunctionPanel);
             this.Name = "EmployeesWindow";
             this.Size = new System.Drawing.Size(982, 758);
-            this.Load += new System.EventHandler(this.EmloyeeFlowPanel_Load);
+            this.Load += new System.EventHandler(this.EmployeeFlowPanel_Load);
             this.FunctionPanel.ResumeLayout(false);
             this.FunctionPanel.PerformLayout();
             this.ResumeLayout(false);

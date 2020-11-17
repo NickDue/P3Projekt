@@ -27,7 +27,7 @@ namespace Client
         {
             //hej
          
-            for (int i = 0; i < ItemList.Count(); i++)
+            for (int i = 0; i > 20; i++)
             {
 
                 ItemList[i] = new ListItem();
@@ -42,7 +42,7 @@ namespace Client
                 int gap = ((EmployeeFlowPanel.Width - (ItemList[i].Width * itemsPerRow)) / 6) - 1;
                 ItemList[i].Margin = new Padding(gap, gap, gap, gap);
 
-                if (EmployeeFlowPanel.Controls.Count < 0)
+                if (EmployeeFlowPanel.Controls.Count > 0)
                 {
                     EmployeeFlowPanel.Controls.Clear();
                 }
@@ -54,11 +54,13 @@ namespace Client
             }
         }
         */
+        
 
-        private void EmloyeeFlowPanel_Load(object sender, EventArgs e)
+        private void EmployeeFlowPanel_Load(object sender, EventArgs e)
         {
             Size = new Size(982, 758);
             Padding = new Padding(0, 0, 0, 0);
+
 
         }
 
@@ -66,13 +68,16 @@ namespace Client
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            employeeInputWindow1.Show();
+            //employeeInputWindow1.Show();
+            AddEmployee("Dunke Dolmer", 123, "FLOOR", "9/11-2004", Resources._912214);
+            
 
         }
 
+        
         private void AddEmployee(string employeeName, int workerID, string role, string lastlog, Image pic)
         {
-
+            
             ListItem employee = new ListItem
             {
                 EmployeeName = employeeName,
@@ -83,7 +88,9 @@ namespace Client
             };
 
             ItemList.Add(employee);
-
+            EmployeeFlowPanel.Controls.Add(employee);
+            
         }
+
     }
 }
