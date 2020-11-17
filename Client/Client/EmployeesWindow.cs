@@ -105,21 +105,12 @@ namespace Client
 
         private void RemoveEmployee()
         {
-            if(GetSelected(ItemList) != null)
+            ListItem item = GetSelected(ItemList);
+            if(item != null)
             {
-                EmployeeFlowPanel.Controls.Remove(GetSelected(ItemList));
-                ItemList.Remove(GetSelected(ItemList));
+                EmployeeFlowPanel.Controls.Remove(item);
+                ItemList.Remove(item);
             }
-  
-            
-            /*
-            int index = GetIndexOfSelected(ItemList);
-            if(index <= 0 && index > 0)
-            {
-                EmployeeFlowPanel.Controls.Remove(ItemList[index]);
-                ItemList.RemoveAt(index);
-            }
-            */
         }
 
         private ListItem GetSelected(List<ListItem> list)
