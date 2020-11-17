@@ -20,26 +20,22 @@ namespace Client
         private void MyhomeForm_Load(object sender, EventArgs e)
         {
             HideNotSelectedPage();
-
-            /*
-            if (User.Role.ToUpper() == "FLOOR")
+            if (User.Role.ToUpper() == "FLOOR1")
             {
                 NavButton2.Hide();
                 NavButton3.Hide();
                 NavButton4.Hide();
                 NavButton5.Hide();
                 NavButton6.Hide();
-
             }
-            */
 
         }
 
         private void HighlightSelectedButton(Button button) 
         {
             RemoveHighlightButton();
-            button.BackColor = Color.Black;
-            button.ForeColor = Color.White;
+            button.BackColor = Color.LightGray;
+            button.ForeColor = Color.Black;
             
         }
         private void RemoveHighlightButton()
@@ -64,9 +60,18 @@ namespace Client
         private void NavButton1_Click(object sender, EventArgs e)
         {
             HideNotSelectedPage();
-            searchWindow1.Show();
+            if(User.Role.ToUpper() == "FLOOR")
+            {
+                floorSearchPage1.Show();
+            }
+            else
+            {
+                searchWindow1.Show();
+            }
+            
             HighlightSelectedButton(NavButton1);
         }
+
         private void NavButton2_Click(object sender, EventArgs e)
         {
             HideNotSelectedPage();
@@ -101,6 +106,7 @@ namespace Client
         }
         private void NavButton7_Click(object sender, EventArgs e)
         {
+
             HideNotSelectedPage();
             HighlightSelectedButton(NavButton7);
             logOutPage2.Show();
@@ -116,6 +122,7 @@ namespace Client
         
         private void HideNotSelectedPage()
         {
+            floorSearchPage1.Hide();
             searchWindow1.Hide();
             allProductsPage1.Hide();
             logsPage1.Hide();

@@ -48,6 +48,7 @@
             this.logsPage1 = new Client.LogsPage();
             this.allProductsPage1 = new Client.AllProductsPage();
             this.searchWindow1 = new Client.SearchWindow();
+            this.floorSearchPage1 = new Client.FloorSearchPage();
             this.Navigationbar.SuspendLayout();
             this.LandingPage.SuspendLayout();
             this.SuspendLayout();
@@ -149,6 +150,7 @@
             // 
             // LandingPage
             // 
+            this.LandingPage.Controls.Add(this.floorSearchPage1);
             this.LandingPage.Controls.Add(this.TimeLabel);
             this.LandingPage.Controls.Add(this.Timetitle);
             this.LandingPage.Controls.Add(this.logOutPage2);
@@ -246,6 +248,13 @@
             this.searchWindow1.Size = new System.Drawing.Size(982, 758);
             this.searchWindow1.TabIndex = 2;
             // 
+            // floorSearchPage1
+            // 
+            this.floorSearchPage1.Location = new System.Drawing.Point(3, 0);
+            this.floorSearchPage1.Name = "floorSearchPage1";
+            this.floorSearchPage1.Size = new System.Drawing.Size(982, 758);
+            this.floorSearchPage1.TabIndex = 13;
+            // 
             // MyhomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -286,6 +295,7 @@
         private LogOutPage logOutPage2;
         private System.Windows.Forms.Label TimeLabel;
         private System.Windows.Forms.Label Timetitle;
+        private FloorSearchPage floorSearchPage1;
     }
 }
 
