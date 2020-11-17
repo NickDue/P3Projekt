@@ -53,8 +53,14 @@
             this.PrimaryLocationBox = new System.Windows.Forms.TextBox();
             this.PrimaryColliBox = new System.Windows.Forms.TextBox();
             this.EditButton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SearchInput = new System.Windows.Forms.TextBox();
             this.TitleLabel = new System.Windows.Forms.Label();
+            this.CheckLabel = new System.Windows.Forms.Label();
+            this.Checkbutton = new System.Windows.Forms.Button();
+            this.LastChanceLabel = new System.Windows.Forms.Label();
+            this.NOButton = new System.Windows.Forms.Button();
+            this.YESButton = new System.Windows.Forms.Button();
+            this.Backbutton = new System.Windows.Forms.Button();
             this.ProductPanel.SuspendLayout();
             this.LocationPanel.SuspendLayout();
             this.SuspendLayout();
@@ -121,7 +127,7 @@
             this.ProductPanel.Controls.Add(this.ProductNumTitle);
             this.ProductPanel.Location = new System.Drawing.Point(491, 198);
             this.ProductPanel.Name = "ProductPanel";
-            this.ProductPanel.Size = new System.Drawing.Size(491, 547);
+            this.ProductPanel.Size = new System.Drawing.Size(491, 557);
             this.ProductPanel.TabIndex = 13;
             // 
             // AmountLabel
@@ -271,9 +277,9 @@
             this.PrimaryLocationLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold);
             this.PrimaryLocationLabel.Location = new System.Drawing.Point(256, 71);
             this.PrimaryLocationLabel.Name = "PrimaryLocationLabel";
-            this.PrimaryLocationLabel.Size = new System.Drawing.Size(51, 26);
+            this.PrimaryLocationLabel.Size = new System.Drawing.Size(104, 26);
             this.PrimaryLocationLabel.TabIndex = 17;
-            this.PrimaryLocationLabel.Text = "N/A";
+            this.PrimaryLocationLabel.Text = "H4-30-21";
             // 
             // PrimaryColliLabel
             // 
@@ -281,16 +287,16 @@
             this.PrimaryColliLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PrimaryColliLabel.Location = new System.Drawing.Point(13, 71);
             this.PrimaryColliLabel.Name = "PrimaryColliLabel";
-            this.PrimaryColliLabel.Size = new System.Drawing.Size(51, 26);
+            this.PrimaryColliLabel.Size = new System.Drawing.Size(45, 26);
             this.PrimaryColliLabel.TabIndex = 19;
-            this.PrimaryColliLabel.Text = "N/A";
+            this.PrimaryColliLabel.Text = "1/5";
             // 
             // SecondaryLocationPanel
             // 
             this.SecondaryLocationPanel.BackColor = System.Drawing.SystemColors.Highlight;
             this.SecondaryLocationPanel.Location = new System.Drawing.Point(3, 182);
             this.SecondaryLocationPanel.Name = "SecondaryLocationPanel";
-            this.SecondaryLocationPanel.Size = new System.Drawing.Size(488, 362);
+            this.SecondaryLocationPanel.Size = new System.Drawing.Size(488, 378);
             this.SecondaryLocationPanel.TabIndex = 18;
             // 
             // PrimaryLocationBox
@@ -318,12 +324,12 @@
             this.EditButton.UseVisualStyleBackColor = true;
             this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
-            // textBox1
+            // SearchInput
             // 
-            this.textBox1.Location = new System.Drawing.Point(311, 90);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(292, 20);
-            this.textBox1.TabIndex = 10;
+            this.SearchInput.Location = new System.Drawing.Point(311, 90);
+            this.SearchInput.Name = "SearchInput";
+            this.SearchInput.Size = new System.Drawing.Size(292, 20);
+            this.SearchInput.TabIndex = 10;
             // 
             // TitleLabel
             // 
@@ -335,10 +341,81 @@
             this.TitleLabel.TabIndex = 9;
             this.TitleLabel.Text = "Enter product ID number";
             // 
+            // CheckLabel
+            // 
+            this.CheckLabel.AutoSize = true;
+            this.CheckLabel.Font = new System.Drawing.Font("Myanmar Text", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckLabel.Location = new System.Drawing.Point(2, 22);
+            this.CheckLabel.Name = "CheckLabel";
+            this.CheckLabel.Size = new System.Drawing.Size(703, 48);
+            this.CheckLabel.TabIndex = 18;
+            this.CheckLabel.Text = "Check here for see if you have entered the right input";
+            // 
+            // Checkbutton
+            // 
+            this.Checkbutton.Font = new System.Drawing.Font("Microsoft YaHei UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Checkbutton.Location = new System.Drawing.Point(10, 73);
+            this.Checkbutton.Name = "Checkbutton";
+            this.Checkbutton.Size = new System.Drawing.Size(133, 60);
+            this.Checkbutton.TabIndex = 19;
+            this.Checkbutton.Text = "Check";
+            this.Checkbutton.UseVisualStyleBackColor = true;
+            this.Checkbutton.Click += new System.EventHandler(this.Checkbutton_Click);
+            // 
+            // LastChanceLabel
+            // 
+            this.LastChanceLabel.AutoSize = true;
+            this.LastChanceLabel.Font = new System.Drawing.Font("Myanmar Text", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastChanceLabel.Location = new System.Drawing.Point(234, 22);
+            this.LastChanceLabel.Name = "LastChanceLabel";
+            this.LastChanceLabel.Size = new System.Drawing.Size(490, 48);
+            this.LastChanceLabel.TabIndex = 20;
+            this.LastChanceLabel.Text = "Are you sure to change this product?";
+            // 
+            // NOButton
+            // 
+            this.NOButton.BackColor = System.Drawing.Color.DarkRed;
+            this.NOButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NOButton.Location = new System.Drawing.Point(299, 117);
+            this.NOButton.Name = "NOButton";
+            this.NOButton.Size = new System.Drawing.Size(103, 37);
+            this.NOButton.TabIndex = 21;
+            this.NOButton.Text = "NO";
+            this.NOButton.UseVisualStyleBackColor = false;
+            this.NOButton.Click += new System.EventHandler(this.NOButton_Click);
+            // 
+            // YESButton
+            // 
+            this.YESButton.BackColor = System.Drawing.Color.Green;
+            this.YESButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.YESButton.Location = new System.Drawing.Point(520, 117);
+            this.YESButton.Name = "YESButton";
+            this.YESButton.Size = new System.Drawing.Size(103, 37);
+            this.YESButton.TabIndex = 22;
+            this.YESButton.Text = "YES";
+            this.YESButton.UseVisualStyleBackColor = false;
+            this.YESButton.Click += new System.EventHandler(this.YESButton_Click);
+            // 
+            // Backbutton
+            // 
+            this.Backbutton.Location = new System.Drawing.Point(875, 13);
+            this.Backbutton.Name = "Backbutton";
+            this.Backbutton.Size = new System.Drawing.Size(75, 23);
+            this.Backbutton.TabIndex = 23;
+            this.Backbutton.Text = "Back ->";
+            this.Backbutton.UseVisualStyleBackColor = true;
+            this.Backbutton.Click += new System.EventHandler(this.Backbutton_Click);
+            // 
             // FloorSearchPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.Backbutton);
+            this.Controls.Add(this.YESButton);
+            this.Controls.Add(this.NOButton);
+            this.Controls.Add(this.LastChanceLabel);
+            this.Controls.Add(this.Checkbutton);
+            this.Controls.Add(this.CheckLabel);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.label2);
@@ -346,10 +423,11 @@
             this.Controls.Add(this.ProductPanel);
             this.Controls.Add(this.LocationPanel);
             this.Controls.Add(this.EditButton);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.SearchInput);
             this.Controls.Add(this.TitleLabel);
             this.Name = "FloorSearchPage";
             this.Size = new System.Drawing.Size(982, 758);
+            this.Load += new System.EventHandler(this.FloorSearchPage_Load);
             this.ProductPanel.ResumeLayout(false);
             this.ProductPanel.PerformLayout();
             this.LocationPanel.ResumeLayout(false);
@@ -386,7 +464,13 @@
         private System.Windows.Forms.TextBox PrimaryLocationBox;
         private System.Windows.Forms.TextBox PrimaryColliBox;
         private System.Windows.Forms.Button EditButton;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox SearchInput;
         private System.Windows.Forms.Label TitleLabel;
+        private System.Windows.Forms.Label CheckLabel;
+        private System.Windows.Forms.Button Checkbutton;
+        private System.Windows.Forms.Label LastChanceLabel;
+        private System.Windows.Forms.Button NOButton;
+        private System.Windows.Forms.Button YESButton;
+        private System.Windows.Forms.Button Backbutton;
     }
 }

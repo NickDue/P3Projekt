@@ -68,6 +68,7 @@
             this.NOButton = new System.Windows.Forms.Button();
             this.YESButton = new System.Windows.Forms.Button();
             this.LastChanceLabel = new System.Windows.Forms.Label();
+            this.Backbutton = new System.Windows.Forms.Button();
             this.LocationPanel.SuspendLayout();
             this.SecondaryLocationPanel.SuspendLayout();
             this.ProductPanel.SuspendLayout();
@@ -457,10 +458,21 @@
             this.LastChanceLabel.TabIndex = 13;
             this.LastChanceLabel.Text = "Are you sure to change this product?";
             // 
+            // Backbutton
+            // 
+            this.Backbutton.Location = new System.Drawing.Point(875, 26);
+            this.Backbutton.Name = "Backbutton";
+            this.Backbutton.Size = new System.Drawing.Size(75, 23);
+            this.Backbutton.TabIndex = 24;
+            this.Backbutton.Text = "Back ->";
+            this.Backbutton.UseVisualStyleBackColor = true;
+            this.Backbutton.Click += new System.EventHandler(this.Backbutton_Click);
+            // 
             // SearchWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.Backbutton);
             this.Controls.Add(this.LastChanceLabel);
             this.Controls.Add(this.YESButton);
             this.Controls.Add(this.NOButton);
@@ -529,5 +541,6 @@
         private System.Windows.Forms.Button NOButton;
         private System.Windows.Forms.Button YESButton;
         private System.Windows.Forms.Label LastChanceLabel;
+        private System.Windows.Forms.Button Backbutton;
     }
 }

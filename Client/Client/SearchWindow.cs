@@ -353,6 +353,7 @@ namespace Client
                                                                     //enter search-mode
         private void SearchWindow_Load(object sender, EventArgs e)
         {
+            Backbutton.Hide();
             SaveButton.Hide();
             OfficeHideFuncBox();
             CheckHide();
@@ -362,6 +363,7 @@ namespace Client
                                                                     //Enter edit-mode
         private void EditButton_Click(object sender, EventArgs e)
         {
+            Backbutton.Show();
             EditButton.Hide();
             SearchButton.Hide();
             SearchInput.Hide();
@@ -373,7 +375,7 @@ namespace Client
                                                                     // Goes to last change validation
         public void SaveButton_Click(object sender, EventArgs e)
         {
-            
+            Backbutton.Hide();
             SaveButton.Hide();
             OfficeHideFuncBox();
             CheckHide();
@@ -391,7 +393,7 @@ namespace Client
         private void NOButton_Click(object sender, EventArgs e)
         {
             LastCHanceHide();
-
+            Backbutton.Show();
             SaveButton.Show();
             OfficeShowFuncBox();
             CheckShow();
@@ -408,6 +410,18 @@ namespace Client
             FinalValidation();
             
             
+        }
+
+        private void Backbutton_Click(object sender, EventArgs e)
+        {
+            Backbutton.Hide();
+            Clearfunc();
+            SaveButton.Hide();
+            CheckHide();
+            EditButton.Show();
+            SearchInput.Show();
+            SearchButton.Show();
+            OfficeHideFuncBox();
         }
     }
 }
