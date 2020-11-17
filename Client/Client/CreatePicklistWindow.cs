@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 namespace Client
 {
@@ -30,7 +32,7 @@ namespace Client
 
         private void GenerateButton_Click(object sender, EventArgs e)
         {
-            // generate picklist to file
+            ExportToPdf();
         }
 
         private void AddButton_Click(object sender, EventArgs e)
@@ -187,5 +189,78 @@ namespace Client
             return data;
         }
         
+        private void ExportToPdf()
+        {
+            var pdfDocument = new Document(PageSize.LETTER, 40f, 40f, 60f, 60f);
+            string saveLocation = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); // desktop path
+
+            PdfWriter.GetInstance(pdfDocument, new FileStream(saveLocation + ".pdf", FileMode.OpenOrCreate));
+            pdfDocument.Open();
+
+            // Tables
+            var newlineTable = new Paragraph("")
+            {
+                SpacingBefore = 10f,
+                SpacingAfter = 10,
+            };
+
+            var headerTable = new PdfPTable(new[] { .75f, 2f })
+            {
+                HorizontalAlignment = Left,
+                WidthPercentage = 75,
+                DefaultCell = { MinimumHeight = 22f }
+            };
+
+            headerTable.AddCell("Title");
+            headerTable.AddCell("Picklist");
+            headerTable.AddCell("Company");
+            headerTable.AddCell("My Home Trading");
+            headerTable.AddCell("Picklist number");
+            headerTable.AddCell("L26758");
+            headerTable.AddCell("Date");
+            headerTable.AddCell(DateTime.Today.ToString());
+
+            pdfDocument.Add(headerTable);
+            pdfDocument.Add(newlineTable);
+
+            var columnCount = FileDataGridView.ColumnCount;
+            var columnWidths = new[] { 1f, 1f, 1f, 1f };
+
+            var table = new PdfPTable(columnWidths)
+            {
+                HorizontalAlignment = Left,
+                WidthPercentage = 100,
+                DefaultCell = { MinimumHeight = 22f }
+            };
+
+            var cell = new PdfPCell(new Phrase("L26758"))
+            {
+                Colspan = columnCount,
+                HorizontalAlignment = 1,
+                MinimumHeight = 30f
+            };
+           
+            table.AddCell(cell);
+
+            // Columns
+            FileDataGridView.Columns
+                .OfType<DataGridViewColumn>()
+                .ToList()
+                .ForEach(c => table.AddCell(c.Name));
+
+            // Rows
+            FileDataGridView.Rows
+                .OfType<DataGridViewRow>()
+                .ToList()
+                .ForEach(r =>
+                {
+                    var cells = r.Cells.OfType<DataGridViewCell>().ToList();
+                    cells.ForEach(c => table.AddCell(c.Value.ToString()));
+                });
+
+            pdfDocument.Add(table);
+
+            pdfDocument.Close();
+        }
     }
 }
