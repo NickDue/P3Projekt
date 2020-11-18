@@ -7,7 +7,7 @@ namespace Server
     public class ProductDescription
     {
         // 22222-03-05
-        public string id { get; set; }
+        public int id { get; set; }
         public string colliNumber { get; set; }
         public string colliAmount { get; set; }
         public string name{ get; set; }
@@ -16,9 +16,9 @@ namespace Server
         public string color{ get; set; }
         public string category{ get; set; }
 
-        public ProductDescription(string productID, string productColliNumber, string productColliAmount, string productName, double productVolume, double productWeight, string productColor, string productCategory)
+        public ProductDescription(int productID, string productColliNumber, string productColliAmount, string productName, double productVolume, double productWeight, string productColor, string productCategory)
         {
-            id = productID + "-" + productColliNumber + "-" + productColliAmount;
+            id = productID;
             colliNumber = productColliNumber;
             colliAmount = productColliAmount;
             name = productName;
