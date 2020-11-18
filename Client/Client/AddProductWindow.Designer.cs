@@ -50,6 +50,10 @@
             this.ProductNameInput = new System.Windows.Forms.TextBox();
             this.ProductNameLabel = new System.Windows.Forms.Label();
             this.ProductNumberPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Line1 = new System.Windows.Forms.Label();
+            this.ColliTotalInput = new System.Windows.Forms.TextBox();
+            this.ColliNumberInput = new System.Windows.Forms.TextBox();
             this.ProductNumberInput = new System.Windows.Forms.TextBox();
             this.ProductNumberLabel = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -78,9 +82,11 @@
             // 
             // SubmitButton
             // 
-            this.SubmitButton.Location = new System.Drawing.Point(849, 195);
+            this.SubmitButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.SubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubmitButton.Location = new System.Drawing.Point(720, 195);
             this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Size = new System.Drawing.Size(75, 23);
+            this.SubmitButton.Size = new System.Drawing.Size(100, 30);
             this.SubmitButton.TabIndex = 1;
             this.SubmitButton.Text = "Submit";
             this.SubmitButton.UseVisualStyleBackColor = true;
@@ -88,9 +94,10 @@
             // 
             // ClearButton
             // 
-            this.ClearButton.Location = new System.Drawing.Point(65, 195);
+            this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClearButton.Location = new System.Drawing.Point(162, 195);
             this.ClearButton.Name = "ClearButton";
-            this.ClearButton.Size = new System.Drawing.Size(75, 23);
+            this.ClearButton.Size = new System.Drawing.Size(100, 30);
             this.ClearButton.TabIndex = 1;
             this.ClearButton.Text = "Clear";
             this.ClearButton.UseVisualStyleBackColor = true;
@@ -133,11 +140,10 @@
             // 
             // AmountInput
             // 
-            this.AmountInput.Dock = System.Windows.Forms.DockStyle.Right;
-            this.AmountInput.Location = new System.Drawing.Point(263, 0);
-            this.AmountInput.Multiline = true;
+            this.AmountInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AmountInput.Location = new System.Drawing.Point(263, 37);
             this.AmountInput.Name = "AmountInput";
-            this.AmountInput.Size = new System.Drawing.Size(719, 84);
+            this.AmountInput.Size = new System.Drawing.Size(600, 26);
             this.AmountInput.TabIndex = 1;
             // 
             // AmountLabel
@@ -145,7 +151,7 @@
             this.AmountLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.AmountLabel.AutoSize = true;
             this.AmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AmountLabel.Location = new System.Drawing.Point(62, 35);
+            this.AmountLabel.Location = new System.Drawing.Point(60, 34);
             this.AmountLabel.Name = "AmountLabel";
             this.AmountLabel.Size = new System.Drawing.Size(107, 29);
             this.AmountLabel.TabIndex = 0;
@@ -163,19 +169,19 @@
             // 
             // WeightInput
             // 
-            this.WeightInput.Dock = System.Windows.Forms.DockStyle.Right;
-            this.WeightInput.Location = new System.Drawing.Point(263, 0);
-            this.WeightInput.Multiline = true;
+            this.WeightInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WeightInput.Location = new System.Drawing.Point(263, 37);
             this.WeightInput.Name = "WeightInput";
-            this.WeightInput.Size = new System.Drawing.Size(719, 84);
+            this.WeightInput.Size = new System.Drawing.Size(600, 26);
             this.WeightInput.TabIndex = 1;
+            this.WeightInput.TextChanged += new System.EventHandler(this.WeightInput_TextChanged);
             // 
             // WeightLabel
             // 
             this.WeightLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.WeightLabel.AutoSize = true;
             this.WeightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WeightLabel.Location = new System.Drawing.Point(62, 35);
+            this.WeightLabel.Location = new System.Drawing.Point(60, 34);
             this.WeightLabel.Name = "WeightLabel";
             this.WeightLabel.Size = new System.Drawing.Size(101, 29);
             this.WeightLabel.TabIndex = 0;
@@ -193,11 +199,10 @@
             // 
             // ColorInput
             // 
-            this.ColorInput.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ColorInput.Location = new System.Drawing.Point(263, 0);
-            this.ColorInput.Multiline = true;
+            this.ColorInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ColorInput.Location = new System.Drawing.Point(263, 37);
             this.ColorInput.Name = "ColorInput";
-            this.ColorInput.Size = new System.Drawing.Size(719, 84);
+            this.ColorInput.Size = new System.Drawing.Size(600, 26);
             this.ColorInput.TabIndex = 1;
             // 
             // ColorLabel
@@ -205,7 +210,7 @@
             this.ColorLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ColorLabel.AutoSize = true;
             this.ColorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ColorLabel.Location = new System.Drawing.Point(62, 38);
+            this.ColorLabel.Location = new System.Drawing.Point(60, 34);
             this.ColorLabel.Name = "ColorLabel";
             this.ColorLabel.Size = new System.Drawing.Size(84, 29);
             this.ColorLabel.TabIndex = 0;
@@ -223,19 +228,19 @@
             // 
             // VolumeInput
             // 
-            this.VolumeInput.Dock = System.Windows.Forms.DockStyle.Right;
-            this.VolumeInput.Location = new System.Drawing.Point(263, 0);
-            this.VolumeInput.Multiline = true;
+            this.VolumeInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VolumeInput.Location = new System.Drawing.Point(263, 37);
             this.VolumeInput.Name = "VolumeInput";
-            this.VolumeInput.Size = new System.Drawing.Size(719, 84);
+            this.VolumeInput.Size = new System.Drawing.Size(600, 26);
             this.VolumeInput.TabIndex = 1;
+            this.VolumeInput.TextChanged += new System.EventHandler(this.VolumeInput_TextChanged);
             // 
             // VolumeLabel
             // 
             this.VolumeLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.VolumeLabel.AutoSize = true;
             this.VolumeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VolumeLabel.Location = new System.Drawing.Point(62, 40);
+            this.VolumeLabel.Location = new System.Drawing.Point(60, 34);
             this.VolumeLabel.Name = "VolumeLabel";
             this.VolumeLabel.Size = new System.Drawing.Size(108, 29);
             this.VolumeLabel.TabIndex = 0;
@@ -253,19 +258,18 @@
             // 
             // ProductNameInput
             // 
-            this.ProductNameInput.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ProductNameInput.Location = new System.Drawing.Point(263, 0);
-            this.ProductNameInput.Multiline = true;
+            this.ProductNameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductNameInput.Location = new System.Drawing.Point(263, 37);
             this.ProductNameInput.Name = "ProductNameInput";
-            this.ProductNameInput.Size = new System.Drawing.Size(719, 84);
+            this.ProductNameInput.Size = new System.Drawing.Size(600, 26);
             this.ProductNameInput.TabIndex = 1;
             // 
             // ProductNameLabel
             // 
-            this.ProductNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ProductNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.ProductNameLabel.AutoSize = true;
             this.ProductNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductNameLabel.Location = new System.Drawing.Point(62, 37);
+            this.ProductNameLabel.Location = new System.Drawing.Point(60, 34);
             this.ProductNameLabel.Name = "ProductNameLabel";
             this.ProductNameLabel.Size = new System.Drawing.Size(181, 29);
             this.ProductNameLabel.TabIndex = 0;
@@ -273,22 +277,67 @@
             // 
             // ProductNumberPanel
             // 
+            this.ProductNumberPanel.Controls.Add(this.label1);
+            this.ProductNumberPanel.Controls.Add(this.Line1);
+            this.ProductNumberPanel.Controls.Add(this.ColliTotalInput);
+            this.ProductNumberPanel.Controls.Add(this.ColliNumberInput);
             this.ProductNumberPanel.Controls.Add(this.ProductNumberInput);
             this.ProductNumberPanel.Controls.Add(this.ProductNumberLabel);
             this.ProductNumberPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ProductNumberPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProductNumberPanel.Location = new System.Drawing.Point(0, 0);
             this.ProductNumberPanel.Name = "ProductNumberPanel";
             this.ProductNumberPanel.Size = new System.Drawing.Size(982, 84);
             this.ProductNumberPanel.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(379, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(15, 20);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "-";
+            // 
+            // Line1
+            // 
+            this.Line1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.Line1.AutoSize = true;
+            this.Line1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Line1.Location = new System.Drawing.Point(333, 40);
+            this.Line1.Name = "Line1";
+            this.Line1.Size = new System.Drawing.Size(15, 20);
+            this.Line1.TabIndex = 4;
+            this.Line1.Text = "-";
+            // 
+            // ColliTotalInput
+            // 
+            this.ColliTotalInput.Location = new System.Drawing.Point(394, 37);
+            this.ColliTotalInput.MaxLength = 2;
+            this.ColliTotalInput.Name = "ColliTotalInput";
+            this.ColliTotalInput.Size = new System.Drawing.Size(31, 26);
+            this.ColliTotalInput.TabIndex = 3;
+            this.ColliTotalInput.TextChanged += new System.EventHandler(this.ColliTotalInput_TextChanged);
+            // 
+            // ColliNumberInput
+            // 
+            this.ColliNumberInput.Location = new System.Drawing.Point(348, 37);
+            this.ColliNumberInput.MaxLength = 2;
+            this.ColliNumberInput.Name = "ColliNumberInput";
+            this.ColliNumberInput.Size = new System.Drawing.Size(31, 26);
+            this.ColliNumberInput.TabIndex = 2;
+            this.ColliNumberInput.TextChanged += new System.EventHandler(this.ColliNumberInput_TextChanged);
+            // 
             // ProductNumberInput
             // 
-            this.ProductNumberInput.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ProductNumberInput.Location = new System.Drawing.Point(263, 0);
-            this.ProductNumberInput.Multiline = true;
+            this.ProductNumberInput.Location = new System.Drawing.Point(263, 37);
+            this.ProductNumberInput.MaxLength = 5;
             this.ProductNumberInput.Name = "ProductNumberInput";
-            this.ProductNumberInput.Size = new System.Drawing.Size(719, 84);
+            this.ProductNumberInput.Size = new System.Drawing.Size(69, 26);
             this.ProductNumberInput.TabIndex = 1;
+            this.ProductNumberInput.TextChanged += new System.EventHandler(this.ProductNumberInput_TextChanged);
             // 
             // ProductNumberLabel
             // 
@@ -359,5 +408,9 @@
         private System.Windows.Forms.TextBox ProductNumberInput;
         private System.Windows.Forms.Label ProductNumberLabel;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.TextBox ColliTotalInput;
+        private System.Windows.Forms.TextBox ColliNumberInput;
+        private System.Windows.Forms.Label Line1;
+        private System.Windows.Forms.Label label1;
     }
 }
