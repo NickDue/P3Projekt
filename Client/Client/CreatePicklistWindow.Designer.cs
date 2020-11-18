@@ -35,7 +35,6 @@
             this.ImportButton = new System.Windows.Forms.Button();
             this.GenerateButton = new System.Windows.Forms.Button();
             this.FunctionPanel = new System.Windows.Forms.Panel();
-            this.OKButton = new System.Windows.Forms.Button();
             this.ExpressCombobox = new System.Windows.Forms.ComboBox();
             this.PlatformCombobox = new System.Windows.Forms.ComboBox();
             this.CityCombobox = new System.Windows.Forms.ComboBox();
@@ -122,7 +121,6 @@
             this.FunctionPanel.Controls.Add(this.RoleLabel);
             this.FunctionPanel.Controls.Add(this.IDLabel);
             this.FunctionPanel.Controls.Add(this.EmployeeNameLabel);
-            this.FunctionPanel.Controls.Add(this.OKButton);
             this.FunctionPanel.Controls.Add(this.ExpressCombobox);
             this.FunctionPanel.Controls.Add(this.PlatformCombobox);
             this.FunctionPanel.Controls.Add(this.CityCombobox);
@@ -135,16 +133,6 @@
             this.FunctionPanel.Name = "FunctionPanel";
             this.FunctionPanel.Size = new System.Drawing.Size(982, 218);
             this.FunctionPanel.TabIndex = 0;
-            // 
-            // OKButton
-            // 
-            this.OKButton.Location = new System.Drawing.Point(64, 187);
-            this.OKButton.Name = "OKButton";
-            this.OKButton.Size = new System.Drawing.Size(75, 23);
-            this.OKButton.TabIndex = 7;
-            this.OKButton.Text = "OK";
-            this.OKButton.UseVisualStyleBackColor = true;
-            this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             // 
             // ExpressCombobox
             // 
@@ -321,7 +309,6 @@
         private System.Windows.Forms.ComboBox ExpressCombobox;
         private System.Windows.Forms.ComboBox PlatformCombobox;
         private System.Windows.Forms.ComboBox CityCombobox;
-        private System.Windows.Forms.Button OKButton;
         private System.Windows.Forms.DataGridView FileDataGridView;
         private System.Windows.Forms.Panel UserInputPanel;
         private System.Windows.Forms.TextBox RoleBox;

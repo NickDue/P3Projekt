@@ -28,7 +28,7 @@ namespace Client
 
             FillComboBox();
 
-            // GetEmployeeInformation(); 
+            GetEmployeeInformation("Dunke Dolmer"); 
         }
 
         private void GenerateButton_Click(object sender, EventArgs e)
@@ -42,11 +42,6 @@ namespace Client
             {
                 ConvertToPdf(FileDataGridView, "picklist");
             }
-        }
-
-        private void OKButton_Click(object sender, EventArgs e)
-        {
-            ControlUserInput();
         }
 
         private void ImportButton_Click(object sender, EventArgs e)
@@ -104,6 +99,16 @@ namespace Client
             {
                 return true;
             }
+        }
+
+        // Displays the user information in the menu
+        private void GetEmployeeInformation(string employee)
+        {
+            Random ID = new Random();
+            
+            EmployeeNameBox.Text = employee;
+            IDBox.Text = (ID.Next(1000, 1100)).ToString();
+            RoleBox.Text = "FLOOR";
         }
 
         // Controls combobox for user input
@@ -228,6 +233,7 @@ namespace Client
                 DefaultCell = { MinimumHeight = 22f }
             };
 
+            // Header table
             headerTable.AddCell(new Phrase(CityLabel.Text, text));
             headerTable.AddCell(new Phrase(CityCombobox.Text, text));
             headerTable.AddCell(new Phrase(PlatformLabel.Text, text));
@@ -255,6 +261,7 @@ namespace Client
 
             // Save file
             var saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "PDF | *.pdf";
             saveFileDialog.FileName = fileName;
             saveFileDialog.DefaultExt = ".pdf";
 
