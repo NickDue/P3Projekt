@@ -23,23 +23,25 @@ namespace Client
 
         private void CreatePicklistWindow_Load(object sender, EventArgs e)
         {
-            PicklistView.Hide();
-            FileDataGridView.Hide();
-            UserInputPanel.Hide();
+            PicklistView.Hide(); // skal slettes
+            //FileDataGridView.Hide();
 
             FillComboBox();
+
+            // GetEmployeeInformation(); 
         }
 
         private void GenerateButton_Click(object sender, EventArgs e)
         {
-            ExportToPdf();
-            //TestPdf(FileDataGridView, "picklist");
-
-        }
-
-        private void AddButton_Click(object sender, EventArgs e)
-        {
-            PicklistView.Items.Add(new ListViewItem(new[] { ProductNumberTextbox.Text, ProductNameTextbox.Text, LocationTextbox.Text, AmountTextbox.Text }));
+            if (FileDataGridView.Rows.Count == 0)
+            {
+                MessageBox.Show("Missing file", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+            else
+            {
+                ConvertToPdf(FileDataGridView, "picklist");
+            }
         }
 
         private void OKButton_Click(object sender, EventArgs e)
@@ -49,28 +51,36 @@ namespace Client
 
         private void ImportButton_Click(object sender, EventArgs e)
         {
-            PicklistView.Hide();
-            FileDataGridView.Show();
-            
-            try
+            if (ControlUserInput())
             {
-                using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "CSV|*.csv", ValidateNames = true, Multiselect = false})
+                PicklistView.Hide();
+                FileDataGridView.Show();
+
+                try
                 {
-                    if(ofd.ShowDialog() == DialogResult.OK)
+                    using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "CSV|*.csv", ValidateNames = true, Multiselect = false })
                     {
-                        FileDataGridView.DataSource = ReadCsv(ofd.FileName);
+                        if (ofd.ShowDialog() == DialogResult.OK)
+                        {
+                            FileDataGridView.DataSource = ReadCsv(ofd.FileName);
+                        }
                     }
                 }
-            }
 
-            catch (Exception ex)
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            
+            else
             {
-                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
             }
         }
 
         // Controls for missing user input
-        private void ControlUserInput()
+        private bool ControlUserInput()
         {
             List<ComboBox> list = new List<ComboBox>();
             list.Add(CityCombobox);
@@ -87,12 +97,12 @@ namespace Client
 
             if (errorMessage.Length > 0)
             {
-                MessageBox.Show(errorPreset + errorMessage, "Error");
+                MessageBox.Show(errorPreset + errorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
             else
             {
-                PicklistView.Show();
-                UserInputPanel.Show();
+                return true;
             }
         }
 
@@ -190,131 +200,75 @@ namespace Client
 
             return data;
         }
-        
-        private void ExportToPdf()
+
+        private void ConvertToPdf(DataGridView data, string fileName)
         {
-            try
-            {
-                var pdfDocument = new Document(PageSize.LETTER, 40f, 40f, 60f, 60f);
-                string saveLocation = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); // desktop path
+            PdfPTable picklistTable = new PdfPTable(data.Columns.Count);
 
-                PdfWriter.GetInstance(pdfDocument, new FileStream(saveLocation + "\\a.pdf", FileMode.OpenOrCreate));
-                pdfDocument.Open();
-
-                // Tables
-                var newlineTable = new Paragraph("")
-                {
-                    SpacingBefore = 10f,
-                    SpacingAfter = 10,
-                };
-
-                var headerTable = new PdfPTable(new[] { .75f, 2f })
-                {
-                    HorizontalAlignment = Left,
-                    WidthPercentage = 75,
-                    DefaultCell = { MinimumHeight = 22f }
-                };
-
-                headerTable.AddCell("Title");
-                headerTable.AddCell("Picklist");
-                headerTable.AddCell("Company");
-                headerTable.AddCell("My Home Trading");
-                headerTable.AddCell("Picklist number");
-                headerTable.AddCell("L26758");
-                headerTable.AddCell("Date");
-                headerTable.AddCell(DateTime.Today.ToString());
-
-                pdfDocument.Add(headerTable);
-                pdfDocument.Add(newlineTable);
-
-                var columnCount = FileDataGridView.ColumnCount;
-                var columnWidths = new[] { 1f, 1f, 1f, 1f };
-
-                var table = new PdfPTable(columnWidths)
-                {
-                    HorizontalAlignment = Left,
-                    WidthPercentage = 100,
-                    DefaultCell = { MinimumHeight = 22f }
-                };
-
-                var cell = new PdfPCell(new Phrase("L26758"))
-                {
-                    Colspan = columnCount,
-                    HorizontalAlignment = 1,
-                    MinimumHeight = 30f
-                };
-
-                table.AddCell(cell);
-
-                // Columns
-                FileDataGridView.Columns
-                    .OfType<DataGridViewColumn>()
-                    .ToList()
-                    .ForEach(c => table.AddCell(c.Name));
-
-                // Rows
-                FileDataGridView.Rows
-                    .OfType<DataGridViewRow>()
-                    .ToList()
-                    .ForEach(r =>
-                    {
-                        var cells = r.Cells.OfType<DataGridViewCell>().ToList();
-                        cells.ForEach(c => table.AddCell(c.Value.ToString()));
-                    });
-
-                pdfDocument.Add(table);
-
-                pdfDocument.Close();
-            }
-
-            catch (Exception e)
-            {
-
-            }
-            
-        }
-
-        private void TestPdf(DataGridView data, string fileName)
-        {
-            PdfPTable pdfTable = new PdfPTable(data.Columns.Count);
-
-            pdfTable.DefaultCell.Padding = 3;
-            pdfTable.DefaultCell.BorderWidth = 1;
-            pdfTable.WidthPercentage = 100;
-            pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
+            // Design
+            picklistTable.DefaultCell.Padding = 3;
+            picklistTable.DefaultCell.BorderWidth = 1;
+            picklistTable.WidthPercentage = 100;
+            picklistTable.HorizontalAlignment = Element.ALIGN_LEFT;
 
             BaseFont baseFont = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.EMBEDDED);
             iTextSharp.text.Font text = new iTextSharp.text.Font(baseFont, 10, iTextSharp.text.Font.NORMAL);
 
-            // Add columns
-            foreach (DataGridViewColumn column in data.Columns)
+            // Tables
+            var newlineTable = new Paragraph("")
+            {
+                SpacingBefore = 10f,
+                SpacingAfter = 10,
+            };
+
+            var headerTable = new PdfPTable(new[] { .75f, 2f })
+            {
+                HorizontalAlignment = Left,
+                WidthPercentage = 75,
+                DefaultCell = { MinimumHeight = 22f }
+            };
+
+            headerTable.AddCell(new Phrase(CityLabel.Text, text));
+            headerTable.AddCell(new Phrase(CityCombobox.Text, text));
+            headerTable.AddCell(new Phrase(PlatformLabel.Text, text));
+            headerTable.AddCell(new Phrase(PlatformCombobox.Text, text));
+            headerTable.AddCell(new Phrase(ExpressLabel.Text, text));
+            headerTable.AddCell(new Phrase(ExpressCombobox.Text, text));
+            headerTable.AddCell("Date");
+            headerTable.AddCell(DateTime.Today.ToString());
+
+            // Picklist table
+            foreach (DataGridViewColumn column in data.Columns) // Adding columns
             {
                 PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
                 cell.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240);
-                pdfTable.AddCell(cell);
+                picklistTable.AddCell(cell);
             }
 
-            // Add rows
-            foreach (DataGridViewRow row in data.Rows)
+            foreach (DataGridViewRow row in data.Rows) // Adding rows
             {
                 foreach (DataGridViewCell cell in row.Cells)
                 {
-                    pdfTable.AddCell(new Phrase(cell.Value.ToString(), text));
+                    picklistTable.AddCell(new Phrase(cell.Value.ToString(), text));
                 }
             }
 
+            // Save file
             var saveFileDialog = new SaveFileDialog();
             saveFileDialog.FileName = fileName;
             saveFileDialog.DefaultExt = ".pdf";
 
+            // Generate .pdf file
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 using (FileStream stream = new FileStream(saveFileDialog.FileName, FileMode.Create))
                 {
-                    Document pdfDocument = new Document(PageSize.A4, 10f, 10f, 10f, 10f);
+                    Document pdfDocument = new Document(PageSize.A4.Rotate(), 10f, 10f, 10f, 10f);
                     PdfWriter.GetInstance(pdfDocument, stream);
                     pdfDocument.Open();
-                    pdfDocument.Add(pdfTable);
+                    pdfDocument.Add(headerTable);
+                    pdfDocument.Add(newlineTable);
+                    pdfDocument.Add(picklistTable);
                     pdfDocument.Close();
                     stream.Close();
                 }

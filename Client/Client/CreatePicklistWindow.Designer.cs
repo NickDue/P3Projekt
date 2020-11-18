@@ -39,21 +39,22 @@
             this.ExpressCombobox = new System.Windows.Forms.ComboBox();
             this.PlatformCombobox = new System.Windows.Forms.ComboBox();
             this.CityCombobox = new System.Windows.Forms.ComboBox();
-            this.AddButton = new System.Windows.Forms.Button();
-            this.UserInputPanel = new System.Windows.Forms.Panel();
-            this.AmountTextbox = new System.Windows.Forms.TextBox();
-            this.LocationTextbox = new System.Windows.Forms.TextBox();
-            this.ProductNameTextbox = new System.Windows.Forms.TextBox();
-            this.ProductNumberTextbox = new System.Windows.Forms.TextBox();
             this.PicklistView = new System.Windows.Forms.ListView();
             this.ProductNumberColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ProductNameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.LocationColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.AmountColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FileDataGridView = new System.Windows.Forms.DataGridView();
+            this.UserInputPanel = new System.Windows.Forms.Panel();
+            this.EmployeeNameLabel = new System.Windows.Forms.Label();
+            this.EmployeeNameBox = new System.Windows.Forms.TextBox();
+            this.IDLabel = new System.Windows.Forms.Label();
+            this.IDBox = new System.Windows.Forms.TextBox();
+            this.RoleLabel = new System.Windows.Forms.Label();
+            this.RoleBox = new System.Windows.Forms.TextBox();
             this.FunctionPanel.SuspendLayout();
-            this.UserInputPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FileDataGridView)).BeginInit();
+            this.UserInputPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // TitleLabel
@@ -95,33 +96,36 @@
             // 
             // ImportButton
             // 
-            this.ImportButton.Location = new System.Drawing.Point(441, 138);
+            this.ImportButton.Location = new System.Drawing.Point(773, 8);
             this.ImportButton.Name = "ImportButton";
             this.ImportButton.Size = new System.Drawing.Size(75, 23);
             this.ImportButton.TabIndex = 3;
-            this.ImportButton.Text = "IMPORT";
+            this.ImportButton.Text = "Import";
             this.ImportButton.UseVisualStyleBackColor = true;
             this.ImportButton.Click += new System.EventHandler(this.ImportButton_Click);
             // 
             // GenerateButton
             // 
-            this.GenerateButton.Location = new System.Drawing.Point(847, 138);
+            this.GenerateButton.Location = new System.Drawing.Point(867, 8);
             this.GenerateButton.Name = "GenerateButton";
             this.GenerateButton.Size = new System.Drawing.Size(99, 23);
             this.GenerateButton.TabIndex = 4;
-            this.GenerateButton.Text = "Generate picklist";
+            this.GenerateButton.Text = "Export to PDF";
             this.GenerateButton.UseVisualStyleBackColor = true;
             this.GenerateButton.Click += new System.EventHandler(this.GenerateButton_Click);
             // 
             // FunctionPanel
             // 
+            this.FunctionPanel.Controls.Add(this.RoleBox);
+            this.FunctionPanel.Controls.Add(this.IDBox);
+            this.FunctionPanel.Controls.Add(this.EmployeeNameBox);
+            this.FunctionPanel.Controls.Add(this.RoleLabel);
+            this.FunctionPanel.Controls.Add(this.IDLabel);
+            this.FunctionPanel.Controls.Add(this.EmployeeNameLabel);
             this.FunctionPanel.Controls.Add(this.OKButton);
             this.FunctionPanel.Controls.Add(this.ExpressCombobox);
             this.FunctionPanel.Controls.Add(this.PlatformCombobox);
             this.FunctionPanel.Controls.Add(this.CityCombobox);
-            this.FunctionPanel.Controls.Add(this.AddButton);
-            this.FunctionPanel.Controls.Add(this.GenerateButton);
-            this.FunctionPanel.Controls.Add(this.ImportButton);
             this.FunctionPanel.Controls.Add(this.ExpressLabel);
             this.FunctionPanel.Controls.Add(this.PlatformLabel);
             this.FunctionPanel.Controls.Add(this.CityLabel);
@@ -166,56 +170,6 @@
             this.CityCombobox.Size = new System.Drawing.Size(121, 21);
             this.CityCombobox.TabIndex = 6;
             // 
-            // AddButton
-            // 
-            this.AddButton.Location = new System.Drawing.Point(873, 187);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(50, 25);
-            this.AddButton.TabIndex = 5;
-            this.AddButton.Text = "Add";
-            this.AddButton.UseVisualStyleBackColor = true;
-            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
-            // 
-            // UserInputPanel
-            // 
-            this.UserInputPanel.Controls.Add(this.AmountTextbox);
-            this.UserInputPanel.Controls.Add(this.LocationTextbox);
-            this.UserInputPanel.Controls.Add(this.ProductNameTextbox);
-            this.UserInputPanel.Controls.Add(this.ProductNumberTextbox);
-            this.UserInputPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.UserInputPanel.Location = new System.Drawing.Point(0, 218);
-            this.UserInputPanel.Name = "UserInputPanel";
-            this.UserInputPanel.Size = new System.Drawing.Size(982, 37);
-            this.UserInputPanel.TabIndex = 3;
-            // 
-            // AmountTextbox
-            // 
-            this.AmountTextbox.Location = new System.Drawing.Point(895, 11);
-            this.AmountTextbox.Name = "AmountTextbox";
-            this.AmountTextbox.Size = new System.Drawing.Size(75, 20);
-            this.AmountTextbox.TabIndex = 0;
-            // 
-            // LocationTextbox
-            // 
-            this.LocationTextbox.Location = new System.Drawing.Point(676, 11);
-            this.LocationTextbox.Name = "LocationTextbox";
-            this.LocationTextbox.Size = new System.Drawing.Size(213, 20);
-            this.LocationTextbox.TabIndex = 0;
-            // 
-            // ProductNameTextbox
-            // 
-            this.ProductNameTextbox.Location = new System.Drawing.Point(205, 11);
-            this.ProductNameTextbox.Name = "ProductNameTextbox";
-            this.ProductNameTextbox.Size = new System.Drawing.Size(465, 20);
-            this.ProductNameTextbox.TabIndex = 0;
-            // 
-            // ProductNumberTextbox
-            // 
-            this.ProductNumberTextbox.Location = new System.Drawing.Point(4, 11);
-            this.ProductNumberTextbox.Name = "ProductNumberTextbox";
-            this.ProductNumberTextbox.Size = new System.Drawing.Size(195, 20);
-            this.ProductNumberTextbox.TabIndex = 0;
-            // 
             // PicklistView
             // 
             this.PicklistView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -226,9 +180,9 @@
             this.PicklistView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PicklistView.GridLines = true;
             this.PicklistView.HideSelection = false;
-            this.PicklistView.Location = new System.Drawing.Point(0, 255);
+            this.PicklistView.Location = new System.Drawing.Point(0, 257);
             this.PicklistView.Name = "PicklistView";
-            this.PicklistView.Size = new System.Drawing.Size(982, 503);
+            this.PicklistView.Size = new System.Drawing.Size(982, 501);
             this.PicklistView.TabIndex = 4;
             this.PicklistView.UseCompatibleStateImageBehavior = false;
             this.PicklistView.View = System.Windows.Forms.View.Details;
@@ -259,10 +213,77 @@
             this.FileDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.FileDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.FileDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FileDataGridView.Location = new System.Drawing.Point(0, 255);
+            this.FileDataGridView.Location = new System.Drawing.Point(0, 257);
             this.FileDataGridView.Name = "FileDataGridView";
-            this.FileDataGridView.Size = new System.Drawing.Size(982, 503);
+            this.FileDataGridView.Size = new System.Drawing.Size(982, 501);
             this.FileDataGridView.TabIndex = 5;
+            // 
+            // UserInputPanel
+            // 
+            this.UserInputPanel.Controls.Add(this.GenerateButton);
+            this.UserInputPanel.Controls.Add(this.ImportButton);
+            this.UserInputPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.UserInputPanel.Location = new System.Drawing.Point(0, 218);
+            this.UserInputPanel.Name = "UserInputPanel";
+            this.UserInputPanel.Size = new System.Drawing.Size(982, 39);
+            this.UserInputPanel.TabIndex = 3;
+            // 
+            // EmployeeNameLabel
+            // 
+            this.EmployeeNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.EmployeeNameLabel.AutoSize = true;
+            this.EmployeeNameLabel.Location = new System.Drawing.Point(653, 71);
+            this.EmployeeNameLabel.Name = "EmployeeNameLabel";
+            this.EmployeeNameLabel.Size = new System.Drawing.Size(56, 13);
+            this.EmployeeNameLabel.TabIndex = 8;
+            this.EmployeeNameLabel.Text = "Employee:";
+            // 
+            // EmployeeNameBox
+            // 
+            this.EmployeeNameBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.EmployeeNameBox.Location = new System.Drawing.Point(715, 68);
+            this.EmployeeNameBox.Name = "EmployeeNameBox";
+            this.EmployeeNameBox.ReadOnly = true;
+            this.EmployeeNameBox.Size = new System.Drawing.Size(236, 20);
+            this.EmployeeNameBox.TabIndex = 9;
+            // 
+            // IDLabel
+            // 
+            this.IDLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.IDLabel.AutoSize = true;
+            this.IDLabel.Location = new System.Drawing.Point(688, 106);
+            this.IDLabel.Name = "IDLabel";
+            this.IDLabel.Size = new System.Drawing.Size(21, 13);
+            this.IDLabel.TabIndex = 8;
+            this.IDLabel.Text = "ID:";
+            // 
+            // IDBox
+            // 
+            this.IDBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.IDBox.Location = new System.Drawing.Point(715, 103);
+            this.IDBox.Name = "IDBox";
+            this.IDBox.ReadOnly = true;
+            this.IDBox.Size = new System.Drawing.Size(236, 20);
+            this.IDBox.TabIndex = 9;
+            // 
+            // RoleLabel
+            // 
+            this.RoleLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.RoleLabel.AutoSize = true;
+            this.RoleLabel.Location = new System.Drawing.Point(677, 141);
+            this.RoleLabel.Name = "RoleLabel";
+            this.RoleLabel.Size = new System.Drawing.Size(32, 13);
+            this.RoleLabel.TabIndex = 8;
+            this.RoleLabel.Text = "Role:";
+            // 
+            // RoleBox
+            // 
+            this.RoleBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.RoleBox.Location = new System.Drawing.Point(715, 138);
+            this.RoleBox.Name = "RoleBox";
+            this.RoleBox.ReadOnly = true;
+            this.RoleBox.Size = new System.Drawing.Size(236, 20);
+            this.RoleBox.TabIndex = 9;
             // 
             // CreatePicklistWindow
             // 
@@ -277,9 +298,8 @@
             this.Load += new System.EventHandler(this.CreatePicklistWindow_Load);
             this.FunctionPanel.ResumeLayout(false);
             this.FunctionPanel.PerformLayout();
-            this.UserInputPanel.ResumeLayout(false);
-            this.UserInputPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FileDataGridView)).EndInit();
+            this.UserInputPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -293,21 +313,22 @@
         private System.Windows.Forms.Button ImportButton;
         private System.Windows.Forms.Button GenerateButton;
         private System.Windows.Forms.Panel FunctionPanel;
-        private System.Windows.Forms.Panel UserInputPanel;
-        private System.Windows.Forms.TextBox AmountTextbox;
-        private System.Windows.Forms.TextBox LocationTextbox;
-        private System.Windows.Forms.TextBox ProductNameTextbox;
-        private System.Windows.Forms.TextBox ProductNumberTextbox;
         private System.Windows.Forms.ListView PicklistView;
         private System.Windows.Forms.ColumnHeader ProductNumberColumn;
         private System.Windows.Forms.ColumnHeader ProductNameColumn;
         private System.Windows.Forms.ColumnHeader LocationColumn;
         private System.Windows.Forms.ColumnHeader AmountColumn;
-        private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.ComboBox ExpressCombobox;
         private System.Windows.Forms.ComboBox PlatformCombobox;
         private System.Windows.Forms.ComboBox CityCombobox;
         private System.Windows.Forms.Button OKButton;
         private System.Windows.Forms.DataGridView FileDataGridView;
+        private System.Windows.Forms.Panel UserInputPanel;
+        private System.Windows.Forms.TextBox RoleBox;
+        private System.Windows.Forms.TextBox IDBox;
+        private System.Windows.Forms.TextBox EmployeeNameBox;
+        private System.Windows.Forms.Label RoleLabel;
+        private System.Windows.Forms.Label IDLabel;
+        private System.Windows.Forms.Label EmployeeNameLabel;
     }
 }
