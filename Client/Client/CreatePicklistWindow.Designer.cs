@@ -255,6 +255,8 @@
             // 
             // FileDataGridView
             // 
+            this.FileDataGridView.AllowUserToAddRows = false;
+            this.FileDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.FileDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.FileDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FileDataGridView.Location = new System.Drawing.Point(0, 255);
