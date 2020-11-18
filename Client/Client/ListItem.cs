@@ -16,7 +16,6 @@ namespace Client
         public ListItem()
         {
             InitializeComponent();
-            
         }
 
         // Event der trigger når man trykker ListItem eller nogen af alle dens underkomponenter
@@ -26,17 +25,20 @@ namespace Client
         private void ListItem_Load(object sender, EventArgs e)
         {
             this.Size = new Size(300, 350);
-
+            //Placerer label i midten af WorkerIDPanel
+            int x = (WorkerIDPanel.Size.Width - WorkerIDInput.Size.Width) / 2;
+            WorkerIDInput.Location = new Point(x, WorkerIDInput.Location.Y);
             //Placerer PictureBox i midten af HeaderPanel
             pictureBox1.Location = new Point((HeaderPanel.Size.Width /2) - (pictureBox1.Size.Width / 2), (HeaderPanel.Size.Height / 2 + (WorkerIDInput.Height / 2)) - (pictureBox1.Size.Height / 2));
 
+            //Tilføjer mouseclick
             this.MouseClick += Control_MouseClick;
             RegisterMouseClickForChildren(Controls);
-
+            
         }
 
 
-
+        //Tilføjer mouse click til ListItem og alle dens underelementer rekursivt
         private void RegisterMouseClickForChildren(ControlCollection controls)
         {
             foreach(Control control in controls)
@@ -50,18 +52,29 @@ namespace Client
         }
 
 
-
+        //Det der sker ved et mouse click
         private void Control_MouseClick(object sender, MouseEventArgs e)
         {
+            bool isAlreadySelected = Selected;
             var wasClicked = WasClicked;
             if (wasClicked != null)
             {
                 WasClicked(this, EventArgs.Empty);
             }
-            // Select this UC on click.
-            Selected = true;
+            
+            if (isAlreadySelected)
+            {
+                Selected = false;
+            }
+            else
+            {
+                Selected = true;
+            }
 
         }
+
+
+
 
 
         #region Properties
@@ -84,7 +97,7 @@ namespace Client
         public int WorkerID
         {
             get { return _workerID; }
-            set { _workerID = value; WorkerIDInput.Text = "ID#" + value.ToString(); }
+            set { _workerID = value; WorkerIDInput.Text = ("ID#" + value.ToString()); }
         }
 
         [Category("Custom Properties")]

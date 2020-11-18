@@ -22,40 +22,6 @@ namespace Client
 
 
 
-        /*
-        private void PopulateEmployeeList()
-        {
-            //hej
-         
-            for (int i = 0; i > 20; i++)
-            {
-
-                ItemList[i] = new ListItem();
-                ItemList[i].EmployeeName = "Ben Dover";
-                ItemList[i].WorkerID = 12345;
-                ItemList[i].Role = "FLOOR";
-                ItemList[i].LastLog = "01/01-0001";
-                ItemList[i].Picture = Resources._912214;
-
-
-                int itemsPerRow = 3;
-                int gap = ((EmployeeFlowPanel.Width - (ItemList[i].Width * itemsPerRow)) / 6) - 1;
-                ItemList[i].Margin = new Padding(gap, gap, gap, gap);
-
-                if (EmployeeFlowPanel.Controls.Count > 0)
-                {
-                    EmployeeFlowPanel.Controls.Clear();
-                }
-                else
-                {
-                    EmployeeFlowPanel.Controls.Add(ItemList[i]);
-                }   
-                
-            }
-        }
-        */
-
-
         private void EmployeeFlowPanel_Load(object sender, EventArgs e)
         {
             Size = new Size(982, 758);
@@ -69,8 +35,9 @@ namespace Client
             // Deselects all other ListItems
             foreach (ListItem listItem in ItemList)
             {
-                ((ListItem)listItem).Selected = false;
+                listItem.Selected = false;
             }
+
         }
 
         private void AddButton_Click(object sender, EventArgs e)
@@ -129,13 +96,6 @@ namespace Client
         {
             RemoveEmployee();
         }
-
-
-
-    
-
-
-
 
     }
 }
