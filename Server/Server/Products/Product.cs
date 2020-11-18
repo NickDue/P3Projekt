@@ -23,6 +23,7 @@ namespace Server
             amount = savedAmount;
             placement = savedPlacement;
         }
+        
 
         public void EditAttribute(string[] newValues)
         {
@@ -38,7 +39,7 @@ namespace Server
             switch (index)
             {
                 case 0:
-                    description.id = value;
+                    //description.id = value;
                     break;
                 case 1:
                     description.colliNumber = value;
