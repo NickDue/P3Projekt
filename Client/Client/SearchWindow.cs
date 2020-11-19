@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Client.TCP;
 
 namespace Client
 {
@@ -422,6 +422,17 @@ namespace Client
             SearchInput.Show();
             SearchButton.Show();
             OfficeHideFuncBox();
+        }
+
+
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+            string input = "find product ! 21188 ! 01 ! 03";
+            TCPClient client = new TCPClient();
+            string info = client.Connect(input);
+            SearchInput.Text = info;
+
+
         }
     }
 }
