@@ -11,6 +11,7 @@ namespace Server.TCP
         private const string SERVER_IP = "127.0.0.1";
         public void Run()
         {
+            HandleMessages msgHandler = new HandleMessages();
             IPAddress localAddress = IPAddress.Parse(SERVER_IP);
             TcpListener listener = new TcpListener(localAddress, PORT_NO);
             Console.WriteLine("Server started listening!");
@@ -28,9 +29,13 @@ namespace Server.TCP
 
                 string dataReceived = Encoding.ASCII.GetString(buffer, 0, bytesRead);
                 Console.WriteLine("Received: " + dataReceived);
+                
+                
+                string output = msgHandler.HandleInput(dataReceived);
+                byte[] byteToSend = ASCIIEncoding.ASCII.GetBytes(output);
             
-                Console.WriteLine("Sending back : " + dataReceived);
-                nwStream.Write(buffer, 0, bytesRead);
+                Console.WriteLine("Sending back : " + output);
+                nwStream.Write(byteToSend, 0, byteToSend.Length);
                 client.Close();
             }
         }
