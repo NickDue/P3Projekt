@@ -50,7 +50,6 @@ namespace Server.SQL
 
         public string AddProductToDatabase(int id, string number, string total, string name, double volume, double weight, string color, string category, string placement)
         {
-            // TODO: Enten skal vi lave Logs table om (hvilket jeg tror er nemmmest), ellers spørg imran.
             try
             {
                 using var con = new MySqlConnection(SqlLogin);

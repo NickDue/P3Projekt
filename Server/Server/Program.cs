@@ -17,9 +17,9 @@ namespace Server
         private const string SERVER_IP = "127.0.0.1";
         static void Main(string[] args)
         {
-            //string result = "";
+            string result = "";
             //EmployeeHandler handler = new EmployeeHandler();
-            //ProductHandler pHandler = new ProductHandler();
+            ProductHandler pHandler = new ProductHandler();
             //pHandler.GetProductByID("21188", "01", "03");
             //handler.DeleteEmployeeFromDB(22222);
             //handler.AddUserToDB(51, "helloWorld","Test subject", Employee.Role.FloorWorker);
@@ -27,13 +27,13 @@ namespace Server
             //Console.WriteLine(handler.AuthenticateUser(1, "dick"));
             //Employee e = handler.GetEmployeeById(10);
             //Console.WriteLine(e.employeeName);
-            /*string result = pHandler.AddProductToDatabase(74, "02", "06", "Sej Sofa", 2.4D, 1.6D, "Green", "Couch",
+            result = pHandler.AddProductToDatabase(34, "02", "06", "Sej Sofa", 2.4D, 1.6D, "Green", "Couch",
                "HAL1-B2-20");
-            Console.WriteLine(result);*/
+            Console.WriteLine(result);
             //result = pHandler.ProductById(21188, "02", "03");
             //Console.WriteLine(result);
-            TCPServer server = new TCPServer();
-            server.Run();
+            //TCPServer server = new TCPServer();
+            //server.Run();
         }
 
         /*static void TestProduct()
