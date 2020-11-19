@@ -122,22 +122,40 @@ namespace Server.SQL
             }
         }
 
-        public void ChangeUserCredentials(int id, string newValue, string typeToAlter)
+        public string ChangeUserCredentials(int id, string newValue, string typeToAlter)
         {
             try
             {
                 using var con = new MySqlConnection(SqlLogin);
                 con.Open();
-                string query = "UPDATE users SET " + typeToAlter + " = '" + newValue + "' WHERE id = " + id + ";";
+                var query = "SELECT * FROM users WHERE id = " +id + ";";
+                     
+                using var command = new MySqlCommand(query, con);
+                int ids = 0;
+                using MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    ids = reader.GetInt32(0);
+                }
+                reader.Close();
+
+                if (ids == 0)
+                {
+                    con.Close();
+                    return "ERROR: Employee doesn't exists.";
+                }
+                query = "UPDATE users SET " + typeToAlter + " = '" + newValue + "' WHERE id = " + id + ";";
                 using var cmd = new MySqlCommand(query, con);
                 cmd.ExecuteNonQuery();
-                Console.WriteLine("Changed "+typeToAlter+" of user with id: " + id + ". New password = " +newValue);
+                return "Changed " + typeToAlter + " of user with id: " + id + ". New " + typeToAlter + " = " + newValue;
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                throw;
+                return "ERROR";
             }
+
+            return "ERROR";
         }
 
         public string AuthenticateUser(int id, string pw)
