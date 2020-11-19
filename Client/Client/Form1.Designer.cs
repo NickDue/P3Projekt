@@ -28,281 +28,340 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Navigationbar = new System.Windows.Forms.Panel();
-            this.NavButton7 = new System.Windows.Forms.Button();
-            this.NavButton6 = new System.Windows.Forms.Button();
-            this.NavButton5 = new System.Windows.Forms.Button();
-            this.NavButton4 = new System.Windows.Forms.Button();
-            this.NavButton3 = new System.Windows.Forms.Button();
-            this.NavButton2 = new System.Windows.Forms.Button();
-            this.NavButton1 = new System.Windows.Forms.Button();
-            this.LandingPage = new System.Windows.Forms.Panel();
-            this.floorSearchPage1 = new Client.FloorSearchPage();
-            this.TimeLabel = new System.Windows.Forms.Label();
-            this.Timetitle = new System.Windows.Forms.Label();
-            this.logOutPage2 = new Client.LogOutPage();
-            this.createPicklistWindow1 = new Client.CreatePicklistWindow();
-            this.addProductWindow1 = new Client.AddProductWindow();
-            this.employeesWindow1 = new Client.EmployeesWindow();
-            this.logsPage1 = new Client.LogsPage();
-            this.allProductsPage1 = new Client.AllProductsPage();
-            this.searchWindow1 = new Client.SearchWindow();
-            this.MyhomeLabel = new System.Windows.Forms.Label();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.Navigationbar.SuspendLayout();
-            this.LandingPage.SuspendLayout();
+            this.navBarPanel = new System.Windows.Forms.Panel();
+            this.signOutButton = new FontAwesome.Sharp.IconButton();
+            this.navButton6 = new FontAwesome.Sharp.IconButton();
+            this.navButton5 = new FontAwesome.Sharp.IconButton();
+            this.navButton4 = new FontAwesome.Sharp.IconButton();
+            this.navButton3 = new FontAwesome.Sharp.IconButton();
+            this.navButton2 = new FontAwesome.Sharp.IconButton();
+            this.navButton1 = new FontAwesome.Sharp.IconButton();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.titleBarPanel = new System.Windows.Forms.Panel();
+            this.minimizeButton = new FontAwesome.Sharp.IconButton();
+            this.maximizeButton = new FontAwesome.Sharp.IconButton();
+            this.closeButton = new FontAwesome.Sharp.IconButton();
+            this.contentPanel = new System.Windows.Forms.Panel();
+            this.navBarPanel.SuspendLayout();
+            this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.titleBarPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Navigationbar
+            // navBarPanel
             // 
-            this.Navigationbar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Navigationbar.Controls.Add(this.NavButton7);
-            this.Navigationbar.Controls.Add(this.NavButton6);
-            this.Navigationbar.Controls.Add(this.NavButton5);
-            this.Navigationbar.Controls.Add(this.NavButton4);
-            this.Navigationbar.Controls.Add(this.NavButton3);
-            this.Navigationbar.Controls.Add(this.NavButton2);
-            this.Navigationbar.Controls.Add(this.NavButton1);
-            this.Navigationbar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Navigationbar.Location = new System.Drawing.Point(0, 0);
-            this.Navigationbar.Name = "Navigationbar";
-            this.Navigationbar.Size = new System.Drawing.Size(193, 761);
-            this.Navigationbar.TabIndex = 0;
-            this.Navigationbar.Paint += new System.Windows.Forms.PaintEventHandler(this.Navigationbar_Paint);
+            this.navBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.navBarPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.navBarPanel.Controls.Add(this.signOutButton);
+            this.navBarPanel.Controls.Add(this.navButton6);
+            this.navBarPanel.Controls.Add(this.navButton5);
+            this.navBarPanel.Controls.Add(this.navButton4);
+            this.navBarPanel.Controls.Add(this.navButton3);
+            this.navBarPanel.Controls.Add(this.navButton2);
+            this.navBarPanel.Controls.Add(this.navButton1);
+            this.navBarPanel.Controls.Add(this.panelLogo);
+            this.navBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.navBarPanel.Location = new System.Drawing.Point(0, 0);
+            this.navBarPanel.Name = "navBarPanel";
+            this.navBarPanel.Size = new System.Drawing.Size(250, 990);
+            this.navBarPanel.TabIndex = 0;
             // 
-            // NavButton7
+            // signOutButton
             // 
-            this.NavButton7.BackColor = System.Drawing.Color.Silver;
-            this.NavButton7.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NavButton7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.NavButton7.Location = new System.Drawing.Point(3, 674);
-            this.NavButton7.Name = "NavButton7";
-            this.NavButton7.Size = new System.Drawing.Size(186, 75);
-            this.NavButton7.TabIndex = 7;
-            this.NavButton7.Text = "Log out";
-            this.NavButton7.UseVisualStyleBackColor = false;
-            this.NavButton7.Click += new System.EventHandler(this.NavButton7_Click);
+            this.signOutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.signOutButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.signOutButton.FlatAppearance.BorderSize = 0;
+            this.signOutButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.signOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.signOutButton.Font = new System.Drawing.Font("DIN1451Engschrift", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signOutButton.ForeColor = System.Drawing.Color.White;
+            this.signOutButton.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            this.signOutButton.IconColor = System.Drawing.Color.White;
+            this.signOutButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.signOutButton.IconSize = 40;
+            this.signOutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.signOutButton.Location = new System.Drawing.Point(0, 888);
+            this.signOutButton.Name = "signOutButton";
+            this.signOutButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.signOutButton.Size = new System.Drawing.Size(248, 100);
+            this.signOutButton.TabIndex = 7;
+            this.signOutButton.Text = "SIGN OUT";
+            this.signOutButton.UseVisualStyleBackColor = false;
+            this.signOutButton.Click += new System.EventHandler(this.signOutButton_Click);
             // 
-            // NavButton6
+            // navButton6
             // 
-            this.NavButton6.BackColor = System.Drawing.Color.Silver;
-            this.NavButton6.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NavButton6.Location = new System.Drawing.Point(4, 480);
-            this.NavButton6.Name = "NavButton6";
-            this.NavButton6.Size = new System.Drawing.Size(185, 75);
-            this.NavButton6.TabIndex = 6;
-            this.NavButton6.Text = "Logs";
-            this.NavButton6.UseVisualStyleBackColor = false;
-            this.NavButton6.Click += new System.EventHandler(this.NavButton6_Click);
+            this.navButton6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.navButton6.FlatAppearance.BorderSize = 0;
+            this.navButton6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.navButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.navButton6.Font = new System.Drawing.Font("DIN1451Engschrift", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navButton6.ForeColor = System.Drawing.Color.White;
+            this.navButton6.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.navButton6.IconColor = System.Drawing.Color.White;
+            this.navButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.navButton6.IconSize = 40;
+            this.navButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.navButton6.Location = new System.Drawing.Point(0, 560);
+            this.navButton6.Name = "navButton6";
+            this.navButton6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.navButton6.Size = new System.Drawing.Size(248, 80);
+            this.navButton6.TabIndex = 6;
+            this.navButton6.Text = "LOGS";
+            this.navButton6.UseVisualStyleBackColor = true;
+            this.navButton6.Click += new System.EventHandler(this.navButton6_Click);
             // 
-            // NavButton5
+            // navButton5
             // 
-            this.NavButton5.BackColor = System.Drawing.Color.Silver;
-            this.NavButton5.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NavButton5.Location = new System.Drawing.Point(4, 384);
-            this.NavButton5.Name = "NavButton5";
-            this.NavButton5.Size = new System.Drawing.Size(185, 75);
-            this.NavButton5.TabIndex = 5;
-            this.NavButton5.Text = "Employees";
-            this.NavButton5.UseVisualStyleBackColor = false;
-            this.NavButton5.Click += new System.EventHandler(this.NavButton5_Click);
+            this.navButton5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.navButton5.FlatAppearance.BorderSize = 0;
+            this.navButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.navButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.navButton5.Font = new System.Drawing.Font("DIN1451Engschrift", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navButton5.ForeColor = System.Drawing.Color.White;
+            this.navButton5.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.navButton5.IconColor = System.Drawing.Color.White;
+            this.navButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.navButton5.IconSize = 40;
+            this.navButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.navButton5.Location = new System.Drawing.Point(0, 480);
+            this.navButton5.Name = "navButton5";
+            this.navButton5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.navButton5.Size = new System.Drawing.Size(248, 80);
+            this.navButton5.TabIndex = 5;
+            this.navButton5.Text = "EMPLOYEES";
+            this.navButton5.UseVisualStyleBackColor = true;
+            this.navButton5.Click += new System.EventHandler(this.navButton5_Click);
             // 
-            // NavButton4
+            // navButton4
             // 
-            this.NavButton4.BackColor = System.Drawing.Color.Silver;
-            this.NavButton4.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NavButton4.Location = new System.Drawing.Point(4, 289);
-            this.NavButton4.Name = "NavButton4";
-            this.NavButton4.Size = new System.Drawing.Size(185, 75);
-            this.NavButton4.TabIndex = 4;
-            this.NavButton4.Text = "Create Picklist";
-            this.NavButton4.UseVisualStyleBackColor = false;
-            this.NavButton4.Click += new System.EventHandler(this.NavButton4_Click);
+            this.navButton4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.navButton4.FlatAppearance.BorderSize = 0;
+            this.navButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.navButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.navButton4.Font = new System.Drawing.Font("DIN1451Engschrift", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navButton4.ForeColor = System.Drawing.Color.White;
+            this.navButton4.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.navButton4.IconColor = System.Drawing.Color.White;
+            this.navButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.navButton4.IconSize = 40;
+            this.navButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.navButton4.Location = new System.Drawing.Point(0, 400);
+            this.navButton4.Name = "navButton4";
+            this.navButton4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.navButton4.Size = new System.Drawing.Size(248, 80);
+            this.navButton4.TabIndex = 4;
+            this.navButton4.Text = "PICKLIST";
+            this.navButton4.UseVisualStyleBackColor = true;
+            this.navButton4.Click += new System.EventHandler(this.navButton4_Click);
             // 
-            // NavButton3
+            // navButton3
             // 
-            this.NavButton3.BackColor = System.Drawing.Color.Silver;
-            this.NavButton3.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NavButton3.Location = new System.Drawing.Point(4, 191);
-            this.NavButton3.Name = "NavButton3";
-            this.NavButton3.Size = new System.Drawing.Size(185, 77);
-            this.NavButton3.TabIndex = 3;
-            this.NavButton3.Text = "All product";
-            this.NavButton3.UseVisualStyleBackColor = false;
-            this.NavButton3.Click += new System.EventHandler(this.NavButton3_Click);
+            this.navButton3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.navButton3.FlatAppearance.BorderSize = 0;
+            this.navButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.navButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.navButton3.Font = new System.Drawing.Font("DIN1451Engschrift", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navButton3.ForeColor = System.Drawing.Color.White;
+            this.navButton3.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.navButton3.IconColor = System.Drawing.Color.White;
+            this.navButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.navButton3.IconSize = 40;
+            this.navButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.navButton3.Location = new System.Drawing.Point(0, 320);
+            this.navButton3.Name = "navButton3";
+            this.navButton3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.navButton3.Size = new System.Drawing.Size(248, 80);
+            this.navButton3.TabIndex = 3;
+            this.navButton3.Text = "ALL PRODUCTS";
+            this.navButton3.UseVisualStyleBackColor = true;
+            this.navButton3.Click += new System.EventHandler(this.navButton3_Click);
             // 
-            // NavButton2
+            // navButton2
             // 
-            this.NavButton2.BackColor = System.Drawing.Color.Silver;
-            this.NavButton2.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NavButton2.Location = new System.Drawing.Point(4, 94);
-            this.NavButton2.Name = "NavButton2";
-            this.NavButton2.Size = new System.Drawing.Size(185, 77);
-            this.NavButton2.TabIndex = 2;
-            this.NavButton2.Text = "Add product";
-            this.NavButton2.UseVisualStyleBackColor = false;
-            this.NavButton2.Click += new System.EventHandler(this.NavButton2_Click);
+            this.navButton2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.navButton2.FlatAppearance.BorderSize = 0;
+            this.navButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.navButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.navButton2.Font = new System.Drawing.Font("DIN1451Engschrift", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navButton2.ForeColor = System.Drawing.Color.White;
+            this.navButton2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.navButton2.IconColor = System.Drawing.Color.White;
+            this.navButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.navButton2.IconSize = 40;
+            this.navButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.navButton2.Location = new System.Drawing.Point(0, 240);
+            this.navButton2.Name = "navButton2";
+            this.navButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.navButton2.Size = new System.Drawing.Size(248, 80);
+            this.navButton2.TabIndex = 2;
+            this.navButton2.Text = "ADD PRODUCTS";
+            this.navButton2.UseVisualStyleBackColor = true;
+            this.navButton2.Click += new System.EventHandler(this.navButton2_Click);
             // 
-            // NavButton1
+            // navButton1
             // 
-            this.NavButton1.BackColor = System.Drawing.Color.Silver;
-            this.NavButton1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NavButton1.Location = new System.Drawing.Point(4, 12);
-            this.NavButton1.Name = "NavButton1";
-            this.NavButton1.Size = new System.Drawing.Size(185, 63);
-            this.NavButton1.TabIndex = 1;
-            this.NavButton1.Text = "Search";
-            this.NavButton1.UseVisualStyleBackColor = false;
-            this.NavButton1.Click += new System.EventHandler(this.NavButton1_Click);
+            this.navButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.navButton1.FlatAppearance.BorderSize = 0;
+            this.navButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.navButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.navButton1.Font = new System.Drawing.Font("DIN1451Engschrift", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navButton1.ForeColor = System.Drawing.Color.White;
+            this.navButton1.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.navButton1.IconColor = System.Drawing.Color.White;
+            this.navButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.navButton1.IconSize = 40;
+            this.navButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.navButton1.Location = new System.Drawing.Point(0, 160);
+            this.navButton1.Name = "navButton1";
+            this.navButton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.navButton1.Size = new System.Drawing.Size(248, 80);
+            this.navButton1.TabIndex = 1;
+            this.navButton1.Text = "SEARCH";
+            this.navButton1.UseVisualStyleBackColor = true;
+            this.navButton1.Click += new System.EventHandler(this.navButton1_Click);
             // 
-            // LandingPage
+            // panelLogo
             // 
-            this.LandingPage.Controls.Add(this.floorSearchPage1);
-            this.LandingPage.Controls.Add(this.TimeLabel);
-            this.LandingPage.Controls.Add(this.Timetitle);
-            this.LandingPage.Controls.Add(this.logOutPage2);
-            this.LandingPage.Controls.Add(this.createPicklistWindow1);
-            this.LandingPage.Controls.Add(this.addProductWindow1);
-            this.LandingPage.Controls.Add(this.employeesWindow1);
-            this.LandingPage.Controls.Add(this.logsPage1);
-            this.LandingPage.Controls.Add(this.allProductsPage1);
-            this.LandingPage.Controls.Add(this.searchWindow1);
-            this.LandingPage.Controls.Add(this.MyhomeLabel);
-            this.LandingPage.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.LandingPage.Location = new System.Drawing.Point(193, 3);
-            this.LandingPage.Name = "LandingPage";
-            this.LandingPage.Size = new System.Drawing.Size(991, 758);
-            this.LandingPage.TabIndex = 2;
-            this.LandingPage.Paint += new System.Windows.Forms.PaintEventHandler(this.LandingPage_Paint);
+            this.panelLogo.Controls.Add(this.pictureBox1);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(248, 160);
+            this.panelLogo.TabIndex = 0;
             // 
-            // floorSearchPage1
+            // pictureBox1
             // 
-            this.floorSearchPage1.Location = new System.Drawing.Point(3, 0);
-            this.floorSearchPage1.Name = "floorSearchPage1";
-            this.floorSearchPage1.Size = new System.Drawing.Size(982, 758);
-            this.floorSearchPage1.TabIndex = 13;
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::Client.Properties.Resources.nonameinc;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(242, 157);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
-            // TimeLabel
+            // titleBarPanel
             // 
-            this.TimeLabel.AutoSize = true;
-            this.TimeLabel.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TimeLabel.Location = new System.Drawing.Point(432, 628);
-            this.TimeLabel.Name = "TimeLabel";
-            this.TimeLabel.Size = new System.Drawing.Size(73, 28);
-            this.TimeLabel.TabIndex = 12;
-            this.TimeLabel.Text = "label1";
+            this.titleBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.titleBarPanel.Controls.Add(this.minimizeButton);
+            this.titleBarPanel.Controls.Add(this.maximizeButton);
+            this.titleBarPanel.Controls.Add(this.closeButton);
+            this.titleBarPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.titleBarPanel.Location = new System.Drawing.Point(250, 0);
+            this.titleBarPanel.Name = "titleBarPanel";
+            this.titleBarPanel.Size = new System.Drawing.Size(1551, 28);
+            this.titleBarPanel.TabIndex = 1;
+            this.titleBarPanel.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.titleBarPanel_MouseDoubleClick);
+            this.titleBarPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.titleBarPanel_MouseDown);
             // 
-            // Timetitle
+            // minimizeButton
             // 
-            this.Timetitle.AutoSize = true;
-            this.Timetitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Timetitle.Location = new System.Drawing.Point(321, 631);
-            this.Timetitle.Name = "Timetitle";
-            this.Timetitle.Size = new System.Drawing.Size(65, 25);
-            this.Timetitle.TabIndex = 11;
-            this.Timetitle.Text = "Time:";
+            this.minimizeButton.AutoSize = true;
+            this.minimizeButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.minimizeButton.FlatAppearance.BorderSize = 0;
+            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizeButton.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.minimizeButton.IconColor = System.Drawing.Color.Black;
+            this.minimizeButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.minimizeButton.IconSize = 25;
+            this.minimizeButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.minimizeButton.Location = new System.Drawing.Point(1377, 0);
+            this.minimizeButton.Name = "minimizeButton";
+            this.minimizeButton.Size = new System.Drawing.Size(58, 28);
+            this.minimizeButton.TabIndex = 2;
+            this.minimizeButton.UseVisualStyleBackColor = true;
+            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
             // 
-            // logOutPage2
+            // maximizeButton
             // 
-            this.logOutPage2.Location = new System.Drawing.Point(0, -3);
-            this.logOutPage2.Name = "logOutPage2";
-            this.logOutPage2.Size = new System.Drawing.Size(982, 758);
-            this.logOutPage2.TabIndex = 10;
+            this.maximizeButton.AutoSize = true;
+            this.maximizeButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.maximizeButton.FlatAppearance.BorderSize = 0;
+            this.maximizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.maximizeButton.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
+            this.maximizeButton.IconColor = System.Drawing.Color.Black;
+            this.maximizeButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.maximizeButton.IconSize = 25;
+            this.maximizeButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.maximizeButton.Location = new System.Drawing.Point(1435, 0);
+            this.maximizeButton.Name = "maximizeButton";
+            this.maximizeButton.Size = new System.Drawing.Size(58, 28);
+            this.maximizeButton.TabIndex = 1;
+            this.maximizeButton.UseVisualStyleBackColor = true;
+            this.maximizeButton.Click += new System.EventHandler(this.maximizeButton_Click);
             // 
-            // createPicklistWindow1
+            // closeButton
             // 
-            this.createPicklistWindow1.Location = new System.Drawing.Point(0, -3);
-            this.createPicklistWindow1.Name = "createPicklistWindow1";
-            this.createPicklistWindow1.Size = new System.Drawing.Size(982, 758);
-            this.createPicklistWindow1.TabIndex = 7;
+            this.closeButton.AutoSize = true;
+            this.closeButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.closeButton.FlatAppearance.BorderSize = 0;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.closeButton.IconColor = System.Drawing.Color.Black;
+            this.closeButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.closeButton.IconSize = 25;
+            this.closeButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.closeButton.Location = new System.Drawing.Point(1493, 0);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(58, 28);
+            this.closeButton.TabIndex = 0;
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
-            // addProductWindow1
+            // contentPanel
             // 
-            this.addProductWindow1.Location = new System.Drawing.Point(0, -3);
-            this.addProductWindow1.Name = "addProductWindow1";
-            this.addProductWindow1.Size = new System.Drawing.Size(982, 758);
-            this.addProductWindow1.TabIndex = 6;
-            // 
-            // employeesWindow1
-            // 
-            this.employeesWindow1.Location = new System.Drawing.Point(0, -3);
-            this.employeesWindow1.Name = "employeesWindow1";
-            this.employeesWindow1.Size = new System.Drawing.Size(982, 758);
-            this.employeesWindow1.TabIndex = 5;
-            // 
-            // logsPage1
-            // 
-            this.logsPage1.Location = new System.Drawing.Point(0, -3);
-            this.logsPage1.Name = "logsPage1";
-            this.logsPage1.Size = new System.Drawing.Size(982, 758);
-            this.logsPage1.TabIndex = 4;
-            // 
-            // allProductsPage1
-            // 
-            this.allProductsPage1.Location = new System.Drawing.Point(0, -3);
-            this.allProductsPage1.Name = "allProductsPage1";
-            this.allProductsPage1.Size = new System.Drawing.Size(982, 758);
-            this.allProductsPage1.TabIndex = 3;
-            // 
-            // searchWindow1
-            // 
-            this.searchWindow1.Location = new System.Drawing.Point(0, -3);
-            this.searchWindow1.Name = "searchWindow1";
-            this.searchWindow1.Size = new System.Drawing.Size(982, 758);
-            this.searchWindow1.TabIndex = 2;
-            // 
-            // MyhomeLabel
-            // 
-            this.MyhomeLabel.AutoSize = true;
-            this.MyhomeLabel.Font = new System.Drawing.Font("Myanmar Text", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MyhomeLabel.Location = new System.Drawing.Point(246, 67);
-            this.MyhomeLabel.Name = "MyhomeLabel";
-            this.MyhomeLabel.Size = new System.Drawing.Size(495, 56);
-            this.MyhomeLabel.TabIndex = 1;
-            this.MyhomeLabel.Text = "Welcome to MyHome database";
-            this.MyhomeLabel.Click += new System.EventHandler(this.MyhomeLabel_Click);
+            this.contentPanel.AutoSize = true;
+            this.contentPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.contentPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contentPanel.Location = new System.Drawing.Point(250, 28);
+            this.contentPanel.Name = "contentPanel";
+            this.contentPanel.Size = new System.Drawing.Size(1551, 962);
+            this.contentPanel.TabIndex = 2;
             // 
             // MyhomeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1184, 761);
-            this.Controls.Add(this.LandingPage);
-            this.Controls.Add(this.Navigationbar);
+            this.ClientSize = new System.Drawing.Size(1801, 990);
+            this.Controls.Add(this.contentPanel);
+            this.Controls.Add(this.titleBarPanel);
+            this.Controls.Add(this.navBarPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MyhomeForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Myhome Database";
             this.Load += new System.EventHandler(this.MyhomeForm_Load);
-            this.Navigationbar.ResumeLayout(false);
-            this.LandingPage.ResumeLayout(false);
-            this.LandingPage.PerformLayout();
+            this.navBarPanel.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.titleBarPanel.ResumeLayout(false);
+            this.titleBarPanel.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel Navigationbar;
-        private System.Windows.Forms.Button NavButton1;
-        private System.Windows.Forms.Button NavButton2;
-        private System.Windows.Forms.Button NavButton3;
-        private System.Windows.Forms.Button NavButton5;
-        private System.Windows.Forms.Button NavButton4;
-        private System.Windows.Forms.Button NavButton6;
-        private System.Windows.Forms.Button NavButton7;
-        private System.Windows.Forms.Panel LandingPage;
-        private System.Windows.Forms.Label MyhomeLabel;
-        private System.Windows.Forms.ColorDialog colorDialog1;
-        private SearchWindow searchWindow1;
-        private AllProductsPage allProductsPage1;
-        private LogsPage logsPage1;
-        private EmployeesWindow employeesWindow1;
-        private AddProductWindow addProductWindow1;
-        private CreatePicklistWindow createPicklistWindow1;
-        private LogOutPage logOutPage2;
-        private System.Windows.Forms.Label TimeLabel;
-        private System.Windows.Forms.Label Timetitle;
-        private FloorSearchPage floorSearchPage1;
+        private System.Windows.Forms.Panel navBarPanel;
+        private FontAwesome.Sharp.IconButton navButton1;
+        private System.Windows.Forms.Panel panelLogo;
+        private FontAwesome.Sharp.IconButton navButton6;
+        private FontAwesome.Sharp.IconButton navButton5;
+        private FontAwesome.Sharp.IconButton navButton4;
+        private FontAwesome.Sharp.IconButton navButton3;
+        private FontAwesome.Sharp.IconButton navButton2;
+        private FontAwesome.Sharp.IconButton signOutButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel titleBarPanel;
+        private System.Windows.Forms.Panel contentPanel;
+        private FontAwesome.Sharp.IconButton closeButton;
+        private FontAwesome.Sharp.IconButton minimizeButton;
+        private FontAwesome.Sharp.IconButton maximizeButton;
     }
 }
 

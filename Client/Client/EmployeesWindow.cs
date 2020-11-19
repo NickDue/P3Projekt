@@ -24,9 +24,6 @@ namespace Client
 
         private void EmployeeFlowPanel_Load(object sender, EventArgs e)
         {
-            Size = new Size(982, 758);
-            Padding = new Padding(0, 0, 0, 0);
-
 
         }
 
