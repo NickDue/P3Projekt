@@ -7,15 +7,43 @@ namespace Server.TCP
     {
         public string HandleInput(string clientInput)
         {
-            string[] input = clientInput.ToLower().Split(" ! ");
-            string output = "";
-            if (input[0].Contains("find product"))
+            string[] input = clientInput.Split(" ! ");
+            string output;
+            if (input[0].StartsWith("find product"))
             {
                 ProductHandler pHandler = new ProductHandler();
                 output = pHandler.ProductById(Int32.Parse(input[1]), input[2], input[3]);
-                return output;
+            } 
+            else if (input[0].StartsWith("remove product"))
+            {
+                ProductHandler pHandler = new ProductHandler();
+                output = pHandler.RemoveProductFromDB(Int32.Parse(input[1]), input[2], input[3]);
+            } 
+            else if (input[0].StartsWith("find employee"))
+            {
+                EmployeeHandler eHandler = new EmployeeHandler();
+                output = eHandler.GetEmployeeById(Int32.Parse(input[1]));
             }
-            return "ERROR OCCOURED!";
+            else if (input[0].StartsWith("remove employee"))
+            {
+                EmployeeHandler eHandler = new EmployeeHandler();
+                output = eHandler.DeleteEmployeeFromDB(Int32.Parse(input[1]));
+            }
+            else if (input[0].StartsWith("add employee"))
+            {
+                EmployeeHandler eHandler = new EmployeeHandler();
+                output = eHandler.AddUserToDB(Int32.Parse(input[1]), input[2], input[3], input[4]);
+            }
+            else if (input[0].StartsWith("authenticate"))
+            {
+                EmployeeHandler eHandler = new EmployeeHandler();
+                output = eHandler.AuthenticateUser(Int32.Parse(input[1]), input[2]);
+            }
+            else
+            {
+                output = "ERROR: Unknown query.";
+            }
+            return output;
         }
 
         private void createProduct(string clientMsg)
