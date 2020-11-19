@@ -9,38 +9,7 @@ namespace Server.SQL
     class ProductHandler
     {
         private const string SqlLogin = @"server=localhost;userid=" + SQLCredentials.MySQLUsername + ";password=" + SQLCredentials.MySQLPassword + ";database=myhome";
-
-        public ProductDescription GetProductByID(string id, string colliNumber, string colliAmount)
-        {
-            try
-            {
-                using var con = new MySqlConnection(SqlLogin);
-                con.Open();
-
-                string query = "SELECT * FROM products WHERE colli_id = " + id + " AND colli_number = " + colliNumber + " AND colli_total = " + colliAmount + ";";
-                using var cmd = new MySqlCommand(query, con);
-                ProductDescription product = null;
-                using MySqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    if (product == null)
-                    {
-                        product = new ProductDescription(reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4),
-                                                         reader.GetDouble(5), reader.GetDouble(6), reader.GetString(7), reader.GetString(8));
-                        Console.WriteLine("{0} {1} {2} {3} {4} {5} {6} {7}", reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4),
-                                                         reader.GetDouble(5), reader.GetDouble(6), reader.GetString(7), reader.GetString(8));
-                    }
-                }
-
-                return product;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                return null;
-            }
-        }
-
+        
         public string ProductById(int id, string number, string total)
         {
             try
@@ -61,7 +30,7 @@ namespace Server.SQL
                     productDescription = new ProductDescription(reader.GetInt32(1), reader.GetString(2),reader.GetString(3),reader.GetString(4),reader.GetDouble(5),reader.GetDouble(6),reader.GetString(7),reader.GetString(8));
                     product = new Product(productDescription, reader.GetInt32(10), new Placement(plc[0],plc[2], Int32.Parse(plc[1])));
                 }
-
+                con.Close();
                 if (product != null && productDescription != null)
                 {
                     string result = product.description.id + "-" + product.description.colliNumber + "-" + product.description.colliAmount + " ! " +
@@ -137,8 +106,24 @@ namespace Server.SQL
             {
                 using var con = new MySqlConnection(SqlLogin);
                 con.Open();
+                string query = "SELECT * FROM products WHERE colli_id = " + id + " AND colli_number = " + number + " AND colli_total = " + total + ";";
+                using var command = new MySqlCommand(query, con);
+                int dbId = 0; 
+                string dbNumber = "", dbTotal = "";
+                using MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    dbId = reader.GetInt32(1);
+                    dbNumber = reader.GetString(2);
+                    dbTotal = reader.GetString(3);
+                }
+
+                reader.Close();
+
+                if (dbId == 0 && dbNumber == "" && dbTotal == "")
+                    return "Product doesn't exists in the database.";
                 
-                string query = "DELETE FROM products WHERE colli_id = " + id + " AND colli_number = " + number + " AND colli_total = " + total + ";";
+                query = "DELETE FROM products WHERE colli_id = " + id + " AND colli_number = " + number + " AND colli_total = " + total + ";";
                 using var cmd = new MySqlCommand(query, con);
                 cmd.ExecuteNonQuery();
                 con.Close();
