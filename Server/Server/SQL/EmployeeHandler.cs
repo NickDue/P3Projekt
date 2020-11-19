@@ -75,7 +75,7 @@ namespace Server.SQL
             }
         }
 
-        public void AddUserToDB(int id, string pw, string name, Employee.Role role)
+        public string AddUserToDB(int id, string pw, string name, string role)
         {
             try
             {
@@ -95,9 +95,8 @@ namespace Server.SQL
 
                  if (ids != 0)
                  {
-                     Console.WriteLine("User already associated with this id.");
                      con.Close();
-                     return;
+                     return "ERROR: Employee already exists.";
                  }
 
                  var sql = "INSERT INTO users(id, username, password, role, register_date) values (@id, @username, @password, @role, @register_date)";
@@ -107,18 +106,19 @@ namespace Server.SQL
                  cmd.Parameters.AddWithValue("@id", id);
                  cmd.Parameters.AddWithValue("@username", name);
                  cmd.Parameters.AddWithValue("@password", pw);
-                 cmd.Parameters.AddWithValue("@role", Enum.GetName(typeof(Employee.Role),role));
+                 //TODO: Make sure the worker role only can be "OfficeWorker" or "FloorWorker"
+                 cmd.Parameters.AddWithValue("@role", role);
                  cmd.Parameters.AddWithValue("@register_date", DateTime.Now);
                  cmd.Prepare();
          
                  cmd.ExecuteNonQuery();
-       
-                 Console.WriteLine("Added user!");
+
+                 return "Added employee to the database.";
             }
             catch (Exception e)
             {
                  Console.WriteLine(e);
-                 throw;
+                 return "ERROR: Employee already exists.";
             }
         }
 
@@ -140,7 +140,7 @@ namespace Server.SQL
             }
         }
 
-        public bool AuthenticateUser(int id, string pw)
+        public string AuthenticateUser(int id, string pw)
         {
             try
             {
@@ -152,9 +152,12 @@ namespace Server.SQL
                 while (reader.Read())
                 {
                     if (reader.GetInt32(0) == id && reader.GetString(2).Equals(pw))
-                        return true;
+                    {
+                        return reader.GetInt32(0) + " ! " + reader.GetString(1) + " ! " + reader.GetString(2) + " ! " +
+                               reader.GetString(3);
+                    }
                 }
-                return false;
+                return "ERROR: Incorrect information.";
             }
             catch (Exception e)
             {

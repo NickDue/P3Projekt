@@ -7,8 +7,8 @@ namespace Server.TCP
     {
         public string HandleInput(string clientInput)
         {
-            string[] input = clientInput.ToLower().Split(" ! ");
-            string output = "ERROR OCCOURED";
+            string[] input = clientInput.Split(" ! ");
+            string output;
             if (input[0].StartsWith("find product"))
             {
                 ProductHandler pHandler = new ProductHandler();
@@ -28,6 +28,20 @@ namespace Server.TCP
             {
                 EmployeeHandler eHandler = new EmployeeHandler();
                 output = eHandler.DeleteEmployeeFromDB(Int32.Parse(input[1]));
+            }
+            else if (input[0].StartsWith("add employee"))
+            {
+                EmployeeHandler eHandler = new EmployeeHandler();
+                output = eHandler.AddUserToDB(Int32.Parse(input[1]), input[2], input[3], input[4]);
+            }
+            else if (input[0].StartsWith("authenticate"))
+            {
+                EmployeeHandler eHandler = new EmployeeHandler();
+                output = eHandler.AuthenticateUser(Int32.Parse(input[1]), input[2]);
+            }
+            else
+            {
+                output = "ERROR: Unknown query.";
             }
             return output;
         }
