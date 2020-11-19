@@ -15,57 +15,24 @@ namespace Client
 {
     public partial class LogsPage : UserControl
     {
-        public static int productNum;
-        public static int employeeNum;
-        public static string actions;
-        public static string oldval;
-        public static string newVal; 
-
 
         public LogsPage()
         {
             InitializeComponent();
-            tableHead();
         }
-       
-
-
-
-
-
-
-        private void tableHead()
-        {
         
-            DataTable.ColumnCount = 5;
-            DataTable.Columns[0].Name = "Worker ID";
-            DataTable.Columns[1].Name = "Product";
-            DataTable.Columns[2].Name = "Action";
-            DataTable.Columns[3].Name = "Old value";
-            DataTable.Columns[4].Name = "New value";
-
-            
-        }
-
-        private void AddNewRow(int worker, int product, string action, string oldVal, string newVal)
+        // get logs data
+        private void getData()
         {
-            ArrayList row = new ArrayList();
-            row.Add(worker);
-            row.Add(product);
-            row.Add(action);
-            row.Add(oldVal);
-            row.Add(newVal);
-            DataTable.Rows.Add(row.ToArray());
-        }
+            DataTable data = new DataTable(); // stores data for DataGridView
 
-        private void DataTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+
 
         }
 
-        private void LogsPage_Load(object sender, EventArgs e)
-        {
+        // display logs data
+        // search through logs data
+        // create product list (testing)
 
-        }
     }
 }
