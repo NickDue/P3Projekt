@@ -1,5 +1,6 @@
 using System;
 using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Asn1.Cms;
 using Renci.SshNet.Messages.Connection;
 
 namespace Server.SQL
@@ -27,7 +28,7 @@ namespace Server.SQL
                 }
 
                 if (employee == null)
-                    return "Employee doesn't exist in the database.";
+                    return "ERROR: Employee doesn't exist in the database.";
 
                 result = employee.employeeID + " ! " + employee.employeeName + " ! " + employee.role + " ! " +
                          employee.password;
@@ -41,22 +42,36 @@ namespace Server.SQL
             }
         }
 
-        public void DeleteEmployeeFromDB(int id)
+        public string DeleteEmployeeFromDB(int id)
         {
             try
             {
                 using var con = new MySqlConnection(SqlLogin);
                 con.Open();
-                string query = "DELETE FROM users where id = " + id;
+                string query = "SELECT * FROM users WHERE id = " + id;
+                using var command = new MySqlCommand(query, con);
+                using MySqlDataReader reader = command.ExecuteReader();
+                int DbID = 0;
+                while (reader.Read())
+                {
+                    DbID = reader.GetInt32(0);
+                }
+                reader.Close();
+
+                if (DbID == 0)
+                {
+                    return "ERROR: Employee doesn't exist in the database.";
+                }
+                query = "DELETE FROM users where id = " + id;
                 using var cmd = new MySqlCommand(query, con);
                 cmd.ExecuteNonQuery();
                 con.Close();
-                Console.WriteLine("Removed user associated with id: " + id);
+                return "Removed user associated with id: " + id;
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                throw;
+                return "ERROR: Employee doesn't exist in the database.";
             }
         }
 
