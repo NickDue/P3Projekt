@@ -39,6 +39,11 @@ namespace Server.TCP
                 EmployeeHandler eHandler = new EmployeeHandler();
                 output = eHandler.AuthenticateUser(Int32.Parse(input[1]), input[2]);
             }
+            else if (input[0].StartsWith("edit employee"))
+            {
+                EmployeeHandler eHandler = new EmployeeHandler();
+                output = eHandler.ChangeUserCredentials(Int32.Parse(input[1]), input[2], input[3]);
+            }
             else
             {
                 output = "ERROR: Unknown query.";
