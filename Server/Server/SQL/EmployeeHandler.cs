@@ -8,13 +8,13 @@ namespace Server.SQL
     {
         private const string SqlLogin = @"server=localhost;userid="+SQLCredentials.MySQLUsername+";password="+SQLCredentials.MySQLPassword+";database=myhome";
 
-        public Employee GetEmployeeById(int id)
+        public String GetEmployeeById(int id)
         {
             try
             {
                 using var con = new MySqlConnection(SqlLogin);
                 con.Open();
-
+                string result = "";
                 string query = "SELECT * FROM users WHERE id = " + id;
                 using var cmd = new MySqlCommand(query, con);
                 Employee employee = null;
@@ -26,12 +26,18 @@ namespace Server.SQL
                     //Console.WriteLine("{0} {1} {2} {3}", reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3));
                 }
 
-                return employee;
+                if (employee == null)
+                    return "Employee doesn't exist in the database.";
+
+                result = employee.employeeID + " ! " + employee.employeeName + " ! " + employee.role + " ! " +
+                         employee.password;
+
+                return result;
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                return null;
+                return "Error occoured.";
             }
         }
 
