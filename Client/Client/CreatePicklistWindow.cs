@@ -240,8 +240,8 @@ namespace Client
             headerTable.AddCell(new Phrase(PlatformCombobox.Text, text));
             headerTable.AddCell(new Phrase(ExpressLabel.Text, text));
             headerTable.AddCell(new Phrase(ExpressCombobox.Text, text));
-            headerTable.AddCell("Date");
-            headerTable.AddCell(DateTime.Today.ToString());
+            headerTable.AddCell(new Phrase("Date", text));
+            headerTable.AddCell(new Phrase(DateTime.Now.ToString(), text));
 
             // Picklist table
             foreach (DataGridViewColumn column in data.Columns) // Adding columns
