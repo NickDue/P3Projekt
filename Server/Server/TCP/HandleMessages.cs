@@ -20,6 +20,14 @@ namespace Server.TCP
                 ProductHandler pHandler = new ProductHandler();
                 output = pHandler.RemoveProductFromDB(Int32.Parse(input[1]), input[2], input[3]);
             } 
+            else if (input[0].StartsWith("add product"))
+            {
+                // Received: 22222-02-02 ! hello ! 2.5 ! green ! 5.1 ! 12312
+                ProductHandler pHandler = new ProductHandler();
+                string[] splittedId = input[1].Split('-');
+                output = pHandler.AddProductToDatabase(Int32.Parse(splittedId[0]), splittedId[1], splittedId[2],
+                    input[2], Double.Parse(input[3]), Double.Parse(input[5]), input[4], null, "");
+            } 
             else if (input[0].StartsWith("find employee"))
             {
                 EmployeeHandler eHandler = new EmployeeHandler();

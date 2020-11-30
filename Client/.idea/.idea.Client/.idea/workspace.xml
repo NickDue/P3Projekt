@@ -23,39 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba08afe5-fc62-476b-9e95-4756abe499d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Client/bin/Debug/FontAwesome.Sharp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Client/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Client/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/Client.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Client.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/SearchWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Client/SearchWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/TCP/TCPClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TCP/TCPClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/AddProductWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Client/AddProductWindow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/bin/Debug/Client.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Client/bin/Debug/Client.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/bin/Debug/Client.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Client/bin/Debug/Client.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/obj/Debug/Client.Properties.Resources.resources" beforeDir="false" afterPath="$PROJECT_DIR$/Client/obj/Debug/Client.Properties.Resources.resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/obj/Debug/Client.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Client/obj/Debug/Client.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/obj/Debug/Client.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Client/obj/Debug/Client.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/obj/Debug/Client.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Client/obj/Debug/Client.csproj.GenerateResource.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/obj/Debug/Client.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Client/obj/Debug/Client.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/obj/Debug/Client.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Client/obj/Debug/Client.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/obj/Debug/Client.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Client/obj/Debug/Client.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server/SQL/EmployeeHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/SQL/EmployeeHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server/SQL/ProductHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/SQL/ProductHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/Server/TCP/HandleMessages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/TCP/HandleMessages.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server/bin/Debug/netcoreapp3.1/Server.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/bin/Debug/netcoreapp3.1/Server.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server/bin/Debug/netcoreapp3.1/Server.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/bin/Debug/netcoreapp3.1/Server.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server/bin/Debug/netcoreapp3.1/Server.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/bin/Debug/netcoreapp3.1/Server.runtimeconfig.dev.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server/obj/Debug/netcoreapp3.1/Server.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/obj/Debug/netcoreapp3.1/Server.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server/obj/Debug/netcoreapp3.1/Server.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/obj/Debug/netcoreapp3.1/Server.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server/obj/Debug/netcoreapp3.1/Server.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/obj/Debug/netcoreapp3.1/Server.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server/obj/Debug/netcoreapp3.1/Server.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/obj/Debug/netcoreapp3.1/Server.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server/obj/Debug/netcoreapp3.1/Server.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/obj/Debug/netcoreapp3.1/Server.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server/obj/Server.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/obj/Server.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server/obj/Server.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/obj/Server.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +44,7 @@
       <list>
         <option value="$PROJECT_DIR$/Client/TCP/TCPClient.cs" />
         <option value="$PROJECT_DIR$/Client/SearchWindow.cs" />
+        <option value="$PROJECT_DIR$/Client/AddProductWindow.cs" />
       </list>
     </option>
   </component>
@@ -115,7 +90,7 @@
       <workItem from="1604058330706" duration="38000" />
       <workItem from="1606728039056" duration="2059000" />
       <workItem from="1606735335212" duration="241000" />
-      <workItem from="1606735582832" duration="2534000" />
+      <workItem from="1606735582832" duration="3823000" />
     </task>
     <servers />
   </component>
@@ -140,22 +115,22 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1234" height="298" key="GridCell.Tab.0.bottom" timestamp="1606737749009">
+    <state width="1234" height="298" key="GridCell.Tab.0.bottom" timestamp="1606739020490">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1234" height="298" key="GridCell.Tab.0.bottom/-1080.0.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1606737749009" />
-    <state width="1234" height="298" key="GridCell.Tab.0.center" timestamp="1606737749009">
+    <state width="1234" height="298" key="GridCell.Tab.0.bottom/-1080.0.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1606739020490" />
+    <state width="1234" height="298" key="GridCell.Tab.0.center" timestamp="1606739020490">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1234" height="298" key="GridCell.Tab.0.center/-1080.0.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1606737749009" />
-    <state width="1234" height="298" key="GridCell.Tab.0.left" timestamp="1606737749009">
+    <state width="1234" height="298" key="GridCell.Tab.0.center/-1080.0.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1606739020490" />
+    <state width="1234" height="298" key="GridCell.Tab.0.left" timestamp="1606739020490">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1234" height="298" key="GridCell.Tab.0.left/-1080.0.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1606737749009" />
-    <state width="1234" height="298" key="GridCell.Tab.0.right" timestamp="1606737749009">
+    <state width="1234" height="298" key="GridCell.Tab.0.left/-1080.0.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1606739020490" />
+    <state width="1234" height="298" key="GridCell.Tab.0.right" timestamp="1606739020490">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1234" height="298" key="GridCell.Tab.0.right/-1080.0.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1606737749009" />
+    <state width="1234" height="298" key="GridCell.Tab.0.right/-1080.0.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1606739020490" />
     <state x="522" y="307" key="RollbackChangesDialog" timestamp="1606728207015">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
