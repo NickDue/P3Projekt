@@ -117,8 +117,8 @@ namespace Client
         {
             TCPClient client = new TCPClient();
             string serverOutput = client.Connect("add product ! " + product);
-            if(string.IsNullOrEmpty(serverOutput))
-                return "ERROR";
+            if(string.IsNullOrEmpty(serverOutput) || serverOutput.StartsWith("ERROR"))
+                return "Error, could not add product. Reason, already Exists in the database.";
             return "New Product Added";
         }
 

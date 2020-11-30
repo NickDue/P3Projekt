@@ -72,7 +72,7 @@ namespace Server.SQL
                 if (dbId != 0 && !dbNumber.Equals("") && !dbTotal.Equals(""))
                 {
                     con.Close();
-                    return "Product with this id already exists.";
+                    return "ERROR: Product with this id already exists.";
                 }
                 var sql = "INSERT INTO products(colli_id, colli_number, colli_total, name, volume, weight, color, category, placement, amount) values (@colli_id, @colli_number, @colli_total, @name, @volume, @weight, @color, @category, @placement, @amount)";
                 using var cmd = new MySqlCommand(sql, con);
