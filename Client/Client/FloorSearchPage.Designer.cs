@@ -55,12 +55,9 @@
             this.EditButton = new System.Windows.Forms.Button();
             this.SearchInput = new System.Windows.Forms.TextBox();
             this.TitleLabel = new System.Windows.Forms.Label();
-            this.CheckLabel = new System.Windows.Forms.Label();
-            this.Checkbutton = new System.Windows.Forms.Button();
-            this.LastChanceLabel = new System.Windows.Forms.Label();
-            this.NOButton = new System.Windows.Forms.Button();
-            this.YESButton = new System.Windows.Forms.Button();
             this.Backbutton = new System.Windows.Forms.Button();
+            this.Backbutton2 = new System.Windows.Forms.Button();
+            this.ProductLabel = new System.Windows.Forms.Label();
             this.ProductPanel.SuspendLayout();
             this.LocationPanel.SuspendLayout();
             this.SuspendLayout();
@@ -68,6 +65,7 @@
             // SaveButton
             // 
             this.SaveButton.BackColor = System.Drawing.Color.Chartreuse;
+            this.SaveButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SaveButton.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveButton.Location = new System.Drawing.Point(849, 90);
             this.SaveButton.Name = "SaveButton";
@@ -79,6 +77,7 @@
             // 
             // SearchButton
             // 
+            this.SearchButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SearchButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchButton.Location = new System.Drawing.Point(628, 73);
             this.SearchButton.Name = "SearchButton";
@@ -86,25 +85,25 @@
             this.SearchButton.TabIndex = 16;
             this.SearchButton.Text = "Search";
             this.SearchButton.UseVisualStyleBackColor = true;
-            this.SearchButton.UseWaitCursor = true;
+            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Myanmar Text", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(483, 147);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(187, 48);
+            this.label2.Size = new System.Drawing.Size(180, 31);
             this.label2.TabIndex = 15;
             this.label2.Text = "Product info:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Myanmar Text", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(2, 147);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 48);
+            this.label1.Size = new System.Drawing.Size(190, 31);
             this.label1.TabIndex = 14;
             this.label1.Text = "Location info:";
             // 
@@ -315,6 +314,7 @@
             // 
             // EditButton
             // 
+            this.EditButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EditButton.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditButton.Location = new System.Drawing.Point(875, 13);
             this.EditButton.Name = "EditButton";
@@ -334,88 +334,52 @@
             // TitleLabel
             // 
             this.TitleLabel.AutoSize = true;
-            this.TitleLabel.Font = new System.Drawing.Font("Myanmar Text", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleLabel.Location = new System.Drawing.Point(291, 22);
+            this.TitleLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLabel.Location = new System.Drawing.Point(329, 22);
             this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(339, 48);
+            this.TitleLabel.Size = new System.Drawing.Size(117, 44);
             this.TitleLabel.TabIndex = 9;
-            this.TitleLabel.Text = "Enter product ID number";
-            // 
-            // CheckLabel
-            // 
-            this.CheckLabel.AutoSize = true;
-            this.CheckLabel.Font = new System.Drawing.Font("Myanmar Text", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckLabel.Location = new System.Drawing.Point(2, 22);
-            this.CheckLabel.Name = "CheckLabel";
-            this.CheckLabel.Size = new System.Drawing.Size(703, 48);
-            this.CheckLabel.TabIndex = 18;
-            this.CheckLabel.Text = "Check here for see if you have entered the right input";
-            // 
-            // Checkbutton
-            // 
-            this.Checkbutton.Font = new System.Drawing.Font("Microsoft YaHei UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Checkbutton.Location = new System.Drawing.Point(10, 73);
-            this.Checkbutton.Name = "Checkbutton";
-            this.Checkbutton.Size = new System.Drawing.Size(133, 60);
-            this.Checkbutton.TabIndex = 19;
-            this.Checkbutton.Text = "Check";
-            this.Checkbutton.UseVisualStyleBackColor = true;
-            this.Checkbutton.Click += new System.EventHandler(this.Checkbutton_Click);
-            // 
-            // LastChanceLabel
-            // 
-            this.LastChanceLabel.AutoSize = true;
-            this.LastChanceLabel.Font = new System.Drawing.Font("Myanmar Text", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastChanceLabel.Location = new System.Drawing.Point(234, 22);
-            this.LastChanceLabel.Name = "LastChanceLabel";
-            this.LastChanceLabel.Size = new System.Drawing.Size(490, 48);
-            this.LastChanceLabel.TabIndex = 20;
-            this.LastChanceLabel.Text = "Are you sure to change this product?";
-            // 
-            // NOButton
-            // 
-            this.NOButton.BackColor = System.Drawing.Color.DarkRed;
-            this.NOButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NOButton.Location = new System.Drawing.Point(299, 117);
-            this.NOButton.Name = "NOButton";
-            this.NOButton.Size = new System.Drawing.Size(103, 37);
-            this.NOButton.TabIndex = 21;
-            this.NOButton.Text = "NO";
-            this.NOButton.UseVisualStyleBackColor = false;
-            this.NOButton.Click += new System.EventHandler(this.NOButton_Click);
-            // 
-            // YESButton
-            // 
-            this.YESButton.BackColor = System.Drawing.Color.Green;
-            this.YESButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.YESButton.Location = new System.Drawing.Point(520, 117);
-            this.YESButton.Name = "YESButton";
-            this.YESButton.Size = new System.Drawing.Size(103, 37);
-            this.YESButton.TabIndex = 22;
-            this.YESButton.Text = "YES";
-            this.YESButton.UseVisualStyleBackColor = false;
-            this.YESButton.Click += new System.EventHandler(this.YESButton_Click);
+            this.TitleLabel.Text = "SEARCH";
             // 
             // Backbutton
             // 
-            this.Backbutton.Location = new System.Drawing.Point(875, 13);
+            this.Backbutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Backbutton.Location = new System.Drawing.Point(15, 15);
             this.Backbutton.Name = "Backbutton";
             this.Backbutton.Size = new System.Drawing.Size(75, 23);
             this.Backbutton.TabIndex = 23;
-            this.Backbutton.Text = "Back ->";
+            this.Backbutton.Text = "Back";
             this.Backbutton.UseVisualStyleBackColor = true;
             this.Backbutton.Click += new System.EventHandler(this.Backbutton_Click);
+            // 
+            // Backbutton2
+            // 
+            this.Backbutton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Backbutton2.Location = new System.Drawing.Point(15, 15);
+            this.Backbutton2.Name = "Backbutton2";
+            this.Backbutton2.Size = new System.Drawing.Size(75, 23);
+            this.Backbutton2.TabIndex = 24;
+            this.Backbutton2.Text = "Back";
+            this.Backbutton2.UseVisualStyleBackColor = true;
+            this.Backbutton2.Click += new System.EventHandler(this.Backbutton2_Click);
+            // 
+            // ProductLabel
+            // 
+            this.ProductLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ProductLabel.AutoSize = true;
+            this.ProductLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductLabel.Location = new System.Drawing.Point(409, 82);
+            this.ProductLabel.Name = "ProductLabel";
+            this.ProductLabel.Size = new System.Drawing.Size(102, 32);
+            this.ProductLabel.TabIndex = 25;
+            this.ProductLabel.Text = "Text here";
             // 
             // FloorSearchPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.Backbutton);
-            this.Controls.Add(this.YESButton);
-            this.Controls.Add(this.NOButton);
-            this.Controls.Add(this.LastChanceLabel);
-            this.Controls.Add(this.Checkbutton);
-            this.Controls.Add(this.CheckLabel);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.Controls.Add(this.ProductLabel);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.label2);
@@ -425,6 +389,8 @@
             this.Controls.Add(this.EditButton);
             this.Controls.Add(this.SearchInput);
             this.Controls.Add(this.TitleLabel);
+            this.Controls.Add(this.Backbutton2);
+            this.Controls.Add(this.Backbutton);
             this.Name = "FloorSearchPage";
             this.Size = new System.Drawing.Size(982, 758);
             this.Load += new System.EventHandler(this.FloorSearchPage_Load);
@@ -466,11 +432,8 @@
         private System.Windows.Forms.Button EditButton;
         private System.Windows.Forms.TextBox SearchInput;
         private System.Windows.Forms.Label TitleLabel;
-        private System.Windows.Forms.Label CheckLabel;
-        private System.Windows.Forms.Button Checkbutton;
-        private System.Windows.Forms.Label LastChanceLabel;
-        private System.Windows.Forms.Button NOButton;
-        private System.Windows.Forms.Button YESButton;
         private System.Windows.Forms.Button Backbutton;
+        private System.Windows.Forms.Button Backbutton2;
+        private System.Windows.Forms.Label ProductLabel;
     }
 }

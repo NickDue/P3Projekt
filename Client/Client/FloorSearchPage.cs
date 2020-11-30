@@ -16,11 +16,24 @@ namespace Client
         {
             InitializeComponent();
         }
+        private void EditFunctionalityHide()
+        {
+            amountBox.Hide();
+            PrimaryLocationBox.Hide();
+            PrimaryColliBox.Hide();
+        }
         private void FloorHideFunc()
         {
             amountBox.Hide();
             PrimaryLocationBox.Hide();
             PrimaryColliBox.Hide();
+            LocationPanel.Hide();
+            label1.Hide();
+            label2.Hide();
+            ProductPanel.Hide();
+            EditButton.Hide();
+            Backbutton2.Hide();
+            ProductLabel.Hide();
         }
         private void FloorShowFunc()
         {
@@ -29,8 +42,9 @@ namespace Client
             PrimaryColliBox.Show();
         }
 
+        /*
         //This is gonna HIDE the YES and NO button
-        private void LastCHanceHide()
+        private void LastChanceHide()
         {
             NOButton.Hide();
             YESButton.Hide();
@@ -43,18 +57,8 @@ namespace Client
             YESButton.Show();
             LastChanceLabel.Show();
         }
-        //This is gonna HIDE the check button
-        private void CheckHide()
-        {
-            Checkbutton.Hide();
-            CheckLabel.Hide();
-        }
-        //This is gonna SHOW the check button 
-        private void CheckShow()
-        {
-            CheckLabel.Show();
-            Checkbutton.Show();
-        }
+        */
+
         //This contaion 3 functions and is the final validation 
         private void FinalValidation()
         {
@@ -140,85 +144,93 @@ namespace Client
                 PrimaryLocationLabel.Text = PrimaryLocationBox.Text;
             }
         }
-        private void Controller()
-        {
-            int errors = 0;
-            //amount Validation
-            try
-            {
-                if (Int32.Parse(amountBox.Text) <= 0 || amountBox.Text.Length > 4)
-                {
-                    MessageBox.Show("Amount should be more than 0 and less than 9999", "error");
-                    amountBox.Text = AmountLabel.Text;
-                    errors++;
-                }
+        /* private void Controller()
+         {
+             int errors = 0;
+             //amount Validation
+             try
+             {
+                 if (Int32.Parse(amountBox.Text) <= 0 || amountBox.Text.Length > 4)
+                 {
+                     MessageBox.Show("Amount should be more than 0 and less than 9999", "error");
+                     amountBox.Text = AmountLabel.Text;
+                     errors++;
+                 }
 
-            }
-            catch (FormatException)
-            {
-                MessageBox.Show("Amount has to be a number", "error");
-                amountBox.Text = AmountLabel.Text;
-            }
-            // Primary colli validation
-            string[] colli = { "1/1","1/2", "2/2", "1/3","2/3", "3/3", "1/4", "2/4", "3/4", "4/4",
-                                "1/5", "2/5", "3/5", "4/5", "5/5", "1/6", "2/6", "3/6", "4/6", "5/6",
-                                "6/6", "1/7","2/7", "3/7","4/7","5/7", "6/7", "7/7","1/8", "2/8", "3/8",
-                                "4/8", "5/8", "6/8", "7/8", "8/8","1/9","2/9", "3/9", "4/9","5/9", "6/9",
-                                "7/9", "8/9", "9/9"};
-            int personal_colli_check = 0;
-            foreach (string item in colli)
-            {
-                if (PrimaryColliBox.Text != item)
-                {
-                    PrimaryColliLabel.Text = PrimaryColliLabel.Text;
+             }
+             catch (FormatException)
+             {
+                 MessageBox.Show("Amount has to be a number", "error");
+                 amountBox.Text = AmountLabel.Text;
+             }
+             // Primary colli validation
+             string[] colli = { "1/1","1/2", "2/2", "1/3","2/3", "3/3", "1/4", "2/4", "3/4", "4/4",
+                                 "1/5", "2/5", "3/5", "4/5", "5/5", "1/6", "2/6", "3/6", "4/6", "5/6",
+                                 "6/6", "1/7","2/7", "3/7","4/7","5/7", "6/7", "7/7","1/8", "2/8", "3/8",
+                                 "4/8", "5/8", "6/8", "7/8", "8/8","1/9","2/9", "3/9", "4/9","5/9", "6/9",
+                                 "7/9", "8/9", "9/9"};
+             int personal_colli_check = 0;
+             foreach (string item in colli)
+             {
+                 if (PrimaryColliBox.Text != item)
+                 {
+                     PrimaryColliLabel.Text = PrimaryColliLabel.Text;
 
-                }
-                else
-                {
-                    personal_colli_check++;
-                }
+                 }
+                 else
+                 {
+                     personal_colli_check++;
+                 }
 
 
-            }
-            if (personal_colli_check == 0)
-            {
-                MessageBox.Show("Colli is not valid, make sure it looks like this '1/2'", "invalid type");
-                errors++;
+             }
+             if (personal_colli_check == 0)
+             {
+                 MessageBox.Show("Colli is not valid, make sure it looks like this '1/2'", "invalid type");
+                 errors++;
 
-            }
+             }
 
-            // Primary Location validation
-            if (PrimaryLocationBox.Text.Trim().Length > 10)
-            {
-                MessageBox.Show("Location cannot be longer than 10 character. Max length of Location is ex. 'SP-22-D-04' WITHOUT SPACE");
-                PrimaryLocationLabel.Text = PrimaryLocationLabel.Text;
-                errors++;
-            }
+             // Primary Location validation
+             if (PrimaryLocationBox.Text.Trim().Length > 10)
+             {
+                 MessageBox.Show("Location cannot be longer than 10 character. Max length of Location is ex. 'SP-22-D-04' WITHOUT SPACE");
+                 PrimaryLocationLabel.Text = PrimaryLocationLabel.Text;
+                 errors++;
+             }
 
-            //If no errors, SUCCESS
-            if (errors == 0)
-            {
-                MessageBox.Show("SUCCESS", "OK");
-            }
-        }
+             //If no errors, SUCCESS
+             if (errors == 0)
+             {
+                 MessageBox.Show("SUCCESS", "OK");
+             }
+         }*/
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
             SaveButton.Hide();
             FloorHideFunc();
-            LastChanceShow();
-            CheckHide();
+            //LastChanceShow();
+            //CheckHide();
             Backbutton.Hide();
+
+            //EditButton.Show();
+            SearchInput.Show();
+            SearchButton.Show();
+            TitleLabel.Show();
+            FinalValidation();
         }
 
         private void EditButton_Click(object sender, EventArgs e)
         {
             Backbutton.Show();
+            Backbutton2.Hide();
             SaveButton.Show();
-            CheckShow();
+            //CheckShow();
             EditButton.Hide();
             SearchButton.Hide();
             SearchInput.Hide();
+            TitleLabel.Hide();
             FloorShowFunc();
         }
 
@@ -227,29 +239,29 @@ namespace Client
             Backbutton.Hide();
             SaveButton.Hide();
             FloorHideFunc();
-            LastCHanceHide();
-            CheckHide();
+            //LastChanceHide();
+            //CheckHide();
         }
 
         private void Checkbutton_Click(object sender, EventArgs e)
         {
             CheckIfEmptyBox();
-            Controller();
-            
+            //Controller();
+
         }
 
         private void NOButton_Click(object sender, EventArgs e)
         {
-            LastCHanceHide();
+            //LastChanceHide();
             Backbutton.Show();
             SaveButton.Show();
             FloorShowFunc();
-            CheckShow();
+            //CheckShow();
         }
 
         private void YESButton_Click(object sender, EventArgs e)
         {
-            LastCHanceHide();
+            //LastChanceHide();
 
             EditButton.Show();
             SearchInput.Show();
@@ -261,13 +273,53 @@ namespace Client
         private void Backbutton_Click(object sender, EventArgs e)
         {
             Backbutton.Hide();
+            Backbutton2.Show();
             Clearfunc();
             SaveButton.Hide();
-            CheckHide();
+            //CheckHide();
             EditButton.Show();
+            //SearchInput.Show();
+            //SearchButton.Show();
+            //TitleLabel.Show();
+            SearchInput.Hide();
+            SearchButton.Hide();
+            TitleLabel.Hide();
+            EditFunctionalityHide();
+        }
+
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+            bool productFound = true; //Opdateres når vi finder ud af at loade produkter fra SQL
+            if (productFound == true)
+            {
+                LocationPanel.Show();
+                label1.Show();
+                label2.Show();
+                ProductPanel.Show();
+                EditButton.Show();
+                Backbutton2.Show();
+                ProductLabel.Text = SearchInput.Text;
+                ProductLabel.Show();
+                SearchInput.Hide();
+                SearchButton.Hide();
+                TitleLabel.Hide();
+            }
+            else
+                MessageBox.Show("Product not found!");
+
+            //MessageBox.Show(SearchInput.Text);
+        }
+
+        private void Backbutton2_Click(object sender, EventArgs e)
+        {
+            FloorHideFunc();
             SearchInput.Show();
             SearchButton.Show();
-            FloorHideFunc();
+            TitleLabel.Show();
         }
     }
 }
+
+
+//491,379
+//162
