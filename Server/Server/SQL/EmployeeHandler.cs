@@ -1,4 +1,7 @@
 using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Runtime.Serialization.Formatters.Binary;
 using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Asn1.Cms;
 using Renci.SshNet.Messages.Connection;
@@ -182,6 +185,32 @@ namespace Server.SQL
                 throw;
             }
             
+        }
+
+        public string GetAllEmployees()
+        {
+            List<Employee> employees = new List<Employee>();
+            using var con = new MySqlConnection(SqlLogin);
+            con.Open();
+            string query = "SELECT * FROM users";
+            using var cmd = new MySqlCommand(query, con);
+            using MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                Employee employee = new Employee(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3));
+                if(employee != null)
+                    employees.Add(employee);
+            }
+            reader.Close();
+            string result = "";
+            foreach (Employee e in employees)
+            {
+                result += e.employeeName + "!" + e.role + "!" + e.employeeID + "\n";
+            }
+
+            if (!string.IsNullOrEmpty(result))
+                return result;
+            return "ERROR";
         }
     }
 }
