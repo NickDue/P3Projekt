@@ -81,10 +81,10 @@
             this.signOutButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.signOutButton.IconSize = 40;
             this.signOutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.signOutButton.Location = new System.Drawing.Point(0, 888);
+            this.signOutButton.Location = new System.Drawing.Point(0, 848);
             this.signOutButton.Name = "signOutButton";
             this.signOutButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.signOutButton.Size = new System.Drawing.Size(248, 100);
+            this.signOutButton.Size = new System.Drawing.Size(248, 140);
             this.signOutButton.TabIndex = 7;
             this.signOutButton.Text = "SIGN OUT";
             this.signOutButton.UseVisualStyleBackColor = false;
@@ -103,12 +103,13 @@
             this.navButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.navButton6.IconSize = 40;
             this.navButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.navButton6.Location = new System.Drawing.Point(0, 560);
+            this.navButton6.Location = new System.Drawing.Point(0, 660);
             this.navButton6.Name = "navButton6";
             this.navButton6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.navButton6.Size = new System.Drawing.Size(248, 80);
+            this.navButton6.Size = new System.Drawing.Size(248, 100);
             this.navButton6.TabIndex = 6;
             this.navButton6.Text = "LOGS";
+            this.navButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.navButton6.UseVisualStyleBackColor = true;
             this.navButton6.Click += new System.EventHandler(this.navButton6_Click);
             // 
@@ -125,12 +126,13 @@
             this.navButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.navButton5.IconSize = 40;
             this.navButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.navButton5.Location = new System.Drawing.Point(0, 480);
+            this.navButton5.Location = new System.Drawing.Point(0, 560);
             this.navButton5.Name = "navButton5";
             this.navButton5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.navButton5.Size = new System.Drawing.Size(248, 80);
+            this.navButton5.Size = new System.Drawing.Size(248, 100);
             this.navButton5.TabIndex = 5;
             this.navButton5.Text = "EMPLOYEES";
+            this.navButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.navButton5.UseVisualStyleBackColor = true;
             this.navButton5.Click += new System.EventHandler(this.navButton5_Click);
             // 
@@ -147,12 +149,13 @@
             this.navButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.navButton4.IconSize = 40;
             this.navButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.navButton4.Location = new System.Drawing.Point(0, 400);
+            this.navButton4.Location = new System.Drawing.Point(0, 460);
             this.navButton4.Name = "navButton4";
             this.navButton4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.navButton4.Size = new System.Drawing.Size(248, 80);
+            this.navButton4.Size = new System.Drawing.Size(248, 100);
             this.navButton4.TabIndex = 4;
             this.navButton4.Text = "PICKLIST";
+            this.navButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.navButton4.UseVisualStyleBackColor = true;
             this.navButton4.Click += new System.EventHandler(this.navButton4_Click);
             // 
@@ -169,12 +172,13 @@
             this.navButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.navButton3.IconSize = 40;
             this.navButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.navButton3.Location = new System.Drawing.Point(0, 320);
+            this.navButton3.Location = new System.Drawing.Point(0, 360);
             this.navButton3.Name = "navButton3";
             this.navButton3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.navButton3.Size = new System.Drawing.Size(248, 80);
+            this.navButton3.Size = new System.Drawing.Size(248, 100);
             this.navButton3.TabIndex = 3;
             this.navButton3.Text = "ALL PRODUCTS";
+            this.navButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.navButton3.UseVisualStyleBackColor = true;
             this.navButton3.Click += new System.EventHandler(this.navButton3_Click);
             // 
@@ -191,12 +195,13 @@
             this.navButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.navButton2.IconSize = 40;
             this.navButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.navButton2.Location = new System.Drawing.Point(0, 240);
+            this.navButton2.Location = new System.Drawing.Point(0, 260);
             this.navButton2.Name = "navButton2";
             this.navButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.navButton2.Size = new System.Drawing.Size(248, 80);
+            this.navButton2.Size = new System.Drawing.Size(248, 100);
             this.navButton2.TabIndex = 2;
             this.navButton2.Text = "ADD PRODUCTS";
+            this.navButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.navButton2.UseVisualStyleBackColor = true;
             this.navButton2.Click += new System.EventHandler(this.navButton2_Click);
             // 
@@ -216,7 +221,7 @@
             this.navButton1.Location = new System.Drawing.Point(0, 160);
             this.navButton1.Name = "navButton1";
             this.navButton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.navButton1.Size = new System.Drawing.Size(248, 80);
+            this.navButton1.Size = new System.Drawing.Size(248, 100);
             this.navButton1.TabIndex = 1;
             this.navButton1.Text = "SEARCH";
             this.navButton1.UseVisualStyleBackColor = true;
@@ -331,7 +336,6 @@
             this.Controls.Add(this.contentPanel);
             this.Controls.Add(this.titleBarPanel);
             this.Controls.Add(this.navBarPanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MyhomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Myhome Database";
