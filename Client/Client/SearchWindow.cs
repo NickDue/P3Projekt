@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Client.TCP;
@@ -379,10 +380,9 @@ namespace Client
             SaveButton.Hide();
             OfficeHideFuncBox();
             CheckHide();
-
             LastChanceShow();
         }
-                                                                    // activate "Controller" for the current input errors
+                                                         // activate "Controller" for the current input errors
         private void Checkbutton_Click(object sender, EventArgs e)
         {
             CheckIfEmptyBox();
@@ -402,14 +402,11 @@ namespace Client
         private void YESButton_Click(object sender, EventArgs e)
         {
             LastCHanceHide();
-
             EditButton.Show();
             SearchInput.Show();
             SearchButton.Show();
-            
+            EditProductInfo();
             FinalValidation();
-            
-            
         }
 
         private void Backbutton_Click(object sender, EventArgs e)
@@ -427,12 +424,59 @@ namespace Client
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
-            string input = "find product ! 21188 ! 01 ! 03";
+            if (string.IsNullOrEmpty(SearchInput.Text))
+                return;
+            string[] splittedInput = SearchInput.Text.Split('-');
+            string input = $"find product ! {splittedInput[0]} ! {splittedInput[1]} ! {splittedInput[2]}";
+            //string input = "find product ! 21188 ! 01 ! 03";
             TCPClient client = new TCPClient();
             string info = client.Connect(input);
-            SearchInput.Text = info;
+            if (!info.StartsWith("ERROR"))
+            {
+                string[] splittedOutput = info.Split('!');
+                ProductNumLabel.Text = splittedOutput[0];
+                ProductNameLabel.Text = splittedOutput[1];
+                VolumeLabel.Text = splittedOutput[2];
+                WeightLabel.Text = splittedOutput[3];
+                ColorLabel.Text = splittedOutput[4];
+                PrimaryLocationLabel.Text = splittedOutput[6];
+                AmountLabel.Text = splittedOutput[7];
+                string[] splittedId = splittedOutput[0].Split('-');
+                PrimaryColliLabel.Text = Int32.Parse(splittedId[1]) + "/" + Int32.Parse(splittedId[2]);
+            }
+            else
+            {
+                SearchInput.Text = "Product Not Found";
+            }
+        }
 
+        private void EditProductInfo()
+        {
+            List<string> EditedValues = new List<string>();
+            if (string.IsNullOrEmpty(ProductNumBox.Text))
+            {
+                EditedValues.Add("" + ProductNumBox.Text);
+            }
+            if (string.IsNullOrEmpty(ProductNameBox.Text))
+            {
+                EditedValues.Add("name: " + ProductNameBox.Text);
+            }
+            if (string.IsNullOrEmpty(ProductNameBox.Text))
+            {
+                EditedValues.Add(ProductNameBox.Text);
+            }
+            SendEditsToServer(EditedValues);
+        }
 
+        private void SendEditsToServer(List<string> edits)
+        {
+            string toSend = "";
+            foreach (string edit in edits)
+            {
+                toSend += edit + " ! ";
+            }
+            TCPClient client = new TCPClient();
+            string recieved = client.Connect(toSend);
         }
     }
 }

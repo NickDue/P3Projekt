@@ -5,12 +5,45 @@
     <e p="C:\Users\meerq\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Client.1645417720.00" t="ExcludeRecursive" />
     <e p="C:\Users\meerq\OneDrive\Skrivebord\P3Projekt\Client" t="IncludeFlat">
       <e p="Client" t="IncludeRecursive">
+        <e p="AddProductWindow.cs" t="Include" />
+        <e p="AddProductWindow.Designer.cs" t="Include" />
+        <e p="AddProductWindow.resx" t="Include" />
+        <e p="AllProductsPage.cs" t="Include" />
+        <e p="AllProductsPage.Designer.cs" t="Include" />
+        <e p="AllProductsPage.resx" t="Include" />
         <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Client.csproj" t="IncludeRecursive" />
+        <e p="CreatePicklistWindow.cs" t="Include" />
+        <e p="CreatePicklistWindow.Designer.cs" t="Include" />
+        <e p="CreatePicklistWindow.resx" t="Include" />
+        <e p="EmployeeInputWindow.cs" t="Include" />
+        <e p="EmployeeInputWindow.Designer.cs" t="Include" />
+        <e p="EmployeeInputWindow.resx" t="Include" />
+        <e p="EmployeesWindow.cs" t="Include" />
+        <e p="EmployeesWindow.Designer.cs" t="Include" />
+        <e p="EmployeesWindow.resx" t="Include" />
+        <e p="FloorSearchPage.cs" t="Include" />
+        <e p="FloorSearchPage.Designer.cs" t="Include" />
+        <e p="FloorSearchPage.resx" t="Include" />
         <e p="Form1.cs" t="Include" />
         <e p="Form1.Designer.cs" t="Include" />
+        <e p="Form1.resx" t="Include" />
+        <e p="ListItem.cs" t="Include" />
+        <e p="ListItem.Designer.cs" t="Include" />
+        <e p="ListItem.resx" t="Include" />
+        <e p="LoginSystem.cs" t="Include" />
+        <e p="LoginSystem.Designer.cs" t="Include" />
+        <e p="LoginSystem.resx" t="Include" />
+        <e p="LogOutPage.cs" t="Include" />
+        <e p="LogOutPage.Designer.cs" t="Include" />
+        <e p="LogOutPage.resx" t="Include" />
+        <e p="LogsPage.cs" t="Include" />
+        <e p="LogsPage.Designer.cs" t="Include" />
+        <e p="LogsPage.resx" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Product.cs" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
@@ -19,6 +52,17 @@
           <e p="Settings.Designer.cs" t="Include" />
           <e p="Settings.settings" t="Include" />
         </e>
+        <e p="Resources" t="Include">
+          <e p="912214.png" t="Include" />
+          <e p="nonameinc.png" t="Include" />
+        </e>
+        <e p="SearchWindow.cs" t="Include" />
+        <e p="SearchWindow.Designer.cs" t="Include" />
+        <e p="SearchWindow.resx" t="Include" />
+        <e p="TCP" t="Include">
+          <e p="TCPClient.cs" t="Include" />
+        </e>
+        <e p="User.cs" t="Include" />
       </e>
       <e p="Client.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />

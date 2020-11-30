@@ -16,7 +16,7 @@ namespace Server.SQL
             {
                 using var con = new MySqlConnection(SqlLogin);
                 con.Open();
-
+                
                 string query = "SELECT * FROM products WHERE colli_id = " + id + " AND colli_number = " + number + " AND colli_total = " + total + ";";
                 using var cmd = new MySqlCommand(query, con);
 
@@ -33,13 +33,13 @@ namespace Server.SQL
                 con.Close();
                 if (product != null && productDescription != null)
                 {
-                    string result = product.description.id + "-" + product.description.colliNumber + "-" + product.description.colliAmount + " ! " +
-                        product.description.name + " ! " + product.description.volume + " ! " + product.description.weight + " ! " + product.description.color + " ! " + product.description.category + " ! " +
-                        product.placement.PrintPlacement() + " ! " + product.amount;
-                    return result;
+                    string result = product.description.id + "-" + product.description.colliNumber + "-" + product.description.colliAmount + "!" +
+                        product.description.name + "!" + product.description.volume + "!" + product.description.weight + "!" + product.description.color + "!" + product.description.category + "!" +
+                        product.placement.PrintPlacement() + "!" + product.amount;
+                    if(!string.IsNullOrEmpty(result))
+                        return result;
                 }
-                
-                return "";
+                return "ERROR: PRODUCT NOT FOUND!";
             }
             catch (Exception e)
             {
@@ -134,6 +134,28 @@ namespace Server.SQL
             }
         }
 
+        public string EditProductDetails(string id)
+        {
+            using var con = new MySqlConnection(SqlLogin);
+            con.Open();
+            var query = "SELECT * FROM products WHERE id = " +id.Split("-")[0] + ";";
+                     
+            using var command = new MySqlCommand(query, con);
+            int ids = 0;
+            using MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                ids = reader.GetInt32(1);
+            }
+            reader.Close();
+
+            if (ids == 0)
+            {
+                con.Close();
+                return "ERROR: Employee doesn't exists.";
+            }
+            return "ERROR OCCURED";
+        }
         
     }
 }
