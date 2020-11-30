@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using Client.TCP;
 
 namespace Client
 {
@@ -23,7 +24,6 @@ namespace Client
             ColorInput.Clear();
             WeightInput.Clear();
             AmountInput.Clear();
-            // do something
         }
 
         private void ClearButton_Click(object sender, EventArgs e)
@@ -92,7 +92,7 @@ namespace Client
         // Assembles a product in one string
         private string GenerateProductString()
         {
-            Product = ProductNumberInput.Text + "-" + ColliNumberInput.Text + "-" + ColliTotalInput.Text + "#" + ProductNameInput.Text + "#" + VolumeInput.Text + "#" + ColorInput.Text + "#" + WeightInput.Text + "#" + AmountInput.Text;
+            Product = ProductNumberInput.Text + "-" + ColliNumberInput.Text + "-" + ColliTotalInput.Text + " ! " + ProductNameInput.Text + " ! " + VolumeInput.Text + " ! " + ColorInput.Text + " ! " + WeightInput.Text + " ! " + AmountInput.Text;
 
             return Product;
         } 
@@ -102,13 +102,24 @@ namespace Client
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to add this product?", "Confirm", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                MessageBox.Show(GenerateProductString());
-                MessageBox.Show("Product added succesfully");
+                string newProduct = GenerateProductString();
+                MessageBox.Show(newProduct);
+                string result = SendProductToServer(newProduct);
+                MessageBox.Show(result);
             }
             else if (dialogResult == DialogResult.No)
             {
                 //do something else
             }
+        }
+
+        private string SendProductToServer(string product)
+        {
+            TCPClient client = new TCPClient();
+            string serverOutput = client.Connect("add product ! " + product);
+            if(string.IsNullOrEmpty(serverOutput) || serverOutput.StartsWith("ERROR"))
+                return "Error, could not add product. Reason, already Exists in the database.";
+            return "New Product Added";
         }
 
         //Checks if the given input for Product Number is a number. If not, it deletes the line, forcing you to start over
@@ -160,5 +171,7 @@ namespace Client
                 WeightInput.Text = WeightInput.Text.Remove(WeightInput.Text.Length - WeightInput.Text.Length);
             }
         }
+        
+        
     }
 }
