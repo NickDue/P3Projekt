@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Client.Properties;
+using Client.TCP;
 
 namespace Client
 {
@@ -24,7 +25,15 @@ namespace Client
 
         private void EmployeeFlowPanel_Load(object sender, EventArgs e)
         {
-
+            TCPClient client = new TCPClient();
+            string output = client.Connect("get employees");
+            string[] splitted = output.Split('\n');
+            foreach (string s in splitted)
+            {
+                string[] employeeData = s.Split('!');
+                if(employeeData.Length == 3)
+                    AddEmployee(employeeData[0], Int32.Parse(employeeData[2]), employeeData[1],"9/11-2004", Resources._912214);
+            }
         }
 
         void ListItem_WasClicked(object sender, EventArgs e)
