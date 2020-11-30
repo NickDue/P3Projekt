@@ -28,51 +28,96 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LogTitle = new System.Windows.Forms.Label();
-            this.DataTable = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.DataTable)).BeginInit();
+            this.SearchPanel = new System.Windows.Forms.Panel();
+            this.ProductGridView = new System.Windows.Forms.DataGridView();
+            this.WorkerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Action = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataColum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SearchPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // LogTitle
+            // SearchPanel
             // 
-            this.LogTitle.AutoSize = true;
-            this.LogTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogTitle.Location = new System.Drawing.Point(3, 0);
-            this.LogTitle.Name = "LogTitle";
-            this.LogTitle.Size = new System.Drawing.Size(96, 39);
-            this.LogTitle.TabIndex = 0;
-            this.LogTitle.Text = "Logs";
+            this.SearchPanel.Controls.Add(this.textBox1);
+            this.SearchPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SearchPanel.Location = new System.Drawing.Point(0, 0);
+            this.SearchPanel.Name = "SearchPanel";
+            this.SearchPanel.Size = new System.Drawing.Size(982, 54);
+            this.SearchPanel.TabIndex = 0;
             // 
-            // DataTable
+            // ProductGridView
             // 
-            this.DataTable.AllowUserToAddRows = false;
-            this.DataTable.AllowUserToDeleteRows = false;
-            this.DataTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataTable.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.DataTable.Location = new System.Drawing.Point(0, 142);
-            this.DataTable.Name = "DataTable";
-            this.DataTable.Size = new System.Drawing.Size(982, 616);
-            this.DataTable.TabIndex = 1;
-            this.DataTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataTable_CellContentClick);
+            this.ProductGridView.AllowUserToAddRows = false;
+            this.ProductGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ProductGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProductGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.WorkerID,
+            this.Product,
+            this.Action,
+            this.DataColum});
+            this.ProductGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProductGridView.Location = new System.Drawing.Point(0, 54);
+            this.ProductGridView.Name = "ProductGridView";
+            this.ProductGridView.Size = new System.Drawing.Size(982, 704);
+            this.ProductGridView.TabIndex = 1;
+            // 
+            // WorkerID
+            // 
+            this.WorkerID.HeaderText = "Worker ID";
+            this.WorkerID.Name = "WorkerID";
+            // 
+            // Product
+            // 
+            this.Product.HeaderText = "Product";
+            this.Product.Name = "Product";
+            // 
+            // Action
+            // 
+            this.Action.HeaderText = "Action";
+            this.Action.Name = "Action";
+            // 
+            // DataColum
+            // 
+            this.DataColum.HeaderText = "Data";
+            this.DataColum.Name = "DataColum";
+            // 
+            // textBox1
+            // 
+            this.textBox1.AccessibleDescription = "";
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(822, 17);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(157, 20);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.Text = "search";
             // 
             // LogsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.DataTable);
-            this.Controls.Add(this.LogTitle);
+            this.Controls.Add(this.ProductGridView);
+            this.Controls.Add(this.SearchPanel);
             this.Name = "LogsPage";
             this.Size = new System.Drawing.Size(982, 758);
-            this.Load += new System.EventHandler(this.LogsPage_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataTable)).EndInit();
+            this.SearchPanel.ResumeLayout(false);
+            this.SearchPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductGridView)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label LogTitle;
-        private System.Windows.Forms.DataGridView DataTable;
+        private System.Windows.Forms.Panel SearchPanel;
+        private System.Windows.Forms.DataGridView ProductGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn WorkerID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Product;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Action;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DataColum;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
