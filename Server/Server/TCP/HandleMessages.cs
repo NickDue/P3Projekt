@@ -9,8 +9,9 @@ namespace Server.TCP
         {
             string[] input = clientInput.Split(" ! ");
             string output;
-            if (input[0].StartsWith("find product"))
+            if (clientInput.StartsWith("find product"))
             {
+                Console.WriteLine("hello");
                 ProductHandler pHandler = new ProductHandler();
                 output = pHandler.ProductById(Int32.Parse(input[1]), input[2], input[3]);
             } 

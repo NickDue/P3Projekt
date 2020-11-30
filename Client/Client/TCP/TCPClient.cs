@@ -16,7 +16,7 @@ namespace Client.TCP
         public string Connect(string dataToSend)
         {
             string Recieved = "";
-            //Console.WriteLine("Sent: {0}", dataToSend);
+            Console.WriteLine("Sent: {0}", dataToSend);
 
 
             TcpClient client = new TcpClient(CLIENT_IP, PORT_NO);
@@ -29,7 +29,9 @@ namespace Client.TCP
             byte[] dataRecieved = new byte[client.ReceiveBufferSize];
             int byteRead = stream.Read(dataRecieved, 0, client.ReceiveBufferSize);
             Recieved = Encoding.ASCII.GetString(dataRecieved, 0, byteRead);
-                return Recieved;
+            client.Close();
+            return Recieved;
+                
         }
 
     }
