@@ -35,6 +35,12 @@
             this.ImportButton = new System.Windows.Forms.Button();
             this.GenerateButton = new System.Windows.Forms.Button();
             this.FunctionPanel = new System.Windows.Forms.Panel();
+            this.RoleBox = new System.Windows.Forms.TextBox();
+            this.IDBox = new System.Windows.Forms.TextBox();
+            this.EmployeeNameBox = new System.Windows.Forms.TextBox();
+            this.RoleLabel = new System.Windows.Forms.Label();
+            this.IDLabel = new System.Windows.Forms.Label();
+            this.EmployeeNameLabel = new System.Windows.Forms.Label();
             this.ExpressCombobox = new System.Windows.Forms.ComboBox();
             this.PlatformCombobox = new System.Windows.Forms.ComboBox();
             this.CityCombobox = new System.Windows.Forms.ComboBox();
@@ -45,12 +51,6 @@
             this.AmountColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FileDataGridView = new System.Windows.Forms.DataGridView();
             this.UserInputPanel = new System.Windows.Forms.Panel();
-            this.EmployeeNameLabel = new System.Windows.Forms.Label();
-            this.EmployeeNameBox = new System.Windows.Forms.TextBox();
-            this.IDLabel = new System.Windows.Forms.Label();
-            this.IDBox = new System.Windows.Forms.TextBox();
-            this.RoleLabel = new System.Windows.Forms.Label();
-            this.RoleBox = new System.Windows.Forms.TextBox();
             this.FunctionPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FileDataGridView)).BeginInit();
             this.UserInputPanel.SuspendLayout();
@@ -134,6 +134,63 @@
             this.FunctionPanel.Size = new System.Drawing.Size(982, 218);
             this.FunctionPanel.TabIndex = 0;
             // 
+            // RoleBox
+            // 
+            this.RoleBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.RoleBox.Location = new System.Drawing.Point(715, 138);
+            this.RoleBox.Name = "RoleBox";
+            this.RoleBox.ReadOnly = true;
+            this.RoleBox.Size = new System.Drawing.Size(236, 20);
+            this.RoleBox.TabIndex = 9;
+            // 
+            // IDBox
+            // 
+            this.IDBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.IDBox.Location = new System.Drawing.Point(715, 103);
+            this.IDBox.Name = "IDBox";
+            this.IDBox.ReadOnly = true;
+            this.IDBox.Size = new System.Drawing.Size(236, 20);
+            this.IDBox.TabIndex = 9;
+            // 
+            // EmployeeNameBox
+            // 
+            this.EmployeeNameBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.EmployeeNameBox.Location = new System.Drawing.Point(715, 68);
+            this.EmployeeNameBox.Name = "EmployeeNameBox";
+            this.EmployeeNameBox.ReadOnly = true;
+            this.EmployeeNameBox.Size = new System.Drawing.Size(236, 20);
+            this.EmployeeNameBox.TabIndex = 9;
+            // 
+            // RoleLabel
+            // 
+            this.RoleLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.RoleLabel.AutoSize = true;
+            this.RoleLabel.Location = new System.Drawing.Point(677, 141);
+            this.RoleLabel.Name = "RoleLabel";
+            this.RoleLabel.Size = new System.Drawing.Size(32, 13);
+            this.RoleLabel.TabIndex = 8;
+            this.RoleLabel.Text = "Role:";
+            // 
+            // IDLabel
+            // 
+            this.IDLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.IDLabel.AutoSize = true;
+            this.IDLabel.Location = new System.Drawing.Point(688, 106);
+            this.IDLabel.Name = "IDLabel";
+            this.IDLabel.Size = new System.Drawing.Size(21, 13);
+            this.IDLabel.TabIndex = 8;
+            this.IDLabel.Text = "ID:";
+            // 
+            // EmployeeNameLabel
+            // 
+            this.EmployeeNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.EmployeeNameLabel.AutoSize = true;
+            this.EmployeeNameLabel.Location = new System.Drawing.Point(653, 71);
+            this.EmployeeNameLabel.Name = "EmployeeNameLabel";
+            this.EmployeeNameLabel.Size = new System.Drawing.Size(56, 13);
+            this.EmployeeNameLabel.TabIndex = 8;
+            this.EmployeeNameLabel.Text = "Employee:";
+            // 
             // ExpressCombobox
             // 
             this.ExpressCombobox.FormattingEnabled = true;
@@ -199,6 +256,7 @@
             // 
             this.FileDataGridView.AllowUserToAddRows = false;
             this.FileDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.FileDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.FileDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.FileDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FileDataGridView.Location = new System.Drawing.Point(0, 257);
@@ -215,63 +273,6 @@
             this.UserInputPanel.Name = "UserInputPanel";
             this.UserInputPanel.Size = new System.Drawing.Size(982, 39);
             this.UserInputPanel.TabIndex = 3;
-            // 
-            // EmployeeNameLabel
-            // 
-            this.EmployeeNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.EmployeeNameLabel.AutoSize = true;
-            this.EmployeeNameLabel.Location = new System.Drawing.Point(653, 71);
-            this.EmployeeNameLabel.Name = "EmployeeNameLabel";
-            this.EmployeeNameLabel.Size = new System.Drawing.Size(56, 13);
-            this.EmployeeNameLabel.TabIndex = 8;
-            this.EmployeeNameLabel.Text = "Employee:";
-            // 
-            // EmployeeNameBox
-            // 
-            this.EmployeeNameBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.EmployeeNameBox.Location = new System.Drawing.Point(715, 68);
-            this.EmployeeNameBox.Name = "EmployeeNameBox";
-            this.EmployeeNameBox.ReadOnly = true;
-            this.EmployeeNameBox.Size = new System.Drawing.Size(236, 20);
-            this.EmployeeNameBox.TabIndex = 9;
-            // 
-            // IDLabel
-            // 
-            this.IDLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.IDLabel.AutoSize = true;
-            this.IDLabel.Location = new System.Drawing.Point(688, 106);
-            this.IDLabel.Name = "IDLabel";
-            this.IDLabel.Size = new System.Drawing.Size(21, 13);
-            this.IDLabel.TabIndex = 8;
-            this.IDLabel.Text = "ID:";
-            // 
-            // IDBox
-            // 
-            this.IDBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.IDBox.Location = new System.Drawing.Point(715, 103);
-            this.IDBox.Name = "IDBox";
-            this.IDBox.ReadOnly = true;
-            this.IDBox.Size = new System.Drawing.Size(236, 20);
-            this.IDBox.TabIndex = 9;
-            // 
-            // RoleLabel
-            // 
-            this.RoleLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.RoleLabel.AutoSize = true;
-            this.RoleLabel.Location = new System.Drawing.Point(677, 141);
-            this.RoleLabel.Name = "RoleLabel";
-            this.RoleLabel.Size = new System.Drawing.Size(32, 13);
-            this.RoleLabel.TabIndex = 8;
-            this.RoleLabel.Text = "Role:";
-            // 
-            // RoleBox
-            // 
-            this.RoleBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.RoleBox.Location = new System.Drawing.Point(715, 138);
-            this.RoleBox.Name = "RoleBox";
-            this.RoleBox.ReadOnly = true;
-            this.RoleBox.Size = new System.Drawing.Size(236, 20);
-            this.RoleBox.TabIndex = 9;
             // 
             // CreatePicklistWindow
             // 
