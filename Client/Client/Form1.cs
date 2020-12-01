@@ -17,7 +17,6 @@ namespace Client
         public MyhomeForm()
         {
             InitializeComponent();
-            this.ControlBox = false;
             this.DoubleBuffered = true;
             this.ControlBox = false;
             this.Text = String.Empty;

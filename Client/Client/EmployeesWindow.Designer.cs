@@ -35,7 +35,6 @@
             this.EditButton = new System.Windows.Forms.Button();
             this.ContentPanel = new System.Windows.Forms.Panel();
             this.EmployeeFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.employeeInputWindow1 = new Client.EmployeeInputWindow();
             this.HeaderPanel.SuspendLayout();
             this.ContentPanel.SuspendLayout();
             this.SuspendLayout();
@@ -74,10 +73,10 @@
             // 
             this.TitleLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.TitleLabel.AutoSize = true;
-            this.TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitleLabel.Location = new System.Drawing.Point(3, 40);
             this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(359, 73);
+            this.TitleLabel.Size = new System.Drawing.Size(259, 76);
             this.TitleLabel.TabIndex = 0;
             this.TitleLabel.Text = "Employees";
             // 
@@ -134,24 +133,12 @@
             this.EmployeeFlowPanel.Size = new System.Drawing.Size(982, 612);
             this.EmployeeFlowPanel.TabIndex = 4;
             // 
-            // employeeInputWindow1
-            // 
-            this.employeeInputWindow1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.employeeInputWindow1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.employeeInputWindow1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.employeeInputWindow1.Location = new System.Drawing.Point(241, 142);
-            this.employeeInputWindow1.Name = "employeeInputWindow1";
-            this.employeeInputWindow1.Padding = new System.Windows.Forms.Padding(3);
-            this.employeeInputWindow1.Size = new System.Drawing.Size(500, 600);
-            this.employeeInputWindow1.TabIndex = 0;
-            // 
             // EmployeesWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.ContentPanel);
-            this.Controls.Add(this.employeeInputWindow1);
             this.Controls.Add(this.HeaderPanel);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "EmployeesWindow";
@@ -170,7 +157,6 @@
         private System.Windows.Forms.Button RemoveButton;
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Label TitleLabel;
-        private EmployeeInputWindow employeeInputWindow1;
         private System.Windows.Forms.Panel HeaderPanel;
         private System.Windows.Forms.Button EditButton;
         private System.Windows.Forms.Panel ContentPanel;
