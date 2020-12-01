@@ -8,6 +8,9 @@
         <e p="AddProductWindow.cs" t="Include" />
         <e p="AddProductWindow.Designer.cs" t="Include" />
         <e p="AddProductWindow.resx" t="Include" />
+        <e p="AddProductWindow_vers1.cs" t="Include" />
+        <e p="AddProductWindow_vers1.Designer.cs" t="Include" />
+        <e p="AddProductWindow_vers1.resx" t="Include" />
         <e p="AllProductsPage.cs" t="Include" />
         <e p="AllProductsPage.Designer.cs" t="Include" />
         <e p="AllProductsPage.resx" t="Include" />
@@ -17,6 +20,9 @@
         <e p="CreatePicklistWindow.cs" t="Include" />
         <e p="CreatePicklistWindow.Designer.cs" t="Include" />
         <e p="CreatePicklistWindow.resx" t="Include" />
+        <e p="EmployeeEditer.cs" t="Include" />
+        <e p="EmployeeEditer.Designer.cs" t="Include" />
+        <e p="EmployeeEditer.resx" t="Include" />
         <e p="EmployeeInputWindow.cs" t="Include" />
         <e p="EmployeeInputWindow.Designer.cs" t="Include" />
         <e p="EmployeeInputWindow.resx" t="Include" />
