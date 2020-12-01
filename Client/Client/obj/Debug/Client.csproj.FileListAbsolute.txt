@@ -78,3 +78,4 @@ C:\Users\meerq\OneDrive\Skrivebord\P3Projekt\Client\Client\bin\Debug\FontAwesome
 C:\Users\meerq\OneDrive\Skrivebord\P3Projekt\Client\Client\bin\Debug\itextsharp.dll
 C:\Users\meerq\OneDrive\Skrivebord\P3Projekt\Client\Client\bin\Debug\itextsharp.xml
 C:\Users\meerq\OneDrive\Skrivebord\P3Projekt\Client\Client\obj\Debug\Client.csproj.CopyComplete
+C:\Users\meerq\OneDrive\Skrivebord\P3Projekt\Client\Client\obj\Debug\Client.AddProductWindow_vers1.resources

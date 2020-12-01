@@ -14,6 +14,7 @@ namespace Client
 {
     public partial class SearchWindow : UserControl
     {
+        private List<string> EditedValues = new List<string>();
         public SearchWindow()
         {
             InitializeComponent();
@@ -74,7 +75,7 @@ namespace Client
         {
             CheckIfEmptyBox();
             HandlingBoxInput();
-            Clearfunc();
+            //Clearfunc(); //Removed for testing
         }
                                                                     //This checks if the type boxes are empty, if yes than keep the current value
         private void CheckIfEmptyBox()
@@ -143,11 +144,11 @@ namespace Client
                 if (ProductNumBox.Text.Length != 5)
                 {
                     MessageBox.Show("Product number has to be 5 numbers", "error");
-                    
                 }
                 else
                 {
-                    ProductNumLabel.Text = ProductNumBox.Text;
+                    EditedValues.Add($"colli_id = {ProductNumBox.Text}");
+                    //ProductNumLabel.Text = ProductNumBox.Text;
                 }
             }
             catch(FormatException)
@@ -161,11 +162,13 @@ namespace Client
                 if (Int32.Parse(amountBox.Text) <= 0 || amountBox.Text.Length > 4)
                 {
                     MessageBox.Show("Amount should be more than 0 and less than 9999", "error");
-                    amountBox.Text = AmountLabel.Text;
+                    EditedValues.Add($"amount = {amountBox.Text}");
+                    //amountBox.Text = AmountLabel.Text;
                 }
                 else
                 {
-                    AmountLabel.Text = amountBox.Text;
+                    EditedValues.Add($"amount = {amountBox.Text}");
+                    //AmountLabel.Text = amountBox.Text;
                 }
             }
             catch (FormatException)
@@ -185,8 +188,10 @@ namespace Client
                 }
                 else
                 {
-                    WeightLabel.Text = WeightBox.Text;
-                    VolumeLabel.Text = VolumeBox.Text;
+                    EditedValues.Add($"weight = {WeightBox.Text}");
+                    EditedValues.Add($"volume = {VolumeBox.Text}");
+                    //WeightLabel.Text = WeightBox.Text;
+                    //VolumeLabel.Text = VolumeBox.Text;
                 }
             }
             catch(FormatException)
@@ -204,8 +209,10 @@ namespace Client
             }
             else
             {
-                ProductNameLabel.Text = ProductNameBox.Text;
-                ColorLabel.Text = ColorBox.Text;
+                EditedValues.Add($"name = {ProductNameBox.Text}");
+                EditedValues.Add($"color = {ColorBox.Text}");
+                //ProductNameLabel.Text = ProductNameBox.Text;
+                //ColorLabel.Text = ColorBox.Text;
             }
             
             // Primary colli validation
@@ -222,7 +229,11 @@ namespace Client
                 }
                 else
                 {
-                    PrimaryColliLabel.Text = PrimaryColliBox.Text;
+                    string[] colliSplitted = item.Split('/');
+                    EditedValues.Add($"colli_number = {colliSplitted[0]}");
+                    EditedValues.Add($"colli_total = {colliSplitted[1]}");
+                    //PrimaryColliLabel.Text = PrimaryColliBox.Text;
+                    break;
                 }
             }
             if (PrimaryColliBox.Text != PrimaryColliLabel.Text)
@@ -238,7 +249,8 @@ namespace Client
             }
             else
             {
-                PrimaryLocationLabel.Text = PrimaryLocationBox.Text;
+                EditedValues.Add($"placement = {PrimaryLocationBox.Text}");
+                //PrimaryLocationLabel.Text = PrimaryLocationBox.Text;
             }
         }
                                                                     //This ONLY check the value, if no errors = success
@@ -405,8 +417,30 @@ namespace Client
             EditButton.Show();
             SearchInput.Show();
             SearchButton.Show();
-            EditProductInfo();
             FinalValidation();
+            SendToServer();
+            GetProductFromServer();
+        }
+
+        private void SendToServer()
+        {
+            string toSend = "edit product\n";
+            foreach (string str in EditedValues)
+            {
+                toSend += str + "\n";
+            }
+            EditedValues.Clear();
+            MessageBox.Show(toSend);
+            TCPClient client = new TCPClient();
+            string response = client.Connect(toSend);
+            if (!response.StartsWith("ERROR"))
+            {
+                MessageBox.Show("Edited product.");
+            }
+            else
+            {
+                MessageBox.Show("Failure");
+            }
         }
 
         private void Backbutton_Click(object sender, EventArgs e)
@@ -426,7 +460,14 @@ namespace Client
         {
             if (string.IsNullOrEmpty(SearchInput.Text))
                 return;
+            GetProductFromServer();
+        }
+
+        private void GetProductFromServer()
+        {
             string[] splittedInput = SearchInput.Text.Split('-');
+            if (splittedInput.Length != 3)
+                return;
             string input = $"find product ! {splittedInput[0]} ! {splittedInput[1]} ! {splittedInput[2]}";
             //string input = "find product ! 21188 ! 01 ! 03";
             TCPClient client = new TCPClient();
@@ -434,49 +475,20 @@ namespace Client
             if (!info.StartsWith("ERROR"))
             {
                 string[] splittedOutput = info.Split('!');
-                ProductNumLabel.Text = splittedOutput[0];
+                string[] splittedId = splittedOutput[0].Split('-');
+                ProductNumLabel.Text = splittedId[0];
                 ProductNameLabel.Text = splittedOutput[1];
                 VolumeLabel.Text = splittedOutput[2];
                 WeightLabel.Text = splittedOutput[3];
                 ColorLabel.Text = splittedOutput[4];
                 PrimaryLocationLabel.Text = splittedOutput[6];
                 AmountLabel.Text = splittedOutput[7];
-                string[] splittedId = splittedOutput[0].Split('-');
                 PrimaryColliLabel.Text = Int32.Parse(splittedId[1]) + "/" + Int32.Parse(splittedId[2]);
             }
             else
             {
-                SearchInput.Text = "Product Not Found";
+                MessageBox.Show("Product Not Found", "error");
             }
-        }
-
-        private void EditProductInfo()
-        {
-            List<string> EditedValues = new List<string>();
-            if (string.IsNullOrEmpty(ProductNumBox.Text))
-            {
-                EditedValues.Add("" + ProductNumBox.Text);
-            }
-            if (string.IsNullOrEmpty(ProductNameBox.Text))
-            {
-                EditedValues.Add("name: " + ProductNameBox.Text);
-            }
-            if (string.IsNullOrEmpty(ProductNameBox.Text))
-            {
-                EditedValues.Add(ProductNameBox.Text);
-            }
-            SendEditsToServer(EditedValues);
-        }
-
-        private void SendEditsToServer(List<string> edits)
-        {
-            string toSend = "";
-            foreach (string edit in edits)
-            {
-                toSend += edit + " ! ";
-            }
-            TCPClient client = new TCPClient();
-            string recieved = client.Connect(toSend);
         }
     }
 }
