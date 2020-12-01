@@ -17,48 +17,16 @@ namespace Client
         public MyhomeForm()
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.None;
             this.ControlBox = false;
             this.DoubleBuffered = true;
-            this.SetStyle(ControlStyles.ResizeRedraw, true);
+            this.ControlBox = false;
+            this.Text = String.Empty;
         }
 
         private void MyhomeForm_Load(object sender, EventArgs e)
         {
 
         }
-
-        private const int cGrip = 16;      // Grip size
-        private const int cCaption = 32;   // Caption bar height;
-
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            Rectangle rc = new Rectangle(this.ClientSize.Width - cGrip, this.ClientSize.Height - cGrip, cGrip, cGrip);
-            ControlPaint.DrawSizeGrip(e.Graphics, this.BackColor, rc);
-        }
-
-        protected override void WndProc(ref Message m)
-        {
-            if (m.Msg == 0x84)
-            {  // Trap WM_NCHITTEST
-                Point pos = new Point(m.LParam.ToInt32());
-                pos = this.PointToClient(pos);
-                if (pos.Y < cCaption)
-                {
-                    m.Result = (IntPtr)2;  // HTCAPTION
-                    return;
-                }
-                if (pos.X >= this.ClientSize.Width - cGrip && pos.Y >= this.ClientSize.Height - cGrip)
-                {
-                    m.Result = (IntPtr)17; // HTBOTTOMRIGHT
-                    return;
-                }
-            }
-            base.WndProc(ref m);
-        }
-
-
-
 
 
         private void HighlightThisButton(Button button)
@@ -108,7 +76,7 @@ namespace Client
         {
             HighlightThisButton(navButton2);
             contentPanel.Controls.Clear();
-            AddProductWindow addProductWindow = new AddProductWindow();
+            AddProductWindow_vers1 addProductWindow = new AddProductWindow_vers1();
             contentPanel.Controls.Add(addProductWindow);
             addProductWindow.Dock = DockStyle.Fill;
         }
