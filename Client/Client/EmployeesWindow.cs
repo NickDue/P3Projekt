@@ -25,6 +25,11 @@ namespace Client
 
         private void EmployeeFlowPanel_Load(object sender, EventArgs e)
         {
+            LoadEmployeesFromDatabase();
+        }
+
+        private void LoadEmployeesFromDatabase()
+        {
             TCPClient client = new TCPClient();
             string output = client.Connect("get employees");
             string[] splitted = output.Split('\n');
@@ -90,7 +95,7 @@ namespace Client
         {
             foreach(ListItem item in list)
             {
-                if(item.Selected == true)
+                if(item.Selected)
                 {
                     return item;
                 }
@@ -100,7 +105,32 @@ namespace Client
 
         private void RemoveButton_Click(object sender, EventArgs e)
         {
+            RemoveEmployeeFromDatabase();
             RemoveEmployee();
+        }
+
+        private void RemoveEmployeeFromDatabase()
+        {
+            ListItem item = GetSelected(ItemList);
+            if(item != null)
+            {
+                string command = "remove employee ! ";
+                TCPClient client = new TCPClient();
+                command += item.WorkerID;
+                string response = client.Connect(command);
+                if (!response.StartsWith("ERROR"))
+                {
+                    EmployeeFlowPanel.Controls.Remove(item);
+                    ItemList.Remove(item);
+                    LoadEmployeesFromDatabase();
+                    MessageBox.Show($"Removed employee with ID: {item.WorkerID}");
+                }
+                else
+                {
+                    MessageBox.Show("ERROR, COULD NOT REMOVE EMPLOYEE", "error");
+                }
+                
+            }
         }
 
     }
