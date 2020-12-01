@@ -11,15 +11,19 @@ namespace Server.TCP
             string output;
             if (clientInput.StartsWith("find product"))
             {
-                Console.WriteLine("hello");
                 ProductHandler pHandler = new ProductHandler();
                 output = pHandler.ProductById(Int32.Parse(input[1]), input[2], input[3]);
-            } 
+            }
             else if (input[0].StartsWith("remove product"))
             {
                 ProductHandler pHandler = new ProductHandler();
                 output = pHandler.RemoveProductFromDB(Int32.Parse(input[1]), input[2], input[3]);
-            } 
+            }
+            else if (clientInput.StartsWith("edit product"))
+            {
+                ProductHandler pHandler = new ProductHandler();
+                output = pHandler.EditProductDetails(clientInput);
+            }
             else if (input[0].StartsWith("add product"))
             {
                 // Received: 22222-02-02 ! hello ! 2.5 ! green ! 5.1 ! 12312
@@ -27,7 +31,7 @@ namespace Server.TCP
                 string[] splittedId = input[1].Split('-');
                 output = pHandler.AddProductToDatabase(Int32.Parse(splittedId[0]), splittedId[1], splittedId[2],
                     input[2], Double.Parse(input[3]), Double.Parse(input[5]), input[4], null, "");
-            } 
+            }
             else if (input[0].StartsWith("find employee"))
             {
                 EmployeeHandler eHandler = new EmployeeHandler();
@@ -62,12 +66,8 @@ namespace Server.TCP
             {
                 output = "ERROR: Unknown query.";
             }
-            return output;
-        }
 
-        private void createProduct(string clientMsg)
-        {
-            
+            return output;
         }
     }
 }

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using Org.BouncyCastle.Cms;
 
 namespace Server.SQL
@@ -27,8 +28,11 @@ namespace Server.SQL
                 while (reader.Read())
                 {
                     string[] plc = reader.GetString(9).Split("-");
+                    Console.WriteLine(plc[0]);
+                    Console.WriteLine(plc[1]);
+                    Console.WriteLine(plc[2]);
                     productDescription = new ProductDescription(reader.GetInt32(1), reader.GetString(2),reader.GetString(3),reader.GetString(4),reader.GetDouble(5),reader.GetDouble(6),reader.GetString(7),reader.GetString(8));
-                    product = new Product(productDescription, reader.GetInt32(10), new Placement(plc[0],plc[2], Int32.Parse(plc[1])));
+                    product = new Product(productDescription, reader.GetInt32(10), new Placement(plc[0],plc[1], Int32.Parse(plc[2])));
                 }
                 con.Close();
                 if (product != null && productDescription != null)
@@ -134,27 +138,36 @@ namespace Server.SQL
             }
         }
 
-        public string EditProductDetails(string id)
+        public string EditProductDetails(string productInfo)
         {
+            string[] splitted = productInfo.Split('\n');
             using var con = new MySqlConnection(SqlLogin);
             con.Open();
-            var query = "SELECT * FROM products WHERE id = " +id.Split("-")[0] + ";";
-                     
+            string query = $"SELECT * FROM products WHERE {splitted[1]} AND {splitted[7]} AND {splitted[8]}";
             using var command = new MySqlCommand(query, con);
-            int ids = 0;
+            int productIndex = 0;
             using MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                ids = reader.GetInt32(1);
+                productIndex = reader.GetInt32(0);
+                Console.WriteLine(productIndex);
             }
             reader.Close();
-
-            if (ids == 0)
+            if (productIndex == 0)
             {
                 con.Close();
                 return "ERROR: Employee doesn't exists.";
             }
-            return "ERROR OCCURED";
+
+            for (int i = 1; i < splitted.Length-1; i++)
+            {
+                string[] split = splitted[i].Split(" = ");
+                query = $"UPDATE products SET {split[0]} = '{split[1]}' WHERE products_index = {productIndex}";
+                var cmd = new MySqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+            }
+            con.Close();
+            return "YAY";
         }
         
     }
