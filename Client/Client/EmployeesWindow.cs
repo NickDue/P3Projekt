@@ -120,8 +120,8 @@ namespace Client
                 string response = client.Connect(command);
                 if (!response.StartsWith("ERROR"))
                 {
-                    EmployeeFlowPanel.Controls.Remove(item);
-                    ItemList.Remove(item);
+                    EmployeeFlowPanel.Controls.Clear();
+                    ItemList.Clear();
                     LoadEmployeesFromDatabase();
                     MessageBox.Show($"Removed employee with ID: {item.WorkerID}");
                 }

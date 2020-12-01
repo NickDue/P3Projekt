@@ -23,7 +23,12 @@ namespace Server
             amount = savedAmount;
             placement = savedPlacement;
         }
-        
+        public Product(ProductDescription d, int savedAmount)
+        {
+            description = d;
+            amount = savedAmount;
+            placement = null;
+        }
 
         public void EditAttribute(string[] newValues)
         {

@@ -27,12 +27,17 @@ namespace Server.SQL
                 using MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    string[] plc = reader.GetString(9).Split("-");
-                    Console.WriteLine(plc[0]);
-                    Console.WriteLine(plc[1]);
-                    Console.WriteLine(plc[2]);
-                    productDescription = new ProductDescription(reader.GetInt32(1), reader.GetString(2),reader.GetString(3),reader.GetString(4),reader.GetDouble(5),reader.GetDouble(6),reader.GetString(7),reader.GetString(8));
-                    product = new Product(productDescription, reader.GetInt32(10), new Placement(plc[0],plc[1], Int32.Parse(plc[2])));
+                    if (string.IsNullOrEmpty(reader.GetString(9)) || string.IsNullOrEmpty(reader.GetString(8)))
+                    {
+                        productDescription = new ProductDescription(reader.GetInt32(1), reader.GetString(2),reader.GetString(3),reader.GetString(4),reader.GetDouble(5),reader.GetDouble(6),reader.GetString(7),null);
+                        product = new Product(productDescription,reader.GetInt32(10));
+                    }
+                    else
+                    {
+                        string[] plc = reader.GetString(9).Split("-");
+                        productDescription = new ProductDescription(reader.GetInt32(1), reader.GetString(2),reader.GetString(3),reader.GetString(4),reader.GetDouble(5),reader.GetDouble(6),reader.GetString(7),reader.GetString(8));
+                        product = new Product(productDescription, reader.GetInt32(10), new Placement(plc[0],plc[1], Int32.Parse(plc[2])));
+                    }
                 }
                 con.Close();
                 if (product != null && productDescription != null)
