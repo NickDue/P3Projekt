@@ -59,45 +59,51 @@
             // TitleLabel
             // 
             this.TitleLabel.AutoSize = true;
-            this.TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleLabel.Location = new System.Drawing.Point(392, 73);
+            this.TitleLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLabel.Location = new System.Drawing.Point(329, 32);
             this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(179, 55);
+            this.TitleLabel.Size = new System.Drawing.Size(136, 57);
             this.TitleLabel.TabIndex = 0;
             this.TitleLabel.Text = "Picklist";
             // 
             // CityLabel
             // 
             this.CityLabel.AutoSize = true;
-            this.CityLabel.Location = new System.Drawing.Point(38, 39);
+            this.CityLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CityLabel.Location = new System.Drawing.Point(35, 23);
             this.CityLabel.Name = "CityLabel";
-            this.CityLabel.Size = new System.Drawing.Size(24, 13);
+            this.CityLabel.Size = new System.Drawing.Size(39, 28);
             this.CityLabel.TabIndex = 1;
             this.CityLabel.Text = "City";
             // 
             // PlatformLabel
             // 
             this.PlatformLabel.AutoSize = true;
-            this.PlatformLabel.Location = new System.Drawing.Point(38, 91);
+            this.PlatformLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlatformLabel.Location = new System.Drawing.Point(35, 86);
             this.PlatformLabel.Name = "PlatformLabel";
-            this.PlatformLabel.Size = new System.Drawing.Size(45, 13);
+            this.PlatformLabel.Size = new System.Drawing.Size(75, 28);
             this.PlatformLabel.TabIndex = 1;
             this.PlatformLabel.Text = "Platform";
             // 
             // ExpressLabel
             // 
             this.ExpressLabel.AutoSize = true;
-            this.ExpressLabel.Location = new System.Drawing.Point(38, 138);
+            this.ExpressLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExpressLabel.Location = new System.Drawing.Point(35, 152);
             this.ExpressLabel.Name = "ExpressLabel";
-            this.ExpressLabel.Size = new System.Drawing.Size(44, 13);
+            this.ExpressLabel.Size = new System.Drawing.Size(70, 28);
             this.ExpressLabel.TabIndex = 1;
             this.ExpressLabel.Text = "Express";
             // 
             // ImportButton
             // 
+            this.ImportButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.ImportButton.AutoSize = true;
+            this.ImportButton.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ImportButton.Location = new System.Drawing.Point(773, 8);
             this.ImportButton.Name = "ImportButton";
-            this.ImportButton.Size = new System.Drawing.Size(75, 23);
+            this.ImportButton.Size = new System.Drawing.Size(75, 29);
             this.ImportButton.TabIndex = 3;
             this.ImportButton.Text = "Import";
             this.ImportButton.UseVisualStyleBackColor = true;
@@ -105,9 +111,12 @@
             // 
             // GenerateButton
             // 
+            this.GenerateButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.GenerateButton.AutoSize = true;
+            this.GenerateButton.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GenerateButton.Location = new System.Drawing.Point(867, 8);
             this.GenerateButton.Name = "GenerateButton";
-            this.GenerateButton.Size = new System.Drawing.Size(99, 23);
+            this.GenerateButton.Size = new System.Drawing.Size(99, 29);
             this.GenerateButton.TabIndex = 4;
             this.GenerateButton.Text = "Export to PDF";
             this.GenerateButton.UseVisualStyleBackColor = true;
@@ -136,83 +145,92 @@
             // 
             // RoleBox
             // 
-            this.RoleBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.RoleBox.Location = new System.Drawing.Point(715, 138);
+            this.RoleBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RoleBox.Font = new System.Drawing.Font("DIN1451Engschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RoleBox.Location = new System.Drawing.Point(711, 182);
             this.RoleBox.Name = "RoleBox";
             this.RoleBox.ReadOnly = true;
-            this.RoleBox.Size = new System.Drawing.Size(236, 20);
+            this.RoleBox.Size = new System.Drawing.Size(236, 36);
             this.RoleBox.TabIndex = 9;
             // 
             // IDBox
             // 
-            this.IDBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.IDBox.Location = new System.Drawing.Point(715, 103);
+            this.IDBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.IDBox.Font = new System.Drawing.Font("DIN1451Engschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IDBox.Location = new System.Drawing.Point(711, 112);
             this.IDBox.Name = "IDBox";
             this.IDBox.ReadOnly = true;
-            this.IDBox.Size = new System.Drawing.Size(236, 20);
+            this.IDBox.Size = new System.Drawing.Size(236, 36);
             this.IDBox.TabIndex = 9;
             // 
             // EmployeeNameBox
             // 
-            this.EmployeeNameBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.EmployeeNameBox.Location = new System.Drawing.Point(715, 68);
+            this.EmployeeNameBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.EmployeeNameBox.Font = new System.Drawing.Font("DIN1451Engschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmployeeNameBox.Location = new System.Drawing.Point(711, 47);
             this.EmployeeNameBox.Name = "EmployeeNameBox";
             this.EmployeeNameBox.ReadOnly = true;
-            this.EmployeeNameBox.Size = new System.Drawing.Size(236, 20);
+            this.EmployeeNameBox.Size = new System.Drawing.Size(236, 36);
             this.EmployeeNameBox.TabIndex = 9;
             // 
             // RoleLabel
             // 
-            this.RoleLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.RoleLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.RoleLabel.AutoSize = true;
-            this.RoleLabel.Location = new System.Drawing.Point(677, 141);
+            this.RoleLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RoleLabel.Location = new System.Drawing.Point(641, 185);
             this.RoleLabel.Name = "RoleLabel";
-            this.RoleLabel.Size = new System.Drawing.Size(32, 13);
+            this.RoleLabel.Size = new System.Drawing.Size(48, 28);
             this.RoleLabel.TabIndex = 8;
             this.RoleLabel.Text = "Role:";
             // 
             // IDLabel
             // 
-            this.IDLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.IDLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.IDLabel.AutoSize = true;
-            this.IDLabel.Location = new System.Drawing.Point(688, 106);
+            this.IDLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IDLabel.Location = new System.Drawing.Point(652, 115);
             this.IDLabel.Name = "IDLabel";
-            this.IDLabel.Size = new System.Drawing.Size(21, 13);
+            this.IDLabel.Size = new System.Drawing.Size(31, 28);
             this.IDLabel.TabIndex = 8;
             this.IDLabel.Text = "ID:";
             // 
             // EmployeeNameLabel
             // 
-            this.EmployeeNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.EmployeeNameLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.EmployeeNameLabel.AutoSize = true;
-            this.EmployeeNameLabel.Location = new System.Drawing.Point(653, 71);
+            this.EmployeeNameLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmployeeNameLabel.Location = new System.Drawing.Point(617, 50);
             this.EmployeeNameLabel.Name = "EmployeeNameLabel";
-            this.EmployeeNameLabel.Size = new System.Drawing.Size(56, 13);
+            this.EmployeeNameLabel.Size = new System.Drawing.Size(87, 28);
             this.EmployeeNameLabel.TabIndex = 8;
             this.EmployeeNameLabel.Text = "Employee:";
             // 
             // ExpressCombobox
             // 
+            this.ExpressCombobox.Font = new System.Drawing.Font("DIN1451Engschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExpressCombobox.FormattingEnabled = true;
-            this.ExpressCombobox.Location = new System.Drawing.Point(41, 154);
+            this.ExpressCombobox.Location = new System.Drawing.Point(38, 182);
             this.ExpressCombobox.Name = "ExpressCombobox";
-            this.ExpressCombobox.Size = new System.Drawing.Size(121, 21);
+            this.ExpressCombobox.Size = new System.Drawing.Size(121, 36);
             this.ExpressCombobox.TabIndex = 6;
             // 
             // PlatformCombobox
             // 
+            this.PlatformCombobox.Font = new System.Drawing.Font("DIN1451Engschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PlatformCombobox.FormattingEnabled = true;
-            this.PlatformCombobox.Location = new System.Drawing.Point(41, 107);
+            this.PlatformCombobox.Location = new System.Drawing.Point(38, 112);
             this.PlatformCombobox.Name = "PlatformCombobox";
-            this.PlatformCombobox.Size = new System.Drawing.Size(121, 21);
+            this.PlatformCombobox.Size = new System.Drawing.Size(121, 36);
             this.PlatformCombobox.TabIndex = 6;
             // 
             // CityCombobox
             // 
+            this.CityCombobox.Font = new System.Drawing.Font("DIN1451Engschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CityCombobox.FormattingEnabled = true;
-            this.CityCombobox.Location = new System.Drawing.Point(41, 56);
+            this.CityCombobox.Location = new System.Drawing.Point(38, 47);
             this.CityCombobox.Name = "CityCombobox";
-            this.CityCombobox.Size = new System.Drawing.Size(121, 21);
+            this.CityCombobox.Size = new System.Drawing.Size(121, 36);
             this.CityCombobox.TabIndex = 6;
             // 
             // PicklistView
@@ -289,6 +307,7 @@
             this.FunctionPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FileDataGridView)).EndInit();
             this.UserInputPanel.ResumeLayout(false);
+            this.UserInputPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }

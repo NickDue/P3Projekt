@@ -48,6 +48,8 @@ namespace Client
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.pColliBox = new System.Windows.Forms.TextBox();
+            this.pColliMaxBox = new System.Windows.Forms.TextBox();
             this.headerPanel.SuspendLayout();
             this.contentPanel.SuspendLayout();
             this.textboxPanel.SuspendLayout();
@@ -89,6 +91,8 @@ namespace Client
             // 
             this.textboxPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textboxPanel.Controls.Add(this.clearButton);
+            this.textboxPanel.Controls.Add(this.pColliMaxBox);
+            this.textboxPanel.Controls.Add(this.pColliBox);
             this.textboxPanel.Controls.Add(this.pNumberBox);
             this.textboxPanel.Controls.Add(this.pAmountBox);
             this.textboxPanel.Controls.Add(this.pColorBox);
@@ -253,6 +257,22 @@ namespace Client
             this.label3.TabIndex = 2;
             this.label3.Text = "Color:";
             // 
+            // pColliBox
+            // 
+            this.pColliBox.Font = new System.Drawing.Font("DIN1451Engschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pColliBox.Location = new System.Drawing.Point(243, 50);
+            this.pColliBox.Name = "pColliBox";
+            this.pColliBox.Size = new System.Drawing.Size(40, 36);
+            this.pColliBox.TabIndex = 6;
+            // 
+            // pColliMaxBox
+            // 
+            this.pColliMaxBox.Font = new System.Drawing.Font("DIN1451Engschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pColliMaxBox.Location = new System.Drawing.Point(289, 50);
+            this.pColliMaxBox.Name = "pColliMaxBox";
+            this.pColliMaxBox.Size = new System.Drawing.Size(37, 36);
+            this.pColliMaxBox.TabIndex = 6;
+            // 
             // AddProductWindow_vers1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,5 +314,7 @@ namespace Client
         private System.Windows.Forms.Button submitButton;
         private System.Windows.Forms.Panel textboxPanel;
         private System.Windows.Forms.Panel labelPanel;
+        private System.Windows.Forms.TextBox pColliMaxBox;
+        private System.Windows.Forms.TextBox pColliBox;
     }
 }

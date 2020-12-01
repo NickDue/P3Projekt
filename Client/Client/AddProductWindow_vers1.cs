@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Client.TCP;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,6 +45,11 @@ namespace Client
             CenterTextboxesInThisPanel(textboxPanel);
 
             pNumberBox.MaxLength = 5;
+
+            pColliBox.MaxLength = 2;
+            pColliMaxBox.MaxLength = 2;
+
+
         }
 
 
@@ -73,6 +79,10 @@ namespace Client
         {
             foreach (TextBox textbox in panel.Controls.OfType<TextBox>())
             {
+                if(textbox == pColliBox || textbox == pColliMaxBox)
+                {
+                    continue;
+                }
                 int x = ((panel.Size.Width - textbox.Size.Width) / 2);
                 textbox.Location = new Point(x, textbox.Location.Y);
             }
@@ -80,7 +90,7 @@ namespace Client
         private string GetInputs()
         {
             string pNumber, pName, pColor, pVolume, pWeight, pAmount;
-            pNumber = FormatProductNumberString(pNumberBox.Text);
+            pNumber = FormatProductNumberString(pNumberBox.Text, pColliBox.Text, pColliMaxBox.Text);
             pName = pNameBox.Text;
             pColor = pColorBox.Text;
             pVolume = pVolumeBox.Text;
@@ -88,29 +98,21 @@ namespace Client
             pAmount = pAmountBox.Text;
             return GenerateProductString(pNumber, pName, pColor, pVolume, pWeight, pAmount);
         }
-        private string FormatProductNumberString(string input)
+        private string FormatProductNumberString(string pNumber, string pColli, string pColliMax)
         {
-            string[] parts = input.Split('-');
-            string productID = parts[0];
-            string colli = parts[1];
-            string collimax = parts[2];
-            return GenerateProductNumberString(productID, colli, collimax);
-        }
-
-        private string GenerateProductNumberString(string productID, string colli, string collimax)
-        {
-            return $"{productID}-{colli}-{collimax}";
+                        
+            return $"{pNumber}-{pColli}-{pColliMax}";
         }
 
         private string GenerateProductString(string pNumber, string pName, string pColor, string pVolume, string pWeight, string pAmount)
         {
-            return $"{pNumber}#{pName}#{pColor}#{pVolume}#{pWeight}#{pAmount}";
+            return $"{pNumber}!{pName}!{pVolume}!{pColor}!{pWeight}!{pAmount}";
         }
 
         private bool ValidateProductNumberInput()
         {
             Regex regex = new Regex(@"^[0-9]+$");
-            if (regex.IsMatch(pNumberBox.Text))
+            if (regex.IsMatch(pNumberBox.Text) && regex.IsMatch(pColliBox.Text) && regex.IsMatch(pColliMaxBox.Text))
             {
                 return true;
             }
@@ -187,10 +189,40 @@ namespace Client
         {
             if (ValidateInput())
             {
-                
+                ConfirmChoice();
+                ClearInputs();
+            }
+            
+            else
+            {
+                MessageBox.Show("you done goofed (incorrect input)");
             }
         }
 
+        private void ConfirmChoice()
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to add this product?", "Confirm", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                string newProduct = GetInputs();
+                MessageBox.Show(newProduct);
+                string result = SendProductToServer(newProduct);
+                MessageBox.Show(result);
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
+        }
+
+        private string SendProductToServer(string product)
+        {
+            TCPClient client = new TCPClient();
+            string serverOutput = client.Connect("add product ! " + product);
+            if (string.IsNullOrEmpty(serverOutput) || serverOutput.StartsWith("ERROR"))
+                return "Error, could not add product. Reason, already Exists in the database.";
+            return "New Product Added";
+        }
 
     }
 }
