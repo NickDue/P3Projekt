@@ -106,7 +106,7 @@ namespace Client
 
         private string GenerateProductString(string pNumber, string pName, string pColor, string pVolume, string pWeight, string pAmount)
         {
-            return $"{pNumber}!{pName}!{pVolume}!{pColor}!{pWeight}!{pAmount}";
+            return $"{pNumber} ! {pName} ! {pVolume} ! {pColor} ! {pWeight} ! {pAmount}";
         }
 
         private bool ValidateProductNumberInput()
