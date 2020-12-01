@@ -21,11 +21,11 @@ namespace Client
 
         private void update()
         {
-            dataGridView1.ColumnCount = 4;
-            dataGridView1.Columns[0].Name = "ProductID";
-            dataGridView1.Columns[1].Name = "Product name";
-            dataGridView1.Columns[2].Name = "Color";
-            dataGridView1.Columns[3].Name = "Location";
+            ProductGridView.ColumnCount = 4;
+            ProductGridView.Columns[0].Name = "ProductID";
+            ProductGridView.Columns[1].Name = "Product name";
+            ProductGridView.Columns[2].Name = "Color";
+            ProductGridView.Columns[3].Name = "Location";
             AddNewRow();
             
         }
@@ -36,7 +36,7 @@ namespace Client
             row.Add("2");
             row.Add("3");
             row.Add("4");
-            dataGridView1.Rows.Add(row.ToArray());
+            ProductGridView.Rows.Add(row.ToArray());
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
