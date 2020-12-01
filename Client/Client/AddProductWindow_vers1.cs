@@ -190,7 +190,6 @@ namespace Client
             if (ValidateInput())
             {
                 ConfirmChoice();
-                ClearInputs();
             }
             
             else
@@ -208,6 +207,7 @@ namespace Client
                 MessageBox.Show(newProduct);
                 string result = SendProductToServer(newProduct);
                 MessageBox.Show(result);
+                ClearInputs();
             }
             else if (dialogResult == DialogResult.No)
             {

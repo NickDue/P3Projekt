@@ -16,10 +16,12 @@ namespace Client
         public AllProductsPage()
         {
             InitializeComponent();
-            update();
+            AddSampleData();
+            SetDate(DateLabelOutput);
+            SetTotalAmount(AmountLabelOutput);
         }
 
-        private void update()
+        private void AddSampleData()
         {
             ProductGridView.ColumnCount = 4;
             ProductGridView.Columns[0].Name = "ProductID";
@@ -29,6 +31,7 @@ namespace Client
             AddNewRow();
             
         }
+
         private void AddNewRow()
         {
             ArrayList row = new ArrayList();
@@ -39,9 +42,14 @@ namespace Client
             ProductGridView.Rows.Add(row.ToArray());
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void SetDate(Label label)
         {
+            label.Text = DateTime.Now.ToString();
+        }
 
+        private void SetTotalAmount(Label label)
+        {
+            label.Text = ProductGridView.Rows.Count.ToString();
         }
     }
 }

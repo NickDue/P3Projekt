@@ -24,7 +24,11 @@ namespace Client
 
         private void MyhomeForm_Load(object sender, EventArgs e)
         {
+            //LoginSystem loginsystem = new LoginSystem();
 
+            //this.Controls.Add(loginsystem);
+            //loginsystem.BringToFront();
+            
         }
 
 
