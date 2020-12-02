@@ -13,6 +13,16 @@ namespace Client
 {
     public partial class ListItem : UserControl
     {
+        public ListItem(string employeeName, int workerID, string role, string lastlog, Image pic)
+        {
+            InitializeComponent();
+
+            EmployeeName = employeeName;
+            WorkerID = workerID;
+            Role = role;
+            LastLog = lastlog;
+            Picture = pic;
+        }
         public ListItem()
         {
             InitializeComponent();
@@ -24,17 +34,18 @@ namespace Client
 
         private void ListItem_Load(object sender, EventArgs e)
         {
-            this.Size = new Size(300, 350);
+            this.Size = new Size(320, 400);
+            int x;
             //Placerer label i midten af WorkerIDPanel
-            int x = (WorkerIDPanel.Size.Width - WorkerIDInput.Size.Width) / 2;
-            WorkerIDInput.Location = new Point(x, WorkerIDInput.Location.Y);
+            x = (headerPanel.Size.Width / 2) - (workerIDLabel.Size.Width / 2);
+            workerIDLabel.Location = new Point(x, workerIDLabel.Location.Y);
             //Placerer PictureBox i midten af HeaderPanel
-            pictureBox1.Location = new Point((HeaderPanel.Size.Width /2) - (pictureBox1.Size.Width / 2), (HeaderPanel.Size.Height / 2 + (WorkerIDInput.Height / 2)) - (pictureBox1.Size.Height / 2));
+            x = (headerPanel.Size.Width / 2) - (pictureBox1.Size.Width / 2);
+            pictureBox1.Location = new Point(x, pictureBox1.Location.Y);
 
             //Tilføjer mouseclick
             this.MouseClick += Control_MouseClick;
             RegisterMouseClickForChildren(Controls);
-            
         }
 
 
@@ -70,8 +81,8 @@ namespace Client
             {
                 Selected = true;
             }
-
         }
+
 
 
 
@@ -84,52 +95,39 @@ namespace Client
         private string _role;
         private string _lastLog;
         private Image _picture;
+        private bool _selected;
 
-
-        [Category("Custom Properties")]
         public string EmployeeName
         {
             get { return _name; }
-            set { _name = value; NameInput.Text = value; }
+            set { _name = value; employeeNameLabel.Text = _name; }
         }
-
-        [Category("Custom Properties")]
         public int WorkerID
         {
             get { return _workerID; }
-            set { _workerID = value; WorkerIDInput.Text = ("ID#" + value.ToString()); }
+            set { _workerID = value; workerIDLabel.Text = ("ID#" + value.ToString()); }
         }
-
-        [Category("Custom Properties")]
         public string Role
         {
             get { return _role; }
-            set { _role = value; RoleInput.Text = value; }
+            set { _role = value; employeeRoleLabel.Text = value; }
         }
-
-        [Category("Custom Properties")]
         public string LastLog
         {
             get { return _lastLog; }
-            set { _lastLog = value; LastLogInput.Text = value; }
+            set { _lastLog = value; employeeLastLogLabel.Text = value; }
         }
-
-        [Category("Custom Properties")]
         public Image Picture
         {
             get { return _picture; }
             set { _picture = value; pictureBox1.Image = value; }
         }
-
-
-        #endregion
-
-        private bool _selected;
         public bool Selected
         {
             get { return _selected; }
-            set { _selected = value; this.BorderStyle = Selected ? BorderStyle.Fixed3D : BorderStyle.FixedSingle; this.BackColor = Selected ? SystemColors.Highlight : SystemColors.ControlLight; }
+            set { _selected = value; this.BorderStyle = Selected ? BorderStyle.Fixed3D : BorderStyle.FixedSingle; this.BackColor = Selected ? SystemColors.Highlight : Color.FromArgb(51, 51, 51); }
         }
 
+        #endregion
     }
 }

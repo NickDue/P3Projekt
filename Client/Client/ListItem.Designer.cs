@@ -28,201 +28,161 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.headerPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.HeaderPanel = new System.Windows.Forms.Panel();
-            this.WorkerIDPanel = new System.Windows.Forms.Panel();
-            this.WorkerIDInput = new System.Windows.Forms.Label();
-            this.ContentPanel = new System.Windows.Forms.Panel();
-            this.LastLogInput = new System.Windows.Forms.Label();
-            this.RoleInput = new System.Windows.Forms.Label();
-            this.NameInput = new System.Windows.Forms.Label();
-            this.NameLabel = new System.Windows.Forms.Label();
-            this.RoleLabel = new System.Windows.Forms.Label();
-            this.LastLogLabel = new System.Windows.Forms.Label();
+            this.workerIDLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.employeeNameLabel = new System.Windows.Forms.Label();
+            this.employeeRoleLabel = new System.Windows.Forms.Label();
+            this.employeeLastLogLabel = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            this.headerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.HeaderPanel.SuspendLayout();
-            this.WorkerIDPanel.SuspendLayout();
-            this.ContentPanel.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.panel1.Controls.Add(this.employeeLastLogLabel);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.employeeRoleLabel);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.employeeNameLabel);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.headerPanel);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(5, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(310, 390);
+            this.panel1.TabIndex = 0;
+            // 
+            // headerPanel
+            // 
+            this.headerPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.headerPanel.Controls.Add(this.pictureBox1);
+            this.headerPanel.Controls.Add(this.workerIDLabel);
+            this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.headerPanel.Location = new System.Drawing.Point(0, 0);
+            this.headerPanel.Name = "headerPanel";
+            this.headerPanel.Size = new System.Drawing.Size(310, 233);
+            this.headerPanel.TabIndex = 0;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Silver;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(65, 48);
+            this.pictureBox1.Location = new System.Drawing.Point(82, 55);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox1.Size = new System.Drawing.Size(153, 166);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // HeaderPanel
+            // workerIDLabel
             // 
-            this.HeaderPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.HeaderPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.HeaderPanel.Controls.Add(this.WorkerIDPanel);
-            this.HeaderPanel.Controls.Add(this.pictureBox1);
-            this.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.HeaderPanel.Location = new System.Drawing.Point(3, 3);
-            this.HeaderPanel.Name = "HeaderPanel";
-            this.HeaderPanel.Padding = new System.Windows.Forms.Padding(5);
-            this.HeaderPanel.Size = new System.Drawing.Size(294, 208);
-            this.HeaderPanel.TabIndex = 9;
+            this.workerIDLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.workerIDLabel.AutoSize = true;
+            this.workerIDLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.workerIDLabel.Location = new System.Drawing.Point(148, 18);
+            this.workerIDLabel.Name = "workerIDLabel";
+            this.workerIDLabel.Size = new System.Drawing.Size(20, 25);
+            this.workerIDLabel.TabIndex = 0;
+            this.workerIDLabel.Text = "#";
+            this.workerIDLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // WorkerIDPanel
+            // label1
             // 
-            this.WorkerIDPanel.Controls.Add(this.WorkerIDInput);
-            this.WorkerIDPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.WorkerIDPanel.Location = new System.Drawing.Point(5, 5);
-            this.WorkerIDPanel.Name = "WorkerIDPanel";
-            this.WorkerIDPanel.Padding = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.WorkerIDPanel.Size = new System.Drawing.Size(282, 28);
-            this.WorkerIDPanel.TabIndex = 9;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(19, 245);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Name:";
             // 
-            // WorkerIDInput
+            // label2
             // 
-            this.WorkerIDInput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.WorkerIDInput.AutoSize = true;
-            this.WorkerIDInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WorkerIDInput.Location = new System.Drawing.Point(117, 3);
-            this.WorkerIDInput.Margin = new System.Windows.Forms.Padding(0);
-            this.WorkerIDInput.Name = "WorkerIDInput";
-            this.WorkerIDInput.Size = new System.Drawing.Size(42, 24);
-            this.WorkerIDInput.TabIndex = 10;
-            this.WorkerIDInput.Text = "N/A";
-            this.WorkerIDInput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(19, 293);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 25);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Role:";
             // 
-            // ContentPanel
+            // label3
             // 
-            this.ContentPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.ContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ContentPanel.Controls.Add(this.LastLogInput);
-            this.ContentPanel.Controls.Add(this.RoleInput);
-            this.ContentPanel.Controls.Add(this.NameInput);
-            this.ContentPanel.Controls.Add(this.NameLabel);
-            this.ContentPanel.Controls.Add(this.RoleLabel);
-            this.ContentPanel.Controls.Add(this.LastLogLabel);
-            this.ContentPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ContentPanel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.ContentPanel.Location = new System.Drawing.Point(3, 217);
-            this.ContentPanel.Name = "ContentPanel";
-            this.ContentPanel.Size = new System.Drawing.Size(294, 130);
-            this.ContentPanel.TabIndex = 8;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(19, 346);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 25);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Last log:";
             // 
-            // LastLogInput
+            // employeeNameLabel
             // 
-            this.LastLogInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.LastLogInput.AutoSize = true;
-            this.LastLogInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastLogInput.Location = new System.Drawing.Point(96, 81);
-            this.LastLogInput.Margin = new System.Windows.Forms.Padding(10);
-            this.LastLogInput.Name = "LastLogInput";
-            this.LastLogInput.Padding = new System.Windows.Forms.Padding(0, 10, 10, 10);
-            this.LastLogInput.Size = new System.Drawing.Size(41, 36);
-            this.LastLogInput.TabIndex = 7;
-            this.LastLogInput.Text = "N/A";
+            this.employeeNameLabel.AutoSize = true;
+            this.employeeNameLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeNameLabel.Location = new System.Drawing.Point(93, 245);
+            this.employeeNameLabel.Name = "employeeNameLabel";
+            this.employeeNameLabel.Size = new System.Drawing.Size(0, 25);
+            this.employeeNameLabel.TabIndex = 1;
             // 
-            // RoleInput
+            // employeeRoleLabel
             // 
-            this.RoleInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.RoleInput.AutoSize = true;
-            this.RoleInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RoleInput.Location = new System.Drawing.Point(96, 43);
-            this.RoleInput.Margin = new System.Windows.Forms.Padding(10);
-            this.RoleInput.Name = "RoleInput";
-            this.RoleInput.Padding = new System.Windows.Forms.Padding(0, 10, 10, 10);
-            this.RoleInput.Size = new System.Drawing.Size(41, 36);
-            this.RoleInput.TabIndex = 6;
-            this.RoleInput.Text = "N/A";
+            this.employeeRoleLabel.AutoSize = true;
+            this.employeeRoleLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeRoleLabel.Location = new System.Drawing.Point(93, 293);
+            this.employeeRoleLabel.Name = "employeeRoleLabel";
+            this.employeeRoleLabel.Size = new System.Drawing.Size(0, 25);
+            this.employeeRoleLabel.TabIndex = 1;
             // 
-            // NameInput
+            // employeeLastLogLabel
             // 
-            this.NameInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.NameInput.AutoSize = true;
-            this.NameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameInput.Location = new System.Drawing.Point(96, 2);
-            this.NameInput.Margin = new System.Windows.Forms.Padding(10);
-            this.NameInput.Name = "NameInput";
-            this.NameInput.Padding = new System.Windows.Forms.Padding(0, 10, 10, 10);
-            this.NameInput.Size = new System.Drawing.Size(41, 36);
-            this.NameInput.TabIndex = 4;
-            this.NameInput.Text = "N/A";
-            // 
-            // NameLabel
-            // 
-            this.NameLabel.AutoSize = true;
-            this.NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameLabel.Location = new System.Drawing.Point(2, 0);
-            this.NameLabel.Margin = new System.Windows.Forms.Padding(10);
-            this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Padding = new System.Windows.Forms.Padding(10, 10, 0, 10);
-            this.NameLabel.Size = new System.Drawing.Size(65, 36);
-            this.NameLabel.TabIndex = 0;
-            this.NameLabel.Text = "NAME:";
-            // 
-            // RoleLabel
-            // 
-            this.RoleLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.RoleLabel.AutoSize = true;
-            this.RoleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RoleLabel.Location = new System.Drawing.Point(2, 43);
-            this.RoleLabel.Margin = new System.Windows.Forms.Padding(10);
-            this.RoleLabel.Name = "RoleLabel";
-            this.RoleLabel.Padding = new System.Windows.Forms.Padding(10, 10, 0, 10);
-            this.RoleLabel.Size = new System.Drawing.Size(62, 36);
-            this.RoleLabel.TabIndex = 2;
-            this.RoleLabel.Text = "ROLE:";
-            // 
-            // LastLogLabel
-            // 
-            this.LastLogLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.LastLogLabel.AutoSize = true;
-            this.LastLogLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastLogLabel.Location = new System.Drawing.Point(2, 80);
-            this.LastLogLabel.Margin = new System.Windows.Forms.Padding(10);
-            this.LastLogLabel.Name = "LastLogLabel";
-            this.LastLogLabel.Padding = new System.Windows.Forms.Padding(10, 10, 0, 10);
-            this.LastLogLabel.Size = new System.Drawing.Size(90, 36);
-            this.LastLogLabel.TabIndex = 3;
-            this.LastLogLabel.Text = "LASTLOG:";
+            this.employeeLastLogLabel.AutoSize = true;
+            this.employeeLastLogLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeLastLogLabel.Location = new System.Drawing.Point(93, 346);
+            this.employeeLastLogLabel.Name = "employeeLastLogLabel";
+            this.employeeLastLogLabel.Size = new System.Drawing.Size(0, 25);
+            this.employeeLastLogLabel.TabIndex = 1;
             // 
             // ListItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.ContentPanel);
-            this.Controls.Add(this.HeaderPanel);
-            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(10);
             this.Name = "ListItem";
-            this.Padding = new System.Windows.Forms.Padding(3);
-            this.Size = new System.Drawing.Size(300, 350);
+            this.Padding = new System.Windows.Forms.Padding(5);
+            this.Size = new System.Drawing.Size(320, 400);
             this.Load += new System.EventHandler(this.ListItem_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.headerPanel.ResumeLayout(false);
+            this.headerPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.HeaderPanel.ResumeLayout(false);
-            this.WorkerIDPanel.ResumeLayout(false);
-            this.WorkerIDPanel.PerformLayout();
-            this.ContentPanel.ResumeLayout(false);
-            this.ContentPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel headerPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel HeaderPanel;
-        private System.Windows.Forms.Panel WorkerIDPanel;
-        private System.Windows.Forms.Label WorkerIDInput;
-        private System.Windows.Forms.Panel ContentPanel;
-        private System.Windows.Forms.Label LastLogInput;
-        private System.Windows.Forms.Label RoleInput;
-        private System.Windows.Forms.Label NameInput;
-        private System.Windows.Forms.Label NameLabel;
-        private System.Windows.Forms.Label RoleLabel;
-        private System.Windows.Forms.Label LastLogLabel;
+        private System.Windows.Forms.Label workerIDLabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label employeeLastLogLabel;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label employeeRoleLabel;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label employeeNameLabel;
     }
 }
