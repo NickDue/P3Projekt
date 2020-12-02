@@ -44,7 +44,7 @@
             this.RemoveButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.RemoveButton.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.RemoveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RemoveButton.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RemoveButton.Location = new System.Drawing.Point(835, 91);
             this.RemoveButton.Name = "RemoveButton";
             this.RemoveButton.Size = new System.Drawing.Size(110, 40);
@@ -59,7 +59,7 @@
             this.AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.AddButton.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddButton.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddButton.Location = new System.Drawing.Point(603, 91);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(110, 40);
@@ -99,13 +99,14 @@
             this.EditButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EditButton.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.EditButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditButton.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditButton.Location = new System.Drawing.Point(719, 91);
             this.EditButton.Name = "EditButton";
             this.EditButton.Size = new System.Drawing.Size(110, 40);
             this.EditButton.TabIndex = 2;
             this.EditButton.Text = "Edit";
             this.EditButton.UseVisualStyleBackColor = false;
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // ContentPanel
             // 

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,25 +13,63 @@ namespace Client
 {
     public partial class EmployeeEditer : Form
     {
+        #region CustomProperties
+
+        private int _id;
+        private string _name;
+        private string _password;
+        private string _role;
+        private Image _profilePicture;
+
+        public int ID
+        {
+            get { return _id; }
+            private set { _id = value; workerIDTextbox.Text = value.ToString(); }
+        }
+        public string EmployeeName
+        {
+            get { return _name; }
+            private set { _name = value; nameTextbox.Text = value; }
+        }
+        public string Password
+        {
+            get { return _password; }
+            private set { _password = value; }
+        }
+        public string Role
+        {
+            get { return  _role; }
+            private set { _role = value; }
+        }
+        public Image ProfilePicture
+        {
+            get { return _profilePicture; }
+            private set { _profilePicture = value; }
+        }
+
+
+        #endregion
+
         public EmployeeEditer()
         {
             InitializeComponent();
         }
 
-
+        public EmployeeEditer(ListItem item)
+        {
+            //this is when you need to edit already existing employees
+            ID = item.WorkerID;
+            EmployeeName = item.Name;
+            Role = item.Role;
+            ProfilePicture = item.Picture;
+        }
 
         private void EmployeeEditer_Load(object sender, EventArgs e)
         {
-            this.Size = new Size(500, 600);
+            this.Size = new Size(500, 650);
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.ControlBox = false;
             this.Text = String.Empty;
-        }
-
-        public EmployeeEditer(int ID, string name, string role, Image profilePicture)
-        {
-            //this is when you need to edit already existing employees
-
         }
 
         private bool AreAllFieldsFilled()
@@ -40,7 +79,10 @@ namespace Client
 
             errorMessage += IsTextboxFilled(nameTextbox);
             errorMessage += IsTextboxFilled(passwordTextbox);
-            errorMessage += IsTextboxFilled(confirmPasswordTextbox);
+            if(passwordTextbox.TextLength < 0)
+            {
+                errorMessage += IsTextboxFilled(confirmPasswordTextbox);
+            }
             errorMessage += IsEitherRadioButtonChecked(floorRButton, officeRButton);
 
             if (errorMessage.Length < 0)
@@ -59,7 +101,7 @@ namespace Client
         {
             if (string.IsNullOrWhiteSpace(tb.Text))
             {
-                return tb.Name + "\n";
+                return tb.Tag + "\n";
             }
             else
             {
@@ -126,6 +168,24 @@ namespace Client
 
                 }
             }
+        }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        //Make us able to drag by holding titlebar
+        private void titlebarPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        public string GenerateEmployeeString()
+        {
+            return $"{ID} ! {EmployeeName} ! {Role} ! {Password}";
         }
     }
 }

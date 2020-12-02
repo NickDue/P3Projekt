@@ -25,7 +25,7 @@ namespace Client
 
         private void EmployeeFlowPanel_Load(object sender, EventArgs e)
         {
-            LoadEmployeesFromDatabase();
+            //LoadEmployeesFromDatabase();
         }
 
         private void LoadEmployeesFromDatabase()
@@ -53,29 +53,32 @@ namespace Client
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            //employeeInputWindow1.Show();
+            PromptForUserCreation();
+        }
 
-            Random rand = new Random();
+        private void EditButton_Click(object sender, EventArgs e)
+        {
+            PromptForUserEdit();
+        }
 
-            AddEmployee("Dunke Dolmer", rand.Next(10000, 99999), "FLOOR", "9/11-2004", Resources._912214);
+        private void PromptForUserCreation()
+        {
+            EmployeeEditer editer = new EmployeeEditer();
+            editer.Show();
+        }
 
-
+        private void PromptForUserEdit()
+        {
+            ListItem item = GetSelected(ItemList);
+            EmployeeEditer editor = new EmployeeEditer(item);
+            //Her skal den vel bare remove den gamle og tilføje den nye?
+            //editor.GenerateEmployeeString(); generer produktstrengen
         }
 
 
         private void AddEmployee(string employeeName, int workerID, string role, string lastlog, Image pic)
         {
-
-            ListItem employee = new ListItem
-            {
-                EmployeeName = employeeName,
-                WorkerID = workerID,
-                Role = role,
-                LastLog = lastlog,
-                Picture = pic,
-                Selected = false
-            };
-
+            ListItem employee = new ListItem(employeeName, workerID, role, lastlog, pic);
             employee.WasClicked += ListItem_WasClicked;
             ItemList.Add(employee);
             EmployeeFlowPanel.Controls.Add(employee);
