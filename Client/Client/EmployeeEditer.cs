@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Client.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,15 +12,18 @@ using System.Windows.Forms;
 
 namespace Client
 {
+    public delegate void EmployeeEditorEventHandler(ListItem employee);
     public partial class EmployeeEditer : Form
     {
+
+        public event EmployeeEditorEventHandler EditorRequestAccepted;
+
         #region CustomProperties
 
         private int _id;
         private string _name;
         private string _password;
         private string _role;
-        private Image _profilePicture;
 
         public int ID
         {
@@ -39,14 +43,20 @@ namespace Client
         public string Role
         {
             get { return  _role; }
-            private set { _role = value; }
-        }
-        public Image ProfilePicture
-        {
-            get { return _profilePicture; }
-            private set { _profilePicture = value; }
+            private set { _role = value;}
         }
 
+        private Image profilePicture1;
+
+        public Image GetProfilePicture()
+        {
+            return profilePicture1;
+        }
+
+        private void SetProfilePicture(Image value)
+        {
+            profilePicture1 = value;
+        }
 
         #endregion
 
@@ -57,11 +67,25 @@ namespace Client
 
         public EmployeeEditer(ListItem item)
         {
+            InitializeComponent();
+
             //this is when you need to edit already existing employees
             ID = item.WorkerID;
-            EmployeeName = item.Name;
-            Role = item.Role;
-            ProfilePicture = item.Picture;
+            EmployeeName = item.EmployeeName;
+            SetRole(item.Role);
+            SetProfilePicture(item.Picture);
+        }
+
+        private void SetRole(string role)
+        {
+            if (role == "FLOOR")
+            {
+                floorRButton.Checked = true;
+            }
+            else if(role == "OFFICE")
+            {
+                officeRButton.Checked = true;
+            }
         }
 
         private void EmployeeEditer_Load(object sender, EventArgs e)
@@ -85,7 +109,7 @@ namespace Client
             }
             errorMessage += IsEitherRadioButtonChecked(floorRButton, officeRButton);
 
-            if (errorMessage.Length < 0)
+            if (errorMessage.Length == 0)
             {
                 return true;
 
@@ -134,6 +158,20 @@ namespace Client
             }
         }
 
+        private string GetRole()
+        {
+            if (floorRButton.Checked == true)
+            {
+                return "FLOOR";
+            }
+            else
+            {
+                return "OFFICE";
+            }
+
+        }
+
+
         private void Clear()
         {
             foreach(TextBox tb in contentPanel.Controls.OfType<TextBox>())
@@ -165,9 +203,17 @@ namespace Client
             {
                 if (DoesPasswordsMatch(passwordTextbox, confirmPasswordTextbox))
                 {
-
+                    ListItem employee = CreateEmployee();
+                    EditorRequestAccepted.Invoke(employee);
+                    this.Close();
                 }
             }
+        }
+
+        private ListItem CreateEmployee()
+        {
+            ListItem employee = new ListItem(nameTextbox.Text, int.Parse(workerIDTextbox.Text), GetRole(), "NONE", Resources._912214);
+            return employee;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
