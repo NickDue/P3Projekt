@@ -63,16 +63,32 @@ namespace Client
 
         private void PromptForUserCreation()
         {
-            EmployeeEditer editer = new EmployeeEditer();
-            editer.Show();
+            EmployeeEditer editor = new EmployeeEditer();
+            editor.Show();
+            editor.EditorRequestAccepted += CreateEmployee;
+        }
+
+        private void CreateEmployee(ListItem employee)
+        {
+            employee.WasClicked += ListItem_WasClicked;
+            ItemList.Add(employee);
+            EmployeeFlowPanel.Controls.Add(employee);
         }
 
         private void PromptForUserEdit()
         {
             ListItem item = GetSelected(ItemList);
             EmployeeEditer editor = new EmployeeEditer(item);
-            //Her skal den vel bare remove den gamle og tilføje den nye?
-            //editor.GenerateEmployeeString(); generer produktstrengen
+            editor.Show();
+            editor.EditorRequestAccepted += EditEmployee;
+        }
+        
+        private void EditEmployee(ListItem employee)
+        {
+            RemoveEmployee();
+            employee.WasClicked += ListItem_WasClicked;
+            ItemList.Add(employee);
+            EmployeeFlowPanel.Controls.Add(employee);
         }
 
 

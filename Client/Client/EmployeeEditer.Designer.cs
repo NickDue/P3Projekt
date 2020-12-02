@@ -202,6 +202,7 @@ namespace Client
             this.confirmPasswordTextbox.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmPasswordTextbox.Location = new System.Drawing.Point(66, 423);
             this.confirmPasswordTextbox.Name = "confirmPasswordTextbox";
+            this.confirmPasswordTextbox.PasswordChar = '*';
             this.confirmPasswordTextbox.Size = new System.Drawing.Size(341, 32);
             this.confirmPasswordTextbox.TabIndex = 3;
             this.confirmPasswordTextbox.Tag = "Password";
@@ -211,6 +212,7 @@ namespace Client
             this.passwordTextbox.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordTextbox.Location = new System.Drawing.Point(66, 351);
             this.passwordTextbox.Name = "passwordTextbox";
+            this.passwordTextbox.PasswordChar = '*';
             this.passwordTextbox.Size = new System.Drawing.Size(341, 32);
             this.passwordTextbox.TabIndex = 2;
             this.passwordTextbox.Tag = "Password";
@@ -272,11 +274,9 @@ namespace Client
             // 
             // workerIDTextbox
             // 
-            this.workerIDTextbox.Enabled = false;
             this.workerIDTextbox.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.workerIDTextbox.Location = new System.Drawing.Point(323, 88);
             this.workerIDTextbox.Name = "workerIDTextbox";
-            this.workerIDTextbox.ReadOnly = true;
             this.workerIDTextbox.Size = new System.Drawing.Size(75, 32);
             this.workerIDTextbox.TabIndex = 2;
             this.workerIDTextbox.TabStop = false;
