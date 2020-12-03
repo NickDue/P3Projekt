@@ -425,6 +425,7 @@ namespace Client
         private void SendToServer()
         {
             string toSend = "edit product\n";
+            EditedValues.Add(UserCredentials.WorkerId.ToString());
             foreach (string str in EditedValues)
             {
                 toSend += str + "\n";
@@ -468,7 +469,7 @@ namespace Client
             string[] splittedInput = SearchInput.Text.Split('-');
             if (splittedInput.Length != 3)
                 return;
-            string input = $"find product ! {splittedInput[0]} ! {splittedInput[1]} ! {splittedInput[2]}";
+            string input = $"find product ! {splittedInput[0]} ! {splittedInput[1]} ! {splittedInput[2]} ! {UserCredentials.WorkerId}";
             //string input = "find product ! 21188 ! 01 ! 03";
             TCPClient client = new TCPClient();
             string info = client.Connect(input);

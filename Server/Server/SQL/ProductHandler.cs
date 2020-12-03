@@ -183,7 +183,7 @@ namespace Server.SQL
                 return "ERROR: Employee doesn't exists.";
             }
 
-            for (int i = 1; i < splitted.Length-1; i++)
+            for (int i = 1; i < splitted.Length-2; i++)
             {
                 string[] split = splitted[i].Split(" = ");
                 query = $"UPDATE products SET {split[0]} = '{split[1]}' WHERE products_index = {productIndex}";
@@ -191,7 +191,7 @@ namespace Server.SQL
                 cmd.ExecuteNonQuery();
             }
             con.Close();
-            return "YAY";
+            return "Edited a product.";
         }
         
     }

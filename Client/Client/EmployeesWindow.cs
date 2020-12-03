@@ -126,7 +126,6 @@ namespace Client
         private void RemoveButton_Click(object sender, EventArgs e)
         {
             RemoveEmployeeFromDatabase();
-            RemoveEmployee();
         }
 
         private void RemoveEmployeeFromDatabase()
@@ -136,7 +135,7 @@ namespace Client
             {
                 string command = "remove employee ! ";
                 TCPClient client = new TCPClient();
-                command += item.WorkerID;
+                command += $"{item.WorkerID} ! {UserCredentials.WorkerId}";
                 string response = client.Connect(command);
                 if (!response.StartsWith("ERROR"))
                 {

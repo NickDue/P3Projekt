@@ -35,7 +35,7 @@ namespace Client
 
         private void AddDatabaseProducts()
         {
-            string query = "get products";
+            string query = $"get products ! {UserCredentials.WorkerId}";
             TCPClient client = new TCPClient();
             string repsonse = client.Connect(query);
             string[] products = repsonse.Split('\n');

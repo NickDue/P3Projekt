@@ -9,10 +9,12 @@ namespace Server.TCP
         {
             string[] input = clientInput.Split(" ! ");
             string output;
+            LogsHandler logsHandler = new LogsHandler();
             if (clientInput.StartsWith("find product"))
             {
                 ProductHandler pHandler = new ProductHandler();
                 output = pHandler.ProductById(Int32.Parse(input[1]), input[2], input[3]);
+                logsHandler.WriteToLog(input[1], input[2], input[3], input[4], "Searched for a product");
             }
             else if (input[0].StartsWith("remove product"))
             {
@@ -23,11 +25,15 @@ namespace Server.TCP
             {
                 ProductHandler pHandler = new ProductHandler();
                 output = pHandler.EditProductDetails(clientInput);
+                string[] splittedForLog = clientInput.Split('\n');
+                logsHandler.WriteToLog(splittedForLog[1].Split(" = ")[1],splittedForLog[7].Split(" = ")[1],splittedForLog[8].Split(" = ")[1], splittedForLog[10], "Edited a product!");
             }
             else if (clientInput.StartsWith("get products"))
             {
                 ProductHandler pHandler = new ProductHandler();
                 output = pHandler.GetAllProducts();
+                logsHandler.WriteToLog(null, null, null, input[1], "Viewed all products!");
+
             }
             else if (input[0].StartsWith("add product"))
             {
@@ -35,6 +41,8 @@ namespace Server.TCP
                 string[] splittedId = input[1].Split('-');
                 output = pHandler.AddProductToDatabase(Int32.Parse(splittedId[0]), splittedId[1], splittedId[2],
                     input[2], Double.Parse(input[3]), Double.Parse(input[5]), input[4], null, "");
+                logsHandler.WriteToLog(splittedId[0], splittedId[1], splittedId[2], input[7], "Added a new product!");
+
             }
             else if (input[0].StartsWith("find employee"))
             {
@@ -45,16 +53,24 @@ namespace Server.TCP
             {
                 EmployeeHandler eHandler = new EmployeeHandler();
                 output = eHandler.DeleteEmployeeFromDB(Int32.Parse(input[1]));
+                logsHandler.WriteToLog(input[1]+"(UserId)", null, null, input[2], "Removed an employee!");
             }
             else if (input[0].StartsWith("add employee"))
             {
                 EmployeeHandler eHandler = new EmployeeHandler();
                 output = eHandler.AddUserToDB(Int32.Parse(input[2]), input[4], input[1], input[3]);
+                logsHandler.WriteToLog(input[2]+"(UserId)",input[3] + "(Role)",null, input[5], "Added user to system.");
             }
             else if (input[0].StartsWith("authenticate"))
             {
                 EmployeeHandler eHandler = new EmployeeHandler();
                 output = eHandler.AuthenticateUser(Int32.Parse(input[1]), input[2]);
+                logsHandler.WriteToLog(null, null,null, input[1], "Logged in!");
+            }
+            else if (input[0].StartsWith("logout"))
+            {
+                output = "Logged out!";
+                logsHandler.WriteToLog(null, null,null, input[1], "Logged out!");
             }
             else if (input[0].StartsWith("edit employee"))
             {
