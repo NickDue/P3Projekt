@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Client.TCP;
 
 namespace Client
 {
@@ -165,6 +166,8 @@ namespace Client
 
         private void signOutButton_Click(object sender, EventArgs e)
         {
+            TCPClient client = new TCPClient();
+            client.Connect($"logout ! {UserCredentials.WorkerId}");
             UserCredentials.WorkerId = -1;
             UserCredentials.WorkerRole = "UNKNOWNROLE";
             UserCredentials.WorkerUsername = "UNKNOWNNAME";

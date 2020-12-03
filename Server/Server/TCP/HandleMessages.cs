@@ -26,7 +26,6 @@ namespace Server.TCP
                 ProductHandler pHandler = new ProductHandler();
                 output = pHandler.EditProductDetails(clientInput);
                 string[] splittedForLog = clientInput.Split('\n');
-                //string[] split = splitted[i].Split(" = ");
                 logsHandler.WriteToLog(splittedForLog[1].Split(" = ")[1],splittedForLog[7].Split(" = ")[1],splittedForLog[8].Split(" = ")[1], splittedForLog[10], "Edited a product!");
             }
             else if (clientInput.StartsWith("get products"))
@@ -64,6 +63,12 @@ namespace Server.TCP
             {
                 EmployeeHandler eHandler = new EmployeeHandler();
                 output = eHandler.AuthenticateUser(Int32.Parse(input[1]), input[2]);
+                logsHandler.WriteToLog(null, null,null, input[1], "Logged in!");
+            }
+            else if (input[0].StartsWith("logout"))
+            {
+                output = "Logged out!";
+                logsHandler.WriteToLog(null, null,null, input[1], "Logged out!");
             }
             else if (input[0].StartsWith("edit employee"))
             {
