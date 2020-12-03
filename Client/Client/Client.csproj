@@ -143,6 +143,12 @@
     <Compile Include="SearchWindow.Designer.cs">
       <DependentUpon>SearchWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="SearchWindow2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SearchWindow2.Designer.cs">
+      <DependentUpon>SearchWindow2.cs</DependentUpon>
+    </Compile>
     <Compile Include="TCP\TCPClient.cs" />
     <Compile Include="User.cs" />
     <EmbeddedResource Include="AddProductWindow.resx">
@@ -196,6 +202,9 @@
     </Compile>
     <EmbeddedResource Include="SearchWindow.resx">
       <DependentUpon>SearchWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchWindow2.resx">
+      <DependentUpon>SearchWindow2.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
