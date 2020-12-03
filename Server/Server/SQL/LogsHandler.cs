@@ -27,5 +27,29 @@ namespace Server.SQL
             con.Close();
             Console.WriteLine("Wrote action to log.");
         }
+
+        public string GetAllLogs()
+        {
+            string allLogs = "";
+            using var con = new MySqlConnection(SqlLogin);
+            con.Open();
+            string query = "SELECT * FROM logs;";
+            using var command = new MySqlCommand(query, con);
+            using MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                Log log = null;
+                string workerid = reader.GetString(4);
+                string productid = $"{reader.GetString(1)}-{reader.GetString(2)}-{reader.GetString(3)}";
+                string message = reader.GetString(5);
+                string date = reader.GetString(6);
+                log = new Log(workerid,productid,message,date);
+                if (log != null)
+                    allLogs += log.LogToString() + "\n";
+            }
+            reader.Close();
+            con.Close();
+            return allLogs;
+        }
     }
 }
