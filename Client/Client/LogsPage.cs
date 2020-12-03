@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Collections;
 using System.Security.Cryptography.X509Certificates;
 using System.Runtime.InteropServices;
+using Client.TCP;
 
 namespace Client
 {
@@ -41,7 +42,21 @@ namespace Client
 
         private void LogsPage_Load(object sender, EventArgs e)
         {
+            LoadFromDatabase();
+        }
 
+        private void LoadFromDatabase()
+        {
+            TCPClient client = new TCPClient();
+            string query = $"get logs ! {UserCredentials.WorkerId}";
+            string reponse = client.Connect(query);
+            string[] logs = reponse.Split('\n');
+            foreach (string str in logs)
+            {
+                string[] splittedLog = str.Split('!');
+                if(splittedLog.Length == 4)
+                    AddNewRow(splittedLog[0],splittedLog[1],splittedLog[2],splittedLog[3]);
+            }
         }
 
         // display logs data
