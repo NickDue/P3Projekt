@@ -166,14 +166,14 @@ namespace Server.SQL
             {
                 using var con = new MySqlConnection(SqlLogin);
                 con.Open();
-                string query = "SELECT * FROM users where password = '" + pw + "';";
+                string query = "SELECT * FROM users where password = '" + pw + "' and id = '"+id +"';";
                 using var cmd = new MySqlCommand(query, con);
                 using MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
                     if (reader.GetInt32(0) == id && reader.GetString(2).Equals(pw))
                     {
-                        return reader.GetInt32(0) + " ! " + reader.GetString(1) + " ! " + reader.GetString(2) + " ! " +
+                        return reader.GetInt32(0) + "!" + reader.GetString(1) + "!" + reader.GetString(2) + "!" +
                                reader.GetString(3);
                     }
                 }

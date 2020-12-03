@@ -69,7 +69,6 @@ C:\Users\meerq\OneDrive\Skrivebord\P3Projekt\Client\Client\obj\Debug\Client.Empl
 C:\Users\meerq\OneDrive\Skrivebord\P3Projekt\Client\Client\obj\Debug\Client.FloorSearchPage.resources
 C:\Users\meerq\OneDrive\Skrivebord\P3Projekt\Client\Client\obj\Debug\Client.MyhomeForm.resources
 C:\Users\meerq\OneDrive\Skrivebord\P3Projekt\Client\Client\obj\Debug\Client.ListItem.resources
-C:\Users\meerq\OneDrive\Skrivebord\P3Projekt\Client\Client\obj\Debug\Client.LoginSystem.resources
 C:\Users\meerq\OneDrive\Skrivebord\P3Projekt\Client\Client\obj\Debug\Client.LogOutPage.resources
 C:\Users\meerq\OneDrive\Skrivebord\P3Projekt\Client\Client\obj\Debug\Client.LogsPage.resources
 C:\Users\meerq\OneDrive\Skrivebord\P3Projekt\Client\Client\obj\Debug\Client.SearchWindow.resources
@@ -80,3 +79,5 @@ C:\Users\meerq\OneDrive\Skrivebord\P3Projekt\Client\Client\bin\Debug\itextsharp.
 C:\Users\meerq\OneDrive\Skrivebord\P3Projekt\Client\Client\obj\Debug\Client.csproj.CopyComplete
 C:\Users\meerq\OneDrive\Skrivebord\P3Projekt\Client\Client\obj\Debug\Client.AddProductWindow_vers1.resources
 C:\Users\meerq\OneDrive\Skrivebord\P3Projekt\Client\Client\obj\Debug\Client.EmployeeEditer.resources
+C:\Users\meerq\OneDrive\Skrivebord\P3Projekt\Client\Client\obj\Debug\Client.LoginForm.resources
+C:\Users\meerq\OneDrive\Skrivebord\P3Projekt\Client\Client\obj\Debug\Client.SearchWindow2.resources
