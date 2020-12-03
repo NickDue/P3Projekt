@@ -116,11 +116,11 @@
     <Compile Include="ListItem.Designer.cs">
       <DependentUpon>ListItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginSystem.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginSystem.Designer.cs">
-      <DependentUpon>LoginSystem.cs</DependentUpon>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LogOutPage.cs">
       <SubType>UserControl</SubType>
@@ -175,8 +175,8 @@
     <EmbeddedResource Include="ListItem.resx">
       <DependentUpon>ListItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginSystem.resx">
-      <DependentUpon>LoginSystem.cs</DependentUpon>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogOutPage.resx">
       <DependentUpon>LogOutPage.cs</DependentUpon>

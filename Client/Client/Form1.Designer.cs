@@ -64,7 +64,7 @@
             this.navBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.navBarPanel.Location = new System.Drawing.Point(0, 0);
             this.navBarPanel.Name = "navBarPanel";
-            this.navBarPanel.Size = new System.Drawing.Size(250, 990);
+            this.navBarPanel.Size = new System.Drawing.Size(250, 845);
             this.navBarPanel.TabIndex = 0;
             // 
             // signOutButton
@@ -74,14 +74,14 @@
             this.signOutButton.FlatAppearance.BorderSize = 0;
             this.signOutButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.signOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.signOutButton.Font = new System.Drawing.Font("DIN1451Engschrift", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signOutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signOutButton.ForeColor = System.Drawing.Color.White;
             this.signOutButton.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
             this.signOutButton.IconColor = System.Drawing.Color.White;
             this.signOutButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.signOutButton.IconSize = 40;
             this.signOutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.signOutButton.Location = new System.Drawing.Point(0, 848);
+            this.signOutButton.Location = new System.Drawing.Point(0, 703);
             this.signOutButton.Name = "signOutButton";
             this.signOutButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.signOutButton.Size = new System.Drawing.Size(248, 140);
@@ -96,7 +96,7 @@
             this.navButton6.FlatAppearance.BorderSize = 0;
             this.navButton6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.navButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.navButton6.Font = new System.Drawing.Font("DIN1451Engschrift", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navButton6.ForeColor = System.Drawing.Color.White;
             this.navButton6.IconChar = FontAwesome.Sharp.IconChar.None;
             this.navButton6.IconColor = System.Drawing.Color.White;
@@ -119,7 +119,7 @@
             this.navButton5.FlatAppearance.BorderSize = 0;
             this.navButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.navButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.navButton5.Font = new System.Drawing.Font("DIN1451Engschrift", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navButton5.ForeColor = System.Drawing.Color.White;
             this.navButton5.IconChar = FontAwesome.Sharp.IconChar.None;
             this.navButton5.IconColor = System.Drawing.Color.White;
@@ -142,7 +142,7 @@
             this.navButton4.FlatAppearance.BorderSize = 0;
             this.navButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.navButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.navButton4.Font = new System.Drawing.Font("DIN1451Engschrift", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navButton4.ForeColor = System.Drawing.Color.White;
             this.navButton4.IconChar = FontAwesome.Sharp.IconChar.None;
             this.navButton4.IconColor = System.Drawing.Color.White;
@@ -165,7 +165,7 @@
             this.navButton3.FlatAppearance.BorderSize = 0;
             this.navButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.navButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.navButton3.Font = new System.Drawing.Font("DIN1451Engschrift", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navButton3.ForeColor = System.Drawing.Color.White;
             this.navButton3.IconChar = FontAwesome.Sharp.IconChar.None;
             this.navButton3.IconColor = System.Drawing.Color.White;
@@ -188,7 +188,7 @@
             this.navButton2.FlatAppearance.BorderSize = 0;
             this.navButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.navButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.navButton2.Font = new System.Drawing.Font("DIN1451Engschrift", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navButton2.ForeColor = System.Drawing.Color.White;
             this.navButton2.IconChar = FontAwesome.Sharp.IconChar.None;
             this.navButton2.IconColor = System.Drawing.Color.White;
@@ -211,7 +211,7 @@
             this.navButton1.FlatAppearance.BorderSize = 0;
             this.navButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.navButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.navButton1.Font = new System.Drawing.Font("DIN1451Engschrift", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navButton1.ForeColor = System.Drawing.Color.White;
             this.navButton1.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.navButton1.IconColor = System.Drawing.Color.White;
@@ -258,7 +258,7 @@
             this.titleBarPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.titleBarPanel.Location = new System.Drawing.Point(250, 0);
             this.titleBarPanel.Name = "titleBarPanel";
-            this.titleBarPanel.Size = new System.Drawing.Size(1551, 28);
+            this.titleBarPanel.Size = new System.Drawing.Size(1290, 28);
             this.titleBarPanel.TabIndex = 1;
             this.titleBarPanel.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.titleBarPanel_MouseDoubleClick);
             this.titleBarPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.titleBarPanel_MouseDown);
@@ -274,7 +274,7 @@
             this.minimizeButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.minimizeButton.IconSize = 25;
             this.minimizeButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.minimizeButton.Location = new System.Drawing.Point(1377, 0);
+            this.minimizeButton.Location = new System.Drawing.Point(1116, 0);
             this.minimizeButton.Name = "minimizeButton";
             this.minimizeButton.Size = new System.Drawing.Size(58, 28);
             this.minimizeButton.TabIndex = 2;
@@ -292,7 +292,7 @@
             this.maximizeButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.maximizeButton.IconSize = 25;
             this.maximizeButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.maximizeButton.Location = new System.Drawing.Point(1435, 0);
+            this.maximizeButton.Location = new System.Drawing.Point(1174, 0);
             this.maximizeButton.Name = "maximizeButton";
             this.maximizeButton.Size = new System.Drawing.Size(58, 28);
             this.maximizeButton.TabIndex = 1;
@@ -310,7 +310,7 @@
             this.closeButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.closeButton.IconSize = 25;
             this.closeButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.closeButton.Location = new System.Drawing.Point(1493, 0);
+            this.closeButton.Location = new System.Drawing.Point(1232, 0);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(58, 28);
             this.closeButton.TabIndex = 0;
@@ -325,14 +325,14 @@
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(250, 28);
             this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(1551, 962);
+            this.contentPanel.Size = new System.Drawing.Size(1290, 817);
             this.contentPanel.TabIndex = 2;
             // 
             // MyhomeForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1801, 990);
+            this.ClientSize = new System.Drawing.Size(1540, 845);
             this.Controls.Add(this.contentPanel);
             this.Controls.Add(this.titleBarPanel);
             this.Controls.Add(this.navBarPanel);

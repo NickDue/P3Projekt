@@ -24,11 +24,6 @@ namespace Client
 
         private void MyhomeForm_Load(object sender, EventArgs e)
         {
-            //LoginSystem loginsystem = new LoginSystem();
-
-            //this.Controls.Add(loginsystem);
-            //loginsystem.BringToFront();
-            
         }
 
 
@@ -171,7 +166,9 @@ namespace Client
 
         private void signOutButton_Click(object sender, EventArgs e)
         {
-
+            LoginForm loginForm = new LoginForm();
+            this.Hide();
+            loginForm.Show();
         }
 
 
