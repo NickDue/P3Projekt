@@ -37,6 +37,8 @@ namespace Server.TCP
                 string[] splittedId = input[1].Split('-');
                 output = pHandler.AddProductToDatabase(Int32.Parse(splittedId[0]), splittedId[1], splittedId[2],
                     input[2], Double.Parse(input[3]), Double.Parse(input[5]), input[4], null, "");
+                logsHandler.WriteToLog(splittedId[0], splittedId[1], splittedId[2], input[7], "Added a new product!");
+
             }
             else if (input[0].StartsWith("find employee"))
             {
