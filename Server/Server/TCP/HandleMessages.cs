@@ -53,12 +53,13 @@ namespace Server.TCP
             {
                 EmployeeHandler eHandler = new EmployeeHandler();
                 output = eHandler.DeleteEmployeeFromDB(Int32.Parse(input[1]));
+                logsHandler.WriteToLog(input[1]+"(UserId)", null, null, input[2], "Removed an employee!");
             }
             else if (input[0].StartsWith("add employee"))
             {
                 EmployeeHandler eHandler = new EmployeeHandler();
                 output = eHandler.AddUserToDB(Int32.Parse(input[2]), input[4], input[1], input[3]);
-                logsHandler.WriteToLog(input[2]+"(User)",input[3] + "(Role)",null, input[5], "Added user to system.");
+                logsHandler.WriteToLog(input[2]+"(UserId)",input[3] + "(Role)",null, input[5], "Added user to system.");
             }
             else if (input[0].StartsWith("authenticate"))
             {
