@@ -25,7 +25,7 @@ namespace Client
 
         private void EmployeeFlowPanel_Load(object sender, EventArgs e)
         {
-            //LoadEmployeesFromDatabase();
+            LoadEmployeesFromDatabase();
         }
 
         private void LoadEmployeesFromDatabase()
@@ -71,8 +71,9 @@ namespace Client
         private void CreateEmployee(ListItem employee)
         {
             employee.WasClicked += ListItem_WasClicked;
-            ItemList.Add(employee);
-            EmployeeFlowPanel.Controls.Add(employee);
+            ItemList.Clear();
+            EmployeeFlowPanel.Controls.Clear();
+            LoadEmployeesFromDatabase();
         }
 
         private void PromptForUserEdit()
