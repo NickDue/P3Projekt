@@ -219,7 +219,7 @@ namespace Client
             string role = GetRole();
             string password = passwordTextbox.Text;
             TCPClient client = new TCPClient();
-            string query = $"add employee ! {name} ! {id} ! {role} ! {password}";
+            string query = $"add employee ! {name} ! {id} ! {role} ! {password} ! {UserCredentials.WorkerId}";
             string response = client.Connect(query);
             if (!response.StartsWith("ERROR"))
             {

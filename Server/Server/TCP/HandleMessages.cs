@@ -58,6 +58,7 @@ namespace Server.TCP
             {
                 EmployeeHandler eHandler = new EmployeeHandler();
                 output = eHandler.AddUserToDB(Int32.Parse(input[2]), input[4], input[1], input[3]);
+                logsHandler.WriteToLog(input[2]+"(User)",input[3] + "(Role)",null, input[5], "Added user to system.");
             }
             else if (input[0].StartsWith("authenticate"))
             {

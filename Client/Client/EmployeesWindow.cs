@@ -126,7 +126,6 @@ namespace Client
         private void RemoveButton_Click(object sender, EventArgs e)
         {
             RemoveEmployeeFromDatabase();
-            RemoveEmployee();
         }
 
         private void RemoveEmployeeFromDatabase()
