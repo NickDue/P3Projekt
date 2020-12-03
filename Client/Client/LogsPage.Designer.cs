@@ -36,7 +36,7 @@
             this.Action = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataColum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SearchPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.ProductGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // SearchPanel
@@ -51,7 +51,8 @@
             // textBox1
             // 
             this.textBox1.AccessibleDescription = "";
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(822, 17);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(157, 20);
@@ -63,7 +64,11 @@
             this.ProductGridView.AllowUserToAddRows = false;
             this.ProductGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ProductGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProductGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.WorkerID, this.Product, this.Action, this.DataColum});
+            this.ProductGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.WorkerID,
+            this.Product,
+            this.Action,
+            this.DataColum});
             this.ProductGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProductGridView.Location = new System.Drawing.Point(0, 54);
             this.ProductGridView.Name = "ProductGridView";
@@ -98,10 +103,12 @@
             this.Controls.Add(this.SearchPanel);
             this.Name = "LogsPage";
             this.Size = new System.Drawing.Size(982, 758);
+            this.Load += new System.EventHandler(this.LogsPage_Load);
             this.SearchPanel.ResumeLayout(false);
             this.SearchPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.ProductGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductGridView)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         #endregion
