@@ -22,21 +22,21 @@
 
         #region Component Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
+        /// <summary>
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             this.SearchPanel = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.ProductGridView = new System.Windows.Forms.DataGridView();
             this.WorkerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Action = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataColum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SearchPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.ProductGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // SearchPanel
@@ -48,16 +48,22 @@
             this.SearchPanel.Size = new System.Drawing.Size(982, 54);
             this.SearchPanel.TabIndex = 0;
             // 
+            // textBox1
+            // 
+            this.textBox1.AccessibleDescription = "";
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(822, 17);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(157, 20);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.Text = "search";
+            // 
             // ProductGridView
             // 
             this.ProductGridView.AllowUserToAddRows = false;
             this.ProductGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ProductGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProductGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.WorkerID,
-            this.Product,
-            this.Action,
-            this.DataColum});
+            this.ProductGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.WorkerID, this.Product, this.Action, this.DataColum});
             this.ProductGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProductGridView.Location = new System.Drawing.Point(0, 54);
             this.ProductGridView.Name = "ProductGridView";
@@ -81,19 +87,8 @@
             // 
             // DataColum
             // 
-            this.DataColum.HeaderText = "Data";
+            this.DataColum.HeaderText = "Date";
             this.DataColum.Name = "DataColum";
-            // 
-            // textBox1
-            // 
-            this.textBox1.AccessibleDescription = "";
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(822, 17);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(157, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "search";
             // 
             // LogsPage
             // 
@@ -105,9 +100,8 @@
             this.Size = new System.Drawing.Size(982, 758);
             this.SearchPanel.ResumeLayout(false);
             this.SearchPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.ProductGridView)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         #endregion

@@ -20,6 +20,15 @@ namespace Client
         {
             InitializeComponent();
         }
+        private void AddNewRow(string worker, string product, string message, string date)
+        {
+            ArrayList row = new ArrayList();
+            row.Add(worker);
+            row.Add(product);
+            row.Add(message);
+            row.Add(date);
+            ProductGridView.Rows.Add(row.ToArray());
+        }
         
         // get logs data
         private void getData()
