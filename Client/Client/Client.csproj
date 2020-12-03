@@ -150,6 +150,7 @@
       <DependentUpon>SearchWindow2.cs</DependentUpon>
     </Compile>
     <Compile Include="TCP\TCPClient.cs" />
+    <Compile Include="TestValidationInput.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserCredentials.cs" />
     <EmbeddedResource Include="AddProductWindow.resx">
