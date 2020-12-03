@@ -425,6 +425,7 @@ namespace Client
         private void SendToServer()
         {
             string toSend = "edit product\n";
+            EditedValues.Add(UserCredentials.WorkerId.ToString());
             foreach (string str in EditedValues)
             {
                 toSend += str + "\n";

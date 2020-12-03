@@ -25,6 +25,9 @@ namespace Server.TCP
             {
                 ProductHandler pHandler = new ProductHandler();
                 output = pHandler.EditProductDetails(clientInput);
+                string[] splittedForLog = clientInput.Split('\n');
+                //string[] split = splitted[i].Split(" = ");
+                logsHandler.WriteToLog(splittedForLog[1].Split(" = ")[1],splittedForLog[7].Split(" = ")[1],splittedForLog[8].Split(" = ")[1], splittedForLog[10], "Edited a product!");
             }
             else if (clientInput.StartsWith("get products"))
             {
