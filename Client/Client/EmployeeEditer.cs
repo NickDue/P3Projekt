@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Client.TCP;
 
 namespace Client
 {
@@ -204,9 +205,29 @@ namespace Client
                 if (DoesPasswordsMatch(passwordTextbox, confirmPasswordTextbox))
                 {
                     ListItem employee = CreateEmployee();
+                    AddUserToDB();
                     EditorRequestAccepted.Invoke(employee);
                     this.Close();
                 }
+            }
+        }
+
+        private void AddUserToDB()
+        {
+            string name = nameTextbox.Text;
+            int id = int.Parse(workerIDTextbox.Text);
+            string role = GetRole();
+            string password = passwordTextbox.Text;
+            TCPClient client = new TCPClient();
+            string query = $"add employee ! {name} ! {id} ! {role} ! {password}";
+            string response = client.Connect(query);
+            if (!response.StartsWith("ERROR"))
+            {
+                MessageBox.Show("Added new employee", "SUCCESS");
+            }
+            else
+            {
+                MessageBox.Show(response, "ERROR");
             }
         }
 

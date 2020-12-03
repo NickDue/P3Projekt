@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
+using Client.TCP;
 
 namespace Client
 {
@@ -17,6 +18,7 @@ namespace Client
         {
             InitializeComponent();
             AddSampleData();
+            AddDatabaseProducts();
             SetDate(DateLabelOutput);
             SetTotalAmount(AmountLabelOutput);
         }
@@ -28,17 +30,30 @@ namespace Client
             ProductGridView.Columns[1].Name = "Product name";
             ProductGridView.Columns[2].Name = "Color";
             ProductGridView.Columns[3].Name = "Location";
-            AddNewRow();
-            
+            //AddNewRow();
         }
 
-        private void AddNewRow()
+        private void AddDatabaseProducts()
+        {
+            string query = "get products";
+            TCPClient client = new TCPClient();
+            string repsonse = client.Connect(query);
+            string[] products = repsonse.Split('\n');
+            foreach (string p in products)
+            {
+                string[] splittedProduct = p.Split('!');
+                if(splittedProduct.Length == 8)
+                    AddNewRow(splittedProduct[0], splittedProduct[1],splittedProduct[4],splittedProduct[6]);
+            }
+        }
+
+        private void AddNewRow(string id, string name, string color, string location)
         {
             ArrayList row = new ArrayList();
-            row.Add("1");
-            row.Add("2");
-            row.Add("3");
-            row.Add("4");
+            row.Add(id);
+            row.Add(name);
+            row.Add(color);
+            row.Add(location);
             ProductGridView.Rows.Add(row.ToArray());
         }
 

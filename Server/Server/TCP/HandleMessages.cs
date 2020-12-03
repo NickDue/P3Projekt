@@ -24,9 +24,13 @@ namespace Server.TCP
                 ProductHandler pHandler = new ProductHandler();
                 output = pHandler.EditProductDetails(clientInput);
             }
+            else if (clientInput.StartsWith("get products"))
+            {
+                ProductHandler pHandler = new ProductHandler();
+                output = pHandler.GetAllProducts();
+            }
             else if (input[0].StartsWith("add product"))
             {
-                // Received: 22222-02-02 ! hello ! 2.5 ! green ! 5.1 ! 12312
                 ProductHandler pHandler = new ProductHandler();
                 string[] splittedId = input[1].Split('-');
                 output = pHandler.AddProductToDatabase(Int32.Parse(splittedId[0]), splittedId[1], splittedId[2],
@@ -45,7 +49,7 @@ namespace Server.TCP
             else if (input[0].StartsWith("add employee"))
             {
                 EmployeeHandler eHandler = new EmployeeHandler();
-                output = eHandler.AddUserToDB(Int32.Parse(input[1]), input[2], input[3], input[4]);
+                output = eHandler.AddUserToDB(Int32.Parse(input[2]), input[4], input[1], input[3]);
             }
             else if (input[0].StartsWith("authenticate"))
             {
