@@ -22,8 +22,14 @@ namespace Client
         private void SearchButton_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(SearchInputBox.Text))
-                return;
-            //GetProductFromServer();
+            {
+                MessageBox.Show("Invalid input: Please enter product number ID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            else
+            {
+                //GetProductFromServer();
+            }
         }
 
         private bool editMode = false;
@@ -46,6 +52,7 @@ namespace Client
             ClearTextBoxInput(LocationProductPanel, ProductPanel);
         }
 
+        // Toggles Editmode for TextBoxes
         private void ToggleTextBoxEditMode(Control control1, Control control2)
         {
             ToggleEditMode();
@@ -64,6 +71,7 @@ namespace Client
             }
         }
 
+        // Toggles ReadOnly in TextBoxes
         private void ToggleTextBoxReadOnly(Control control, bool b)
         {
             foreach (TextBox tb in control.Controls.OfType<TextBox>())
@@ -72,6 +80,7 @@ namespace Client
             }
         }
 
+        // Toggles the bool editMode
         private void ToggleEditMode()
         {
             if (editMode)
@@ -85,6 +94,7 @@ namespace Client
             }
         }
 
+        // Clears the current text in TextBoxes
         private void ClearTextBoxInput(Control control1, Control control2)
         {
             if (editMode)
@@ -100,6 +110,7 @@ namespace Client
             }
         }
 
+        // Checks for null or empty input and returns a bool
         private bool ValidateInput(Control control)
         {
             foreach (TextBox tb in control.Controls.OfType<TextBox>())
@@ -121,6 +132,7 @@ namespace Client
             }
         }
 
+        // Validates input for product number using regular expression and returning a bool
         private bool ValidateProductNumberInput()
         {
             Regex regex = new Regex(@"^[0-9]+$");
@@ -136,6 +148,7 @@ namespace Client
             }
         }
 
+        // Validates numeric input for textboxes by returning a bool
         private bool ValidateNumericInput()
         {
             List<TextBox> numericInputBoxes = GetNumericBoxes();
@@ -172,6 +185,7 @@ namespace Client
 
         }
 
+        // Gets and returns a list of TextBoxes with numeric input
         private List<TextBox> GetNumericBoxes()
         {
             List<TextBox> numericInputBoxes = new List<TextBox>();
