@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Client.TCP;
 
 namespace Client
 {
@@ -15,6 +16,7 @@ namespace Client
     {
         string userName = "admin";
         int password = 12345;
+        private const bool DBActive = true;
         public LoginForm()
         {
             InitializeComponent();
@@ -30,11 +32,35 @@ namespace Client
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            MyhomeForm form = new MyhomeForm();
-            if (UsernameBox.Text == userName && Int32.Parse(PasswordBox.Text) == password)
+            if (DBActive)
             {
-                this.Hide();
-                form.Show();
+                string query = $"authenticate ! {UsernameBox.Text} ! {PasswordBox.Text}";
+                TCPClient client = new TCPClient();
+                string resonse = client.Connect(query);
+                if (!resonse.StartsWith("ERROR"))
+                {
+                    string[] splittedResponse = resonse.Split('!');
+                    UserCredentials.WorkerId = Int32.Parse(splittedResponse[0]);
+                    UserCredentials.WorkerUsername = splittedResponse[1];
+                    UserCredentials.WorkerRole = splittedResponse[3];
+                    MyhomeForm form = new MyhomeForm();
+                    Hide();
+                    form.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Unknown User", "Error");
+                }
+            }
+            else
+            {
+                MyhomeForm form = new MyhomeForm();
+                if (UsernameBox.Text == userName && Int32.Parse(PasswordBox.Text) == password)
+                {
+                    this.Hide();
+                    form.Show();
+                }
+
             }
             
         }
@@ -71,5 +97,6 @@ namespace Client
         {
             Application.Exit();
         }
+        
     }
 }

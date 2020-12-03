@@ -13,7 +13,6 @@ namespace Client
 {
     public partial class MyhomeForm : Form
     {
-
         public MyhomeForm()
         {
             InitializeComponent();
@@ -166,6 +165,9 @@ namespace Client
 
         private void signOutButton_Click(object sender, EventArgs e)
         {
+            UserCredentials.WorkerId = -1;
+            UserCredentials.WorkerRole = "UNKNOWNROLE";
+            UserCredentials.WorkerUsername = "UNKNOWNNAME";
             LoginForm loginForm = new LoginForm();
             this.Hide();
             loginForm.Show();

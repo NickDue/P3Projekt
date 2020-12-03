@@ -26,15 +26,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba08afe5-fc62-476b-9e95-4756abe499d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Client/obj/Debug/Client.EmployeeEditer.resources" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Client/.idea/discord.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/UserCredentials.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/obj/Debug/Client.LoginForm.resources" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/obj/Debug/Client.SearchWindow2.resources" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/.idea/.idea.Server/.idea/discord.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Client/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Client/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Client.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Client.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Form1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/LoginForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Client/LoginForm.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/bin/Debug/Client.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Client/bin/Debug/Client.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/bin/Debug/Client.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Client/bin/Debug/Client.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/obj/Debug/Client.LoginSystem.resources" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/obj/Debug/Client.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Client/obj/Debug/Client.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/obj/Debug/Client.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Client/obj/Debug/Client.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/obj/Debug/Client.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Client/obj/Debug/Client.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/obj/Debug/Client.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Client/obj/Debug/Client.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server/SQL/ProductHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/SQL/ProductHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Server/SQL/EmployeeHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/SQL/EmployeeHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/Server/bin/Debug/netcoreapp3.1/Server.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/bin/Debug/netcoreapp3.1/Server.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/Server/bin/Debug/netcoreapp3.1/Server.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/bin/Debug/netcoreapp3.1/Server.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/Server/obj/Debug/netcoreapp3.1/Server.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/obj/Debug/netcoreapp3.1/Server.dll" afterDir="false" />
@@ -55,8 +64,10 @@
         <option value="$PROJECT_DIR$/Client/AddProductWindow.cs" />
         <option value="$PROJECT_DIR$/Client/SearchWindow.cs" />
         <option value="$PROJECT_DIR$/Client/EmployeesWindow.cs" />
-        <option value="$PROJECT_DIR$/Client/Form1.cs" />
         <option value="$PROJECT_DIR$/Client/AddProductWindow_vers1.cs" />
+        <option value="$PROJECT_DIR$/Client/UserCredentials.cs" />
+        <option value="$PROJECT_DIR$/Client/LoginForm.cs" />
+        <option value="$PROJECT_DIR$/Client/Form1.cs" />
       </list>
     </option>
   </component>
@@ -106,6 +117,7 @@
       <workItem from="1606728039056" duration="2059000" />
       <workItem from="1606735335212" duration="241000" />
       <workItem from="1606735582832" duration="5462000" />
+      <workItem from="1606989832774" duration="1315000" />
     </task>
     <servers />
   </component>

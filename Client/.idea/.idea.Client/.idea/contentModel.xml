@@ -38,9 +38,9 @@
         <e p="ListItem.cs" t="Include" />
         <e p="ListItem.Designer.cs" t="Include" />
         <e p="ListItem.resx" t="Include" />
-        <e p="LoginSystem.cs" t="Include" />
-        <e p="LoginSystem.Designer.cs" t="Include" />
-        <e p="LoginSystem.resx" t="Include" />
+        <e p="LoginForm.cs" t="Include" />
+        <e p="LoginForm.Designer.cs" t="Include" />
+        <e p="LoginForm.resx" t="Include" />
         <e p="LogOutPage.cs" t="Include" />
         <e p="LogOutPage.Designer.cs" t="Include" />
         <e p="LogOutPage.resx" t="Include" />
@@ -65,10 +65,14 @@
         <e p="SearchWindow.cs" t="Include" />
         <e p="SearchWindow.Designer.cs" t="Include" />
         <e p="SearchWindow.resx" t="Include" />
+        <e p="SearchWindow2.cs" t="Include" />
+        <e p="SearchWindow2.Designer.cs" t="Include" />
+        <e p="SearchWindow2.resx" t="Include" />
         <e p="TCP" t="Include">
           <e p="TCPClient.cs" t="Include" />
         </e>
         <e p="User.cs" t="Include" />
+        <e p="UserCredentials.cs" t="Include" />
       </e>
       <e p="Client.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
