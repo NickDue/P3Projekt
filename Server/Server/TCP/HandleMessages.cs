@@ -9,10 +9,12 @@ namespace Server.TCP
         {
             string[] input = clientInput.Split(" ! ");
             string output;
+            LogsHandler logsHandler = new LogsHandler();
             if (clientInput.StartsWith("find product"))
             {
                 ProductHandler pHandler = new ProductHandler();
                 output = pHandler.ProductById(Int32.Parse(input[1]), input[2], input[3]);
+                logsHandler.WriteToLog(input[1], input[2], input[3], input[4], "Searched for a product");
             }
             else if (input[0].StartsWith("remove product"))
             {

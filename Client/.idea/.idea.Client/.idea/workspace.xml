@@ -26,28 +26,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba08afe5-fc62-476b-9e95-4756abe499d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Client/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/UserCredentials.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/obj/Debug/Client.LoginForm.resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/obj/Debug/Client.SearchWindow2.resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/.idea/.idea.Server/.idea/discord.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Client/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Client/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/Server/SQL/LogsHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/Client.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Client.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Form1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/LoginForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Client/LoginForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/bin/Debug/Client.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Client/bin/Debug/Client.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/bin/Debug/Client.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Client/bin/Debug/Client.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/obj/Debug/Client.LoginSystem.resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/obj/Debug/Client.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Client/obj/Debug/Client.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/obj/Debug/Client.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Client/obj/Debug/Client.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/obj/Debug/Client.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Client/obj/Debug/Client.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/obj/Debug/Client.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Client/obj/Debug/Client.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server/SQL/EmployeeHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/SQL/EmployeeHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server/bin/Debug/netcoreapp3.1/Server.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/bin/Debug/netcoreapp3.1/Server.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server/bin/Debug/netcoreapp3.1/Server.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/bin/Debug/netcoreapp3.1/Server.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server/obj/Debug/netcoreapp3.1/Server.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/obj/Debug/netcoreapp3.1/Server.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server/obj/Debug/netcoreapp3.1/Server.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/obj/Debug/netcoreapp3.1/Server.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Server/TCP/HandleMessages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/TCP/HandleMessages.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,9 +46,9 @@
         <option value="$PROJECT_DIR$/Client/SearchWindow.cs" />
         <option value="$PROJECT_DIR$/Client/EmployeesWindow.cs" />
         <option value="$PROJECT_DIR$/Client/AddProductWindow_vers1.cs" />
-        <option value="$PROJECT_DIR$/Client/UserCredentials.cs" />
         <option value="$PROJECT_DIR$/Client/LoginForm.cs" />
         <option value="$PROJECT_DIR$/Client/Form1.cs" />
+        <option value="$PROJECT_DIR$/Client/UserCredentials.cs" />
       </list>
     </option>
   </component>
