@@ -39,6 +39,11 @@ namespace Client
 
         }
 
+        private void LogsPage_Load(object sender, EventArgs e)
+        {
+
+        }
+
         // display logs data
         // search through logs data
         // create product list (testing)
