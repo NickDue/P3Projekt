@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.SearchPanel = new System.Windows.Forms.Panel();
+            this.CancelButton = new System.Windows.Forms.Button();
             this.ProductInfoLabel = new System.Windows.Forms.Label();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.LocationInfoLabel = new System.Windows.Forms.Label();
@@ -66,6 +67,7 @@
             // 
             // SearchPanel
             // 
+            this.SearchPanel.Controls.Add(this.CancelButton);
             this.SearchPanel.Controls.Add(this.ProductInfoLabel);
             this.SearchPanel.Controls.Add(this.TitleLabel);
             this.SearchPanel.Controls.Add(this.LocationInfoLabel);
@@ -77,6 +79,19 @@
             this.SearchPanel.Name = "SearchPanel";
             this.SearchPanel.Size = new System.Drawing.Size(982, 177);
             this.SearchPanel.TabIndex = 0;
+            // 
+            // CancelButton
+            // 
+            this.CancelButton.AutoSize = true;
+            this.CancelButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.CancelButton.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelButton.Location = new System.Drawing.Point(889, 123);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(53, 29);
+            this.CancelButton.TabIndex = 4;
+            this.CancelButton.Text = "Cancel";
+            this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // ProductInfoLabel
             // 
@@ -91,10 +106,10 @@
             // TitleLabel
             // 
             this.TitleLabel.AutoSize = true;
-            this.TitleLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleLabel.Location = new System.Drawing.Point(438, 64);
+            this.TitleLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLabel.Location = new System.Drawing.Point(409, 60);
             this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(127, 19);
+            this.TitleLabel.Size = new System.Drawing.Size(171, 25);
             this.TitleLabel.TabIndex = 3;
             this.TitleLabel.Text = "Enter product number ID";
             // 
@@ -132,6 +147,7 @@
             this.SearchButton.TabIndex = 1;
             this.SearchButton.Text = "Search";
             this.SearchButton.UseVisualStyleBackColor = true;
+            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
             // SearchInputBox
             // 
@@ -190,7 +206,7 @@
             // 
             // LocationBox
             // 
-            this.LocationBox.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LocationBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LocationBox.Location = new System.Drawing.Point(267, 69);
             this.LocationBox.Name = "LocationBox";
             this.LocationBox.ReadOnly = true;
@@ -199,7 +215,7 @@
             // 
             // LocationColliBox
             // 
-            this.LocationColliBox.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LocationColliBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LocationColliBox.Location = new System.Drawing.Point(87, 69);
             this.LocationColliBox.Name = "LocationColliBox";
             this.LocationColliBox.ReadOnly = true;
@@ -239,7 +255,7 @@
             // 
             this.AmountLabel.AutoSize = true;
             this.AmountLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AmountLabel.Location = new System.Drawing.Point(138, 496);
+            this.AmountLabel.Location = new System.Drawing.Point(134, 496);
             this.AmountLabel.Name = "AmountLabel";
             this.AmountLabel.Size = new System.Drawing.Size(49, 19);
             this.AmountLabel.TabIndex = 0;
@@ -258,7 +274,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(138, 414);
+            this.label7.Location = new System.Drawing.Point(134, 414);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(45, 19);
             this.label7.TabIndex = 0;
@@ -277,7 +293,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(138, 329);
+            this.label6.Location = new System.Drawing.Point(134, 329);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 19);
             this.label6.TabIndex = 0;
@@ -296,7 +312,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(138, 236);
+            this.label5.Location = new System.Drawing.Point(134, 236);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 19);
             this.label5.TabIndex = 0;
@@ -315,7 +331,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(138, 151);
+            this.label4.Location = new System.Drawing.Point(134, 151);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 19);
             this.label4.TabIndex = 0;
@@ -334,7 +350,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(138, 76);
+            this.label3.Location = new System.Drawing.Point(134, 76);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 19);
             this.label3.TabIndex = 0;
@@ -392,5 +408,6 @@
         private System.Windows.Forms.Panel LocationProductPanel;
         private System.Windows.Forms.TextBox LocationBox;
         private System.Windows.Forms.TextBox LocationColliBox;
+        private System.Windows.Forms.Button CancelButton;
     }
 }
