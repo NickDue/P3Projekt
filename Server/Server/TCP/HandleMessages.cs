@@ -30,6 +30,8 @@ namespace Server.TCP
             {
                 ProductHandler pHandler = new ProductHandler();
                 output = pHandler.GetAllProducts();
+                logsHandler.WriteToLog(null, null, null, input[1], "Viewed all products!");
+
             }
             else if (input[0].StartsWith("add product"))
             {

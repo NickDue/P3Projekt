@@ -26,8 +26,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba08afe5-fc62-476b-9e95-4756abe499d8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Client/AddProductWindow_vers1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Client/AddProductWindow_vers1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/AllProductsPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Client/AllProductsPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/bin/Debug/Client.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Client/bin/Debug/Client.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/bin/Debug/Client.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Client/bin/Debug/Client.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/obj/Debug/Client.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Client/obj/Debug/Client.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/obj/Debug/Client.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Client/obj/Debug/Client.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/Server/TCP/HandleMessages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/TCP/HandleMessages.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Server/bin/Debug/netcoreapp3.1/Server.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/bin/Debug/netcoreapp3.1/Server.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Server/bin/Debug/netcoreapp3.1/Server.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/bin/Debug/netcoreapp3.1/Server.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Server/obj/Debug/netcoreapp3.1/Server.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/obj/Debug/netcoreapp3.1/Server.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Server/obj/Debug/netcoreapp3.1/Server.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/obj/Debug/netcoreapp3.1/Server.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +56,7 @@
         <option value="$PROJECT_DIR$/Client/UserCredentials.cs" />
         <option value="$PROJECT_DIR$/Client/SearchWindow.cs" />
         <option value="$PROJECT_DIR$/Client/AddProductWindow_vers1.cs" />
+        <option value="$PROJECT_DIR$/Client/AllProductsPage.cs" />
       </list>
     </option>
   </component>
@@ -122,22 +131,22 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1248" height="297" key="GridCell.Tab.0.bottom" timestamp="1606992895944">
+    <state width="624" height="297" key="GridCell.Tab.0.bottom" timestamp="1606993414295">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1248" height="297" key="GridCell.Tab.0.bottom/-1080.0.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1606992895944" />
-    <state width="1248" height="297" key="GridCell.Tab.0.center" timestamp="1606992895944">
+    <state width="624" height="297" key="GridCell.Tab.0.bottom/-1080.0.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1606993414295" />
+    <state width="624" height="297" key="GridCell.Tab.0.center" timestamp="1606993414295">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1248" height="297" key="GridCell.Tab.0.center/-1080.0.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1606992895944" />
-    <state width="1248" height="297" key="GridCell.Tab.0.left" timestamp="1606992895944">
+    <state width="624" height="297" key="GridCell.Tab.0.center/-1080.0.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1606993414295" />
+    <state width="624" height="297" key="GridCell.Tab.0.left" timestamp="1606993414294">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1248" height="297" key="GridCell.Tab.0.left/-1080.0.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1606992895944" />
-    <state width="1248" height="297" key="GridCell.Tab.0.right" timestamp="1606992895944">
+    <state width="624" height="297" key="GridCell.Tab.0.left/-1080.0.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1606993414294" />
+    <state width="624" height="297" key="GridCell.Tab.0.right" timestamp="1606993414295">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1248" height="297" key="GridCell.Tab.0.right/-1080.0.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1606992895944" />
+    <state width="624" height="297" key="GridCell.Tab.0.right/-1080.0.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1606993414295" />
     <state x="522" y="307" key="RollbackChangesDialog" timestamp="1606728207015">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
