@@ -90,6 +90,7 @@ namespace Server.TCP
             }
             else if (input[0].StartsWith("get logs"))
             {
+                output = "sucess";
                 logsHandler.WriteToLog("null","null","null", input[1], "Generated a picklist!");
             }
             else
