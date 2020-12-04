@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using Client.TCP;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 
@@ -41,6 +42,9 @@ namespace Client
             else
             {
                 ConvertToPdf(FileDataGridView, "picklist");
+                TCPClient client = new TCPClient();
+                string query = $"create picklist ! {UserCredentials.WorkerId}";
+                client.Connect(query);
             }
         }
 

@@ -3520,19 +3520,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kenneth Køpke\\.nuget\\packages\\": {}
+    "C:\\Users\\meerq\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kenneth Køpke\\Documents\\GitHub\\P3Projekt\\Client\\TestArea\\TestArea.csproj",
+      "projectUniqueName": "C:\\Users\\meerq\\OneDrive\\Skrivebord\\P3Projekt\\Client\\TestArea\\TestArea.csproj",
       "projectName": "TestArea",
-      "projectPath": "C:\\Users\\Kenneth Køpke\\Documents\\GitHub\\P3Projekt\\Client\\TestArea\\TestArea.csproj",
-      "packagesPath": "C:\\Users\\Kenneth Køpke\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kenneth Køpke\\Documents\\GitHub\\P3Projekt\\Client\\TestArea\\obj\\",
+      "projectPath": "C:\\Users\\meerq\\OneDrive\\Skrivebord\\P3Projekt\\Client\\TestArea\\TestArea.csproj",
+      "packagesPath": "C:\\Users\\meerq\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\meerq\\OneDrive\\Skrivebord\\P3Projekt\\Client\\TestArea\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Kenneth Køpke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\meerq\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3545,8 +3545,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Kenneth Køpke\\Documents\\GitHub\\P3Projekt\\Client\\Client\\Client.csproj": {
-              "projectPath": "C:\\Users\\Kenneth Køpke\\Documents\\GitHub\\P3Projekt\\Client\\Client\\Client.csproj"
+            "C:\\Users\\meerq\\OneDrive\\Skrivebord\\P3Projekt\\Client\\Client\\Client.csproj": {
+              "projectPath": "C:\\Users\\meerq\\OneDrive\\Skrivebord\\P3Projekt\\Client\\Client\\Client.csproj"
             }
           }
         }

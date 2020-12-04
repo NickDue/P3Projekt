@@ -16,7 +16,7 @@ namespace Client
     public delegate void EmployeeEditorEventHandler(ListItem employee);
     public partial class EmployeeEditer : Form
     {
-
+        private string Method { get; }
         public event EmployeeEditorEventHandler EditorRequestAccepted;
 
         #region CustomProperties
@@ -61,18 +61,20 @@ namespace Client
 
         #endregion
 
-        public EmployeeEditer()
+        public EmployeeEditer(string method)
         {
             InitializeComponent();
+            Method = method;
         }
 
-        public EmployeeEditer(ListItem item)
+        public EmployeeEditer(ListItem item, string method)
         {
             InitializeComponent();
 
             //this is when you need to edit already existing employees
             ID = item.WorkerID;
             EmployeeName = item.EmployeeName;
+            Method = method;
             SetRole(item.Role);
             SetProfilePicture(item.Picture);
         }
@@ -219,11 +221,11 @@ namespace Client
             string role = GetRole();
             string password = passwordTextbox.Text;
             TCPClient client = new TCPClient();
-            string query = $"add employee ! {name} ! {id} ! {role} ! {password} ! {UserCredentials.WorkerId}";
+            string query = $"{Method} employee ! {name} ! {id} ! {role} ! {password} ! {UserCredentials.WorkerId}";
             string response = client.Connect(query);
             if (!response.StartsWith("ERROR"))
             {
-                MessageBox.Show("Added new employee", "SUCCESS");
+                MessageBox.Show(response, "SUCCESS");
             }
             else
             {
