@@ -4,10 +4,11 @@ using Client;
 
 namespace TestArea
 {
+    
     public class InputTest
     {
         [Fact]
-        public void ValidationTest1()
+        public void ValidationTest1_Parse()
         {
             string input = "12";
             int expected = 12;
@@ -17,7 +18,7 @@ namespace TestArea
             Assert.Equal(expected, result);
         }
         [Fact]
-        public void ValidationTest2()
+        public void ValidationTest2_Length()
         {
             string input = "1442";
             int expected = 4;
@@ -26,7 +27,7 @@ namespace TestArea
            Assert.Equal(expected, result);
         }
         [Fact]
-        public void ValidationTest3()
+        public void ValidationTest3_Match()
         {
             string input = "1/2";
             string expected = input;
@@ -35,10 +36,10 @@ namespace TestArea
             Assert.Equal(expected, result);
         }
         [Fact]
-        public void ValidationTest4()
+        public void ValidationTest4_Equivalence()
         {
-            TestValidationInput test = new Client.TestValidationInput();
-            double numberGiven = test.ValidationTestVolumenumber();
+            TestValidationInput test = new TestValidationInput();
+            double numberGiven = test.ValidationTestWeightnumber();
             double high = 500.0;
             double low = 0.0;
             Assert.True(numberGiven <= high);
