@@ -75,7 +75,8 @@ namespace Server.TCP
             else if (input[0].StartsWith("edit employee"))
             {
                 EmployeeHandler eHandler = new EmployeeHandler();
-                output = eHandler.ChangeUserCredentials(Int32.Parse(input[1]), input[2], input[3]);
+                output = eHandler.ChangeUserCredentials(Int32.Parse(input[2]), input[1], input[3],input[4]);
+                logsHandler.WriteToLog(input[2]+"(UserId)", "null","null",input[5],"Edited Employee information.");
             }
             else if (input[0].StartsWith("get employees"))
             {
@@ -86,6 +87,10 @@ namespace Server.TCP
             {
                 output = logsHandler.GetAllLogs();
                 logsHandler.WriteToLog("null","null","null", input[1], "Viewed all logs!");
+            }
+            else if (input[0].StartsWith("get logs"))
+            {
+                logsHandler.WriteToLog("null","null","null", input[1], "Generated a picklist!");
             }
             else
             {

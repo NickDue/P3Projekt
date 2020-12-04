@@ -115,7 +115,7 @@ namespace Server.SQL
          
                  cmd.ExecuteNonQuery();
 
-                 return "Added employee to the database.";
+                 return "Added employee.";
             }
             catch (Exception e)
             {
@@ -124,7 +124,7 @@ namespace Server.SQL
             }
         }
 
-        public string ChangeUserCredentials(int id, string newValue, string typeToAlter)
+        public string ChangeUserCredentials(int id, string name, string role, string password)
         {
             try
             {
@@ -146,10 +146,16 @@ namespace Server.SQL
                     con.Close();
                     return "ERROR: Employee doesn't exists.";
                 }
-                query = "UPDATE users SET " + typeToAlter + " = '" + newValue + "' WHERE id = " + id + ";";
-                using var cmd = new MySqlCommand(query, con);
-                cmd.ExecuteNonQuery();
-                return "Changed " + typeToAlter + " of user with id: " + id + ". New " + typeToAlter + " = " + newValue;
+
+                string[] newValues = new[] {$"username = '{name}'",$"role = '{role}'",$"password = '{password}'"};
+                foreach (string str in newValues)
+                {
+                    query = $"UPDATE users SET {str} WHERE id = {id}";
+                    using var cmd = new MySqlCommand(query, con);
+                    cmd.ExecuteNonQuery();
+                }
+            //query = "UPDATE users SET " + typeToAlter + " = '" + newValue + "' WHERE id = " + id + ";";
+            return "Edited employee";
             }
             catch (Exception e)
             {

@@ -63,7 +63,7 @@ namespace Client
 
         private void PromptForUserCreation()
         {
-            EmployeeEditer editor = new EmployeeEditer();
+            EmployeeEditer editor = new EmployeeEditer("add");
             editor.Show();
             editor.EditorRequestAccepted += CreateEmployee;
         }
@@ -79,17 +79,20 @@ namespace Client
         private void PromptForUserEdit()
         {
             ListItem item = GetSelected(ItemList);
-            EmployeeEditer editor = new EmployeeEditer(item);
+            EmployeeEditer editor = new EmployeeEditer(item,"edit");
             editor.Show();
             editor.EditorRequestAccepted += EditEmployee;
         }
         
         private void EditEmployee(ListItem employee)
         {
-            RemoveEmployee();
+            /*RemoveEmployee();
             employee.WasClicked += ListItem_WasClicked;
             ItemList.Add(employee);
-            EmployeeFlowPanel.Controls.Add(employee);
+            EmployeeFlowPanel.Controls.Add(employee);*/
+            ItemList.Clear();
+            EmployeeFlowPanel.Controls.Clear();
+            LoadEmployeesFromDatabase();
         }
 
 
