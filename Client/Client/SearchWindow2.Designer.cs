@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.SearchPanel = new System.Windows.Forms.Panel();
-            this.CancelButton = new System.Windows.Forms.Button();
             this.ProductInfoLabel = new System.Windows.Forms.Label();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.LocationInfoLabel = new System.Windows.Forms.Label();
@@ -67,7 +66,6 @@
             // 
             // SearchPanel
             // 
-            this.SearchPanel.Controls.Add(this.CancelButton);
             this.SearchPanel.Controls.Add(this.ProductInfoLabel);
             this.SearchPanel.Controls.Add(this.TitleLabel);
             this.SearchPanel.Controls.Add(this.LocationInfoLabel);
@@ -79,19 +77,6 @@
             this.SearchPanel.Name = "SearchPanel";
             this.SearchPanel.Size = new System.Drawing.Size(982, 177);
             this.SearchPanel.TabIndex = 0;
-            // 
-            // CancelButton
-            // 
-            this.CancelButton.AutoSize = true;
-            this.CancelButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.CancelButton.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelButton.Location = new System.Drawing.Point(889, 123);
-            this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(53, 29);
-            this.CancelButton.TabIndex = 4;
-            this.CancelButton.Text = "Cancel";
-            this.CancelButton.UseVisualStyleBackColor = true;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // ProductInfoLabel
             // 
@@ -339,6 +324,7 @@
             // 
             // ProductNumberBox
             // 
+            this.ProductNumberBox.Enabled = false;
             this.ProductNumberBox.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProductNumberBox.Location = new System.Drawing.Point(228, 73);
             this.ProductNumberBox.Name = "ProductNumberBox";
@@ -408,6 +394,5 @@
         private System.Windows.Forms.Panel LocationProductPanel;
         private System.Windows.Forms.TextBox LocationBox;
         private System.Windows.Forms.TextBox LocationColliBox;
-        private System.Windows.Forms.Button CancelButton;
     }
 }

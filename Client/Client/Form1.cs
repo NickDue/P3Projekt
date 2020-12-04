@@ -65,7 +65,7 @@ namespace Client
         {
             HighlightThisButton(navButton1);
             contentPanel.Controls.Clear();
-            SearchWindow searchWindow = new SearchWindow();
+            SearchWindow2 searchWindow = new SearchWindow2();
             contentPanel.Controls.Add(searchWindow);
             searchWindow.Dock = DockStyle.Fill;
         }
