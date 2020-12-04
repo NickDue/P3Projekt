@@ -14,8 +14,8 @@ namespace Client
 {
     public partial class LoginForm : Form
     {
-        string userName = "admin";
-        int password = 12345;
+        string username = "admin";
+        string password = "admin";
         private const bool DBActive = true;
         public LoginForm()
         {
@@ -23,7 +23,9 @@ namespace Client
             this.DoubleBuffered = true;
             this.ControlBox = false;
             this.Text = String.Empty;
+            KeyPreview = true;
         }
+
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
@@ -32,38 +34,10 @@ namespace Client
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            if (DBActive)
-            {
-                string query = $"authenticate ! {UsernameBox.Text} ! {PasswordBox.Text}";
-                TCPClient client = new TCPClient();
-                string resonse = client.Connect(query);
-                if (!resonse.StartsWith("ERROR"))
-                {
-                    string[] splittedResponse = resonse.Split('!');
-                    UserCredentials.WorkerId = Int32.Parse(splittedResponse[0]);
-                    UserCredentials.WorkerUsername = splittedResponse[1];
-                    UserCredentials.WorkerRole = splittedResponse[3];
-                    MyhomeForm form = new MyhomeForm();
-                    Hide();
-                    form.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Unknown User", "Error");
-                }
-            }
-            else
-            {
-                MyhomeForm form = new MyhomeForm();
-                if (UsernameBox.Text == userName && Int32.Parse(PasswordBox.Text) == password)
-                {
-                    this.Hide();
-                    form.Show();
-                }
-
-            }
-            
+            LoginFunction();
         }
+
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
@@ -93,10 +67,52 @@ namespace Client
 
         }
 
+        private void LoginFunction()
+        {
+            if (DBActive)
+            {
+                string query = $"authenticate ! {UsernameBox.Text} ! {PasswordBox.Text}";
+                TCPClient client = new TCPClient();
+                string resonse = client.Connect(query);
+                if (!resonse.StartsWith("ERROR"))
+                {
+                    string[] splittedResponse = resonse.Split('!');
+                    UserCredentials.WorkerId = Int32.Parse(splittedResponse[0]);
+                    UserCredentials.WorkerUsername = splittedResponse[1];
+                    UserCredentials.WorkerRole = splittedResponse[3];
+                    MyhomeForm form = new MyhomeForm();
+                    Hide();
+                    form.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Unknown User", "Error");
+                }
+            }
+            else
+            {
+                MyhomeForm form = new MyhomeForm();
+                if (UsernameBox.Text == username && PasswordBox.Text == password)
+                {
+                    this.Hide();
+                    form.Show();
+                }
+
+            }
+        }
+
+
         private void closeButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-        
+
+        private void PasswordBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                LoginFunction();
+            }
+        }
     }
 }

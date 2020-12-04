@@ -120,6 +120,7 @@
             this.PasswordBox.PasswordChar = '*';
             this.PasswordBox.Size = new System.Drawing.Size(305, 40);
             this.PasswordBox.TabIndex = 6;
+            this.PasswordBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PasswordBox_KeyDown);
             // 
             // PasswordLabel
             // 
