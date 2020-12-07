@@ -52,6 +52,7 @@
             this.ProductNumberBox = new System.Windows.Forms.TextBox();
             this.PNumberLabel = new System.Windows.Forms.Label();
             this.ProductGridView = new System.Windows.Forms.DataGridView();
+            this.OtherLocations = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SearchPanel.SuspendLayout();
             this.LocationProductPanel.SuspendLayout();
             this.ProductPanel.SuspendLayout();
@@ -329,12 +330,24 @@
             // 
             // ProductGridView
             // 
+            this.ProductGridView.AllowUserToAddRows = false;
+            this.ProductGridView.AllowUserToDeleteRows = false;
+            this.ProductGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ProductGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProductGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.OtherLocations});
             this.ProductGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProductGridView.Location = new System.Drawing.Point(0, 224);
             this.ProductGridView.Name = "ProductGridView";
+            this.ProductGridView.ReadOnly = true;
             this.ProductGridView.Size = new System.Drawing.Size(491, 534);
             this.ProductGridView.TabIndex = 3;
+            // 
+            // OtherLocations
+            // 
+            this.OtherLocations.HeaderText = "Other locations";
+            this.OtherLocations.Name = "OtherLocations";
+            this.OtherLocations.ReadOnly = true;
             // 
             // SearchWindow2
             // 
@@ -384,5 +397,6 @@
         private System.Windows.Forms.TextBox LocationBox;
         private System.Windows.Forms.TextBox LocationColliBox;
         private System.Windows.Forms.DataGridView ProductGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OtherLocations;
     }
 }
