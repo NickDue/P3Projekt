@@ -16,11 +16,6 @@ namespace Server.TCP
                 output = pHandler.ProductById(Int32.Parse(input[1]), input[2], input[3]);
                 logsHandler.WriteToLog(input[1], input[2], input[3], input[4], "Searched for a product");
             }
-            else if (input[0].StartsWith("remove product"))
-            {
-                ProductHandler pHandler = new ProductHandler();
-                output = pHandler.RemoveProductFromDB(Int32.Parse(input[1]), input[2], input[3]);
-            }
             else if (clientInput.StartsWith("edit product"))
             {
                 ProductHandler pHandler = new ProductHandler();
@@ -43,11 +38,6 @@ namespace Server.TCP
                     input[2], Double.Parse(input[3]), Double.Parse(input[5]), input[4], null, "");
                 logsHandler.WriteToLog(splittedId[0], splittedId[1], splittedId[2], input[7], "Added a new product!");
 
-            }
-            else if (input[0].StartsWith("find employee"))
-            {
-                EmployeeHandler eHandler = new EmployeeHandler();
-                output = eHandler.GetEmployeeById(Int32.Parse(input[1]));
             }
             else if (input[0].StartsWith("remove employee"))
             {
@@ -80,6 +70,7 @@ namespace Server.TCP
             }
             else if (input[0].StartsWith("get employees"))
             {
+                //TODO: TILFØJ LOG
                 EmployeeHandler eHandler = new EmployeeHandler();
                 output = eHandler.GetAllEmployees();
             }

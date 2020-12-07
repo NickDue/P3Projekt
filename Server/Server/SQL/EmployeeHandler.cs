@@ -11,38 +11,7 @@ namespace Server.SQL
     public class EmployeeHandler
     {
         private const string SqlLogin = @"server=localhost;userid="+SQLCredentials.MySQLUsername+";password="+SQLCredentials.MySQLPassword+";database=myhome";
-
-        public String GetEmployeeById(int id)
-        {
-            try
-            {
-                using var con = new MySqlConnection(SqlLogin);
-                con.Open();
-                string result = "";
-                string query = "SELECT * FROM users WHERE id = " + id;
-                using var cmd = new MySqlCommand(query, con);
-                Employee employee = null;
-                using MySqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    if(employee == null)
-                        employee = new Employee(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3));
-                }
-
-                if (employee == null)
-                    return "ERROR: Employee doesn't exist in the database.";
-
-                result = employee.employeeID + " ! " + employee.employeeName + " ! " + employee.role + " ! " +
-                         employee.password;
-
-                return result;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                return "Error occoured.";
-            }
-        }
+        
 
         public string DeleteEmployeeFromDB(int id)
         {
