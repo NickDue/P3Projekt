@@ -29,104 +29,81 @@
         private void InitializeComponent()
         {
             this.SearchPanel = new System.Windows.Forms.Panel();
-            this.ProductInfoLabel = new System.Windows.Forms.Label();
             this.TitleLabel = new System.Windows.Forms.Label();
-            this.LocationInfoLabel = new System.Windows.Forms.Label();
             this.EditButton = new System.Windows.Forms.Button();
             this.SearchButton = new System.Windows.Forms.Button();
             this.SearchInputBox = new System.Windows.Forms.TextBox();
-            this.LocationPanel = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.LocationsDataGridView = new System.Windows.Forms.DataGridView();
+            this.ProductInfoLabel = new System.Windows.Forms.Label();
+            this.LocationInfoLabel = new System.Windows.Forms.Label();
             this.LocationProductPanel = new System.Windows.Forms.Panel();
             this.LocationBox = new System.Windows.Forms.TextBox();
             this.LocationColliBox = new System.Windows.Forms.TextBox();
             this.ProductPanel = new System.Windows.Forms.Panel();
             this.AmountBox = new System.Windows.Forms.TextBox();
-            this.AmountLabel = new System.Windows.Forms.Label();
+            this.PAmountLabel = new System.Windows.Forms.Label();
             this.WeightBox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.PWeightLabel = new System.Windows.Forms.Label();
             this.ColorBox = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.PColorLabel = new System.Windows.Forms.Label();
             this.VolumeBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.PVolumeLabel = new System.Windows.Forms.Label();
             this.ProductNameBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.PNameLabel = new System.Windows.Forms.Label();
             this.ProductNumberBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.PNumberLabel = new System.Windows.Forms.Label();
+            this.ProductGridView = new System.Windows.Forms.DataGridView();
             this.SearchPanel.SuspendLayout();
-            this.LocationPanel.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LocationsDataGridView)).BeginInit();
             this.LocationProductPanel.SuspendLayout();
             this.ProductPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // SearchPanel
             // 
-            this.SearchPanel.Controls.Add(this.ProductInfoLabel);
+            this.SearchPanel.AutoSize = true;
             this.SearchPanel.Controls.Add(this.TitleLabel);
-            this.SearchPanel.Controls.Add(this.LocationInfoLabel);
             this.SearchPanel.Controls.Add(this.EditButton);
             this.SearchPanel.Controls.Add(this.SearchButton);
             this.SearchPanel.Controls.Add(this.SearchInputBox);
             this.SearchPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.SearchPanel.Location = new System.Drawing.Point(0, 0);
             this.SearchPanel.Name = "SearchPanel";
-            this.SearchPanel.Size = new System.Drawing.Size(982, 177);
+            this.SearchPanel.Size = new System.Drawing.Size(982, 78);
             this.SearchPanel.TabIndex = 0;
-            // 
-            // ProductInfoLabel
-            // 
-            this.ProductInfoLabel.AutoSize = true;
-            this.ProductInfoLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductInfoLabel.Location = new System.Drawing.Point(493, 155);
-            this.ProductInfoLabel.Name = "ProductInfoLabel";
-            this.ProductInfoLabel.Size = new System.Drawing.Size(72, 19);
-            this.ProductInfoLabel.TabIndex = 3;
-            this.ProductInfoLabel.Text = "Product info:";
             // 
             // TitleLabel
             // 
+            this.TitleLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.TitleLabel.AutoSize = true;
             this.TitleLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleLabel.Location = new System.Drawing.Point(409, 60);
+            this.TitleLabel.Location = new System.Drawing.Point(409, 18);
             this.TitleLabel.Name = "TitleLabel";
             this.TitleLabel.Size = new System.Drawing.Size(171, 25);
             this.TitleLabel.TabIndex = 3;
             this.TitleLabel.Text = "Enter product number ID";
             // 
-            // LocationInfoLabel
-            // 
-            this.LocationInfoLabel.AutoSize = true;
-            this.LocationInfoLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LocationInfoLabel.Location = new System.Drawing.Point(3, 155);
-            this.LocationInfoLabel.Name = "LocationInfoLabel";
-            this.LocationInfoLabel.Size = new System.Drawing.Size(76, 19);
-            this.LocationInfoLabel.TabIndex = 3;
-            this.LocationInfoLabel.Text = "Location info:";
-            // 
             // EditButton
             // 
+            this.EditButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.EditButton.AutoSize = true;
             this.EditButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.EditButton.BackColor = System.Drawing.Color.Green;
             this.EditButton.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditButton.Location = new System.Drawing.Point(889, 88);
+            this.EditButton.Location = new System.Drawing.Point(889, 46);
             this.EditButton.Name = "EditButton";
             this.EditButton.Size = new System.Drawing.Size(37, 29);
             this.EditButton.TabIndex = 2;
             this.EditButton.Text = "Edit";
-            this.EditButton.UseVisualStyleBackColor = true;
+            this.EditButton.UseVisualStyleBackColor = false;
             this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // SearchButton
             // 
+            this.SearchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.SearchButton.AutoSize = true;
             this.SearchButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.SearchButton.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchButton.Location = new System.Drawing.Point(586, 88);
+            this.SearchButton.Location = new System.Drawing.Point(586, 46);
             this.SearchButton.Name = "SearchButton";
             this.SearchButton.Size = new System.Drawing.Size(53, 29);
             this.SearchButton.TabIndex = 1;
@@ -136,55 +113,49 @@
             // 
             // SearchInputBox
             // 
+            this.SearchInputBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.SearchInputBox.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchInputBox.Location = new System.Drawing.Point(407, 90);
+            this.SearchInputBox.Location = new System.Drawing.Point(407, 48);
+            this.SearchInputBox.MaximumSize = new System.Drawing.Size(175, 26);
+            this.SearchInputBox.MaxLength = 20;
+            this.SearchInputBox.MinimumSize = new System.Drawing.Size(175, 26);
             this.SearchInputBox.Name = "SearchInputBox";
-            this.SearchInputBox.Size = new System.Drawing.Size(173, 26);
+            this.SearchInputBox.Size = new System.Drawing.Size(175, 26);
             this.SearchInputBox.TabIndex = 0;
             // 
-            // LocationPanel
+            // ProductInfoLabel
             // 
-            this.LocationPanel.Controls.Add(this.panel2);
-            this.LocationPanel.Controls.Add(this.LocationProductPanel);
-            this.LocationPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.LocationPanel.Location = new System.Drawing.Point(0, 177);
-            this.LocationPanel.Name = "LocationPanel";
-            this.LocationPanel.Size = new System.Drawing.Size(491, 581);
-            this.LocationPanel.TabIndex = 1;
+            this.ProductInfoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ProductInfoLabel.AutoSize = true;
+            this.ProductInfoLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductInfoLabel.Location = new System.Drawing.Point(3, 3);
+            this.ProductInfoLabel.Name = "ProductInfoLabel";
+            this.ProductInfoLabel.Size = new System.Drawing.Size(72, 19);
+            this.ProductInfoLabel.TabIndex = 3;
+            this.ProductInfoLabel.Text = "Product info:";
             // 
-            // panel2
+            // LocationInfoLabel
             // 
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 146);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(491, 435);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.LocationsDataGridView);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(491, 435);
-            this.panel3.TabIndex = 0;
-            // 
-            // LocationsDataGridView
-            // 
-            this.LocationsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LocationsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LocationsDataGridView.Location = new System.Drawing.Point(0, 0);
-            this.LocationsDataGridView.Name = "LocationsDataGridView";
-            this.LocationsDataGridView.Size = new System.Drawing.Size(491, 435);
-            this.LocationsDataGridView.TabIndex = 0;
+            this.LocationInfoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LocationInfoLabel.AutoSize = true;
+            this.LocationInfoLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LocationInfoLabel.Location = new System.Drawing.Point(3, 0);
+            this.LocationInfoLabel.Name = "LocationInfoLabel";
+            this.LocationInfoLabel.Size = new System.Drawing.Size(76, 19);
+            this.LocationInfoLabel.TabIndex = 3;
+            this.LocationInfoLabel.Text = "Location info:";
             // 
             // LocationProductPanel
             // 
             this.LocationProductPanel.Controls.Add(this.LocationBox);
+            this.LocationProductPanel.Controls.Add(this.LocationInfoLabel);
             this.LocationProductPanel.Controls.Add(this.LocationColliBox);
             this.LocationProductPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.LocationProductPanel.Location = new System.Drawing.Point(0, 0);
+            this.LocationProductPanel.Location = new System.Drawing.Point(0, 78);
             this.LocationProductPanel.Name = "LocationProductPanel";
             this.LocationProductPanel.Size = new System.Drawing.Size(491, 146);
             this.LocationProductPanel.TabIndex = 0;
@@ -200,6 +171,7 @@
             // 
             // LocationColliBox
             // 
+            this.LocationColliBox.Enabled = false;
             this.LocationColliBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LocationColliBox.Location = new System.Drawing.Point(87, 69);
             this.LocationColliBox.Name = "LocationColliBox";
@@ -209,159 +181,180 @@
             // 
             // ProductPanel
             // 
+            this.ProductPanel.Controls.Add(this.ProductInfoLabel);
             this.ProductPanel.Controls.Add(this.AmountBox);
-            this.ProductPanel.Controls.Add(this.AmountLabel);
+            this.ProductPanel.Controls.Add(this.PAmountLabel);
             this.ProductPanel.Controls.Add(this.WeightBox);
-            this.ProductPanel.Controls.Add(this.label7);
+            this.ProductPanel.Controls.Add(this.PWeightLabel);
             this.ProductPanel.Controls.Add(this.ColorBox);
-            this.ProductPanel.Controls.Add(this.label6);
+            this.ProductPanel.Controls.Add(this.PColorLabel);
             this.ProductPanel.Controls.Add(this.VolumeBox);
-            this.ProductPanel.Controls.Add(this.label5);
+            this.ProductPanel.Controls.Add(this.PVolumeLabel);
             this.ProductPanel.Controls.Add(this.ProductNameBox);
-            this.ProductPanel.Controls.Add(this.label4);
+            this.ProductPanel.Controls.Add(this.PNameLabel);
             this.ProductPanel.Controls.Add(this.ProductNumberBox);
-            this.ProductPanel.Controls.Add(this.label3);
-            this.ProductPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ProductPanel.Location = new System.Drawing.Point(491, 177);
+            this.ProductPanel.Controls.Add(this.PNumberLabel);
+            this.ProductPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ProductPanel.Location = new System.Drawing.Point(491, 78);
             this.ProductPanel.Name = "ProductPanel";
-            this.ProductPanel.Size = new System.Drawing.Size(491, 581);
+            this.ProductPanel.Size = new System.Drawing.Size(491, 680);
             this.ProductPanel.TabIndex = 2;
             // 
             // AmountBox
             // 
+            this.AmountBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.AmountBox.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AmountBox.Location = new System.Drawing.Point(228, 493);
+            this.AmountBox.Location = new System.Drawing.Point(228, 536);
             this.AmountBox.Name = "AmountBox";
             this.AmountBox.ReadOnly = true;
             this.AmountBox.Size = new System.Drawing.Size(125, 26);
             this.AmountBox.TabIndex = 1;
             // 
-            // AmountLabel
+            // PAmountLabel
             // 
-            this.AmountLabel.AutoSize = true;
-            this.AmountLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AmountLabel.Location = new System.Drawing.Point(134, 496);
-            this.AmountLabel.Name = "AmountLabel";
-            this.AmountLabel.Size = new System.Drawing.Size(49, 19);
-            this.AmountLabel.TabIndex = 0;
-            this.AmountLabel.Text = "Amount:";
+            this.PAmountLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.PAmountLabel.AutoSize = true;
+            this.PAmountLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PAmountLabel.Location = new System.Drawing.Point(134, 539);
+            this.PAmountLabel.Name = "PAmountLabel";
+            this.PAmountLabel.Size = new System.Drawing.Size(49, 19);
+            this.PAmountLabel.TabIndex = 0;
+            this.PAmountLabel.Text = "Amount:";
             // 
             // WeightBox
             // 
+            this.WeightBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.WeightBox.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WeightBox.Location = new System.Drawing.Point(228, 411);
+            this.WeightBox.Location = new System.Drawing.Point(228, 454);
             this.WeightBox.Name = "WeightBox";
             this.WeightBox.ReadOnly = true;
             this.WeightBox.Size = new System.Drawing.Size(125, 26);
             this.WeightBox.TabIndex = 1;
             // 
-            // label7
+            // PWeightLabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(134, 414);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 19);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Weight:";
+            this.PWeightLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.PWeightLabel.AutoSize = true;
+            this.PWeightLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PWeightLabel.Location = new System.Drawing.Point(134, 457);
+            this.PWeightLabel.Name = "PWeightLabel";
+            this.PWeightLabel.Size = new System.Drawing.Size(45, 19);
+            this.PWeightLabel.TabIndex = 0;
+            this.PWeightLabel.Text = "Weight:";
             // 
             // ColorBox
             // 
+            this.ColorBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.ColorBox.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ColorBox.Location = new System.Drawing.Point(228, 326);
+            this.ColorBox.Location = new System.Drawing.Point(228, 369);
             this.ColorBox.Name = "ColorBox";
             this.ColorBox.ReadOnly = true;
             this.ColorBox.Size = new System.Drawing.Size(125, 26);
             this.ColorBox.TabIndex = 1;
             // 
-            // label6
+            // PColorLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(134, 329);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 19);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Color:";
+            this.PColorLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.PColorLabel.AutoSize = true;
+            this.PColorLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PColorLabel.Location = new System.Drawing.Point(134, 372);
+            this.PColorLabel.Name = "PColorLabel";
+            this.PColorLabel.Size = new System.Drawing.Size(38, 19);
+            this.PColorLabel.TabIndex = 0;
+            this.PColorLabel.Text = "Color:";
             // 
             // VolumeBox
             // 
+            this.VolumeBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.VolumeBox.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VolumeBox.Location = new System.Drawing.Point(228, 233);
+            this.VolumeBox.Location = new System.Drawing.Point(228, 276);
             this.VolumeBox.Name = "VolumeBox";
             this.VolumeBox.ReadOnly = true;
             this.VolumeBox.Size = new System.Drawing.Size(125, 26);
             this.VolumeBox.TabIndex = 1;
             // 
-            // label5
+            // PVolumeLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(134, 236);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 19);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Volume:";
+            this.PVolumeLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.PVolumeLabel.AutoSize = true;
+            this.PVolumeLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PVolumeLabel.Location = new System.Drawing.Point(134, 279);
+            this.PVolumeLabel.Name = "PVolumeLabel";
+            this.PVolumeLabel.Size = new System.Drawing.Size(49, 19);
+            this.PVolumeLabel.TabIndex = 0;
+            this.PVolumeLabel.Text = "Volume:";
             // 
             // ProductNameBox
             // 
+            this.ProductNameBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.ProductNameBox.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductNameBox.Location = new System.Drawing.Point(228, 148);
+            this.ProductNameBox.Location = new System.Drawing.Point(228, 191);
             this.ProductNameBox.Name = "ProductNameBox";
             this.ProductNameBox.ReadOnly = true;
             this.ProductNameBox.Size = new System.Drawing.Size(125, 26);
             this.ProductNameBox.TabIndex = 1;
             // 
-            // label4
+            // PNameLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(134, 151);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 19);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Product Name:";
+            this.PNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.PNameLabel.AutoSize = true;
+            this.PNameLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PNameLabel.Location = new System.Drawing.Point(134, 194);
+            this.PNameLabel.Name = "PNameLabel";
+            this.PNameLabel.Size = new System.Drawing.Size(81, 19);
+            this.PNameLabel.TabIndex = 0;
+            this.PNameLabel.Text = "Product Name:";
             // 
             // ProductNumberBox
             // 
+            this.ProductNumberBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.ProductNumberBox.Enabled = false;
             this.ProductNumberBox.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductNumberBox.Location = new System.Drawing.Point(228, 73);
+            this.ProductNumberBox.Location = new System.Drawing.Point(228, 116);
             this.ProductNumberBox.Name = "ProductNumberBox";
             this.ProductNumberBox.ReadOnly = true;
             this.ProductNumberBox.Size = new System.Drawing.Size(125, 26);
             this.ProductNumberBox.TabIndex = 1;
             // 
-            // label3
+            // PNumberLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(134, 76);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 19);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Product Number:";
+            this.PNumberLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.PNumberLabel.AutoSize = true;
+            this.PNumberLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PNumberLabel.Location = new System.Drawing.Point(134, 119);
+            this.PNumberLabel.Name = "PNumberLabel";
+            this.PNumberLabel.Size = new System.Drawing.Size(91, 19);
+            this.PNumberLabel.TabIndex = 0;
+            this.PNumberLabel.Text = "Product Number:";
+            // 
+            // ProductGridView
+            // 
+            this.ProductGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProductGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProductGridView.Location = new System.Drawing.Point(0, 224);
+            this.ProductGridView.Name = "ProductGridView";
+            this.ProductGridView.Size = new System.Drawing.Size(491, 534);
+            this.ProductGridView.TabIndex = 3;
             // 
             // SearchWindow2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.ProductGridView);
+            this.Controls.Add(this.LocationProductPanel);
             this.Controls.Add(this.ProductPanel);
-            this.Controls.Add(this.LocationPanel);
             this.Controls.Add(this.SearchPanel);
             this.Name = "SearchWindow2";
             this.Size = new System.Drawing.Size(982, 758);
             this.SearchPanel.ResumeLayout(false);
             this.SearchPanel.PerformLayout();
-            this.LocationPanel.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LocationsDataGridView)).EndInit();
             this.LocationProductPanel.ResumeLayout(false);
             this.LocationProductPanel.PerformLayout();
             this.ProductPanel.ResumeLayout(false);
             this.ProductPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -374,25 +367,22 @@
         private System.Windows.Forms.Button EditButton;
         private System.Windows.Forms.Button SearchButton;
         private System.Windows.Forms.TextBox SearchInputBox;
-        private System.Windows.Forms.Panel LocationPanel;
         private System.Windows.Forms.Panel ProductPanel;
         private System.Windows.Forms.TextBox AmountBox;
-        private System.Windows.Forms.Label AmountLabel;
+        private System.Windows.Forms.Label PAmountLabel;
         private System.Windows.Forms.TextBox WeightBox;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label PWeightLabel;
         private System.Windows.Forms.TextBox ColorBox;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label PColorLabel;
         private System.Windows.Forms.TextBox VolumeBox;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label PVolumeLabel;
         private System.Windows.Forms.TextBox ProductNameBox;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label PNameLabel;
         private System.Windows.Forms.TextBox ProductNumberBox;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView LocationsDataGridView;
+        private System.Windows.Forms.Label PNumberLabel;
         private System.Windows.Forms.Panel LocationProductPanel;
         private System.Windows.Forms.TextBox LocationBox;
         private System.Windows.Forms.TextBox LocationColliBox;
+        private System.Windows.Forms.DataGridView ProductGridView;
     }
 }

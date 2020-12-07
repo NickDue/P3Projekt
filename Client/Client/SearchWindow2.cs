@@ -124,6 +124,7 @@ namespace Client
                 ToggleTextBoxReadOnly(control1, false);
                 ToggleTextBoxReadOnly(control2, false);
                 EditButton.Text = "Save";
+                EditButton.BackColor = Color.Red;
             }
 
             else
@@ -131,6 +132,7 @@ namespace Client
                 ToggleTextBoxReadOnly(control1, true);
                 ToggleTextBoxReadOnly(control2, true);
                 EditButton.Text = "Edit";
+                EditButton.BackColor = Color.Green;
             }
         }
 
