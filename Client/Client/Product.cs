@@ -8,9 +8,18 @@ namespace Client
 {
     class Product
     {
-        int ProductNumber;
-        string ProductName;
-        string Location;
-        int amount;
+        public int ProductID { get; set; }
+
+        public string ProductName { get; set; }
+
+        public double Volume { get; set; }
+
+        public string Color { get; set; }
+
+        public double Weight { get; set; }
+
+        public int Amount { get; set; }
+
+        public string Location { get; set; }
     }
 }

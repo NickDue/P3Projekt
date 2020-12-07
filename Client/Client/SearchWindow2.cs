@@ -14,9 +14,33 @@ namespace Client
 {
     public partial class SearchWindow2 : UserControl
     {
+        private List<string> EditedValues = new List<string>();
+
         public SearchWindow2()
         {
             InitializeComponent();
+            AddSampleProduct();
+        }
+
+        private void AddSampleProduct()
+        {
+            Product p = new Product();
+
+            p.ProductID = 12345;
+            p.ProductName = "Cool Chair";
+            p.Volume = 11.2;
+            p.Color = "Navy";
+            p.Weight = 10.5;
+            p.Amount = 5;
+            p.Location = "HAL1";
+
+            ProductNumberBox.Text = p.ProductID.ToString();
+            ProductNameBox.Text = p.ProductName;
+            VolumeBox.Text = p.Volume.ToString();
+            ColorBox.Text = p.Color;
+            WeightBox.Text = p.Weight.ToString();
+            AmountBox.Text = p.Amount.ToString();
+            LocationBox.Text = p.Location;
         }
 
         private void SearchButton_Click(object sender, EventArgs e)
@@ -36,21 +60,46 @@ namespace Client
 
         private void EditButton_Click(object sender, EventArgs e)
         {
-            if (!editMode)
-            {
-                if (ValidateInput(ProductPanel) && ValidateInput(LocationProductPanel))
-                {
+            ToggleTextBoxEditMode(ProductPanel, LocationProductPanel);
 
-                }
+            if (editMode)
+            {
+                // do nothing
             }
 
-            ToggleTextBoxEditMode(ProductPanel, LocationProductPanel);
+            else
+            {
+                ConfirmChoiceUser();
+            }
         }
 
-        private void CancelButton_Click(object sender, EventArgs e)
+        private void ConfirmChoiceUser()
         {
-            ClearTextBoxInput(LocationProductPanel, ProductPanel);
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to edit this product?", "Confirm", MessageBoxButtons.YesNo);
+            
+            if (dialogResult == DialogResult.Yes)
+            {
+                if (ValidateInput(ProductPanel))
+                {
+                    SendToServer();
+                    GetProductFromServer();
+                }
+
+                else
+                {
+                    MessageBox.Show("Failed to edit product");
+                    ToggleTextBoxEditMode(ProductPanel, LocationProductPanel);
+                }
+
+            }
+
+            else if (dialogResult == DialogResult.No)
+            {
+                ToggleTextBoxEditMode(ProductPanel, LocationProductPanel);
+            }
         }
+
+
 
         // Toggles Editmode for TextBoxes
         private void ToggleTextBoxEditMode(Control control1, Control control2)
@@ -189,39 +238,63 @@ namespace Client
         private List<TextBox> GetNumericBoxes()
         {
             List<TextBox> numericInputBoxes = new List<TextBox>();
+
             numericInputBoxes.Add(WeightBox);
             numericInputBoxes.Add(VolumeBox);
             numericInputBoxes.Add(AmountBox);
+
             return numericInputBoxes;
         }
 
-        //private void GetProductFromServer()
-        //{
-        //    string[] splittedInput = SearchInputBox.Text.Split('-');
-        //    if (splittedInput.Length != 3)
-        //        return;
-        //    string input = $"find product ! {splittedInput[0]} ! {splittedInput[1]} ! {splittedInput[2]}";
-        //    //string input = "find product ! 21188 ! 01 ! 03";
-        //    TCPClient client = new TCPClient();
-        //    string info = client.Connect(input);
-        //    if (!info.StartsWith("ERROR"))
-        //    {
-        //        string[] splittedOutput = info.Split('!');
-        //        string[] splittedId = splittedOutput[0].Split('-');
-        //        ProductNumLabel.Text = splittedId[0];
-        //        ProductNameLabel.Text = splittedOutput[1];
-        //        VolumeLabel.Text = splittedOutput[2];
-        //        WeightLabel.Text = splittedOutput[3];
-        //        ColorLabel.Text = splittedOutput[4];
-        //        PrimaryLocationLabel.Text = splittedOutput[6];
-        //        AmountLabel.Text = splittedOutput[7];
-        //        PrimaryColliLabel.Text = Int32.Parse(splittedId[1]) + "/" + Int32.Parse(splittedId[2]);
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Product Not Found", "error");
-        //    }
+        private void GetProductFromServer()
+        {
+            string[] splittedInput = SearchInputBox.Text.Split('-');
+            if (splittedInput.Length != 3)
+                return;
+            string input = $"find product ! {splittedInput[0]} ! {splittedInput[1]} ! {splittedInput[2]}";
+            //string input = "find product ! 21188 ! 01 ! 03";
+            TCPClient client = new TCPClient();
+            string info = client.Connect(input);
+            if (!info.StartsWith("ERROR"))
+            {
+                string[] splittedOutput = info.Split('!');
+                string[] splittedId = splittedOutput[0].Split('-');
+                ProductNumberBox.Text = splittedId[0];
+                ProductNameBox.Text = splittedOutput[1];
+                VolumeBox.Text = splittedOutput[2];
+                WeightBox.Text = splittedOutput[3];
+                ColorBox.Text = splittedOutput[4];
+                LocationBox.Text = splittedOutput[6];
+                AmountBox.Text = splittedOutput[7];
+                LocationColliBox.Text = Int32.Parse(splittedId[1]) + "/" + Int32.Parse(splittedId[2]);
+            }
+            else
+            {
+                MessageBox.Show("Product Not Found", "error");
+            }
+        }
 
-        //}
+
+        private void SendToServer()
+        {
+            string toSend = "edit product\n";
+            EditedValues.Add(UserCredentials.WorkerId.ToString());
+            foreach (string str in EditedValues)
+            {
+                toSend += str + "\n";
+            }
+            EditedValues.Clear();
+            MessageBox.Show(toSend);
+            TCPClient client = new TCPClient();
+            string response = client.Connect(toSend);
+            if (!response.StartsWith("ERROR"))
+            {
+                MessageBox.Show("Edited product.");
+            }
+            else
+            {
+                MessageBox.Show("Failure");
+            }
+        }
     }
 }
