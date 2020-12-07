@@ -39,7 +39,7 @@ namespace TestArea
         public void ValidationTest4_Equivalence()
         {
             TestValidationInput test = new TestValidationInput();
-            double numberGiven = test.ValidationTestWeightnumber();
+            double numberGiven = test.ValidationTestVolumenumber();
             double high = 500.0;
             double low = 0.0;
             Assert.True(numberGiven <= high);
