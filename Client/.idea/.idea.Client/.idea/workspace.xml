@@ -26,7 +26,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba08afe5-fc62-476b-9e95-4756abe499d8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Server/Server/TCP/HandleMessages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/TCP/HandleMessages.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/SearchWindow2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Client/SearchWindow2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/bin/Debug/Client.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Client/bin/Debug/Client.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/bin/Debug/Client.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Client/bin/Debug/Client.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/obj/Debug/Client.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Client/obj/Debug/Client.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/obj/Debug/Client.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Client/obj/Debug/Client.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestArea/InputTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestArea/InputTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestArea/obj/Debug/netcoreapp3.1/TestArea.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestArea/obj/Debug/netcoreapp3.1/TestArea.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestArea/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/TestArea/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Server/bin/Debug/netcoreapp3.1/Server.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/bin/Debug/netcoreapp3.1/Server.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Server/bin/Debug/netcoreapp3.1/Server.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/bin/Debug/netcoreapp3.1/Server.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Server/obj/Debug/netcoreapp3.1/Server.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/obj/Debug/netcoreapp3.1/Server.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Server/obj/Debug/netcoreapp3.1/Server.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/obj/Debug/netcoreapp3.1/Server.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +63,7 @@
         <option value="$PROJECT_DIR$/Client/EmployeeEditer.cs" />
         <option value="$PROJECT_DIR$/Client/EmployeesWindow.cs" />
         <option value="$PROJECT_DIR$/Client/CreatePicklistWindow.cs" />
+        <option value="$PROJECT_DIR$/Client/SearchWindow2.cs" />
       </list>
     </option>
   </component>
@@ -63,6 +76,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -102,6 +116,7 @@
       <workItem from="1606735582832" duration="5462000" />
       <workItem from="1606989832774" duration="1315000" />
       <workItem from="1607071479544" duration="2809000" />
+      <workItem from="1607325324385" duration="1347000" />
     </task>
     <servers />
   </component>
@@ -123,25 +138,26 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="600" height="297" key="GridCell.Tab.0.bottom" timestamp="1607073996426">
+    <state width="600" height="304" key="GridCell.Tab.0.bottom" timestamp="1607325846170">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="600" height="297" key="GridCell.Tab.0.bottom/-1080.0.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1607073996426" />
-    <state width="600" height="297" key="GridCell.Tab.0.center" timestamp="1607073996426">
+    <state width="600" height="304" key="GridCell.Tab.0.bottom/-1080.0.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1607325846170" />
+    <state width="600" height="304" key="GridCell.Tab.0.center" timestamp="1607325846170">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="600" height="297" key="GridCell.Tab.0.center/-1080.0.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1607073996426" />
-    <state width="600" height="297" key="GridCell.Tab.0.left" timestamp="1607073996425">
+    <state width="600" height="304" key="GridCell.Tab.0.center/-1080.0.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1607325846170" />
+    <state width="600" height="304" key="GridCell.Tab.0.left" timestamp="1607325846170">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="600" height="297" key="GridCell.Tab.0.left/-1080.0.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1607073996425" />
-    <state width="600" height="297" key="GridCell.Tab.0.right" timestamp="1607073996426">
+    <state width="600" height="304" key="GridCell.Tab.0.left/-1080.0.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1607325846170" />
+    <state width="600" height="304" key="GridCell.Tab.0.right" timestamp="1607325846170">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="600" height="297" key="GridCell.Tab.0.right/-1080.0.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1607073996426" />
+    <state width="600" height="304" key="GridCell.Tab.0.right/-1080.0.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1607325846170" />
     <state x="522" y="307" key="RollbackChangesDialog" timestamp="1606728207015">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
