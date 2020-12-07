@@ -100,41 +100,6 @@ namespace Server.SQL
             return "ERROR: Couldn't add product to Database";
         }
 
-        public string RemoveProductFromDB(int id, string number, string total)
-        {
-            try
-            {
-                using var con = new MySqlConnection(SqlLogin);
-                con.Open();
-                string query = "SELECT * FROM products WHERE colli_id = " + id + " AND colli_number = " + number + " AND colli_total = " + total + ";";
-                using var command = new MySqlCommand(query, con);
-                int dbId = 0; 
-                string dbNumber = "", dbTotal = "";
-                using MySqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    dbId = reader.GetInt32(1);
-                    dbNumber = reader.GetString(2);
-                    dbTotal = reader.GetString(3);
-                }
-
-                reader.Close();
-
-                if (dbId == 0 && dbNumber == "" && dbTotal == "")
-                    return "Product doesn't exists in the database.";
-                
-                query = "DELETE FROM products WHERE colli_id = " + id + " AND colli_number = " + number + " AND colli_total = " + total + ";";
-                using var cmd = new MySqlCommand(query, con);
-                cmd.ExecuteNonQuery();
-                con.Close();
-                return "Removed Product";
-            }
-            catch (Exception e)
-            {
-                return "ERROR OCCURED";
-            }
-        }
-
         public string GetAllProducts()
         {
             string allProducts = "";

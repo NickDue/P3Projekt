@@ -27,18 +27,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ba08afe5-fc62-476b-9e95-4756abe499d8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/SearchWindow2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Client/SearchWindow2.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/bin/Debug/Client.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Client/bin/Debug/Client.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/bin/Debug/Client.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Client/bin/Debug/Client.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/obj/Debug/Client.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Client/obj/Debug/Client.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/obj/Debug/Client.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Client/obj/Debug/Client.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestArea/InputTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestArea/InputTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestArea/obj/Debug/netcoreapp3.1/TestArea.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestArea/obj/Debug/netcoreapp3.1/TestArea.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestArea/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/TestArea/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server/bin/Debug/netcoreapp3.1/Server.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/bin/Debug/netcoreapp3.1/Server.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server/bin/Debug/netcoreapp3.1/Server.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/bin/Debug/netcoreapp3.1/Server.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server/obj/Debug/netcoreapp3.1/Server.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/obj/Debug/netcoreapp3.1/Server.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server/obj/Debug/netcoreapp3.1/Server.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/obj/Debug/netcoreapp3.1/Server.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Server/SQL/EmployeeHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/SQL/EmployeeHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Server/SQL/ProductHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/SQL/ProductHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Server/TCP/HandleMessages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/TCP/HandleMessages.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +38,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/meerq/OneDrive/Skrivebord/P3Projekt/Client/Client/CreatePicklistWindow.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -62,8 +56,8 @@
         <option value="$PROJECT_DIR$/Client/LogsPage.cs" />
         <option value="$PROJECT_DIR$/Client/EmployeeEditer.cs" />
         <option value="$PROJECT_DIR$/Client/EmployeesWindow.cs" />
-        <option value="$PROJECT_DIR$/Client/CreatePicklistWindow.cs" />
         <option value="$PROJECT_DIR$/Client/SearchWindow2.cs" />
+        <option value="$PROJECT_DIR$/Client/CreatePicklistWindow.cs" />
       </list>
     </option>
   </component>
@@ -142,6 +136,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="100" y="100" width="1023" height="1200" key="DiffContextDialog" timestamp="1607327666274">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="100" y="100" width="1023" height="1200" key="DiffContextDialog/-1080.0.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1607327666274" />
     <state width="600" height="304" key="GridCell.Tab.0.bottom" timestamp="1607325846170">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -166,10 +164,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="251" y="118" width="2065" height="1200" key="VCS.FileHistoryDialog/-1080.0.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1606999582134" />
-    <state x="319" y="420" width="642" height="566" key="find.popup" timestamp="1606835013200">
+    <state x="319" y="420" width="642" height="566" key="find.popup" timestamp="1607327399971">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="319" y="420" width="642" height="566" key="find.popup/-1080.0.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1606835013200" />
+    <state x="319" y="420" width="642" height="566" key="find.popup/-1080.0.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1607327399971" />
     <state x="303" y="320" width="672" height="678" key="search.everywhere.popup" timestamp="1607072418838">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
