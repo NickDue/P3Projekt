@@ -158,6 +158,22 @@ namespace Server.SQL
             con.Close();
             return "Edited a product.";
         }
+
+        public string GetRelatedProducts(string id)
+        {
+            string products = "";
+            using var con = new MySqlConnection(SqlLogin);
+            con.Open();
+            string query = $"SELECT * FROM products WHERE colli_id = {id}";
+            using var command = new MySqlCommand(query, con);
+            using MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                products +=
+                    $"{reader.GetString(1)}!{reader.GetString(2)}!{reader.GetString(3)}!{reader.GetString(9)}\n";
+            }
+            return products;
+        }
         
     }
 }

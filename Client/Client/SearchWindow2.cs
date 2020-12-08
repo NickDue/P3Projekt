@@ -21,7 +21,7 @@ namespace Client
         {
             InitializeComponent();
             AddSampleProduct();
-            AddLocationsToDataGrid(ProductGridView, "HAL0 - HYLDE 33");
+            //AddLocationsToDataGrid(ProductGridView, "HAL0 - HYLDE 33");
         }
 
         private void AddSampleProduct()
@@ -63,12 +63,7 @@ namespace Client
         {
             ToggleTextBoxEditMode(ProductPanel, LocationProductPanel);
 
-            if (editMode)
-            {
-                // do nothing
-            }
-
-            else
+            if (!editMode)
             {
                 ConfirmChoiceUser();
             }
@@ -273,6 +268,7 @@ namespace Client
             string info = client.Connect(input);
             if (!info.StartsWith("ERROR"))
             {
+                ProductGridView.Rows.Clear();
                 string[] splittedOutput = info.Split('!');
                 string[] splittedId = splittedOutput[0].Split('-');
                 ProductNumberBox.Text = splittedId[0];
@@ -283,10 +279,31 @@ namespace Client
                 LocationBox.Text = splittedOutput[6];
                 AmountBox.Text = splittedOutput[7];
                 LocationColliBox.Text = Int32.Parse(splittedId[1]) + "/" + Int32.Parse(splittedId[2]);
+                GetRelatedProducts(splittedInput[0],splittedInput[1],splittedInput[2]);
             }
             else
             {
                 MessageBox.Show("Product Not Found", "error");
+            }
+        }
+
+        private void GetRelatedProducts(string product_id, string colli, string total)
+        {
+            string query = $"related ! {product_id}";
+            TCPClient client = new TCPClient();
+            string info = client.Connect(query);
+            string[] splittedProducts = info.Split('\n');
+            for (int i = 0; i < splittedProducts.Length-1; i++)
+            {
+                if (!string.IsNullOrEmpty(splittedProducts[i]))
+                {
+                    string[] splittedId = splittedProducts[i].Split('!');
+                    if (splittedId[1] != colli && splittedId[2] != total)
+                    {
+                        string product = $"{splittedId[1]}/{splittedId[2]} - Id: {splittedId[0]} - Location: {splittedId[3]}";
+                        AddLocationsToDataGrid(ProductGridView, product);
+                    } 
+                }
             }
         }
 

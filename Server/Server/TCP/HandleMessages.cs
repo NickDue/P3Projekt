@@ -30,6 +30,11 @@ namespace Server.TCP
                 logsHandler.WriteToLog("null", "null", "null", input[1], "Viewed all products!");
 
             }
+            else if (clientInput.StartsWith("related"))
+            {
+                ProductHandler pHandler = new ProductHandler();
+                output = pHandler.GetRelatedProducts(input[1]);
+            }
             else if (input[0].StartsWith("add product"))
             {
                 ProductHandler pHandler = new ProductHandler();
