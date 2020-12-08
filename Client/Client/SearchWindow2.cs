@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using Client.TCP;
+using System.Collections;
 
 namespace Client
 {
@@ -20,6 +21,7 @@ namespace Client
         {
             InitializeComponent();
             AddSampleProduct();
+            AddLocationsToDataGrid(ProductGridView, "HAL0 - HYLDE 33");
         }
 
         private void AddSampleProduct()
@@ -72,20 +74,6 @@ namespace Client
             }
         }
 
-        private void AddAllInformation()
-        {
-            EditedValues.Add($"colli_id = {ProductNumberBox.Text}");
-            EditedValues.Add($"amount = {AmountBox.Text}");
-            EditedValues.Add($"weight = {WeightBox.Text}");
-            EditedValues.Add($"volume = {VolumeBox.Text}");
-            EditedValues.Add($"name = {ProductNameBox.Text}");
-            EditedValues.Add($"color = {ColorBox.Text}");
-            string[] colliSplitted = LocationColliBox.Text.Split('/');
-            EditedValues.Add($"colli_number = {colliSplitted[0]}");
-            EditedValues.Add($"colli_total = {colliSplitted[1]}");
-            EditedValues.Add($"placement = {LocationBox.Text}");
-        }
-
         private void ConfirmChoiceUser()
         {
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to edit this product?", "Confirm", MessageBoxButtons.YesNo);
@@ -113,7 +101,19 @@ namespace Client
             }
         }
 
-
+        private void AddAllInformation()
+        {
+            EditedValues.Add($"colli_id = {ProductNumberBox.Text}");
+            EditedValues.Add($"amount = {AmountBox.Text}");
+            EditedValues.Add($"weight = {WeightBox.Text}");
+            EditedValues.Add($"volume = {VolumeBox.Text}");
+            EditedValues.Add($"name = {ProductNameBox.Text}");
+            EditedValues.Add($"color = {ColorBox.Text}");
+            string[] colliSplitted = LocationColliBox.Text.Split('/');
+            EditedValues.Add($"colli_number = {colliSplitted[0]}");
+            EditedValues.Add($"colli_total = {colliSplitted[1]}");
+            EditedValues.Add($"placement = {LocationBox.Text}");
+        }
 
         // Toggles Editmode for TextBoxes
         private void ToggleTextBoxEditMode(Control control1, Control control2)
@@ -312,5 +312,15 @@ namespace Client
                 MessageBox.Show("Failure");
             }
         }
+
+        private void AddLocationsToDataGrid(DataGridView Grid, string location)
+        {
+            ArrayList row = new ArrayList();
+
+            row.Add(location);
+
+            Grid.Rows.Add(row.ToArray());
+        }
+
     }
 }
