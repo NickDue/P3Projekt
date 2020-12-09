@@ -20,29 +20,8 @@ namespace Client
         public SearchWindow2()
         {
             InitializeComponent();
-            AddSampleProduct();
+            //AddSampleProduct();
             //AddLocationsToDataGrid(ProductGridView, "HAL0 - HYLDE 33");
-        }
-
-        private void AddSampleProduct()
-        {
-            Product p = new Product();
-
-            p.ProductID = 12345;
-            p.ProductName = "Cool Chair";
-            p.Volume = 11.2;
-            p.Color = "Navy";
-            p.Weight = 10.5;
-            p.Amount = 5;
-            p.Location = "HAL1";
-
-            ProductNumberBox.Text = p.ProductID.ToString();
-            ProductNameBox.Text = p.ProductName;
-            VolumeBox.Text = p.Volume.ToString();
-            ColorBox.Text = p.Color;
-            WeightBox.Text = p.Weight.ToString();
-            AmountBox.Text = p.Amount.ToString();
-            LocationBox.Text = p.Location;
         }
 
         private void SearchButton_Click(object sender, EventArgs e)
@@ -55,6 +34,16 @@ namespace Client
             {
                 GetProductFromServer();
             }
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            CancelEdit();
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            DeleteProduct();
         }
 
         private bool editMode = false;
@@ -154,20 +143,32 @@ namespace Client
             }
         }
 
-        // Clears the current text in TextBoxes
-        private void ClearTextBoxInput(Control control1, Control control2)
+        private void CancelEdit()
         {
             if (editMode)
             {
-                foreach (TextBox tb in control1.Controls.OfType<TextBox>())
-                {
-                    tb.Text = string.Empty;
-                }
-                foreach (TextBox tb in control2.Controls.OfType<TextBox>())
-                {
-                    tb.Text = string.Empty;
-                }
+                ToggleTextBoxEditMode(ProductPanel, LocationProductPanel);
+                ClearTextBoxInput(ProductPanel, LocationProductPanel);
             }
+
+            else
+            {
+                ClearTextBoxInput(ProductPanel, LocationProductPanel);
+            }
+        }
+
+        // Clears the current text in TextBoxes
+        private void ClearTextBoxInput(Control control1, Control control2)
+        { 
+            foreach (TextBox tb in control1.Controls.OfType<TextBox>())
+            {
+                tb.Text = string.Empty;
+            }
+
+            foreach (TextBox tb in control2.Controls.OfType<TextBox>())
+            {
+                tb.Text = string.Empty;
+            } 
         }
 
         // Checks for null or empty input and returns a bool
@@ -330,6 +331,11 @@ namespace Client
             }
         }
 
+        private void DeleteProduct()
+        {
+            // deletes product from database
+        }
+
         private void AddLocationsToDataGrid(DataGridView Grid, string location)
         {
             ArrayList row = new ArrayList();
@@ -338,6 +344,38 @@ namespace Client
 
             Grid.Rows.Add(row.ToArray());
         }
+
+        private void AddSampleProduct()
+        {
+            Product p = new Product();
+
+            p.ProductID = 12345;
+            p.ProductName = "Cool Chair";
+            p.Volume = 11.2;
+            p.Color = "Navy";
+            p.Weight = 10.5;
+            p.Amount = 5;
+            p.Location = "HAL1";
+
+            ProductNumberBox.Text = p.ProductID.ToString();
+            ProductNameBox.Text = p.ProductName;
+            VolumeBox.Text = p.Volume.ToString();
+            ColorBox.Text = p.Color;
+            WeightBox.Text = p.Weight.ToString();
+            AmountBox.Text = p.Amount.ToString();
+            LocationBox.Text = p.Location;
+        }
+
+        private void beepButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("beep");
+        }
+
+        private void boopButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("boop");
+        }
+
 
     }
 }
