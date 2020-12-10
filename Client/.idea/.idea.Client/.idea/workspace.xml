@@ -32,6 +32,7 @@
       <change beforePath="$PROJECT_DIR$/Client/bin/Debug/Client.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Client/bin/Debug/Client.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/obj/Debug/Client.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Client/obj/Debug/Client.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/obj/Debug/Client.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Client/obj/Debug/Client.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestArea/obj/Debug/netcoreapp3.1/TestArea.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestArea/obj/Debug/netcoreapp3.1/TestArea.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/Server/SQL/ProductHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/SQL/ProductHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/Server/TCP/HandleMessages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/TCP/HandleMessages.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/Server/bin/Debug/netcoreapp3.1/Server.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/bin/Debug/netcoreapp3.1/Server.dll" afterDir="false" />
@@ -117,6 +118,7 @@
       <workItem from="1607071479544" duration="2809000" />
       <workItem from="1607325324385" duration="1347000" />
       <workItem from="1607421751299" duration="1611000" />
+      <workItem from="1607602681422" duration="661000" />
     </task>
     <servers />
   </component>
