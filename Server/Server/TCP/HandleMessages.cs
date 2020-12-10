@@ -28,7 +28,12 @@ namespace Server.TCP
                 ProductHandler pHandler = new ProductHandler();
                 output = pHandler.GetAllProducts();
                 logsHandler.WriteToLog("null", "null", "null", input[1], "Viewed all products!");
-
+            }
+            else if (clientInput.StartsWith("delete product"))
+            {
+                ProductHandler pHandler = new ProductHandler();
+                output = pHandler.DeleteProduct(input[1], input[2], input[3]);
+                logsHandler.WriteToLog("input[1]", "input[2]", "input[3]", input[4], "Deleted a product");
             }
             else if (clientInput.StartsWith("related"))
             {

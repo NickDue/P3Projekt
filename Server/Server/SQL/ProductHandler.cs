@@ -174,6 +174,16 @@ namespace Server.SQL
             }
             return products;
         }
+        public string DeleteProduct(string id, string colli, string total)
+        {
+            using var con = new MySqlConnection(SqlLogin);
+            con.Open();
+            string query = $"DELETE FROM products where colli_id = {id} AND colli_number = {colli} AND colli_total = {total}";
+            using var cmd = new MySqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            return $"Delete the product with id {id}-{colli}-{total}";
+        }
         
     }
 }

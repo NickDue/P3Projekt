@@ -333,7 +333,15 @@ namespace Client
 
         private void DeleteProduct()
         {
-            // deletes product from database
+            string[] splittedInput = SearchInputBox.Text.Split('-');
+            if (splittedInput.Length != 3)
+                return;
+            string input = $"delete product ! {splittedInput[0]} ! {splittedInput[1]} ! {splittedInput[2]} ! {UserCredentials.WorkerId}";
+            TCPClient client = new TCPClient();
+            string info = client.Connect(input);
+            MessageBox.Show(info);
+            ClearTextBoxInput(ProductPanel, LocationProductPanel);
+            SearchInputBox.Text = String.Empty;
         }
 
         private void AddLocationsToDataGrid(DataGridView Grid, string location)
