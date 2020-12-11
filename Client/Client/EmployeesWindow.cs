@@ -98,20 +98,10 @@ namespace Client
 
         private void AddEmployee(string employeeName, int workerID, string role, string lastlog, Image pic)
         {
-            ListItem employee = new ListItem(employeeName, workerID, role, lastlog, pic);
+            ListItem employee = new ListItem(employeeName, workerID, role, lastlog);
             employee.WasClicked += ListItem_WasClicked;
             ItemList.Add(employee);
             EmployeeFlowPanel.Controls.Add(employee);
-        }
-
-        private void RemoveEmployee()
-        {
-            ListItem item = GetSelected(ItemList);
-            if(item != null)
-            {
-                EmployeeFlowPanel.Controls.Remove(item);
-                ItemList.Remove(item);
-            }
         }
 
         private ListItem GetSelected(List<ListItem> list)
@@ -128,7 +118,11 @@ namespace Client
 
         private void RemoveButton_Click(object sender, EventArgs e)
         {
-            RemoveEmployeeFromDatabase();
+            var result = MessageBox.Show("Are you sure you wish to remove this employee?", "Remove Employee", MessageBoxButtons.YesNo);
+            if(result == DialogResult.Yes)
+            {
+                RemoveEmployeeFromDatabase();
+            }
         }
 
         private void RemoveEmployeeFromDatabase()

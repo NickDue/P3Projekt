@@ -14,7 +14,7 @@ namespace Server.TCP
             {
                 ProductHandler pHandler = new ProductHandler();
                 output = pHandler.ProductById(Int32.Parse(input[1]), input[2], input[3]);
-                logsHandler.WriteToLog(input[1], input[2], input[3], input[4], "Searched for a product");
+                //logsHandler.WriteToLog(input[1], input[2], input[3], input[4], "Searched for a product");
             }
             else if (clientInput.StartsWith("edit product"))
             {
@@ -27,7 +27,7 @@ namespace Server.TCP
             {
                 ProductHandler pHandler = new ProductHandler();
                 output = pHandler.GetAllProducts();
-                logsHandler.WriteToLog("null", "null", "null", input[1], "Viewed all products!");
+                //logsHandler.WriteToLog("null", "null", "null", input[1], "Viewed all products!");
             }
             else if (clientInput.StartsWith("delete product"))
             {
@@ -80,19 +80,13 @@ namespace Server.TCP
             }
             else if (input[0].StartsWith("get employees"))
             {
-                //TODO: TILFØJ LOG
                 EmployeeHandler eHandler = new EmployeeHandler();
                 output = eHandler.GetAllEmployees();
             }
             else if (input[0].StartsWith("get logs"))
             {
                 output = logsHandler.GetAllLogs();
-                logsHandler.WriteToLog("null","null","null", input[1], "Viewed all logs!");
-            }
-            else if (input[0].StartsWith("get logs"))
-            {
-                output = "sucess";
-                logsHandler.WriteToLog("null","null","null", input[1], "Generated a picklist!");
+                //logsHandler.WriteToLog("null","null","null", input[1], "Viewed all logs!");
             }
             else
             {

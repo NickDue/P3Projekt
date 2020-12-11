@@ -47,18 +47,6 @@ namespace Client
             private set { _role = value;}
         }
 
-        private Image profilePicture1;
-
-        public Image GetProfilePicture()
-        {
-            return profilePicture1;
-        }
-
-        private void SetProfilePicture(Image value)
-        {
-            profilePicture1 = value;
-        }
-
         #endregion
 
         public EmployeeEditer(string method)
@@ -76,7 +64,6 @@ namespace Client
             EmployeeName = item.EmployeeName;
             Method = method;
             SetRole(item.Role);
-            SetProfilePicture(item.Picture);
         }
 
         private void SetRole(string role)
@@ -235,7 +222,7 @@ namespace Client
 
         private ListItem CreateEmployee()
         {
-            ListItem employee = new ListItem(nameTextbox.Text, int.Parse(workerIDTextbox.Text), GetRole(), "NONE", Resources._912214);
+            ListItem employee = new ListItem(nameTextbox.Text, int.Parse(workerIDTextbox.Text), GetRole(), "NONE");
             return employee;
         }
 

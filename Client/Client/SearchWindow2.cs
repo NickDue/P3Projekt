@@ -225,7 +225,7 @@ namespace Client
                 else
                 {
                     canCovert = decimal.TryParse(tb.Text, out _);
-                    if (canCovert)
+                    if (canCovert && !tb.Text.Contains(","))
                     {
                         if (tb == AmountBox)
                         {

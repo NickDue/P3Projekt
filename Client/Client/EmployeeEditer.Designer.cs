@@ -33,7 +33,6 @@ namespace Client
             this.titleLabel = new System.Windows.Forms.Label();
             this.closeButton = new FontAwesome.Sharp.IconButton();
             this.contentPanel = new System.Windows.Forms.Panel();
-            this.placeholderLabel = new System.Windows.Forms.Label();
             this.officeRButton = new System.Windows.Forms.RadioButton();
             this.floorRButton = new System.Windows.Forms.RadioButton();
             this.roleLabel = new System.Windows.Forms.Label();
@@ -43,21 +42,17 @@ namespace Client
             this.confirmPasswordTextbox = new System.Windows.Forms.TextBox();
             this.passwordTextbox = new System.Windows.Forms.TextBox();
             this.nameTextbox = new System.Windows.Forms.TextBox();
-            this.importLabel = new System.Windows.Forms.Label();
             this.cancelButton = new System.Windows.Forms.Button();
             this.confirmButton = new System.Windows.Forms.Button();
-            this.importButton = new System.Windows.Forms.Button();
             this.workerIDTextbox = new System.Windows.Forms.TextBox();
             this.workerIDLabel = new System.Windows.Forms.Label();
-            this.profilePicture = new System.Windows.Forms.PictureBox();
             this.titlebarPanel.SuspendLayout();
             this.contentPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.profilePicture)).BeginInit();
             this.SuspendLayout();
             // 
             // titlebarPanel
             // 
-            this.titlebarPanel.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (153)))), ((int) (((byte) (153)))), ((int) (((byte) (153)))));
+            this.titlebarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
             this.titlebarPanel.Controls.Add(this.titleLabel);
             this.titlebarPanel.Controls.Add(this.closeButton);
             this.titlebarPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -71,7 +66,7 @@ namespace Client
             // 
             this.titleLabel.AutoSize = true;
             this.titleLabel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLabel.Location = new System.Drawing.Point(0, 0);
             this.titleLabel.Name = "titleLabel";
             this.titleLabel.Size = new System.Drawing.Size(192, 29);
@@ -99,7 +94,6 @@ namespace Client
             // 
             // contentPanel
             // 
-            this.contentPanel.Controls.Add(this.placeholderLabel);
             this.contentPanel.Controls.Add(this.officeRButton);
             this.contentPanel.Controls.Add(this.floorRButton);
             this.contentPanel.Controls.Add(this.roleLabel);
@@ -109,35 +103,21 @@ namespace Client
             this.contentPanel.Controls.Add(this.confirmPasswordTextbox);
             this.contentPanel.Controls.Add(this.passwordTextbox);
             this.contentPanel.Controls.Add(this.nameTextbox);
-            this.contentPanel.Controls.Add(this.importLabel);
             this.contentPanel.Controls.Add(this.cancelButton);
             this.contentPanel.Controls.Add(this.confirmButton);
-            this.contentPanel.Controls.Add(this.importButton);
             this.contentPanel.Controls.Add(this.workerIDTextbox);
             this.contentPanel.Controls.Add(this.workerIDLabel);
-            this.contentPanel.Controls.Add(this.profilePicture);
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(0, 28);
             this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(484, 583);
+            this.contentPanel.Size = new System.Drawing.Size(484, 483);
             this.contentPanel.TabIndex = 1;
-            // 
-            // placeholderLabel
-            // 
-            this.placeholderLabel.AutoSize = true;
-            this.placeholderLabel.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (153)))), ((int) (((byte) (153)))), ((int) (((byte) (153)))));
-            this.placeholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.placeholderLabel.Location = new System.Drawing.Point(77, 123);
-            this.placeholderLabel.Name = "placeholderLabel";
-            this.placeholderLabel.Size = new System.Drawing.Size(168, 25);
-            this.placeholderLabel.TabIndex = 8;
-            this.placeholderLabel.Text = "PLACEHOLDER";
             // 
             // officeRButton
             // 
             this.officeRButton.AutoSize = true;
-            this.officeRButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.officeRButton.Location = new System.Drawing.Point(268, 461);
+            this.officeRButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.officeRButton.Location = new System.Drawing.Point(274, 307);
             this.officeRButton.Name = "officeRButton";
             this.officeRButton.Size = new System.Drawing.Size(86, 29);
             this.officeRButton.TabIndex = 5;
@@ -148,8 +128,8 @@ namespace Client
             // floorRButton
             // 
             this.floorRButton.AutoSize = true;
-            this.floorRButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.floorRButton.Location = new System.Drawing.Point(147, 461);
+            this.floorRButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.floorRButton.Location = new System.Drawing.Point(153, 307);
             this.floorRButton.Name = "floorRButton";
             this.floorRButton.Size = new System.Drawing.Size(79, 29);
             this.floorRButton.TabIndex = 4;
@@ -160,8 +140,8 @@ namespace Client
             // roleLabel
             // 
             this.roleLabel.AutoSize = true;
-            this.roleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.roleLabel.Location = new System.Drawing.Point(61, 467);
+            this.roleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roleLabel.Location = new System.Drawing.Point(67, 313);
             this.roleLabel.Name = "roleLabel";
             this.roleLabel.Size = new System.Drawing.Size(56, 25);
             this.roleLabel.TabIndex = 6;
@@ -170,8 +150,8 @@ namespace Client
             // confirmPasswordLabel
             // 
             this.confirmPasswordLabel.AutoSize = true;
-            this.confirmPasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.confirmPasswordLabel.Location = new System.Drawing.Point(61, 395);
+            this.confirmPasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmPasswordLabel.Location = new System.Drawing.Point(67, 241);
             this.confirmPasswordLabel.Name = "confirmPasswordLabel";
             this.confirmPasswordLabel.Size = new System.Drawing.Size(184, 25);
             this.confirmPasswordLabel.TabIndex = 6;
@@ -180,8 +160,8 @@ namespace Client
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.passwordLabel.Location = new System.Drawing.Point(61, 323);
+            this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordLabel.Location = new System.Drawing.Point(67, 169);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(106, 25);
             this.passwordLabel.TabIndex = 6;
@@ -190,8 +170,8 @@ namespace Client
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.nameLabel.Location = new System.Drawing.Point(61, 251);
+            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel.Location = new System.Drawing.Point(67, 97);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(68, 25);
             this.nameLabel.TabIndex = 6;
@@ -199,8 +179,8 @@ namespace Client
             // 
             // confirmPasswordTextbox
             // 
-            this.confirmPasswordTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.confirmPasswordTextbox.Location = new System.Drawing.Point(66, 423);
+            this.confirmPasswordTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmPasswordTextbox.Location = new System.Drawing.Point(72, 269);
             this.confirmPasswordTextbox.Name = "confirmPasswordTextbox";
             this.confirmPasswordTextbox.PasswordChar = '*';
             this.confirmPasswordTextbox.Size = new System.Drawing.Size(341, 31);
@@ -209,8 +189,8 @@ namespace Client
             // 
             // passwordTextbox
             // 
-            this.passwordTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.passwordTextbox.Location = new System.Drawing.Point(66, 351);
+            this.passwordTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordTextbox.Location = new System.Drawing.Point(72, 197);
             this.passwordTextbox.Name = "passwordTextbox";
             this.passwordTextbox.PasswordChar = '*';
             this.passwordTextbox.Size = new System.Drawing.Size(341, 31);
@@ -219,28 +199,18 @@ namespace Client
             // 
             // nameTextbox
             // 
-            this.nameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.nameTextbox.Location = new System.Drawing.Point(66, 279);
+            this.nameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameTextbox.Location = new System.Drawing.Point(72, 125);
             this.nameTextbox.Name = "nameTextbox";
             this.nameTextbox.Size = new System.Drawing.Size(341, 31);
             this.nameTextbox.TabIndex = 1;
             this.nameTextbox.Tag = "Name";
             // 
-            // importLabel
-            // 
-            this.importLabel.AutoSize = true;
-            this.importLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.importLabel.Location = new System.Drawing.Point(318, 161);
-            this.importLabel.Name = "importLabel";
-            this.importLabel.Size = new System.Drawing.Size(85, 25);
-            this.importLabel.TabIndex = 4;
-            this.importLabel.Text = "Picture:";
-            // 
             // cancelButton
             // 
             this.cancelButton.AutoSize = true;
-            this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.cancelButton.Location = new System.Drawing.Point(268, 536);
+            this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelButton.Location = new System.Drawing.Point(274, 382);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(89, 35);
             this.cancelButton.TabIndex = 5;
@@ -251,8 +221,8 @@ namespace Client
             // confirmButton
             // 
             this.confirmButton.AutoSize = true;
-            this.confirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.confirmButton.Location = new System.Drawing.Point(147, 536);
+            this.confirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmButton.Location = new System.Drawing.Point(153, 382);
             this.confirmButton.Name = "confirmButton";
             this.confirmButton.Size = new System.Drawing.Size(96, 35);
             this.confirmButton.TabIndex = 4;
@@ -260,22 +230,10 @@ namespace Client
             this.confirmButton.UseVisualStyleBackColor = true;
             this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
             // 
-            // importButton
-            // 
-            this.importButton.AutoSize = true;
-            this.importButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.importButton.Location = new System.Drawing.Point(323, 189);
-            this.importButton.Name = "importButton";
-            this.importButton.Size = new System.Drawing.Size(81, 35);
-            this.importButton.TabIndex = 3;
-            this.importButton.TabStop = false;
-            this.importButton.Text = "Import";
-            this.importButton.UseVisualStyleBackColor = true;
-            // 
             // workerIDTextbox
             // 
-            this.workerIDTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.workerIDTextbox.Location = new System.Drawing.Point(323, 88);
+            this.workerIDTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.workerIDTextbox.Location = new System.Drawing.Point(72, 60);
             this.workerIDTextbox.Name = "workerIDTextbox";
             this.workerIDTextbox.Size = new System.Drawing.Size(75, 31);
             this.workerIDTextbox.TabIndex = 2;
@@ -284,28 +242,19 @@ namespace Client
             // workerIDLabel
             // 
             this.workerIDLabel.AutoSize = true;
-            this.workerIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.workerIDLabel.Location = new System.Drawing.Point(318, 60);
+            this.workerIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.workerIDLabel.Location = new System.Drawing.Point(67, 32);
             this.workerIDLabel.Name = "workerIDLabel";
             this.workerIDLabel.Size = new System.Drawing.Size(125, 25);
             this.workerIDLabel.TabIndex = 1;
             this.workerIDLabel.Text = "Worker ID#:";
             // 
-            // profilePicture
-            // 
-            this.profilePicture.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (153)))), ((int) (((byte) (153)))), ((int) (((byte) (153)))));
-            this.profilePicture.Location = new System.Drawing.Point(75, 36);
-            this.profilePicture.Name = "profilePicture";
-            this.profilePicture.Size = new System.Drawing.Size(184, 200);
-            this.profilePicture.TabIndex = 0;
-            this.profilePicture.TabStop = false;
-            // 
             // EmployeeEditer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (241)))), ((int) (((byte) (241)))), ((int) (((byte) (241)))));
-            this.ClientSize = new System.Drawing.Size(484, 611);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.ClientSize = new System.Drawing.Size(484, 511);
             this.Controls.Add(this.contentPanel);
             this.Controls.Add(this.titlebarPanel);
             this.Name = "EmployeeEditer";
@@ -316,8 +265,8 @@ namespace Client
             this.titlebarPanel.PerformLayout();
             this.contentPanel.ResumeLayout(false);
             this.contentPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.profilePicture)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -326,11 +275,8 @@ namespace Client
         private FontAwesome.Sharp.IconButton closeButton;
         private System.Windows.Forms.Panel contentPanel;
         private System.Windows.Forms.Label titleLabel;
-        private System.Windows.Forms.PictureBox profilePicture;
         private System.Windows.Forms.Label workerIDLabel;
         private System.Windows.Forms.TextBox workerIDTextbox;
-        private System.Windows.Forms.Label importLabel;
-        private System.Windows.Forms.Button importButton;
         private System.Windows.Forms.TextBox confirmPasswordTextbox;
         private System.Windows.Forms.TextBox passwordTextbox;
         private System.Windows.Forms.TextBox nameTextbox;
@@ -342,6 +288,5 @@ namespace Client
         private System.Windows.Forms.RadioButton officeRButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button confirmButton;
-        private System.Windows.Forms.Label placeholderLabel;
     }
 }

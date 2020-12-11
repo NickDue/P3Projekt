@@ -29,18 +29,16 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.headerPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.workerIDLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.employeeNameLabel = new System.Windows.Forms.Label();
-            this.employeeRoleLabel = new System.Windows.Forms.Label();
             this.employeeLastLogLabel = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.employeeRoleLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.employeeNameLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.headerPanel = new System.Windows.Forms.Panel();
+            this.workerIDLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.headerPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,59 +58,14 @@
             this.panel1.Size = new System.Drawing.Size(310, 390);
             this.panel1.TabIndex = 0;
             // 
-            // headerPanel
+            // employeeLastLogLabel
             // 
-            this.headerPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.headerPanel.Controls.Add(this.pictureBox1);
-            this.headerPanel.Controls.Add(this.workerIDLabel);
-            this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.headerPanel.Location = new System.Drawing.Point(0, 0);
-            this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(310, 233);
-            this.headerPanel.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(82, 55);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(153, 166);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // workerIDLabel
-            // 
-            this.workerIDLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.workerIDLabel.AutoSize = true;
-            this.workerIDLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.workerIDLabel.Location = new System.Drawing.Point(148, 18);
-            this.workerIDLabel.Name = "workerIDLabel";
-            this.workerIDLabel.Size = new System.Drawing.Size(20, 25);
-            this.workerIDLabel.TabIndex = 0;
-            this.workerIDLabel.Text = "#";
-            this.workerIDLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 245);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Name:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(19, 293);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Role:";
+            this.employeeLastLogLabel.AutoSize = true;
+            this.employeeLastLogLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeLastLogLabel.Location = new System.Drawing.Point(93, 346);
+            this.employeeLastLogLabel.Name = "employeeLastLogLabel";
+            this.employeeLastLogLabel.Size = new System.Drawing.Size(0, 25);
+            this.employeeLastLogLabel.TabIndex = 1;
             // 
             // label3
             // 
@@ -124,15 +77,6 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Last log:";
             // 
-            // employeeNameLabel
-            // 
-            this.employeeNameLabel.AutoSize = true;
-            this.employeeNameLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeeNameLabel.Location = new System.Drawing.Point(93, 245);
-            this.employeeNameLabel.Name = "employeeNameLabel";
-            this.employeeNameLabel.Size = new System.Drawing.Size(0, 25);
-            this.employeeNameLabel.TabIndex = 1;
-            // 
             // employeeRoleLabel
             // 
             this.employeeRoleLabel.AutoSize = true;
@@ -142,14 +86,56 @@
             this.employeeRoleLabel.Size = new System.Drawing.Size(0, 25);
             this.employeeRoleLabel.TabIndex = 1;
             // 
-            // employeeLastLogLabel
+            // label2
             // 
-            this.employeeLastLogLabel.AutoSize = true;
-            this.employeeLastLogLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeeLastLogLabel.Location = new System.Drawing.Point(93, 346);
-            this.employeeLastLogLabel.Name = "employeeLastLogLabel";
-            this.employeeLastLogLabel.Size = new System.Drawing.Size(0, 25);
-            this.employeeLastLogLabel.TabIndex = 1;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(19, 293);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 25);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Role:";
+            // 
+            // employeeNameLabel
+            // 
+            this.employeeNameLabel.AutoSize = true;
+            this.employeeNameLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeNameLabel.Location = new System.Drawing.Point(93, 245);
+            this.employeeNameLabel.Name = "employeeNameLabel";
+            this.employeeNameLabel.Size = new System.Drawing.Size(0, 25);
+            this.employeeNameLabel.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(19, 245);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Name:";
+            // 
+            // headerPanel
+            // 
+            this.headerPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.headerPanel.Controls.Add(this.workerIDLabel);
+            this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.headerPanel.Location = new System.Drawing.Point(0, 0);
+            this.headerPanel.Name = "headerPanel";
+            this.headerPanel.Size = new System.Drawing.Size(310, 233);
+            this.headerPanel.TabIndex = 0;
+            // 
+            // workerIDLabel
+            // 
+            this.workerIDLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.workerIDLabel.AutoSize = true;
+            this.workerIDLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.workerIDLabel.Location = new System.Drawing.Point(146, 60);
+            this.workerIDLabel.Name = "workerIDLabel";
+            this.workerIDLabel.Size = new System.Drawing.Size(20, 25);
+            this.workerIDLabel.TabIndex = 0;
+            this.workerIDLabel.Text = "#";
+            this.workerIDLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ListItem
             // 
@@ -167,7 +153,6 @@
             this.panel1.PerformLayout();
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -176,7 +161,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel headerPanel;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label workerIDLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label employeeLastLogLabel;
