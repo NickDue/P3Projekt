@@ -58,6 +58,7 @@ namespace Client
             }
         }
 
+        // Prompts the user for confirmation before editing product
         private void ConfirmChoiceUser()
         {
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to edit this product?", "Confirm", MessageBoxButtons.YesNo);
@@ -143,6 +144,7 @@ namespace Client
             }
         }
 
+        // Cancels Edit Mode and clears textboxes
         private void CancelEdit()
         {
             if (editMode)
@@ -352,38 +354,5 @@ namespace Client
 
             Grid.Rows.Add(row.ToArray());
         }
-
-        private void AddSampleProduct()
-        {
-            Product p = new Product();
-
-            p.ProductID = 12345;
-            p.ProductName = "Cool Chair";
-            p.Volume = 11.2;
-            p.Color = "Navy";
-            p.Weight = 10.5;
-            p.Amount = 5;
-            p.Location = "HAL1";
-
-            ProductNumberBox.Text = p.ProductID.ToString();
-            ProductNameBox.Text = p.ProductName;
-            VolumeBox.Text = p.Volume.ToString();
-            ColorBox.Text = p.Color;
-            WeightBox.Text = p.Weight.ToString();
-            AmountBox.Text = p.Amount.ToString();
-            LocationBox.Text = p.Location;
-        }
-
-        private void beepButton_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("beep");
-        }
-
-        private void boopButton_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("boop");
-        }
-
-
     }
 }
