@@ -24,6 +24,17 @@ namespace Client
 
         private void MyhomeForm_Load(object sender, EventArgs e)
         {
+            if(UserCredentials.WorkerRole == "FLOOR")
+            {
+                foreach(Button button in navBarPanel.Controls.OfType<Button>())
+                {
+                    if(button != navButton1 && button != signOutButton)
+                    {
+                        button.Hide();
+                    }
+                }
+            }
+            userCredentialsLabel.Text = $"{UserCredentials.WorkerId}   |   {UserCredentials.WorkerUsername}   |   {UserCredentials.WorkerRole}";
         }
 
 
