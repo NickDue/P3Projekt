@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\meerq\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\meerq\\.nuget\\packages"
+    ]
+  }
+}
