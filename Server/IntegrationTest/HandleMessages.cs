@@ -5,7 +5,6 @@
         public string HandleInput(string data)
         {
             string output = "ERROR: UNKNOWN COMMAND";
-            string[] command = data.Split(" ! ");
             if (data.StartsWith("get product"))
             {
                 ProductTests pTest = new ProductTests();
