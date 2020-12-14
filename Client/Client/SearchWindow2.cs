@@ -41,11 +41,6 @@ namespace Client
             CancelEdit();
         }
 
-        private void DeleteButton_Click(object sender, EventArgs e)
-        {
-            DeleteProduct();
-        }
-
         private bool editMode = false;
 
         private void EditButton_Click(object sender, EventArgs e)
@@ -108,16 +103,16 @@ namespace Client
             {
                 ToggleTextBoxReadOnly(control1, false);
                 ToggleTextBoxReadOnly(control2, false);
-                EditButton.Text = "Save";
-                EditButton.BackColor = Color.Red;
+                EditButton.Text = "CONFIRM";
+                EditButton.BackColor = Color.DarkGray;
             }
 
             else
             {
                 ToggleTextBoxReadOnly(control1, true);
                 ToggleTextBoxReadOnly(control2, true);
-                EditButton.Text = "Edit";
-                EditButton.BackColor = Color.Green;
+                EditButton.Text = "EDIT";
+                EditButton.BackColor = Color.LightGray;
             }
         }
 

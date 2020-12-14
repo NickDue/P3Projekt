@@ -1,0 +1,4 @@
+C:\Users\jonas\OneDrive\Skrivebord\P3Projekt\Client\TestArea\obj\Debug\netcoreapp3.1\TestArea.csprojAssemblyReference.cache
+C:\Users\jonas\OneDrive\Skrivebord\P3Projekt\Client\TestArea\obj\Debug\netcoreapp3.1\TestArea.AssemblyInfoInputs.cache
+C:\Users\jonas\OneDrive\Skrivebord\P3Projekt\Client\TestArea\obj\Debug\netcoreapp3.1\TestArea.AssemblyInfo.cs
+C:\Users\jonas\OneDrive\Skrivebord\P3Projekt\Client\TestArea\obj\Debug\netcoreapp3.1\TestArea.csproj.CoreCompileInputs.cache
