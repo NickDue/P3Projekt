@@ -79,6 +79,11 @@ namespace Client
         private void PromptForUserEdit()
         {
             ListItem item = GetSelected(ItemList);
+            if (item == null)
+            {
+                MessageBox.Show("You need to choose and employee first");
+                return;
+            }
             EmployeeEditer editor = new EmployeeEditer(item,"edit");
             editor.Show();
             editor.EditorRequestAccepted += EditEmployee;
