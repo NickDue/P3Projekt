@@ -34,6 +34,8 @@ namespace Client
             this.contentPanel = new System.Windows.Forms.Panel();
             this.textboxPanel = new System.Windows.Forms.Panel();
             this.clearButton = new System.Windows.Forms.Button();
+            this.pColliMaxBox = new System.Windows.Forms.TextBox();
+            this.pColliBox = new System.Windows.Forms.TextBox();
             this.pNumberBox = new System.Windows.Forms.TextBox();
             this.pAmountBox = new System.Windows.Forms.TextBox();
             this.pColorBox = new System.Windows.Forms.TextBox();
@@ -48,8 +50,6 @@ namespace Client
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pColliBox = new System.Windows.Forms.TextBox();
-            this.pColliMaxBox = new System.Windows.Forms.TextBox();
             this.headerPanel.SuspendLayout();
             this.contentPanel.SuspendLayout();
             this.textboxPanel.SuspendLayout();
@@ -70,11 +70,11 @@ namespace Client
             // 
             this.titleLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.titleLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLabel.Location = new System.Drawing.Point(648, 48);
+            this.titleLabel.Location = new System.Drawing.Point(614, 53);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(276, 76);
+            this.titleLabel.Size = new System.Drawing.Size(393, 76);
             this.titleLabel.TabIndex = 0;
-            this.titleLabel.Text = "Add Product";
+            this.titleLabel.Text = "ADD PRODUCT";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // contentPanel
@@ -106,63 +106,79 @@ namespace Client
             // 
             // clearButton
             // 
-            this.clearButton.AutoSize = true;
-            this.clearButton.Font = new System.Drawing.Font("DIN1451Engschrift", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearButton.Font = new System.Drawing.Font("DIN1451Engschrift", 18F);
             this.clearButton.Location = new System.Drawing.Point(80, 550);
             this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(101, 48);
+            this.clearButton.Size = new System.Drawing.Size(95, 38);
             this.clearButton.TabIndex = 9;
-            this.clearButton.Text = "Clear";
+            this.clearButton.Text = "CLEAR";
             this.clearButton.UseVisualStyleBackColor = true;
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
+            // pColliMaxBox
+            // 
+            this.pColliMaxBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.pColliMaxBox.Location = new System.Drawing.Point(286, 50);
+            this.pColliMaxBox.Name = "pColliMaxBox";
+            this.pColliMaxBox.Size = new System.Drawing.Size(40, 35);
+            this.pColliMaxBox.TabIndex = 3;
+            // 
+            // pColliBox
+            // 
+            this.pColliBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.pColliBox.Location = new System.Drawing.Point(240, 50);
+            this.pColliBox.Name = "pColliBox";
+            this.pColliBox.Size = new System.Drawing.Size(40, 35);
+            this.pColliBox.TabIndex = 2;
+            // 
             // pNumberBox
             // 
-            this.pNumberBox.Font = new System.Drawing.Font("DIN1451Engschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pNumberBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.pNumberBox.Location = new System.Drawing.Point(80, 50);
+            this.pNumberBox.MaxLength = 500;
             this.pNumberBox.Name = "pNumberBox";
-            this.pNumberBox.Size = new System.Drawing.Size(125, 36);
-            this.pNumberBox.TabIndex = 6;
+            this.pNumberBox.Size = new System.Drawing.Size(154, 35);
+            this.pNumberBox.TabIndex = 1;
             // 
             // pAmountBox
             // 
-            this.pAmountBox.Font = new System.Drawing.Font("DIN1451Engschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pAmountBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pAmountBox.Location = new System.Drawing.Point(80, 470);
             this.pAmountBox.Name = "pAmountBox";
-            this.pAmountBox.Size = new System.Drawing.Size(125, 36);
+            this.pAmountBox.Size = new System.Drawing.Size(246, 35);
             this.pAmountBox.TabIndex = 8;
             // 
             // pColorBox
             // 
-            this.pColorBox.Font = new System.Drawing.Font("DIN1451Engschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pColorBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.pColorBox.Location = new System.Drawing.Point(80, 210);
             this.pColorBox.Name = "pColorBox";
-            this.pColorBox.Size = new System.Drawing.Size(125, 36);
-            this.pColorBox.TabIndex = 6;
+            this.pColorBox.Size = new System.Drawing.Size(246, 35);
+            this.pColorBox.TabIndex = 5;
             // 
             // pVolumeBox
             // 
-            this.pVolumeBox.Font = new System.Drawing.Font("DIN1451Engschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pVolumeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.pVolumeBox.Location = new System.Drawing.Point(80, 290);
             this.pVolumeBox.Name = "pVolumeBox";
-            this.pVolumeBox.Size = new System.Drawing.Size(125, 36);
-            this.pVolumeBox.TabIndex = 8;
+            this.pVolumeBox.Size = new System.Drawing.Size(246, 35);
+            this.pVolumeBox.TabIndex = 6;
             // 
             // pWeightBox
             // 
-            this.pWeightBox.Font = new System.Drawing.Font("DIN1451Engschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pWeightBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.pWeightBox.Location = new System.Drawing.Point(80, 380);
             this.pWeightBox.Name = "pWeightBox";
-            this.pWeightBox.Size = new System.Drawing.Size(125, 36);
-            this.pWeightBox.TabIndex = 6;
+            this.pWeightBox.Size = new System.Drawing.Size(246, 35);
+            this.pWeightBox.TabIndex = 7;
             // 
             // pNameBox
             // 
-            this.pNameBox.Font = new System.Drawing.Font("DIN1451Engschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.pNameBox.Location = new System.Drawing.Point(80, 130);
             this.pNameBox.Name = "pNameBox";
-            this.pNameBox.Size = new System.Drawing.Size(125, 36);
-            this.pNameBox.TabIndex = 8;
+            this.pNameBox.Size = new System.Drawing.Size(246, 35);
+            this.pNameBox.TabIndex = 4;
             // 
             // labelPanel
             // 
@@ -182,96 +198,80 @@ namespace Client
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("DIN1451Engschrift", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label1.Location = new System.Drawing.Point(80, 50);
+            this.label1.Location = new System.Drawing.Point(48, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(182, 38);
+            this.label1.Size = new System.Drawing.Size(270, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Product number:";
             // 
             // submitButton
             // 
-            this.submitButton.AutoSize = true;
-            this.submitButton.Font = new System.Drawing.Font("DIN1451Engschrift", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submitButton.BackColor = System.Drawing.Color.DarkGray;
+            this.submitButton.Font = new System.Drawing.Font("DIN1451Engschrift", 18F);
             this.submitButton.Location = new System.Drawing.Point(39, 550);
             this.submitButton.Name = "submitButton";
-            this.submitButton.Size = new System.Drawing.Size(101, 48);
-            this.submitButton.TabIndex = 9;
-            this.submitButton.Text = "Submit";
-            this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Size = new System.Drawing.Size(95, 38);
+            this.submitButton.TabIndex = 10;
+            this.submitButton.Text = "SUBMIT";
+            this.submitButton.UseVisualStyleBackColor = false;
             this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("DIN1451Engschrift", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label6.Location = new System.Drawing.Point(32, 470);
+            this.label6.Location = new System.Drawing.Point(48, 470);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 38);
+            this.label6.Size = new System.Drawing.Size(145, 37);
             this.label6.TabIndex = 5;
             this.label6.Text = "Amount:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("DIN1451Engschrift", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label5.Location = new System.Drawing.Point(32, 380);
+            this.label5.Location = new System.Drawing.Point(48, 380);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 38);
+            this.label5.Size = new System.Drawing.Size(133, 37);
             this.label5.TabIndex = 4;
             this.label5.Text = "Weight:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("DIN1451Engschrift", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label2.Location = new System.Drawing.Point(80, 130);
+            this.label2.Location = new System.Drawing.Point(48, 130);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 38);
+            this.label2.Size = new System.Drawing.Size(239, 37);
             this.label2.TabIndex = 1;
             this.label2.Text = "Product name:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("DIN1451Engschrift", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label4.Location = new System.Drawing.Point(32, 290);
+            this.label4.Location = new System.Drawing.Point(48, 290);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 38);
+            this.label4.Size = new System.Drawing.Size(142, 37);
             this.label4.TabIndex = 3;
             this.label4.Text = "Volume:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("DIN1451Engschrift", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label3.Location = new System.Drawing.Point(80, 210);
+            this.label3.Location = new System.Drawing.Point(48, 210);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 38);
+            this.label3.Size = new System.Drawing.Size(109, 37);
             this.label3.TabIndex = 2;
             this.label3.Text = "Color:";
-            // 
-            // pColliBox
-            // 
-            this.pColliBox.Font = new System.Drawing.Font("DIN1451Engschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pColliBox.Location = new System.Drawing.Point(243, 50);
-            this.pColliBox.Name = "pColliBox";
-            this.pColliBox.Size = new System.Drawing.Size(40, 36);
-            this.pColliBox.TabIndex = 6;
-            // 
-            // pColliMaxBox
-            // 
-            this.pColliMaxBox.Font = new System.Drawing.Font("DIN1451Engschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pColliMaxBox.Location = new System.Drawing.Point(289, 50);
-            this.pColliMaxBox.Name = "pColliMaxBox";
-            this.pColliMaxBox.Size = new System.Drawing.Size(37, 36);
-            this.pColliMaxBox.TabIndex = 6;
             // 
             // AddProductWindow_vers1
             // 

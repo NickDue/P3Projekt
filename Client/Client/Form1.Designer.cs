@@ -37,12 +37,12 @@
             this.navButton2 = new FontAwesome.Sharp.IconButton();
             this.navButton1 = new FontAwesome.Sharp.IconButton();
             this.titleBarPanel = new System.Windows.Forms.Panel();
+            this.userCredentialsLabel = new System.Windows.Forms.Label();
+            this.loggedInLabel = new System.Windows.Forms.Label();
             this.minimizeButton = new FontAwesome.Sharp.IconButton();
             this.maximizeButton = new FontAwesome.Sharp.IconButton();
             this.closeButton = new FontAwesome.Sharp.IconButton();
             this.contentPanel = new System.Windows.Forms.Panel();
-            this.loggedInLabel = new System.Windows.Forms.Label();
-            this.userCredentialsLabel = new System.Windows.Forms.Label();
             this.navBarPanel.SuspendLayout();
             this.titleBarPanel.SuspendLayout();
             this.SuspendLayout();
@@ -72,7 +72,7 @@
             this.signOutButton.FlatAppearance.BorderSize = 0;
             this.signOutButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.signOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.signOutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signOutButton.Font = new System.Drawing.Font("DIN1451Engschrift", 30F);
             this.signOutButton.ForeColor = System.Drawing.Color.White;
             this.signOutButton.IconChar = FontAwesome.Sharp.IconChar.None;
             this.signOutButton.IconColor = System.Drawing.Color.White;
@@ -94,7 +94,7 @@
             this.navButton6.FlatAppearance.BorderSize = 0;
             this.navButton6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.navButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.navButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navButton6.Font = new System.Drawing.Font("DIN1451Engschrift", 30F);
             this.navButton6.ForeColor = System.Drawing.Color.White;
             this.navButton6.IconChar = FontAwesome.Sharp.IconChar.None;
             this.navButton6.IconColor = System.Drawing.Color.White;
@@ -117,7 +117,7 @@
             this.navButton5.FlatAppearance.BorderSize = 0;
             this.navButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.navButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.navButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navButton5.Font = new System.Drawing.Font("DIN1451Engschrift", 30F);
             this.navButton5.ForeColor = System.Drawing.Color.White;
             this.navButton5.IconChar = FontAwesome.Sharp.IconChar.None;
             this.navButton5.IconColor = System.Drawing.Color.White;
@@ -140,7 +140,7 @@
             this.navButton4.FlatAppearance.BorderSize = 0;
             this.navButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.navButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.navButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navButton4.Font = new System.Drawing.Font("DIN1451Engschrift", 30F);
             this.navButton4.ForeColor = System.Drawing.Color.White;
             this.navButton4.IconChar = FontAwesome.Sharp.IconChar.None;
             this.navButton4.IconColor = System.Drawing.Color.White;
@@ -163,7 +163,7 @@
             this.navButton3.FlatAppearance.BorderSize = 0;
             this.navButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.navButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.navButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navButton3.Font = new System.Drawing.Font("DIN1451Engschrift", 30F);
             this.navButton3.ForeColor = System.Drawing.Color.White;
             this.navButton3.IconChar = FontAwesome.Sharp.IconChar.None;
             this.navButton3.IconColor = System.Drawing.Color.White;
@@ -186,7 +186,7 @@
             this.navButton2.FlatAppearance.BorderSize = 0;
             this.navButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.navButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.navButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navButton2.Font = new System.Drawing.Font("DIN1451Engschrift", 30F);
             this.navButton2.ForeColor = System.Drawing.Color.White;
             this.navButton2.IconChar = FontAwesome.Sharp.IconChar.None;
             this.navButton2.IconColor = System.Drawing.Color.White;
@@ -209,7 +209,7 @@
             this.navButton1.FlatAppearance.BorderSize = 0;
             this.navButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.navButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.navButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navButton1.Font = new System.Drawing.Font("DIN1451Engschrift", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navButton1.ForeColor = System.Drawing.Color.White;
             this.navButton1.IconChar = FontAwesome.Sharp.IconChar.None;
             this.navButton1.IconColor = System.Drawing.Color.White;
@@ -241,6 +241,26 @@
             this.titleBarPanel.TabIndex = 1;
             this.titleBarPanel.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.titleBarPanel_MouseDoubleClick);
             this.titleBarPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.titleBarPanel_MouseDown);
+            // 
+            // userCredentialsLabel
+            // 
+            this.userCredentialsLabel.AutoSize = true;
+            this.userCredentialsLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userCredentialsLabel.Location = new System.Drawing.Point(69, 4);
+            this.userCredentialsLabel.Name = "userCredentialsLabel";
+            this.userCredentialsLabel.Size = new System.Drawing.Size(27, 19);
+            this.userCredentialsLabel.TabIndex = 4;
+            this.userCredentialsLabel.Text = "null";
+            // 
+            // loggedInLabel
+            // 
+            this.loggedInLabel.AutoSize = true;
+            this.loggedInLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loggedInLabel.Location = new System.Drawing.Point(3, 4);
+            this.loggedInLabel.Name = "loggedInLabel";
+            this.loggedInLabel.Size = new System.Drawing.Size(60, 19);
+            this.loggedInLabel.TabIndex = 3;
+            this.loggedInLabel.Text = "Logged in:";
             // 
             // minimizeButton
             // 
@@ -306,26 +326,6 @@
             this.contentPanel.Name = "contentPanel";
             this.contentPanel.Size = new System.Drawing.Size(1290, 817);
             this.contentPanel.TabIndex = 2;
-            // 
-            // loggedInLabel
-            // 
-            this.loggedInLabel.AutoSize = true;
-            this.loggedInLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loggedInLabel.Location = new System.Drawing.Point(3, 4);
-            this.loggedInLabel.Name = "loggedInLabel";
-            this.loggedInLabel.Size = new System.Drawing.Size(60, 19);
-            this.loggedInLabel.TabIndex = 3;
-            this.loggedInLabel.Text = "Logged in:";
-            // 
-            // userCredentialsLabel
-            // 
-            this.userCredentialsLabel.AutoSize = true;
-            this.userCredentialsLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userCredentialsLabel.Location = new System.Drawing.Point(69, 4);
-            this.userCredentialsLabel.Name = "userCredentialsLabel";
-            this.userCredentialsLabel.Size = new System.Drawing.Size(27, 19);
-            this.userCredentialsLabel.TabIndex = 4;
-            this.userCredentialsLabel.Text = "null";
             // 
             // MyhomeForm
             // 
