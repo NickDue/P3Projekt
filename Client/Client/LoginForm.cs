@@ -14,8 +14,10 @@ namespace Client
 {
     public partial class LoginForm : Form
     {
-        string username = "admin";
-        string password = "admin";
+        string username_floor = "floor";
+        string password_floor = "floor";
+        string username_office = "office";
+        string password_office = "office";
         private const bool DBActive = true;
         public LoginForm()
         {
@@ -69,36 +71,42 @@ namespace Client
 
         private void LoginFunction()
         {
-            if (DBActive)
+            if(UsernameBox.Text == username_floor && PasswordBox.Text == password_floor)
             {
+                TestForm tform = new TestForm();
+                UserCredentials.WorkerRole = username_floor;
+                Hide();
+                tform.Show();
+            }else if(UsernameBox.Text == username_office && PasswordBox.Text == password_office)
+            {
+                TestForm tform = new TestForm();
+                UserCredentials.WorkerRole = username_office;
+                Hide();
+                tform.Show();
+            }
+            else
+            { 
+                if (DBActive)
+                {
                 string query = $"authenticate ! {UsernameBox.Text} ! {PasswordBox.Text}";
                 TCPClient client = new TCPClient();
                 string resonse = client.Connect(query);
-                if (!resonse.StartsWith("ERROR"))
-                {
-                    string[] splittedResponse = resonse.Split('!');
-                    UserCredentials.WorkerId = Int32.Parse(splittedResponse[0]);
-                    UserCredentials.WorkerUsername = splittedResponse[1];
-                    UserCredentials.WorkerRole = splittedResponse[3];
-                    MyhomeForm form = new MyhomeForm();
-                    Hide();
-                    form.Show();
+                    if (!resonse.StartsWith("ERROR"))
+                    {
+                        string[] splittedResponse = resonse.Split('!');
+                        UserCredentials.WorkerId = Int32.Parse(splittedResponse[0]);
+                        UserCredentials.WorkerUsername = splittedResponse[1];
+                        UserCredentials.WorkerRole = splittedResponse[3];
+                        MyhomeForm form = new MyhomeForm();
+                        Hide();
+                        form.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Unknown User", "Error");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Unknown User", "Error");
-                }
-            }
-            else
-            {
-                MyhomeForm form = new MyhomeForm();
-                if (UsernameBox.Text == username && PasswordBox.Text == password)
-                {
-                    this.Hide();
-                    form.Show();
-                }
-
-            }
+            }          
         }
 
 
