@@ -150,6 +150,24 @@
       <DependentUpon>SearchWindow2.cs</DependentUpon>
     </Compile>
     <Compile Include="TCP\TCPClient.cs" />
+    <Compile Include="TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testpage_floor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Testpage_floor.Designer.cs">
+      <DependentUpon>Testpage_floor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testpage_office.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Testpage_office.Designer.cs">
+      <DependentUpon>Testpage_office.cs</DependentUpon>
+    </Compile>
     <Compile Include="TestValidationInput.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserCredentials.cs" />
@@ -207,6 +225,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SearchWindow2.resx">
       <DependentUpon>SearchWindow2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testpage_floor.resx">
+      <DependentUpon>Testpage_floor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testpage_office.resx">
+      <DependentUpon>Testpage_office.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
