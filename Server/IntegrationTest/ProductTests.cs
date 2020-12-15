@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using System;
 
 namespace IntegrationTest
 {
@@ -44,6 +45,21 @@ namespace IntegrationTest
             cmd.ExecuteNonQuery();
             con.Close();
             return "Removed Product(s)";
+        }
+        public string EditTestProduct(string data)
+        {
+            string[] splittedData = data.Split(" ! ");
+            using var con = new MySqlConnection(SqlLogin);
+            con.Open();
+            string query = $"UPDATE test SET product = '{splittedData[1]}'";
+            var cmd = new MySqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+            query = $"UPDATE test SET product_2 = '{splittedData[2]}'";
+            cmd = new MySqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            return "Edited a product.";
+
         }
     }
 }

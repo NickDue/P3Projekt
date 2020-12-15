@@ -36,6 +36,7 @@
             this.input2 = new System.Windows.Forms.TextBox();
             this.GETbtn = new System.Windows.Forms.Button();
             this.employee = new System.Windows.Forms.Button();
+            this.changebtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@
             // 
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(0, 337);
-            this.dataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.Size = new System.Drawing.Size(656, 334);
             this.dataGridView.TabIndex = 2;
@@ -61,7 +62,7 @@
             // ADDbtn
             // 
             this.ADDbtn.Location = new System.Drawing.Point(459, 183);
-            this.ADDbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ADDbtn.Margin = new System.Windows.Forms.Padding(4);
             this.ADDbtn.Name = "ADDbtn";
             this.ADDbtn.Size = new System.Drawing.Size(197, 49);
             this.ADDbtn.TabIndex = 3;
@@ -72,7 +73,7 @@
             // REMOVEbtn
             // 
             this.REMOVEbtn.Location = new System.Drawing.Point(457, 257);
-            this.REMOVEbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.REMOVEbtn.Margin = new System.Windows.Forms.Padding(4);
             this.REMOVEbtn.Name = "REMOVEbtn";
             this.REMOVEbtn.Size = new System.Drawing.Size(199, 49);
             this.REMOVEbtn.TabIndex = 4;
@@ -83,7 +84,7 @@
             // input1
             // 
             this.input1.Location = new System.Drawing.Point(707, 375);
-            this.input1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.input1.Margin = new System.Windows.Forms.Padding(4);
             this.input1.Name = "input1";
             this.input1.Size = new System.Drawing.Size(132, 22);
             this.input1.TabIndex = 5;
@@ -91,7 +92,7 @@
             // input2
             // 
             this.input2.Location = new System.Drawing.Point(707, 443);
-            this.input2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.input2.Margin = new System.Windows.Forms.Padding(4);
             this.input2.Name = "input2";
             this.input2.Size = new System.Drawing.Size(132, 22);
             this.input2.TabIndex = 6;
@@ -99,7 +100,7 @@
             // GETbtn
             // 
             this.GETbtn.Location = new System.Drawing.Point(47, 302);
-            this.GETbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GETbtn.Margin = new System.Windows.Forms.Padding(4);
             this.GETbtn.Name = "GETbtn";
             this.GETbtn.Size = new System.Drawing.Size(100, 28);
             this.GETbtn.TabIndex = 7;
@@ -117,10 +118,21 @@
             this.employee.UseVisualStyleBackColor = true;
             this.employee.Click += new System.EventHandler(this.employee_Click);
             // 
+            // changebtn
+            // 
+            this.changebtn.Location = new System.Drawing.Point(707, 105);
+            this.changebtn.Name = "changebtn";
+            this.changebtn.Size = new System.Drawing.Size(210, 53);
+            this.changebtn.TabIndex = 9;
+            this.changebtn.Text = "CHANGE A PRODUCT";
+            this.changebtn.UseVisualStyleBackColor = true;
+            this.changebtn.Click += new System.EventHandler(this.changebtn_Click);
+            // 
             // Testpage_office
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.changebtn);
             this.Controls.Add(this.employee);
             this.Controls.Add(this.GETbtn);
             this.Controls.Add(this.input2);
@@ -148,5 +160,6 @@
         private System.Windows.Forms.TextBox input2;
         private System.Windows.Forms.Button GETbtn;
         private System.Windows.Forms.Button employee;
+        private System.Windows.Forms.Button changebtn;
     }
 }

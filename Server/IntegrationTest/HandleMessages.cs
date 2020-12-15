@@ -30,6 +30,11 @@
                 EmployeeTest pTest = new EmployeeTest();
                 output = pTest.AuthenticateUser(data);
             }
+            else if(data.StartsWith("edit info"))
+            {
+                ProductTests ptest = new ProductTests();
+                output = ptest.EditTestProduct(data);
+            }
 
             return output;
         }
