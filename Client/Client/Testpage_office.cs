@@ -87,6 +87,21 @@ namespace Client
         {
             getProduct();
         }
+
+        private void AddUser(string inputFromBox)
+        {
+            string input = "add user ! " + inputFromBox;
+            TCPClient client = new TCPClient();
+            string info = client.Connect(input);
+            MessageBox.Show(info);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            string input = mergeInput(input1.Text, input2.Text);
+            AddUser(input);
+
+        }
     }  
            
 }

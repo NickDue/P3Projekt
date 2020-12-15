@@ -35,6 +35,7 @@
             this.input1 = new System.Windows.Forms.TextBox();
             this.input2 = new System.Windows.Forms.TextBox();
             this.GETbtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +60,7 @@
             // 
             // ADDbtn
             // 
-            this.ADDbtn.Location = new System.Drawing.Point(343, 142);
+            this.ADDbtn.Location = new System.Drawing.Point(343, 149);
             this.ADDbtn.Name = "ADDbtn";
             this.ADDbtn.Size = new System.Drawing.Size(148, 40);
             this.ADDbtn.TabIndex = 3;
@@ -101,10 +102,21 @@
             this.GETbtn.UseVisualStyleBackColor = true;
             this.GETbtn.Click += new System.EventHandler(this.GETbtn_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(343, 85);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(148, 42);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "ADD EMPLOYEE";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Testpage_office
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.GETbtn);
             this.Controls.Add(this.input2);
             this.Controls.Add(this.input1);
@@ -130,5 +142,6 @@
         private System.Windows.Forms.TextBox input1;
         private System.Windows.Forms.TextBox input2;
         private System.Windows.Forms.Button GETbtn;
+        private System.Windows.Forms.Button button1;
     }
 }
