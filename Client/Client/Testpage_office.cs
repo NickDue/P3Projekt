@@ -87,6 +87,19 @@ namespace Client
         {
             getProduct();
         }
+
+        private void AddEmployee(string inputFromUser)
+        {
+            string input = "add user ! " + inputFromUser;
+            TCPClient client = new TCPClient();
+            client.Connect(input);
+        }
+
+        private void employee_Click(object sender, EventArgs e)
+        {
+            string input = mergeInput(input1.Text, input2.Text);
+            AddEmployee(input);
+        }
     }  
            
 }
