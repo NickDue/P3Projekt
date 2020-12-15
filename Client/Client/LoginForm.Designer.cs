@@ -86,6 +86,7 @@
             this.UsernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameLabel.ForeColor = System.Drawing.Color.DimGray;
             this.UsernameLabel.Location = new System.Drawing.Point(-1, 190);
+            this.UsernameLabel.Location = new System.Drawing.Point(-1, 185);
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(116, 25);
             this.UsernameLabel.TabIndex = 1;
@@ -134,6 +135,16 @@
             this.PasswordLabel.TabIndex = 1;
             this.PasswordLabel.Text = "Password:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Client.Properties.Resources.nonameinc;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(245, 157);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
             // titleBarPanel
             // 
             this.titleBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
@@ -144,6 +155,7 @@
             this.titleBarPanel.Location = new System.Drawing.Point(0, 0);
             this.titleBarPanel.Name = "titleBarPanel";
             this.titleBarPanel.Size = new System.Drawing.Size(1443, 28);
+            this.titleBarPanel.Size = new System.Drawing.Size(1155, 28);
             this.titleBarPanel.TabIndex = 16;
             this.titleBarPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.titleBarPanel_MouseDown);
             // 
@@ -159,6 +171,7 @@
             this.minimizeButton.IconSize = 25;
             this.minimizeButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.minimizeButton.Location = new System.Drawing.Point(1269, 0);
+            this.minimizeButton.Location = new System.Drawing.Point(981, 0);
             this.minimizeButton.Name = "minimizeButton";
             this.minimizeButton.Size = new System.Drawing.Size(58, 28);
             this.minimizeButton.TabIndex = 17;
@@ -177,6 +190,7 @@
             this.maximizeButton.IconSize = 25;
             this.maximizeButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.maximizeButton.Location = new System.Drawing.Point(1327, 0);
+            this.maximizeButton.Location = new System.Drawing.Point(1039, 0);
             this.maximizeButton.Name = "maximizeButton";
             this.maximizeButton.Size = new System.Drawing.Size(58, 28);
             this.maximizeButton.TabIndex = 17;
@@ -196,6 +210,7 @@
             this.closeButton.IconSize = 25;
             this.closeButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.closeButton.Location = new System.Drawing.Point(1385, 0);
+            this.closeButton.Location = new System.Drawing.Point(1097, 0);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(58, 28);
             this.closeButton.TabIndex = 11;
@@ -208,6 +223,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
             this.ClientSize = new System.Drawing.Size(1443, 845);
+            this.ClientSize = new System.Drawing.Size(1155, 687);
             this.Controls.Add(this.titleBarPanel);
             this.Controls.Add(this.LoginPanel);
             this.Name = "LoginForm";
