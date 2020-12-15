@@ -29,35 +29,24 @@
         private void InitializeComponent()
         {
             this.SearchPanel = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.ProductGridView = new System.Windows.Forms.DataGridView();
             this.WorkerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Action = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataColum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LogsTitle = new System.Windows.Forms.Label();
             this.SearchPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // SearchPanel
             // 
-            this.SearchPanel.Controls.Add(this.textBox1);
+            this.SearchPanel.Controls.Add(this.LogsTitle);
             this.SearchPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.SearchPanel.Location = new System.Drawing.Point(0, 0);
             this.SearchPanel.Name = "SearchPanel";
-            this.SearchPanel.Size = new System.Drawing.Size(982, 54);
+            this.SearchPanel.Size = new System.Drawing.Size(982, 106);
             this.SearchPanel.TabIndex = 0;
-            // 
-            // textBox1
-            // 
-            this.textBox1.AccessibleDescription = "";
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(822, 17);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(157, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "search";
             // 
             // ProductGridView
             // 
@@ -70,9 +59,9 @@
             this.Action,
             this.DataColum});
             this.ProductGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ProductGridView.Location = new System.Drawing.Point(0, 54);
+            this.ProductGridView.Location = new System.Drawing.Point(0, 106);
             this.ProductGridView.Name = "ProductGridView";
-            this.ProductGridView.Size = new System.Drawing.Size(982, 704);
+            this.ProductGridView.Size = new System.Drawing.Size(982, 652);
             this.ProductGridView.TabIndex = 1;
             // 
             // WorkerID
@@ -94,6 +83,16 @@
             // 
             this.DataColum.HeaderText = "Date";
             this.DataColum.Name = "DataColum";
+            // 
+            // LogsTitle
+            // 
+            this.LogsTitle.AutoSize = true;
+            this.LogsTitle.Font = new System.Drawing.Font("DIN1451Engschrift", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogsTitle.Location = new System.Drawing.Point(429, 13);
+            this.LogsTitle.Name = "LogsTitle";
+            this.LogsTitle.Size = new System.Drawing.Size(137, 76);
+            this.LogsTitle.TabIndex = 0;
+            this.LogsTitle.Text = "LOGS";
             // 
             // LogsPage
             // 
@@ -119,6 +118,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Product;
         private System.Windows.Forms.DataGridViewTextBoxColumn Action;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataColum;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label LogsTitle;
     }
 }

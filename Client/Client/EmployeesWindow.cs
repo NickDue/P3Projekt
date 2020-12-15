@@ -37,7 +37,7 @@ namespace Client
             {
                 string[] employeeData = s.Split('!');
                 if(employeeData.Length == 3)
-                    AddEmployee(employeeData[0], Int32.Parse(employeeData[2]), employeeData[1],"9/11-2004", Resources._912214);
+                    AddEmployee(employeeData[0], Int32.Parse(employeeData[2]), employeeData[1], Resources._912214);
             }
         }
 
@@ -101,9 +101,9 @@ namespace Client
         }
 
 
-        private void AddEmployee(string employeeName, int workerID, string role, string lastlog, Image pic)
+        private void AddEmployee(string employeeName, int workerID, string role, Image pic)
         {
-            ListItem employee = new ListItem(employeeName, workerID, role, lastlog);
+            ListItem employee = new ListItem(employeeName, workerID, role);
             employee.WasClicked += ListItem_WasClicked;
             ItemList.Add(employee);
             EmployeeFlowPanel.Controls.Add(employee);

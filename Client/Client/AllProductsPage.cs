@@ -59,7 +59,9 @@ namespace Client
 
         private void SetDate(Label label)
         {
-            label.Text = DateTime.Now.ToString();
+            string dateAndTime = DateTime.Now.ToString(); ;
+            string[] date = dateAndTime.Split(' ');
+            label.Text = date[0];
         }
 
         private void SetTotalAmount(Label label)

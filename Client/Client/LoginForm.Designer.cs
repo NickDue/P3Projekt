@@ -35,13 +35,11 @@
             this.LoginButton = new System.Windows.Forms.Button();
             this.PasswordBox = new System.Windows.Forms.TextBox();
             this.PasswordLabel = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.titleBarPanel = new System.Windows.Forms.Panel();
             this.minimizeButton = new FontAwesome.Sharp.IconButton();
             this.maximizeButton = new FontAwesome.Sharp.IconButton();
             this.closeButton = new FontAwesome.Sharp.IconButton();
             this.LoginPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.titleBarPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,6 +90,8 @@
             this.UsernameLabel.ForeColor = System.Drawing.Color.DimGray;
             this.UsernameLabel.Location = new System.Drawing.Point(-1, 228);
             this.UsernameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.UsernameLabel.Location = new System.Drawing.Point(-1, 190);
+            this.UsernameLabel.Location = new System.Drawing.Point(-1, 185);
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(116, 25);
             this.UsernameLabel.TabIndex = 1;
@@ -165,6 +165,8 @@
             this.titleBarPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.titleBarPanel.Name = "titleBarPanel";
             this.titleBarPanel.Size = new System.Drawing.Size(1540, 34);
+            this.titleBarPanel.Size = new System.Drawing.Size(1443, 28);
+            this.titleBarPanel.Size = new System.Drawing.Size(1155, 28);
             this.titleBarPanel.TabIndex = 16;
             this.titleBarPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.titleBarPanel_MouseDown);
             // 
@@ -181,6 +183,8 @@
             this.minimizeButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.minimizeButton.Location = new System.Drawing.Point(1309, 0);
             this.minimizeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.minimizeButton.Location = new System.Drawing.Point(1269, 0);
+            this.minimizeButton.Location = new System.Drawing.Point(981, 0);
             this.minimizeButton.Name = "minimizeButton";
             this.minimizeButton.Size = new System.Drawing.Size(77, 34);
             this.minimizeButton.TabIndex = 17;
@@ -200,6 +204,8 @@
             this.maximizeButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.maximizeButton.Location = new System.Drawing.Point(1386, 0);
             this.maximizeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.maximizeButton.Location = new System.Drawing.Point(1327, 0);
+            this.maximizeButton.Location = new System.Drawing.Point(1039, 0);
             this.maximizeButton.Name = "maximizeButton";
             this.maximizeButton.Size = new System.Drawing.Size(77, 34);
             this.maximizeButton.TabIndex = 17;
@@ -220,6 +226,8 @@
             this.closeButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.closeButton.Location = new System.Drawing.Point(1463, 0);
             this.closeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.closeButton.Location = new System.Drawing.Point(1385, 0);
+            this.closeButton.Location = new System.Drawing.Point(1097, 0);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(77, 34);
             this.closeButton.TabIndex = 11;
@@ -232,8 +240,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
             this.ClientSize = new System.Drawing.Size(1540, 846);
+            this.ClientSize = new System.Drawing.Size(1443, 845);
+            this.ClientSize = new System.Drawing.Size(1155, 687);
             this.Controls.Add(this.titleBarPanel);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LoginPanel);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LoginForm";
@@ -241,7 +250,6 @@
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.LoginPanel.ResumeLayout(false);
             this.LoginPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.titleBarPanel.ResumeLayout(false);
             this.titleBarPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -257,7 +265,6 @@
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.TextBox PasswordBox;
         private System.Windows.Forms.Label PasswordLabel;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel titleBarPanel;
         private FontAwesome.Sharp.IconButton closeButton;
         private FontAwesome.Sharp.IconButton maximizeButton;

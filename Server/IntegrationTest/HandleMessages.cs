@@ -20,6 +20,16 @@
                 ProductTests pTest = new ProductTests();
                 output = pTest.DeleteTestProduct();
             }
+            else if (data.StartsWith("add user"))
+            {
+                EmployeeTest pTest = new EmployeeTest();
+                output = pTest.CreateNewEmployeeTest(data);
+            }
+            else if (data.StartsWith("authenticate"))
+            {
+                EmployeeTest pTest = new EmployeeTest();
+                output = pTest.AuthenticateUser(data);
+            }
 
             return output;
         }
