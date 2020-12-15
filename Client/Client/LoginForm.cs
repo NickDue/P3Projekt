@@ -19,7 +19,7 @@ namespace Client
         string username_office = "office";
         string password_office = "office";
         private const bool DBActive = true;
-        private const bool Test = true;
+        private const bool Test = false;
         public LoginForm()
         {
             InitializeComponent();
@@ -97,7 +97,7 @@ namespace Client
                             string[] splittedResponse = resonse.Split('!');
                             UserCredentials.WorkerId = Int32.Parse(splittedResponse[0]);
                             UserCredentials.WorkerUsername = splittedResponse[1];
-                        if (!Test)
+                        if (!Test == true)
                         {
                              UserCredentials.WorkerRole = splittedResponse[3];
                         }   

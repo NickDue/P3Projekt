@@ -168,7 +168,6 @@
     <Compile Include="Testpage_office.Designer.cs">
       <DependentUpon>Testpage_office.cs</DependentUpon>
     </Compile>
-    <Compile Include="TestValidationInput.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserCredentials.cs" />
     <EmbeddedResource Include="AddProductWindow.resx">
