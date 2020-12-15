@@ -19,6 +19,7 @@ namespace Client
         string username_office = "office";
         string password_office = "office";
         private const bool DBActive = true;
+        private const bool Test = true;
         public LoginForm()
         {
             InitializeComponent();
@@ -88,23 +89,26 @@ namespace Client
             { 
                 if (DBActive)
                 {
-                string query = $"authenticate ! {UsernameBox.Text} ! {PasswordBox.Text}";
-                TCPClient client = new TCPClient();
-                string resonse = client.Connect(query);
-                    if (!resonse.StartsWith("ERROR"))
-                    {
-                        string[] splittedResponse = resonse.Split('!');
-                        UserCredentials.WorkerId = Int32.Parse(splittedResponse[0]);
-                        UserCredentials.WorkerUsername = splittedResponse[1];
-                        UserCredentials.WorkerRole = splittedResponse[3];
-                        MyhomeForm form = new MyhomeForm();
-                        Hide();
-                        form.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Unknown User", "Error");
-                    }
+                    string query = $"authenticate ! {UsernameBox.Text} ! {PasswordBox.Text}";
+                    TCPClient client = new TCPClient();
+                    string resonse = client.Connect(query);
+                        if (!resonse.StartsWith("ERROR"))
+                        {
+                            string[] splittedResponse = resonse.Split('!');
+                            UserCredentials.WorkerId = Int32.Parse(splittedResponse[0]);
+                            UserCredentials.WorkerUsername = splittedResponse[1];
+                        if (!Test)
+                        {
+                             UserCredentials.WorkerRole = splittedResponse[3];
+                        }   
+                            MyhomeForm form = new MyhomeForm();
+                            Hide();
+                            form.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Unknown User", "Error");
+                        }
                 }
             }          
         }

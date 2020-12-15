@@ -79,12 +79,7 @@ namespace Client
             string input = "get product";
             TCPClient client = new TCPClient();
             string info = client.Connect(input);
-            string[] splittedInfo = info.Split('\n');
-            for (int i = 0; i <= splittedInfo.Length - 1; i++)
-            {
-               PrintToGrid(dataGridView, splittedInfo[i]);
-            }
-            //PrintToGrid(dataGridView, info);
+            PrintToGrid(dataGridView, info);
             MessageBox.Show(info);
         }
 
