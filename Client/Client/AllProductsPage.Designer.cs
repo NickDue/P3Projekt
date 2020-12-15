@@ -32,9 +32,9 @@
             this.DateLabel = new System.Windows.Forms.Label();
             this.Headline = new System.Windows.Forms.Label();
             this.TopPanel = new System.Windows.Forms.Panel();
-            this.ProductGridView = new System.Windows.Forms.DataGridView();
-            this.DateLabelOutput = new System.Windows.Forms.Label();
             this.AmountLabelOutput = new System.Windows.Forms.Label();
+            this.DateLabelOutput = new System.Windows.Forms.Label();
+            this.ProductGridView = new System.Windows.Forms.DataGridView();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductGridView)).BeginInit();
             this.SuspendLayout();
@@ -42,20 +42,20 @@
             // AmountLabel
             // 
             this.AmountLabel.AutoSize = true;
-            this.AmountLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AmountLabel.Location = new System.Drawing.Point(17, 100);
             this.AmountLabel.Name = "AmountLabel";
-            this.AmountLabel.Size = new System.Drawing.Size(89, 23);
+            this.AmountLabel.Size = new System.Drawing.Size(172, 29);
             this.AmountLabel.TabIndex = 3;
             this.AmountLabel.Text = "Total amount:";
             // 
             // DateLabel
             // 
             this.DateLabel.AutoSize = true;
-            this.DateLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateLabel.Location = new System.Drawing.Point(17, 76);
+            this.DateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateLabel.Location = new System.Drawing.Point(294, 100);
             this.DateLabel.Name = "DateLabel";
-            this.DateLabel.Size = new System.Drawing.Size(40, 23);
+            this.DateLabel.Size = new System.Drawing.Size(74, 29);
             this.DateLabel.TabIndex = 2;
             this.DateLabel.Text = "Date:";
             // 
@@ -63,15 +63,16 @@
             // 
             this.Headline.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Headline.AutoSize = true;
-            this.Headline.Font = new System.Drawing.Font("DIN1451Engschrift", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Headline.Location = new System.Drawing.Point(306, 21);
+            this.Headline.Font = new System.Drawing.Font("DIN1451Engschrift", 48F);
+            this.Headline.Location = new System.Drawing.Point(337, 20);
             this.Headline.Name = "Headline";
-            this.Headline.Size = new System.Drawing.Size(388, 57);
+            this.Headline.Size = new System.Drawing.Size(326, 76);
             this.Headline.TabIndex = 0;
-            this.Headline.Text = "All products in database";
+            this.Headline.Text = "ALL PRODUCTS";
             // 
             // TopPanel
             // 
+            this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.TopPanel.Controls.Add(this.AmountLabelOutput);
             this.TopPanel.Controls.Add(this.DateLabelOutput);
             this.TopPanel.Controls.Add(this.Headline);
@@ -82,6 +83,26 @@
             this.TopPanel.Name = "TopPanel";
             this.TopPanel.Size = new System.Drawing.Size(982, 134);
             this.TopPanel.TabIndex = 9;
+            // 
+            // AmountLabelOutput
+            // 
+            this.AmountLabelOutput.AutoSize = true;
+            this.AmountLabelOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AmountLabelOutput.Location = new System.Drawing.Point(195, 100);
+            this.AmountLabelOutput.Name = "AmountLabelOutput";
+            this.AmountLabelOutput.Size = new System.Drawing.Size(53, 29);
+            this.AmountLabelOutput.TabIndex = 4;
+            this.AmountLabelOutput.Text = "N/A";
+            // 
+            // DateLabelOutput
+            // 
+            this.DateLabelOutput.AutoSize = true;
+            this.DateLabelOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateLabelOutput.Location = new System.Drawing.Point(374, 100);
+            this.DateLabelOutput.Name = "DateLabelOutput";
+            this.DateLabelOutput.Size = new System.Drawing.Size(53, 29);
+            this.DateLabelOutput.TabIndex = 4;
+            this.DateLabelOutput.Text = "N/A";
             // 
             // ProductGridView
             // 
@@ -97,26 +118,6 @@
             this.ProductGridView.ReadOnly = true;
             this.ProductGridView.Size = new System.Drawing.Size(982, 624);
             this.ProductGridView.TabIndex = 10;
-            // 
-            // DateLabelOutput
-            // 
-            this.DateLabelOutput.AutoSize = true;
-            this.DateLabelOutput.Font = new System.Drawing.Font("DIN1451Engschrift", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateLabelOutput.Location = new System.Drawing.Point(104, 83);
-            this.DateLabelOutput.Name = "DateLabelOutput";
-            this.DateLabelOutput.Size = new System.Drawing.Size(18, 13);
-            this.DateLabelOutput.TabIndex = 4;
-            this.DateLabelOutput.Text = "N/A";
-            // 
-            // AmountLabelOutput
-            // 
-            this.AmountLabelOutput.AutoSize = true;
-            this.AmountLabelOutput.Font = new System.Drawing.Font("DIN1451Engschrift", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AmountLabelOutput.Location = new System.Drawing.Point(104, 107);
-            this.AmountLabelOutput.Name = "AmountLabelOutput";
-            this.AmountLabelOutput.Size = new System.Drawing.Size(18, 13);
-            this.AmountLabelOutput.TabIndex = 4;
-            this.AmountLabelOutput.Text = "N/A";
             // 
             // AllProductsPage
             // 

@@ -14,8 +14,6 @@ namespace Client
 {
     public partial class AddProductWindow_vers1 : UserControl
     {
-
-
         public AddProductWindow_vers1()
         {
             InitializeComponent();
@@ -41,9 +39,6 @@ namespace Client
             x = ((textboxPanel.Size.Width - clearButton.Size.Width) / 2);
             clearButton.Location = new Point(x, clearButton.Location.Y);
 
-            CenterLabelsInThisPanel(labelPanel);
-            CenterTextboxesInThisPanel(textboxPanel);
-
             pNumberBox.MaxLength = 5;
 
             pColliBox.MaxLength = 2;
@@ -66,27 +61,6 @@ namespace Client
             }
         }
 
-        private void CenterLabelsInThisPanel(Control panel)
-        {
-            foreach (Label label in panel.Controls.OfType<Label>())
-            {
-                int x = ((panel.Size.Width - label.Size.Width) / 2);
-                label.Location = new Point(x, label.Location.Y);
-            }
-        }
-
-        private void CenterTextboxesInThisPanel(Control panel)
-        {
-            foreach (TextBox textbox in panel.Controls.OfType<TextBox>())
-            {
-                if(textbox == pColliBox || textbox == pColliMaxBox)
-                {
-                    continue;
-                }
-                int x = ((panel.Size.Width - textbox.Size.Width) / 2);
-                textbox.Location = new Point(x, textbox.Location.Y);
-            }
-        }
         private string GetInputs()
         {
             string pNumber, pName, pColor, pVolume, pWeight, pAmount;
@@ -98,6 +72,7 @@ namespace Client
             pAmount = pAmountBox.Text;
             return GenerateProductString(pNumber, pName, pColor, pVolume, pWeight, pAmount);
         }
+
         private string FormatProductNumberString(string pNumber, string pColli, string pColliMax)
         {
                         

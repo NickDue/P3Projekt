@@ -198,7 +198,7 @@
             this.navButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.navButton2.Size = new System.Drawing.Size(248, 100);
             this.navButton2.TabIndex = 2;
-            this.navButton2.Text = "ADD PRODUCTS";
+            this.navButton2.Text = "ADD PRODUCT";
             this.navButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.navButton2.UseVisualStyleBackColor = true;
             this.navButton2.Click += new System.EventHandler(this.navButton2_Click);
