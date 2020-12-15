@@ -13,14 +13,14 @@ namespace Client
 {
     public partial class ListItem : UserControl
     {
-        public ListItem(string employeeName, int workerID, string role, string lastlog)
+        public ListItem(string employeeName, int workerID, string role)
         {
             InitializeComponent();
 
             EmployeeName = employeeName;
             WorkerID = workerID;
             Role = role;
-            LastLog = lastlog;
+            //LastLog = lastlog;
         }
         public ListItem()
         {
@@ -33,11 +33,11 @@ namespace Client
 
         private void ListItem_Load(object sender, EventArgs e)
         {
-            this.Size = new Size(320, 400);
+            this.Size = new Size(320, 260);
             int x;
             //Placerer label i midten af WorkerIDPanel
             x = (headerPanel.Size.Width / 2) - (workerIDLabel.Size.Width / 2);
-            workerIDLabel.Location = new Point(x, workerIDLabel.Location.Y);
+            //workerIDLabel.Location = new Point(x, workerIDLabel.Location.Y);
             //Placerer PictureBox i midten af HeaderPanel
 
             //Tilføjer mouseclick
@@ -80,17 +80,12 @@ namespace Client
             }
         }
 
-
-
-
-
-
         #region Properties
 
         private string _name;
         private int _workerID;
         private string _role;
-        private string _lastLog;
+        //private string _lastLog;
         private bool _selected;
 
         public string EmployeeName
@@ -108,11 +103,7 @@ namespace Client
             get { return _role; }
             set { _role = value; employeeRoleLabel.Text = value; }
         }
-        public string LastLog
-        {
-            get { return _lastLog; }
-            set { _lastLog = value; employeeLastLogLabel.Text = value; }
-        }
+        
         public bool Selected
         {
             get { return _selected; }

@@ -222,7 +222,7 @@ namespace Client
 
         private ListItem CreateEmployee()
         {
-            ListItem employee = new ListItem(nameTextbox.Text, int.Parse(workerIDTextbox.Text), GetRole(), "NONE");
+            ListItem employee = new ListItem(nameTextbox.Text, int.Parse(workerIDTextbox.Text), GetRole());
             return employee;
         }
 

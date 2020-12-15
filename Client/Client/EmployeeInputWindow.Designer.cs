@@ -59,9 +59,9 @@
             this.Header.Margin = new System.Windows.Forms.Padding(0);
             this.Header.Name = "Header";
             this.Header.Padding = new System.Windows.Forms.Padding(3);
-            this.Header.Size = new System.Drawing.Size(154, 30);
+            this.Header.Size = new System.Drawing.Size(176, 30);
             this.Header.TabIndex = 0;
-            this.Header.Text = "Add Employee";
+            this.Header.Text = "ADD EMPLOYEE";
             // 
             // Content
             // 

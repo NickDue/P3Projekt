@@ -66,12 +66,12 @@ namespace Client
             // 
             this.titleLabel.AutoSize = true;
             this.titleLabel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLabel.Location = new System.Drawing.Point(0, 0);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(192, 29);
+            this.titleLabel.Size = new System.Drawing.Size(146, 28);
             this.titleLabel.TabIndex = 2;
-            this.titleLabel.Text = "Employee Editer";
+            this.titleLabel.Text = "EMPLOYEE EDITOR";
             // 
             // closeButton
             // 
@@ -117,7 +117,7 @@ namespace Client
             // 
             this.officeRButton.AutoSize = true;
             this.officeRButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.officeRButton.Location = new System.Drawing.Point(274, 307);
+            this.officeRButton.Location = new System.Drawing.Point(274, 313);
             this.officeRButton.Name = "officeRButton";
             this.officeRButton.Size = new System.Drawing.Size(86, 29);
             this.officeRButton.TabIndex = 5;
@@ -129,7 +129,7 @@ namespace Client
             // 
             this.floorRButton.AutoSize = true;
             this.floorRButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.floorRButton.Location = new System.Drawing.Point(153, 307);
+            this.floorRButton.Location = new System.Drawing.Point(153, 313);
             this.floorRButton.Name = "floorRButton";
             this.floorRButton.Size = new System.Drawing.Size(79, 29);
             this.floorRButton.TabIndex = 4;
@@ -140,40 +140,40 @@ namespace Client
             // roleLabel
             // 
             this.roleLabel.AutoSize = true;
-            this.roleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roleLabel.Location = new System.Drawing.Point(67, 313);
             this.roleLabel.Name = "roleLabel";
-            this.roleLabel.Size = new System.Drawing.Size(56, 25);
+            this.roleLabel.Size = new System.Drawing.Size(60, 25);
             this.roleLabel.TabIndex = 6;
             this.roleLabel.Text = "Role";
             // 
             // confirmPasswordLabel
             // 
             this.confirmPasswordLabel.AutoSize = true;
-            this.confirmPasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmPasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmPasswordLabel.Location = new System.Drawing.Point(67, 241);
             this.confirmPasswordLabel.Name = "confirmPasswordLabel";
-            this.confirmPasswordLabel.Size = new System.Drawing.Size(184, 25);
+            this.confirmPasswordLabel.Size = new System.Drawing.Size(200, 25);
             this.confirmPasswordLabel.TabIndex = 6;
             this.confirmPasswordLabel.Text = "Confirm password";
             // 
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordLabel.Location = new System.Drawing.Point(67, 169);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(106, 25);
+            this.passwordLabel.Size = new System.Drawing.Size(114, 25);
             this.passwordLabel.TabIndex = 6;
             this.passwordLabel.Text = "Password";
             // 
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel.Location = new System.Drawing.Point(67, 97);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(68, 25);
+            this.nameLabel.Size = new System.Drawing.Size(72, 25);
             this.nameLabel.TabIndex = 6;
             this.nameLabel.Text = "Name";
             // 
@@ -209,25 +209,26 @@ namespace Client
             // cancelButton
             // 
             this.cancelButton.AutoSize = true;
-            this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelButton.Font = new System.Drawing.Font("DIN1451Engschrift", 18F);
             this.cancelButton.Location = new System.Drawing.Point(274, 382);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(89, 35);
+            this.cancelButton.Size = new System.Drawing.Size(95, 38);
             this.cancelButton.TabIndex = 5;
-            this.cancelButton.Text = "Cancel";
+            this.cancelButton.Text = "CANCEL";
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // confirmButton
             // 
             this.confirmButton.AutoSize = true;
-            this.confirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirmButton.Location = new System.Drawing.Point(153, 382);
+            this.confirmButton.BackColor = System.Drawing.Color.DarkGray;
+            this.confirmButton.Font = new System.Drawing.Font("DIN1451Engschrift", 18F);
+            this.confirmButton.Location = new System.Drawing.Point(119, 382);
             this.confirmButton.Name = "confirmButton";
-            this.confirmButton.Size = new System.Drawing.Size(96, 35);
+            this.confirmButton.Size = new System.Drawing.Size(95, 38);
             this.confirmButton.TabIndex = 4;
-            this.confirmButton.Text = "Confirm";
-            this.confirmButton.UseVisualStyleBackColor = true;
+            this.confirmButton.Text = "CONFIRM";
+            this.confirmButton.UseVisualStyleBackColor = false;
             this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
             // 
             // workerIDTextbox
@@ -242,12 +243,12 @@ namespace Client
             // workerIDLabel
             // 
             this.workerIDLabel.AutoSize = true;
-            this.workerIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.workerIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.workerIDLabel.Location = new System.Drawing.Point(67, 32);
             this.workerIDLabel.Name = "workerIDLabel";
-            this.workerIDLabel.Size = new System.Drawing.Size(125, 25);
+            this.workerIDLabel.Size = new System.Drawing.Size(116, 25);
             this.workerIDLabel.TabIndex = 1;
-            this.workerIDLabel.Text = "Worker ID#:";
+            this.workerIDLabel.Text = "Worker ID";
             // 
             // EmployeeEditer
             // 
