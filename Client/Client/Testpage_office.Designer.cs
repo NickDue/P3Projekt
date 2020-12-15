@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.ADDbtn = new System.Windows.Forms.Button();
             this.REMOVEbtn = new System.Windows.Forms.Button();
             this.input1 = new System.Windows.Forms.TextBox();
             this.input2 = new System.Windows.Forms.TextBox();
             this.GETbtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -49,13 +49,13 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Test page for office";
             // 
-            // dataGridView1
+            // dataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 274);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(492, 271);
-            this.dataGridView1.TabIndex = 2;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(0, 274);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(492, 271);
+            this.dataGridView.TabIndex = 2;
             // 
             // ADDbtn
             // 
@@ -110,12 +110,12 @@
             this.Controls.Add(this.input1);
             this.Controls.Add(this.REMOVEbtn);
             this.Controls.Add(this.ADDbtn);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Testpage_office";
             this.Size = new System.Drawing.Size(777, 559);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,7 +124,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Button ADDbtn;
         private System.Windows.Forms.Button REMOVEbtn;
         private System.Windows.Forms.TextBox input1;
