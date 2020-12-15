@@ -27,7 +27,7 @@ namespace IntegrationTest
             string[] splittedData = data.Split(" ! ");
             using var con = new MySqlConnection(SqlLogin);
             con.Open();
-            string query = "SELECT * FROM test where password = '" + splittedData[2] + "' and id = '"+splittedData[1] +"';";
+            string query = "SELECT * FROM test where product_2 = '" + splittedData[2] + "' and product = '"+splittedData[1] +"';";
             using var cmd = new MySqlCommand(query, con);
             using MySqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
