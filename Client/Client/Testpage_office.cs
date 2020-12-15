@@ -100,6 +100,19 @@ namespace Client
             string input = mergeInput(input1.Text, input2.Text);
             AddEmployee(input);
         }
+
+        private void ChangeData(string inputFromUser)
+        {
+            string input = "edit info ! " + inputFromUser;
+            TCPClient client = new TCPClient();
+            client.Connect(input);
+        }
+
+        private void changebtn_Click(object sender, EventArgs e)
+        {
+           string input = mergeInput(input1.Text, input2.Text);
+            ChangeData(input);
+        }
     }  
            
 }
