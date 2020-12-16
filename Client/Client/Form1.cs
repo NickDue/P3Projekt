@@ -177,14 +177,23 @@ namespace Client
 
         private void signOutButton_Click(object sender, EventArgs e)
         {
-            TCPClient client = new TCPClient();
-            client.Connect($"logout ! {UserCredentials.WorkerId}");
-            UserCredentials.WorkerId = -1;
-            UserCredentials.WorkerRole = "UNKNOWNROLE";
-            UserCredentials.WorkerUsername = "UNKNOWNNAME";
-            LoginForm loginForm = new LoginForm();
-            this.Hide();
-            loginForm.Show();
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to logout?", "Confirm", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                TCPClient client = new TCPClient();
+                client.Connect($"logout ! {UserCredentials.WorkerId}");
+                UserCredentials.WorkerId = -1;
+                UserCredentials.WorkerRole = "UNKNOWNROLE";
+                UserCredentials.WorkerUsername = "UNKNOWNNAME";
+                LoginForm loginForm = new LoginForm();
+                this.Hide();
+                loginForm.Show();
+            }
+
+            else
+            {
+                // do nothing
+            }
         }
 
 

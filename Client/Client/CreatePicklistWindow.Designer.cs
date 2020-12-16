@@ -135,6 +135,7 @@
             // 
             // ExpressCombobox
             // 
+            this.ExpressCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ExpressCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.ExpressCombobox.FormattingEnabled = true;
             this.ExpressCombobox.Location = new System.Drawing.Point(38, 180);
@@ -144,6 +145,7 @@
             // 
             // PlatformCombobox
             // 
+            this.PlatformCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PlatformCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.PlatformCombobox.FormattingEnabled = true;
             this.PlatformCombobox.Location = new System.Drawing.Point(38, 115);
@@ -153,6 +155,7 @@
             // 
             // CityCombobox
             // 
+            this.CityCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CityCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.CityCombobox.FormattingEnabled = true;
             this.CityCombobox.Location = new System.Drawing.Point(38, 50);
@@ -200,12 +203,15 @@
             // FileDataGridView
             // 
             this.FileDataGridView.AllowUserToAddRows = false;
+            this.FileDataGridView.AllowUserToDeleteRows = false;
+            this.FileDataGridView.AllowUserToResizeRows = false;
             this.FileDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.FileDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.FileDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.FileDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FileDataGridView.Location = new System.Drawing.Point(0, 278);
             this.FileDataGridView.Name = "FileDataGridView";
+            this.FileDataGridView.ReadOnly = true;
             this.FileDataGridView.Size = new System.Drawing.Size(982, 480);
             this.FileDataGridView.TabIndex = 5;
             // 
