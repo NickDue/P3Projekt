@@ -37,15 +37,17 @@
             // testpage_floor1
             // 
             this.testpage_floor1.Location = new System.Drawing.Point(0, 1);
+            this.testpage_floor1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.testpage_floor1.Name = "testpage_floor1";
-            this.testpage_floor1.Size = new System.Drawing.Size(1057, 561);
+            this.testpage_floor1.Size = new System.Drawing.Size(793, 456);
             this.testpage_floor1.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1063, 106);
+            this.button1.Location = new System.Drawing.Point(797, 86);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(185, 180);
+            this.button1.Size = new System.Drawing.Size(139, 146);
             this.button1.TabIndex = 2;
             this.button1.Text = "Log out";
             this.button1.UseVisualStyleBackColor = true;
@@ -54,28 +56,32 @@
             // testpage_office1
             // 
             this.testpage_office1.Location = new System.Drawing.Point(0, 1);
+            this.testpage_office1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.testpage_office1.Name = "testpage_office1";
-            this.testpage_office1.Size = new System.Drawing.Size(890, 585);
+            this.testpage_office1.Size = new System.Drawing.Size(668, 475);
             this.testpage_office1.TabIndex = 3;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1063, 336);
+            this.button2.Location = new System.Drawing.Point(797, 273);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(185, 51);
+            this.button2.Size = new System.Drawing.Size(139, 41);
             this.button2.TabIndex = 4;
             this.button2.Text = "extra functionalities";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // TestForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1306, 532);
+            this.ClientSize = new System.Drawing.Size(980, 432);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.testpage_office1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.testpage_floor1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "TestForm";
             this.Text = "TestForm";
             this.Load += new System.EventHandler(this.TestForm_Load);
