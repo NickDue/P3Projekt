@@ -102,6 +102,7 @@
             this.DeleteButton.TabIndex = 4;
             this.DeleteButton.Text = "DELETE";
             this.DeleteButton.UseVisualStyleBackColor = false;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // TitleLabel
             // 
