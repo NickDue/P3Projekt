@@ -169,7 +169,7 @@ namespace Client
             
             else
             {
-                MessageBox.Show("you done goofed (incorrect input)");
+                MessageBox.Show("Incorrect input.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -181,6 +181,7 @@ namespace Client
                 string newProduct = GetInputs();
                 MessageBox.Show(newProduct);
                 string result = SendProductToServer(newProduct);
+                MessageBox.Show("Successfully added product!", "Add Product", MessageBoxButtons.OK);
                 MessageBox.Show(result);
                 ClearInputs();
             }
