@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Client.TCP;
+using System.Text.RegularExpressions;
 
 namespace Client
 {
@@ -85,14 +86,25 @@ namespace Client
             this.ControlBox = false;
             this.Text = String.Empty;
         }
-
+        
         private bool AreAllFieldsFilled()
         {
             string errorPreset = "The following is missing: \n\n";
             string errorMessage = string.Empty;
 
-            errorMessage += IsTextboxFilled(nameTextbox);
-            errorMessage += IsTextboxFilled(passwordTextbox);
+            if(ValidateNumberInput(workerIDTextbox))
+            {
+                errorMessage += IsTextboxFilled(workerIDTextbox);
+                errorMessage += IsTextboxFilled(nameTextbox);
+                errorMessage += IsTextboxFilled(passwordTextbox);
+            }
+
+            else
+            {
+                MessageBox.Show("Worker ID must be a number!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
             if(passwordTextbox.TextLength < 0)
             {
                 errorMessage += IsTextboxFilled(confirmPasswordTextbox);
@@ -110,7 +122,20 @@ namespace Client
                 return false;
             }
         }
-        
+
+        private bool ValidateNumberInput(TextBox tb)
+        {
+            Regex regex = new Regex(@"^[0-9]+$");
+            if (regex.IsMatch(tb.Text))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         private string IsTextboxFilled(TextBox tb)
         {
             if (string.IsNullOrWhiteSpace(tb.Text))
@@ -198,7 +223,14 @@ namespace Client
                     EditorRequestAccepted.Invoke(employee);
                     this.Close();
                 }
+
+                else
+                {
+                    MessageBox.Show("User or password is incorrect!", "Login failed", MessageBoxButtons.OK);
+                }
             }
+
+
         }
 
         private void AddUserToDB()
