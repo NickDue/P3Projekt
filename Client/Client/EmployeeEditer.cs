@@ -19,6 +19,7 @@ namespace Client
     {
         private string Method { get; }
         public event EmployeeEditorEventHandler EditorRequestAccepted;
+        public event Action EditorRequestCancelled;
 
         #region CustomProperties
 
@@ -85,6 +86,7 @@ namespace Client
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.ControlBox = false;
             this.Text = String.Empty;
+            workerIDTextbox.MaxLength = 5;
         }
         
         private bool AreAllFieldsFilled()
@@ -198,12 +200,14 @@ namespace Client
         private void closeButton_Click(object sender, EventArgs e)
         {
             Clear();
+            EditorRequestCancelled.Invoke();
             this.Close();
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
             Clear();
+            EditorRequestCancelled.Invoke();
             this.Close();
         }
 

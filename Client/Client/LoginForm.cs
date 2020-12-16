@@ -32,7 +32,7 @@ namespace Client
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-
+            LoginPanel.Location = new Point((this.Width - LoginPanel.Width)/2, (this.Height - LoginPanel.Height)/2);
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
