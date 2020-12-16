@@ -9,7 +9,7 @@ namespace Server
         public ProductDescription description { get; }
         public int amount { get; set; }
         
-        public Placement placement { get; set; }
+        public string placement { get; set; }
 
         public Product(ProductDescription d)
         {
@@ -17,7 +17,7 @@ namespace Server
             amount = 0;
             placement = null;
         }
-        public Product(ProductDescription d, int savedAmount, Placement savedPlacement)
+        public Product(ProductDescription d, int savedAmount, string savedPlacement)
         {
             description = d;
             amount = savedAmount;

@@ -29,14 +29,14 @@ namespace Server.SQL
                 {
                     string[] plc = reader.GetString(9).Split("-");
                     productDescription = new ProductDescription(reader.GetInt32(1), reader.GetString(2),reader.GetString(3),reader.GetString(4),reader.GetDouble(5),reader.GetDouble(6),reader.GetString(7),reader.GetString(8));
-                    product = new Product(productDescription, reader.GetInt32(10), new Placement(plc[0],plc[1], Int32.Parse(plc[2])));
+                    product = new Product(productDescription, reader.GetInt32(10), reader.GetString(9));
                 }
                 con.Close();
                 if (product != null && productDescription != null)
                 {
                     string result = product.description.id + "-" + product.description.colliNumber + "-" + product.description.colliAmount + "!" +
                         product.description.name + "!" + product.description.volume + "!" + product.description.weight + "!" + product.description.color + "!" + product.description.category + "!" +
-                        product.placement.PrintPlacement() + "!" + product.amount;
+                        product.placement+ "!" + product.amount;
                     if(!string.IsNullOrEmpty(result))
                         return result;
                 }
