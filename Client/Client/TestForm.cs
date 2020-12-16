@@ -27,7 +27,7 @@ namespace Client
             }
             else
             {
-                testpage_office1.Show();
+                testpage_office1.Hide();
                 testpage_floor1.Hide();
                 button2.Show();
             }
@@ -38,6 +38,11 @@ namespace Client
             LoginForm loginForm = new LoginForm();
             Hide();
             loginForm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            testpage_office1.Show();
         }
     }
 }
