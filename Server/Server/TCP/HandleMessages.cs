@@ -63,9 +63,18 @@ namespace Server.TCP
             }
             else if (input[0].StartsWith("authenticate"))
             {
-                EmployeeHandler eHandler = new EmployeeHandler();
-                output = eHandler.AuthenticateUser(Int32.Parse(input[1]), input[2]);
-                logsHandler.WriteToLog("null", "null","null", input[1], "Logged in!");
+                try
+                {
+                    EmployeeHandler eHandler = new EmployeeHandler();
+                    output = eHandler.AuthenticateUser(Int32.Parse(input[1]), input[2]);
+                    logsHandler.WriteToLog("null", "null","null", input[1], "Logged in!");
+
+                }
+                catch(FormatException)
+                {
+                    return input[1] + input[2];
+                }
+                
             }
             else if (input[0].StartsWith("logout"))
             {
