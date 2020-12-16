@@ -103,9 +103,7 @@ namespace Client
             if (dialogResult == DialogResult.Yes)
             {
                 string newProduct = GenerateProductString();
-                MessageBox.Show(newProduct);
-                string result = SendProductToServer(newProduct);
-                MessageBox.Show(result);
+                SendProductToServer(newProduct);
             }
             else if (dialogResult == DialogResult.No)
             {
