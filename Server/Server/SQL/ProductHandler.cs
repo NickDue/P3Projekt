@@ -114,12 +114,12 @@ namespace Server.SQL
                 ProductDescription productDescription = null;
                 string[] plc = reader.GetString(9).Split("-");
                 productDescription = new ProductDescription(reader.GetInt32(1), reader.GetString(2),reader.GetString(3),reader.GetString(4),reader.GetDouble(5),reader.GetDouble(6),reader.GetString(7),reader.GetString(8));
-                product = new Product(productDescription, reader.GetInt32(10), new Placement(plc[0],plc[1], Int32.Parse(plc[2])));
+                product = new Product(productDescription, reader.GetInt32(10), reader.GetString(9));
                 if (product != null && productDescription != null)
                 {
                     allProducts += product.description.id + "-" + product.description.colliNumber + "-" + product.description.colliAmount + "!" +
                                          product.description.name + "!" + product.description.volume + "!" + product.description.weight + "!" + product.description.color + "!" + product.description.category + "!" +
-                                         product.placement.PrintPlacement() + "!" + product.amount+ "\n";
+                                         product.placement + "!" + product.amount+ "\n";
                 }
             }
             reader.Close();
