@@ -92,15 +92,17 @@ namespace Client
                     string query = $"authenticate ! {UsernameBox.Text} ! {PasswordBox.Text}";
                     TCPClient client = new TCPClient();
                     string resonse = client.Connect(query);
+                    try
+                    {
                         if (!resonse.StartsWith("ERROR"))
                         {
                             string[] splittedResponse = resonse.Split('!');
                             UserCredentials.WorkerId = Int32.Parse(splittedResponse[0]);
                             UserCredentials.WorkerUsername = splittedResponse[1];
-                        if (!Test == true)
-                        {
-                             UserCredentials.WorkerRole = splittedResponse[3];
-                        }   
+                            if (!Test == true)
+                            {
+                                UserCredentials.WorkerRole = splittedResponse[3];
+                            }
                             MyhomeForm form = new MyhomeForm();
                             Hide();
                             form.Show();
@@ -111,6 +113,15 @@ namespace Client
                             UsernameBox.Clear();
                             PasswordBox.Clear();
                         }
+                    }
+                    catch (FormatException)
+                    {
+                        MessageBox.Show("Password or username wrong", "Error");
+                    }
+                    catch (ArgumentNullException)
+                    {
+                        MessageBox.Show("Empty input field, try again", "Error");
+                    }
                 }
             }          
         }
