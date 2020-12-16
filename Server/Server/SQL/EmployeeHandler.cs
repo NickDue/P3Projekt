@@ -135,10 +135,14 @@ namespace Server.SQL
             return "ERROR";
         }
 
-        public string AuthenticateUser(int id, string pw)
+        public string AuthenticateUser(string id, string pw)
         {
             try
             {
+                int ids;
+                bool testIntId = Int32.TryParse(id, out ids);
+                if(!testIntId)
+                    return "ERROR: Incorrect information.";
                 using var con = new MySqlConnection(SqlLogin);
                 con.Open();
                 string query = "SELECT * FROM users where password = '" + pw + "' and id = '"+id +"';";
@@ -146,7 +150,7 @@ namespace Server.SQL
                 using MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    if (reader.GetInt32(0) == id && reader.GetString(2).Equals(pw))
+                    if (reader.GetInt32(0) == ids && reader.GetString(2).Equals(pw))
                     {
                         return reader.GetInt32(0) + "!" + reader.GetString(1) + "!" + reader.GetString(2) + "!" +
                                reader.GetString(3);

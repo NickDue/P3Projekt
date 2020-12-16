@@ -110,6 +110,8 @@ namespace Client
                         else
                         {
                             MessageBox.Show("Unknown User", "Error");
+                            UsernameBox.Clear();
+                            PasswordBox.Clear();
                         }
                     }
                     catch (FormatException)
