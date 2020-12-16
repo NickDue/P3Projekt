@@ -52,7 +52,7 @@
             this.LoginPanel.Controls.Add(this.LoginButton);
             this.LoginPanel.Controls.Add(this.PasswordBox);
             this.LoginPanel.Controls.Add(this.PasswordLabel);
-            this.LoginPanel.Location = new System.Drawing.Point(482, 218);
+            this.LoginPanel.Location = new System.Drawing.Point(199, 83);
             this.LoginPanel.Name = "LoginPanel";
             this.LoginPanel.Size = new System.Drawing.Size(486, 448);
             this.LoginPanel.TabIndex = 14;

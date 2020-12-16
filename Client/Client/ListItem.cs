@@ -96,7 +96,7 @@ namespace Client
         public int WorkerID
         {
             get { return _workerID; }
-            set { _workerID = value; workerIDLabel.Text = ("ID#" + value.ToString()); }
+            set { _workerID = value; workerIDLabel.Text = (value.ToString()); }
         }
         public string Role
         {

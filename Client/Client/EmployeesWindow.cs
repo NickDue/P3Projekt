@@ -58,13 +58,15 @@ namespace Client
 
         private void EditButton_Click(object sender, EventArgs e)
         {
-            PromptForUserEdit();
+                PromptForUserEdit();
         }
 
         private void PromptForUserCreation()
         {
             EmployeeEditer editor = new EmployeeEditer("add");
             editor.Show();
+            ToggleButtons(HeaderPanel, false);
+            editor.EditorRequestCancelled += CancelEdit;
             editor.EditorRequestAccepted += CreateEmployee;
         }
 
@@ -84,9 +86,27 @@ namespace Client
                 MessageBox.Show("You need to choose and employee first");
                 return;
             }
-            EmployeeEditer editor = new EmployeeEditer(item,"edit");
-            editor.Show();
-            editor.EditorRequestAccepted += EditEmployee;
+            else
+            {
+                EmployeeEditer editor = new EmployeeEditer(item, "edit");
+                editor.Show();
+                ToggleButtons(HeaderPanel, false);
+                editor.EditorRequestAccepted += EditEmployee;
+                editor.EditorRequestCancelled += CancelEdit;
+            }
+        }
+
+        private void CancelEdit()
+        {
+            ToggleButtons(HeaderPanel, true);
+        }
+
+        private void ToggleButtons(Panel panel, bool value)
+        {
+            foreach(Button button in panel.Controls.OfType<Button>())
+            {
+                button.Enabled = value;
+            }
         }
         
         private void EditEmployee(ListItem employee)
@@ -98,6 +118,7 @@ namespace Client
             ItemList.Clear();
             EmployeeFlowPanel.Controls.Clear();
             LoadEmployeesFromDatabase();
+            EditButton.Enabled = true;
         }
 
 
@@ -123,16 +144,30 @@ namespace Client
 
         private void RemoveButton_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Are you sure you wish to remove this employee?", "Remove Employee", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(result == DialogResult.Yes)
+            ListItem item = GetSelected(ItemList);
+            if (item == null)
             {
-                RemoveEmployeeFromDatabase();
+                MessageBox.Show("You need to choose and employee first");
+                return;
+            }
+            else if(item.WorkerID == UserCredentials.WorkerId)
+            {
+                MessageBox.Show("You cannot delete your own user. Please contact the system administrator.");
+                item.Selected = false;
+                return;
+            }
+            else
+            {
+                var result = MessageBox.Show("Are you sure you wish to remove this employee?", "Remove Employee", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    RemoveEmployeeFromDatabase(item);
+                }
             }
         }
 
-        private void RemoveEmployeeFromDatabase()
+        private void RemoveEmployeeFromDatabase(ListItem item)
         {
-            ListItem item = GetSelected(ItemList);
             if(item != null)
             {
                 string command = "remove employee ! ";
