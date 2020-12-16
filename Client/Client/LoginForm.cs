@@ -109,18 +109,18 @@ namespace Client
                         }
                         else
                         {
-                            MessageBox.Show("Unknown User", "Error");
+                            MessageBox.Show("Unknown User", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             UsernameBox.Clear();
                             PasswordBox.Clear();
                         }
                     }
                     catch (FormatException)
                     {
-                        MessageBox.Show("Password or username wrong", "Error");
+                        MessageBox.Show("Password or username wrong", "Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     catch (ArgumentNullException)
                     {
-                        MessageBox.Show("Empty input field, try again", "Error");
+                        MessageBox.Show("Empty input field, try again", "Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }          
