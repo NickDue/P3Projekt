@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.SearchPanel = new System.Windows.Forms.Panel();
+            this.LogsTitle = new System.Windows.Forms.Label();
             this.ProductGridView = new System.Windows.Forms.DataGridView();
             this.WorkerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Action = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataColum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LogsTitle = new System.Windows.Forms.Label();
             this.SearchPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductGridView)).BeginInit();
             this.SuspendLayout();
@@ -48,9 +48,21 @@
             this.SearchPanel.Size = new System.Drawing.Size(982, 106);
             this.SearchPanel.TabIndex = 0;
             // 
+            // LogsTitle
+            // 
+            this.LogsTitle.AutoSize = true;
+            this.LogsTitle.Font = new System.Drawing.Font("DIN1451Engschrift", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogsTitle.Location = new System.Drawing.Point(429, 13);
+            this.LogsTitle.Name = "LogsTitle";
+            this.LogsTitle.Size = new System.Drawing.Size(137, 76);
+            this.LogsTitle.TabIndex = 0;
+            this.LogsTitle.Text = "LOGS";
+            // 
             // ProductGridView
             // 
             this.ProductGridView.AllowUserToAddRows = false;
+            this.ProductGridView.AllowUserToDeleteRows = false;
+            this.ProductGridView.AllowUserToResizeRows = false;
             this.ProductGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ProductGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProductGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -61,6 +73,7 @@
             this.ProductGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProductGridView.Location = new System.Drawing.Point(0, 106);
             this.ProductGridView.Name = "ProductGridView";
+            this.ProductGridView.ReadOnly = true;
             this.ProductGridView.Size = new System.Drawing.Size(982, 652);
             this.ProductGridView.TabIndex = 1;
             // 
@@ -68,31 +81,25 @@
             // 
             this.WorkerID.HeaderText = "Worker ID";
             this.WorkerID.Name = "WorkerID";
+            this.WorkerID.ReadOnly = true;
             // 
             // Product
             // 
             this.Product.HeaderText = "Product";
             this.Product.Name = "Product";
+            this.Product.ReadOnly = true;
             // 
             // Action
             // 
             this.Action.HeaderText = "Action";
             this.Action.Name = "Action";
+            this.Action.ReadOnly = true;
             // 
             // DataColum
             // 
             this.DataColum.HeaderText = "Date";
             this.DataColum.Name = "DataColum";
-            // 
-            // LogsTitle
-            // 
-            this.LogsTitle.AutoSize = true;
-            this.LogsTitle.Font = new System.Drawing.Font("DIN1451Engschrift", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogsTitle.Location = new System.Drawing.Point(429, 13);
-            this.LogsTitle.Name = "LogsTitle";
-            this.LogsTitle.Size = new System.Drawing.Size(137, 76);
-            this.LogsTitle.TabIndex = 0;
-            this.LogsTitle.Text = "LOGS";
+            this.DataColum.ReadOnly = true;
             // 
             // LogsPage
             // 
