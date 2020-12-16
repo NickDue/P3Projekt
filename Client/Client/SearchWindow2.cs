@@ -296,7 +296,7 @@ namespace Client
                 if (!string.IsNullOrEmpty(splittedProducts[i]))
                 {
                     string[] splittedId = splittedProducts[i].Split('!');
-                    if (splittedId[1] != colli && splittedId[2] != total)
+                    if (!splittedId[1].Equals(colli))
                     {
                         string product = $"{splittedId[1]}/{splittedId[2]} - Id: {splittedId[0]} - Location: {splittedId[3]}";
                         AddLocationsToDataGrid(ProductGridView, product);
@@ -348,6 +348,11 @@ namespace Client
             row.Add(location);
 
             Grid.Rows.Add(row.ToArray());
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            DeleteProduct();
         }
     }
 }

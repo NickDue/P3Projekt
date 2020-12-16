@@ -110,3 +110,6 @@ C:\Users\jonas\OneDrive\Skrivebord\P3Projekt\Client\Client\obj\Debug\Client.cspr
 C:\Users\jonas\OneDrive\Skrivebord\P3Projekt\Client\Client\obj\Debug\Client.csproj.CopyComplete
 C:\Users\jonas\OneDrive\Skrivebord\P3Projekt\Client\Client\obj\Debug\Client.exe
 C:\Users\jonas\OneDrive\Skrivebord\P3Projekt\Client\Client\obj\Debug\Client.pdb
+C:\Users\meerq\OneDrive\Skrivebord\P3Projekt\Client\Client\obj\Debug\Client.TestForm.resources
+C:\Users\meerq\OneDrive\Skrivebord\P3Projekt\Client\Client\obj\Debug\Client.Testpage_floor.resources
+C:\Users\meerq\OneDrive\Skrivebord\P3Projekt\Client\Client\obj\Debug\Client.Testpage_office.resources
