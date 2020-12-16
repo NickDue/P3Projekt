@@ -106,7 +106,7 @@ namespace Client
             }
             else
             {
-                MessageBox.Show(errorPreset + errorMessage, "Error");
+                MessageBox.Show(errorPreset + errorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
         }
@@ -212,11 +212,11 @@ namespace Client
             string response = client.Connect(query);
             if (!response.StartsWith("ERROR"))
             {
-                MessageBox.Show(response, "SUCCESS");
+                MessageBox.Show(response, "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             else
             {
-                MessageBox.Show(response, "ERROR");
+                MessageBox.Show(response, "ERROR",MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

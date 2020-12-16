@@ -175,14 +175,12 @@ namespace Client
 
         private void ConfirmChoice()
         {
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to add this product?", "Confirm", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to add this product?", "Confirm", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
                 string newProduct = GetInputs();
-                MessageBox.Show(newProduct);
                 string result = SendProductToServer(newProduct);
-                MessageBox.Show("Successfully added product!", "Add Product", MessageBoxButtons.OK);
-                MessageBox.Show(result);
+                MessageBox.Show(result, "Add Product", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 ClearInputs();
             }
             else if (dialogResult == DialogResult.No)

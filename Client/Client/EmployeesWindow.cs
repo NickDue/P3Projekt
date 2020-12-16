@@ -123,7 +123,7 @@ namespace Client
 
         private void RemoveButton_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Are you sure you wish to remove this employee?", "Remove Employee", MessageBoxButtons.YesNo);
+            var result = MessageBox.Show("Are you sure you wish to remove this employee?", "Remove Employee", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(result == DialogResult.Yes)
             {
                 RemoveEmployeeFromDatabase();
