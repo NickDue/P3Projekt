@@ -50,72 +50,78 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.headerPanel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(5, 5);
+            this.panel1.Location = new System.Drawing.Point(7, 6);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(310, 250);
+            this.panel1.Size = new System.Drawing.Size(413, 308);
             this.panel1.TabIndex = 0;
             // 
             // workerIDLabel
             // 
             this.workerIDLabel.AutoSize = true;
-            this.workerIDLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.workerIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.workerIDLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.workerIDLabel.Location = new System.Drawing.Point(90, 60);
+            this.workerIDLabel.Location = new System.Drawing.Point(147, 74);
+            this.workerIDLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.workerIDLabel.Name = "workerIDLabel";
-            this.workerIDLabel.Size = new System.Drawing.Size(20, 25);
+            this.workerIDLabel.Size = new System.Drawing.Size(31, 32);
             this.workerIDLabel.TabIndex = 0;
             this.workerIDLabel.Text = "#";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 60);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(27, 74);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 25);
+            this.label3.Size = new System.Drawing.Size(50, 32);
             this.label3.TabIndex = 1;
             this.label3.Text = "ID:";
             // 
             // employeeRoleLabel
             // 
             this.employeeRoleLabel.AutoSize = true;
-            this.employeeRoleLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeRoleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employeeRoleLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.employeeRoleLabel.Location = new System.Drawing.Point(90, 180);
+            this.employeeRoleLabel.Location = new System.Drawing.Point(147, 222);
+            this.employeeRoleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.employeeRoleLabel.Name = "employeeRoleLabel";
-            this.employeeRoleLabel.Size = new System.Drawing.Size(20, 25);
+            this.employeeRoleLabel.Size = new System.Drawing.Size(31, 32);
             this.employeeRoleLabel.TabIndex = 1;
             this.employeeRoleLabel.Text = "#";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 180);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(27, 222);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 25);
+            this.label2.Size = new System.Drawing.Size(82, 32);
             this.label2.TabIndex = 1;
             this.label2.Text = "Role:";
             // 
             // employeeNameLabel
             // 
             this.employeeNameLabel.AutoSize = true;
-            this.employeeNameLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employeeNameLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.employeeNameLabel.Location = new System.Drawing.Point(90, 120);
+            this.employeeNameLabel.Location = new System.Drawing.Point(147, 148);
+            this.employeeNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.employeeNameLabel.Name = "employeeNameLabel";
-            this.employeeNameLabel.Size = new System.Drawing.Size(20, 25);
+            this.employeeNameLabel.Size = new System.Drawing.Size(31, 32);
             this.employeeNameLabel.TabIndex = 1;
             this.employeeNameLabel.Text = "#";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("DIN1451Engschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(20, 120);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(27, 148);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 25);
+            this.label1.Size = new System.Drawing.Size(98, 32);
             this.label1.TabIndex = 1;
             this.label1.Text = "Name:";
             // 
@@ -124,21 +130,22 @@
             this.headerPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerPanel.Location = new System.Drawing.Point(0, 0);
+            this.headerPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(310, 28);
+            this.headerPanel.Size = new System.Drawing.Size(413, 34);
             this.headerPanel.TabIndex = 0;
             // 
             // ListItem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(10);
+            this.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.Name = "ListItem";
-            this.Padding = new System.Windows.Forms.Padding(5);
-            this.Size = new System.Drawing.Size(320, 260);
+            this.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.Size = new System.Drawing.Size(427, 320);
             this.Load += new System.EventHandler(this.ListItem_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -44,17 +44,19 @@
             this.SearchPanel.Controls.Add(this.LogsTitle);
             this.SearchPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.SearchPanel.Location = new System.Drawing.Point(0, 0);
+            this.SearchPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SearchPanel.Name = "SearchPanel";
-            this.SearchPanel.Size = new System.Drawing.Size(982, 106);
+            this.SearchPanel.Size = new System.Drawing.Size(1309, 130);
             this.SearchPanel.TabIndex = 0;
             // 
             // LogsTitle
             // 
             this.LogsTitle.AutoSize = true;
             this.LogsTitle.Font = new System.Drawing.Font("DIN1451Engschrift", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogsTitle.Location = new System.Drawing.Point(429, 13);
+            this.LogsTitle.Location = new System.Drawing.Point(572, 16);
+            this.LogsTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LogsTitle.Name = "LogsTitle";
-            this.LogsTitle.Size = new System.Drawing.Size(137, 76);
+            this.LogsTitle.Size = new System.Drawing.Size(170, 95);
             this.LogsTitle.TabIndex = 0;
             this.LogsTitle.Text = "LOGS";
             // 
@@ -71,44 +73,51 @@
             this.Action,
             this.DataColum});
             this.ProductGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ProductGridView.Location = new System.Drawing.Point(0, 106);
+            this.ProductGridView.Location = new System.Drawing.Point(0, 163);
+            this.ProductGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ProductGridView.Name = "ProductGridView";
             this.ProductGridView.ReadOnly = true;
-            this.ProductGridView.Size = new System.Drawing.Size(982, 652);
+            this.ProductGridView.RowHeadersWidth = 51;
+            this.ProductGridView.Size = new System.Drawing.Size(1636, 1004);
             this.ProductGridView.TabIndex = 1;
             // 
             // WorkerID
             // 
             this.WorkerID.HeaderText = "Worker ID";
+            this.WorkerID.MinimumWidth = 6;
             this.WorkerID.Name = "WorkerID";
             this.WorkerID.ReadOnly = true;
             // 
             // Product
             // 
-            this.Product.HeaderText = "Product";
+            this.Product.HeaderText = "Object ID";
+            this.Product.MinimumWidth = 6;
             this.Product.Name = "Product";
             this.Product.ReadOnly = true;
             // 
             // Action
             // 
             this.Action.HeaderText = "Action";
+            this.Action.MinimumWidth = 6;
             this.Action.Name = "Action";
             this.Action.ReadOnly = true;
             // 
             // DataColum
             // 
             this.DataColum.HeaderText = "Date";
+            this.DataColum.MinimumWidth = 6;
             this.DataColum.Name = "DataColum";
             this.DataColum.ReadOnly = true;
             // 
             // LogsPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.ProductGridView);
             this.Controls.Add(this.SearchPanel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LogsPage";
-            this.Size = new System.Drawing.Size(982, 758);
+            this.Size = new System.Drawing.Size(1309, 933);
             this.Load += new System.EventHandler(this.LogsPage_Load);
             this.SearchPanel.ResumeLayout(false);
             this.SearchPanel.PerformLayout();
@@ -121,10 +130,10 @@
 
         private System.Windows.Forms.Panel SearchPanel;
         private System.Windows.Forms.DataGridView ProductGridView;
+        private System.Windows.Forms.Label LogsTitle;
         private System.Windows.Forms.DataGridViewTextBoxColumn WorkerID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Product;
         private System.Windows.Forms.DataGridViewTextBoxColumn Action;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataColum;
-        private System.Windows.Forms.Label LogsTitle;
     }
 }

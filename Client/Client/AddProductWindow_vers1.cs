@@ -183,10 +183,6 @@ namespace Client
                 MessageBox.Show(result, "Add Product", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 ClearInputs();
             }
-            else if (dialogResult == DialogResult.No)
-            {
-                //do something else
-            }
         }
 
         private string SendProductToServer(string product)

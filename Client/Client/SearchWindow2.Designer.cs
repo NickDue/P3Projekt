@@ -72,19 +72,20 @@
             this.SearchPanel.Controls.Add(this.SearchInputBox);
             this.SearchPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.SearchPanel.Location = new System.Drawing.Point(0, 0);
+            this.SearchPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SearchPanel.Name = "SearchPanel";
-            this.SearchPanel.Size = new System.Drawing.Size(982, 152);
+            this.SearchPanel.Size = new System.Drawing.Size(1309, 187);
             this.SearchPanel.TabIndex = 0;
             // 
             // CancelButton
             // 
-            this.CancelButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.CancelButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.CancelButton.BackColor = System.Drawing.Color.LightGray;
             this.CancelButton.Font = new System.Drawing.Font("DIN1451Engschrift", 18F);
-            this.CancelButton.Location = new System.Drawing.Point(766, 32);
+            this.CancelButton.Location = new System.Drawing.Point(24, 20);
+            this.CancelButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(95, 38);
+            this.CancelButton.Size = new System.Drawing.Size(127, 47);
             this.CancelButton.TabIndex = 4;
             this.CancelButton.Text = "CANCEL";
             this.CancelButton.UseVisualStyleBackColor = false;
@@ -92,13 +93,13 @@
             // 
             // DeleteButton
             // 
-            this.DeleteButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.DeleteButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.DeleteButton.BackColor = System.Drawing.Color.LightGray;
             this.DeleteButton.Font = new System.Drawing.Font("DIN1451Engschrift", 18F);
-            this.DeleteButton.Location = new System.Drawing.Point(877, 86);
+            this.DeleteButton.Location = new System.Drawing.Point(24, 107);
+            this.DeleteButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(95, 38);
+            this.DeleteButton.Size = new System.Drawing.Size(127, 47);
             this.DeleteButton.TabIndex = 4;
             this.DeleteButton.Text = "DELETE";
             this.DeleteButton.UseVisualStyleBackColor = false;
@@ -109,9 +110,10 @@
             this.TitleLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.TitleLabel.AutoSize = true;
             this.TitleLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 48F);
-            this.TitleLabel.Location = new System.Drawing.Point(304, -1);
+            this.TitleLabel.Location = new System.Drawing.Point(405, -1);
+            this.TitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(402, 76);
+            this.TitleLabel.Size = new System.Drawing.Size(506, 95);
             this.TitleLabel.TabIndex = 3;
             this.TitleLabel.Text = "ENTER PRODUCT ID";
             this.TitleLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -123,9 +125,10 @@
             this.EditButton.BackColor = System.Drawing.Color.LightGray;
             this.EditButton.FlatAppearance.BorderSize = 0;
             this.EditButton.Font = new System.Drawing.Font("DIN1451Engschrift", 18F);
-            this.EditButton.Location = new System.Drawing.Point(877, 32);
+            this.EditButton.Location = new System.Drawing.Point(1165, 20);
+            this.EditButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(95, 38);
+            this.EditButton.Size = new System.Drawing.Size(127, 47);
             this.EditButton.TabIndex = 2;
             this.EditButton.Text = "EDIT";
             this.EditButton.UseVisualStyleBackColor = false;
@@ -137,9 +140,10 @@
             this.SearchButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.SearchButton.BackColor = System.Drawing.Color.LightGray;
             this.SearchButton.Font = new System.Drawing.Font("DIN1451Engschrift", 18F);
-            this.SearchButton.Location = new System.Drawing.Point(639, 86);
+            this.SearchButton.Location = new System.Drawing.Point(852, 106);
+            this.SearchButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(95, 38);
+            this.SearchButton.Size = new System.Drawing.Size(127, 47);
             this.SearchButton.TabIndex = 1;
             this.SearchButton.Text = "SEARCH";
             this.SearchButton.UseVisualStyleBackColor = false;
@@ -149,12 +153,13 @@
             // 
             this.SearchInputBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.SearchInputBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.SearchInputBox.Location = new System.Drawing.Point(296, 87);
-            this.SearchInputBox.MaximumSize = new System.Drawing.Size(325, 38);
+            this.SearchInputBox.Location = new System.Drawing.Point(395, 107);
+            this.SearchInputBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SearchInputBox.MaximumSize = new System.Drawing.Size(432, 38);
             this.SearchInputBox.MaxLength = 20;
-            this.SearchInputBox.MinimumSize = new System.Drawing.Size(325, 38);
+            this.SearchInputBox.MinimumSize = new System.Drawing.Size(432, 38);
             this.SearchInputBox.Name = "SearchInputBox";
-            this.SearchInputBox.Size = new System.Drawing.Size(325, 38);
+            this.SearchInputBox.Size = new System.Drawing.Size(432, 45);
             this.SearchInputBox.TabIndex = 0;
             // 
             // ProductInfoLabel
@@ -164,9 +169,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ProductInfoLabel.AutoSize = true;
             this.ProductInfoLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 30F);
-            this.ProductInfoLabel.Location = new System.Drawing.Point(195, 3);
+            this.ProductInfoLabel.Location = new System.Drawing.Point(260, 4);
+            this.ProductInfoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ProductInfoLabel.Name = "ProductInfoLabel";
-            this.ProductInfoLabel.Size = new System.Drawing.Size(198, 47);
+            this.ProductInfoLabel.Size = new System.Drawing.Size(247, 60);
             this.ProductInfoLabel.TabIndex = 3;
             this.ProductInfoLabel.Text = "PRODUCT INFO";
             // 
@@ -177,9 +183,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LocationInfoLabel.AutoSize = true;
             this.LocationInfoLabel.Font = new System.Drawing.Font("DIN1451Engschrift", 30F);
-            this.LocationInfoLabel.Location = new System.Drawing.Point(83, 3);
+            this.LocationInfoLabel.Location = new System.Drawing.Point(111, 4);
+            this.LocationInfoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LocationInfoLabel.Name = "LocationInfoLabel";
-            this.LocationInfoLabel.Size = new System.Drawing.Size(205, 47);
+            this.LocationInfoLabel.Size = new System.Drawing.Size(256, 60);
             this.LocationInfoLabel.TabIndex = 3;
             this.LocationInfoLabel.Text = "LOCATION INFO";
             // 
@@ -189,28 +196,31 @@
             this.LocationProductPanel.Controls.Add(this.LocationInfoLabel);
             this.LocationProductPanel.Controls.Add(this.LocationColliBox);
             this.LocationProductPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.LocationProductPanel.Location = new System.Drawing.Point(0, 152);
+            this.LocationProductPanel.Location = new System.Drawing.Point(0, 187);
+            this.LocationProductPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LocationProductPanel.Name = "LocationProductPanel";
-            this.LocationProductPanel.Size = new System.Drawing.Size(387, 146);
+            this.LocationProductPanel.Size = new System.Drawing.Size(516, 180);
             this.LocationProductPanel.TabIndex = 0;
             // 
             // LocationBox
             // 
             this.LocationBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.LocationBox.Location = new System.Drawing.Point(136, 69);
+            this.LocationBox.Location = new System.Drawing.Point(181, 85);
+            this.LocationBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LocationBox.Name = "LocationBox";
             this.LocationBox.ReadOnly = true;
-            this.LocationBox.Size = new System.Drawing.Size(198, 38);
+            this.LocationBox.Size = new System.Drawing.Size(263, 45);
             this.LocationBox.TabIndex = 0;
             // 
             // LocationColliBox
             // 
             this.LocationColliBox.Enabled = false;
             this.LocationColliBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.LocationColliBox.Location = new System.Drawing.Point(43, 69);
+            this.LocationColliBox.Location = new System.Drawing.Point(57, 85);
+            this.LocationColliBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LocationColliBox.Name = "LocationColliBox";
             this.LocationColliBox.ReadOnly = true;
-            this.LocationColliBox.Size = new System.Drawing.Size(58, 38);
+            this.LocationColliBox.Size = new System.Drawing.Size(76, 45);
             this.LocationColliBox.TabIndex = 0;
             // 
             // ProductPanel
@@ -229,19 +239,21 @@
             this.ProductPanel.Controls.Add(this.ProductNumberBox);
             this.ProductPanel.Controls.Add(this.PNumberLabel);
             this.ProductPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ProductPanel.Location = new System.Drawing.Point(387, 152);
+            this.ProductPanel.Location = new System.Drawing.Point(516, 187);
+            this.ProductPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ProductPanel.Name = "ProductPanel";
-            this.ProductPanel.Size = new System.Drawing.Size(595, 606);
+            this.ProductPanel.Size = new System.Drawing.Size(793, 746);
             this.ProductPanel.TabIndex = 2;
             // 
             // AmountBox
             // 
             this.AmountBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.AmountBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.AmountBox.Location = new System.Drawing.Point(280, 474);
+            this.AmountBox.Location = new System.Drawing.Point(373, 583);
+            this.AmountBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AmountBox.Name = "AmountBox";
             this.AmountBox.ReadOnly = true;
-            this.AmountBox.Size = new System.Drawing.Size(273, 38);
+            this.AmountBox.Size = new System.Drawing.Size(363, 45);
             this.AmountBox.TabIndex = 1;
             // 
             // PAmountLabel
@@ -249,9 +261,10 @@
             this.PAmountLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.PAmountLabel.AutoSize = true;
             this.PAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
-            this.PAmountLabel.Location = new System.Drawing.Point(40, 474);
+            this.PAmountLabel.Location = new System.Drawing.Point(53, 583);
+            this.PAmountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PAmountLabel.Name = "PAmountLabel";
-            this.PAmountLabel.Size = new System.Drawing.Size(122, 31);
+            this.PAmountLabel.Size = new System.Drawing.Size(150, 39);
             this.PAmountLabel.TabIndex = 0;
             this.PAmountLabel.Text = "Amount:";
             // 
@@ -259,10 +272,11 @@
             // 
             this.WeightBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.WeightBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.WeightBox.Location = new System.Drawing.Point(280, 394);
+            this.WeightBox.Location = new System.Drawing.Point(373, 485);
+            this.WeightBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.WeightBox.Name = "WeightBox";
             this.WeightBox.ReadOnly = true;
-            this.WeightBox.Size = new System.Drawing.Size(273, 38);
+            this.WeightBox.Size = new System.Drawing.Size(363, 45);
             this.WeightBox.TabIndex = 1;
             // 
             // PWeightLabel
@@ -270,20 +284,22 @@
             this.PWeightLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.PWeightLabel.AutoSize = true;
             this.PWeightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
-            this.PWeightLabel.Location = new System.Drawing.Point(40, 394);
+            this.PWeightLabel.Location = new System.Drawing.Point(53, 485);
+            this.PWeightLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PWeightLabel.Name = "PWeightLabel";
-            this.PWeightLabel.Size = new System.Drawing.Size(113, 31);
+            this.PWeightLabel.Size = new System.Drawing.Size(139, 39);
             this.PWeightLabel.TabIndex = 0;
             this.PWeightLabel.Text = "Weight:";
             // 
             // ColorBox
             // 
-            this.ColorBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.ColorBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ColorBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.ColorBox.Location = new System.Drawing.Point(280, 314);
+            this.ColorBox.Location = new System.Drawing.Point(373, 386);
+            this.ColorBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ColorBox.Name = "ColorBox";
             this.ColorBox.ReadOnly = true;
-            this.ColorBox.Size = new System.Drawing.Size(273, 38);
+            this.ColorBox.Size = new System.Drawing.Size(363, 45);
             this.ColorBox.TabIndex = 1;
             // 
             // PColorLabel
@@ -291,9 +307,10 @@
             this.PColorLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.PColorLabel.AutoSize = true;
             this.PColorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
-            this.PColorLabel.Location = new System.Drawing.Point(40, 314);
+            this.PColorLabel.Location = new System.Drawing.Point(53, 386);
+            this.PColorLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PColorLabel.Name = "PColorLabel";
-            this.PColorLabel.Size = new System.Drawing.Size(93, 31);
+            this.PColorLabel.Size = new System.Drawing.Size(114, 39);
             this.PColorLabel.TabIndex = 0;
             this.PColorLabel.Text = "Color:";
             // 
@@ -301,10 +318,11 @@
             // 
             this.VolumeBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.VolumeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.VolumeBox.Location = new System.Drawing.Point(280, 234);
+            this.VolumeBox.Location = new System.Drawing.Point(373, 288);
+            this.VolumeBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.VolumeBox.Name = "VolumeBox";
             this.VolumeBox.ReadOnly = true;
-            this.VolumeBox.Size = new System.Drawing.Size(273, 38);
+            this.VolumeBox.Size = new System.Drawing.Size(363, 45);
             this.VolumeBox.TabIndex = 1;
             // 
             // PVolumeLabel
@@ -312,9 +330,10 @@
             this.PVolumeLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.PVolumeLabel.AutoSize = true;
             this.PVolumeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
-            this.PVolumeLabel.Location = new System.Drawing.Point(40, 234);
+            this.PVolumeLabel.Location = new System.Drawing.Point(53, 288);
+            this.PVolumeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PVolumeLabel.Name = "PVolumeLabel";
-            this.PVolumeLabel.Size = new System.Drawing.Size(120, 31);
+            this.PVolumeLabel.Size = new System.Drawing.Size(149, 39);
             this.PVolumeLabel.TabIndex = 0;
             this.PVolumeLabel.Text = "Volume:";
             // 
@@ -322,10 +341,11 @@
             // 
             this.ProductNameBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.ProductNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.ProductNameBox.Location = new System.Drawing.Point(280, 154);
+            this.ProductNameBox.Location = new System.Drawing.Point(373, 190);
+            this.ProductNameBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ProductNameBox.Name = "ProductNameBox";
             this.ProductNameBox.ReadOnly = true;
-            this.ProductNameBox.Size = new System.Drawing.Size(273, 38);
+            this.ProductNameBox.Size = new System.Drawing.Size(363, 45);
             this.ProductNameBox.TabIndex = 1;
             // 
             // PNameLabel
@@ -333,9 +353,10 @@
             this.PNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.PNameLabel.AutoSize = true;
             this.PNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
-            this.PNameLabel.Location = new System.Drawing.Point(40, 154);
+            this.PNameLabel.Location = new System.Drawing.Point(53, 190);
+            this.PNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PNameLabel.Name = "PNameLabel";
-            this.PNameLabel.Size = new System.Drawing.Size(208, 31);
+            this.PNameLabel.Size = new System.Drawing.Size(256, 39);
             this.PNameLabel.TabIndex = 0;
             this.PNameLabel.Text = "Product Name:";
             // 
@@ -344,10 +365,11 @@
             this.ProductNumberBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.ProductNumberBox.Enabled = false;
             this.ProductNumberBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.ProductNumberBox.Location = new System.Drawing.Point(280, 74);
+            this.ProductNumberBox.Location = new System.Drawing.Point(373, 91);
+            this.ProductNumberBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ProductNumberBox.Name = "ProductNumberBox";
             this.ProductNumberBox.ReadOnly = true;
-            this.ProductNumberBox.Size = new System.Drawing.Size(273, 38);
+            this.ProductNumberBox.Size = new System.Drawing.Size(363, 45);
             this.ProductNumberBox.TabIndex = 1;
             // 
             // PNumberLabel
@@ -355,9 +377,10 @@
             this.PNumberLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.PNumberLabel.AutoSize = true;
             this.PNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
-            this.PNumberLabel.Location = new System.Drawing.Point(40, 74);
+            this.PNumberLabel.Location = new System.Drawing.Point(53, 91);
+            this.PNumberLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PNumberLabel.Name = "PNumberLabel";
-            this.PNumberLabel.Size = new System.Drawing.Size(234, 31);
+            this.PNumberLabel.Size = new System.Drawing.Size(288, 39);
             this.PNumberLabel.TabIndex = 0;
             this.PNumberLabel.Text = "Product Number:";
             // 
@@ -370,28 +393,32 @@
             this.ProductGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.OtherLocations});
             this.ProductGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ProductGridView.Location = new System.Drawing.Point(0, 298);
+            this.ProductGridView.Location = new System.Drawing.Point(0, 367);
+            this.ProductGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ProductGridView.Name = "ProductGridView";
             this.ProductGridView.ReadOnly = true;
-            this.ProductGridView.Size = new System.Drawing.Size(387, 460);
+            this.ProductGridView.RowHeadersWidth = 51;
+            this.ProductGridView.Size = new System.Drawing.Size(516, 566);
             this.ProductGridView.TabIndex = 3;
             // 
             // OtherLocations
             // 
             this.OtherLocations.HeaderText = "Other locations";
+            this.OtherLocations.MinimumWidth = 6;
             this.OtherLocations.Name = "OtherLocations";
             this.OtherLocations.ReadOnly = true;
             // 
             // SearchWindow2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.ProductGridView);
             this.Controls.Add(this.LocationProductPanel);
             this.Controls.Add(this.ProductPanel);
             this.Controls.Add(this.SearchPanel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SearchWindow2";
-            this.Size = new System.Drawing.Size(982, 758);
+            this.Size = new System.Drawing.Size(1309, 933);
             this.SearchPanel.ResumeLayout(false);
             this.SearchPanel.PerformLayout();
             this.LocationProductPanel.ResumeLayout(false);

@@ -30,15 +30,6 @@ namespace Client
             row.Add(date);
             ProductGridView.Rows.Add(row.ToArray());
         }
-        
-        // get logs data
-        private void getData()
-        {
-            DataTable data = new DataTable(); // stores data for DataGridView
-
-
-
-        }
 
         private void LogsPage_Load(object sender, EventArgs e)
         {
@@ -49,19 +40,34 @@ namespace Client
         {
             TCPClient client = new TCPClient();
             string query = $"get logs ! {UserCredentials.WorkerId}";
-            string reponse = client.Connect(query);
-            string[] logs = reponse.Split('\n');
+            string response = client.Connect(query);
+            string[] logs = response.Split('\n');
             foreach (string str in logs)
             {
                 string[] splittedLog = str.Split('!');
-                if(splittedLog.Length == 4)
-                    AddNewRow(splittedLog[0],splittedLog[1],splittedLog[2],splittedLog[3]);
+
+                if (splittedLog.Length == 4)
+                {
+                    for (int i = 0; i < splittedLog.Length; i++)
+                    {
+                        if (splittedLog[1].Contains("null"))
+                        {
+                            string formatLog = splittedLog[1];
+                            string[] formatSplitLog = formatLog.Split('-');
+
+                            for (int k = 0; k < formatSplitLog.Length; k++)
+                            {
+                                if (formatSplitLog[k] == "null")
+                                {
+                                    formatSplitLog[k] = "";
+                                }
+                            }
+                            splittedLog[1] = string.Join(" ", formatSplitLog);
+                        };
+                    }
+                    AddNewRow(splittedLog[0], splittedLog[1], splittedLog[2], splittedLog[3]);
+                }
             }
         }
-
-        // display logs data
-        // search through logs data
-        // create product list (testing)
-
     }
 }
