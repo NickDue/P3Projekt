@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\meerq\\OneDrive\\Skrivebord\\P3Projekt\\Server\\IntegrationTest\\IntegrationTest.csproj": {}
+    "C:\\Users\\Catte\\Documents\\GitHub\\P3Projekt\\Server\\IntegrationTest\\IntegrationTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\meerq\\OneDrive\\Skrivebord\\P3Projekt\\Server\\IntegrationTest\\IntegrationTest.csproj": {
+    "C:\\Users\\Catte\\Documents\\GitHub\\P3Projekt\\Server\\IntegrationTest\\IntegrationTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\meerq\\OneDrive\\Skrivebord\\P3Projekt\\Server\\IntegrationTest\\IntegrationTest.csproj",
+        "projectUniqueName": "C:\\Users\\Catte\\Documents\\GitHub\\P3Projekt\\Server\\IntegrationTest\\IntegrationTest.csproj",
         "projectName": "IntegrationTest",
-        "projectPath": "C:\\Users\\meerq\\OneDrive\\Skrivebord\\P3Projekt\\Server\\IntegrationTest\\IntegrationTest.csproj",
-        "packagesPath": "C:\\Users\\meerq\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\meerq\\OneDrive\\Skrivebord\\P3Projekt\\Server\\IntegrationTest\\obj\\",
+        "projectPath": "C:\\Users\\Catte\\Documents\\GitHub\\P3Projekt\\Server\\IntegrationTest\\IntegrationTest.csproj",
+        "packagesPath": "C:\\Users\\Catte\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Catte\\Documents\\GitHub\\P3Projekt\\Server\\IntegrationTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\meerq\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Catte\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "MySql.Data": {
               "target": "Package",
@@ -58,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
