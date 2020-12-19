@@ -69,11 +69,6 @@ namespace Client
                     MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            
-            else
-            {
-                
-            }
         }
 
         // Controls for missing user input
